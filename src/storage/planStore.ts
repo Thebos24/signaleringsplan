@@ -4,6 +4,7 @@ import {
   DEFAULT_RED_ACTION_PICTO,
   PLAN_ID,
   cleanClientName,
+  canAddTile,
   cleanText,
   isAllowedTile,
   type Color,
@@ -72,6 +73,10 @@ export async function addTile(input: NewTile): Promise<Tile> {
     throw new Error(`A ${input.color} tile cannot be a ${input.kind}`)
   }
   return db.transaction('rw', db.plan, db.tiles, db.photos, async () => {
+    const inList = await db.tiles.where({ color: input.color, kind: input.kind }).count()
+    if (!canAddTile(inList)) {
+      throw new Error(`The ${input.color} ${input.kind} list is full (Q-004)`)
+    }
     const tile = {
       kind: input.kind,
       color: input.color,

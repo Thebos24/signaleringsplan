@@ -88,7 +88,7 @@ Het is een **gratis hobbyproject**, zonder licentie of account (D-017).
   - **Foto maken** of kiezen. De app snijdt hem vierkant, verkleint hem en zet hem om naar een schets (D-010).
     De begeleider ziet het resultaat en kiest "Gebruik" of "Opnieuw".
 - Tegels bewerken, verwijderen (met "Weet je het zeker?") en van volgorde veranderen.
-- Maximaal aantal per lijst (Q-004): voorstel 6 signalen en 6 acties per kleur, zodat het overzichtelijk blijft.
+- Maximaal **6** per lijst (Q-004, D-027): 6 signalen en 6 acties per kleur, zodat het overzichtelijk blijft. Bij 6 verdwijnt de knop "Toevoegen" en staat er "De lijst is vol". De standaard rode actie telt mee.
 - Rood krijgt bij een nieuw plan al de actie "Ik ga naar mijn begeleider" met pictogram, aan te passen of te verwijderen.
 - Knop **"Bekijk als cliënt"** om de flow te proberen, en **"Klaar"** om de invulmodus te sluiten.
 

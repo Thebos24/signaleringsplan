@@ -1,16 +1,13 @@
 import { useState } from 'react'
-import { BigButton } from '../../components/BigButton'
 import type { PlanData } from '../plan/usePlan'
 import { isPlanEmpty } from '../../domain/planStatus'
 import { setClientName } from '../../storage/planStore'
-import { nl } from '../../text/nl'
+import { Editor } from './Editor'
 import { WelcomeScreen } from './WelcomeScreen'
 import './fill.css'
 
-const t = nl.fill
-
 // The filling-in mode, opened with the hold-to-open button (D-006).
-// TEMPORARY: after the welcome screen only a placeholder shows; the editor comes in T-2.2.
+// First the welcome screen (empty plan only), then the editor (T-2.2).
 export function FillMode({
   data,
   onChanged,
@@ -36,11 +33,5 @@ export function FillMode({
     )
   }
 
-  return (
-    <main className="fill">
-      <h1>{t.title}</h1>
-      <p>{t.editorSoon}</p>
-      <BigButton onClick={onClose}>{t.close}</BigButton>
-    </main>
-  )
+  return <Editor data={data} onChanged={onChanged} onClose={onClose} />
 }

@@ -138,6 +138,36 @@ describe('addTile', () => {
   })
 })
 
+describe('addTile limit (Q-004)', () => {
+  it('refuses a 7th tile in a list, but other lists stay open', async () => {
+    for (let i = 1; i <= 6; i++) {
+      await addTile({
+        kind: 'signal',
+        color: 'orange',
+        text: `Signaal ${i}`,
+        image: picto('angry'),
+      })
+    }
+    await expect(
+      addTile({ kind: 'signal', color: 'orange', text: 'Te veel', image: picto('angry') }),
+    ).rejects.toThrow(/full/)
+    expect(await getTiles('orange', 'signal')).toHaveLength(6)
+
+    await addTile({ kind: 'action', color: 'orange', text: 'Wandelen', image: picto('walk') })
+    await addTile({ kind: 'signal', color: 'red', text: 'Boos', image: picto('angry') })
+  })
+
+  it('counts the default red action: red actions have room for 5 more', async () => {
+    await ensurePlan()
+    for (let i = 1; i <= 5; i++) {
+      await addTile({ kind: 'action', color: 'red', text: `Actie ${i}`, image: picto('walk') })
+    }
+    await expect(
+      addTile({ kind: 'action', color: 'red', text: 'Te veel', image: picto('walk') }),
+    ).rejects.toThrow(/full/)
+  })
+})
+
 describe('updateTile', () => {
   it('changes the text and keeps the image', async () => {
     const tile = await addTile({

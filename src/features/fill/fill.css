@@ -23,3 +23,111 @@
   background: var(--color-paper);
   color: var(--color-ink);
 }
+
+/* Editor */
+.fill__tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fill__tab {
+  font: inherit;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+.fill__tab .color-badge {
+  display: flex;
+  opacity: 0.55;
+}
+/* The chosen colour: full strength and a thicker outline, not only a colour change */
+.fill__tab[aria-pressed='true'] .color-badge {
+  opacity: 1;
+  border-width: calc(var(--size-border-width) * 2);
+}
+.fill__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-gap);
+}
+.fill__list h2,
+.fill__list p,
+.fill__form h3 {
+  margin: 0;
+}
+.fill__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fill__row,
+.fill__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border: var(--size-border-width) solid var(--color-ink);
+  border-radius: var(--size-radius);
+}
+.fill__row-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.fill__row-main img {
+  width: 48px;
+  height: 48px;
+}
+.fill__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.fill__pictos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.fill__pictos legend {
+  padding: 0;
+  margin-bottom: 8px;
+}
+.fill__picto-choice {
+  position: relative;
+  display: flex;
+  border: var(--size-border-width) solid transparent;
+  border-radius: var(--size-radius);
+}
+/* The radio itself is hidden; the chosen picture gets a thick outline */
+.fill__picto-choice input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.fill__picto-choice:has(input:checked) {
+  border-color: var(--color-ink);
+  background: var(--color-green-light);
+}
+.fill__picto-choice:has(input:focus-visible) {
+  outline: var(--size-border-width) solid var(--color-muted);
+}
+.fill__picto-choice img {
+  width: 56px;
+  height: 56px;
+}
+.fill__actions .big-button {
+  flex: 1;
+}
+.fill__actions strong {
+  flex-basis: 100%;
+}

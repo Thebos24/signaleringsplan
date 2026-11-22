@@ -287,3 +287,28 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Gevolgen: Het welkomstscherm verschijnt opnieuw als iemand alle signalen verwijdert. Dat is bedoeld. Het
   startscherm en `FillMode` zijn tijdelijk kaal: de signaaltegels komen in T-3.1, de editor in T-2.2.
 - Herzien als: T-2.2 of Checkpoint 2 laat zien dat het welkomstscherm op een verkeerd moment verschijnt.
+
+### D-027 — Editor per kleur: opbouw en maximum van 6 per lijst (T-2.2)
+- Datum: 2026-11-22 · Status: Besloten · Besloten door: Sander (maximum 6, Q-004), Claude (opbouw)
+- Besluit:
+  - **Maximaal 6 tegels per lijst** (`MAX_TILES_PER_LIST` in `src/domain/plan.ts`): 6 signalen en 6 acties per kleur.
+    De rode standaardactie telt mee, dus rood heeft nog ruimte voor 5 eigen acties. Bij 6 verdwijnt "Toevoegen" en staat
+    er "De lijst is vol: er passen er 6." Tekst op een tegel: maximaal 40 tekens.
+  - De opslaglaag **weigert** een 7e tegel (`addTile` geeft een fout), naast het scherm dat de knop verbergt.
+  - De editor (`src/features/fill/`) heeft drie knoppen bovenaan (Groen, Oranje, Rood; kleur + symbool + woord,
+    de gekozen heeft een dikke rand) en per kleur de lijsten Signalen (niet bij groen) en Acties. Een tegel in de
+    lijst heeft ↑ ↓ (volgorde), Wijzigen en Verwijderen. Verwijderen vraagt eerst "Weet je het zeker?" in de
+    tegel zelf, zonder pop-up. Wijzigingen worden direct opgeslagen (SPEC §6.4). Enter in het tekstveld bewaart.
+  - Het plaatje kiezen is **tijdelijk** een rijtje met de 10 placeholder-pictogrammen. T-2.3 vervangt dit door de
+    pictogramkiezer met zoekveld, T-2.4 en T-2.5 voegen foto's toe.
+  - Volgorde verwisselen gaat met pijltjes (bestaande `moveTile`), niet met slepen.
+- Waarom: Een maximum in de opslaglaag voorkomt dat een fout in een scherm toch een 7e tegel maakt (D-023 liet het
+  bij de schermen; dat is hier aangescherpt). Pijltjes werken met vingers, schermlezers en het toetsenbord
+  zonder extra pakket. Een bevestiging in de tegel zelf is rustiger dan een pop-up (DESIGN.md regel 7) en
+  verdwijnt niet achter het toetsenbord.
+- Afgewezen: Slepen om de volgorde te wijzigen (lastig op een telefoon, vraagt een pakket, D-019). Alleen het
+  scherm laten tellen (een fout daar zou de opslag vervuilen). Een pop-up voor "Weet je het zeker?". Eén lange lijst
+  met alle kleuren door elkaar (veel scrollen; de tabbalk met drie kleuren is duidelijker).
+- Gevolgen: Een plan zonder signalen toont bij het volgende openen weer het welkomstscherm (D-026). Wie alle signalen
+  verwijdert, ziet dat dus; dat is bedoeld. Foto's kunnen nog niet gekozen worden (T-2.4).
+- Herzien als: Checkpoint 2 laat zien dat 6 te weinig of te veel is, of dat pijltjes onhandig zijn.

@@ -15,6 +15,20 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — Editor per kleur (T-2.2)
+- Waar: Claude Code (Sonnet 5.5 · high; past bij de tag: ja)
+- Gedaan: T-2.2. In de invulmodus staan nu drie kleurknoppen (Groen, Oranje, Rood) en per kleur de lijsten Signalen
+  (niet bij groen) en Acties. Je kunt tegels toevoegen (tekst + plaatje), wijzigen, verwijderen met "Weet je het
+  zeker?" en met ↑ ↓ van volgorde veranderen. Maximaal 6 per lijst. Alles wordt direct opgeslagen. 78 tests,
+  lint en build slagen. In de preview (390×844) een signaal toegevoegd, de bevestiging bekeken en na herladen
+  teruggezien.
+- Beslissingen: D-027 (nieuw). Q-004 beantwoord door Sander: 6 per lijst.
+- Problemen / verrassingen: De opslagtests voor de editor draaien in jsdom met `fake-indexeddb`; dat werkt, dus
+  geen aparte mocks nodig. Het plaatje kiezen is nog een tijdelijk rijtje van de 10 placeholder-pictogrammen.
+  Nog niet op de iPhone bekeken (hoort bij Checkpoint 2).
+- Volgende: T-2.3 Pictogramkiezer met zoekveld ⚙ Sonnet · medium. Sander wisselt met `/model` naar medium voor de
+  nieuwe sessie. Checkpoint 1 op de iPhone staat nog open.
+
 ## 2026-11-22 — Invulmodus openen en welkomstscherm (T-2.1)
 - Waar: Claude Code, zelfde sessie als T-1.2 t/m T-1.5 (Sonnet 5.5 · medium; past bij de tag: ja)
 - Gedaan: T-2.1. De app opent nu op het echte startscherm ("Hoi [naam], wat merk je?", nog zonder tegels) met de
