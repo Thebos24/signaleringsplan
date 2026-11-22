@@ -126,12 +126,14 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Herzien als: niet nodig.
 
 ### D-013 — Opslag in IndexedDB via Dexie
-- Datum: 2026-11-22 · Status: Voorlopig (check op iPhone in T-0.4) · Besloten door: Claude
+- Datum: 2026-11-22 · Status: Besloten (2026-11-22, na de proef op de iPhone in T-0.5) · Besloten door: Claude
 - Besluit: Het plan, de tegels en de schetsfoto's (als Blob) staan in IndexedDB, via de kleine bibliotheek Dexie
   met een geversioneerd schema. Bij de eerste start vraagt de app `navigator.storage.persist()`.
 - Waarom: localStorage is te klein voor foto's en kan geen Blobs bewaren. Dexie maakt versies en migraties simpel.
 - Afgewezen: localStorage (te klein). Ruwe IndexedDB-API (foutgevoelig). OPFS (minder breed getest op iOS voor dit gebruik).
-- Herzien als: de check in T-0.4 laat zien dat gegevens op iOS niet blijven staan.
+- Uitkomst proef (T-0.5, 2026-11-22): op Sanders iPhone, vanaf het beginscherm, bleven tekst en foto bewaard na
+  afsluiten, in vliegtuigmodus en na opnieuw opstarten. Het antwoord van `persist()` is niet doorgegeven.
+- Herzien als: gegevens op iOS of Android toch verdwijnen (bijv. na weken niet gebruiken).
 
 ### D-014 — Hosting op GitHub Pages
 - Datum: 2026-11-22 · Status: Voorlopig · Besloten door: Claude

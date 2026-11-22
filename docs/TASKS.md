@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 0 (Voorbereiding).** T-0.1 t/m T-0.4 zijn af (2026-11-22). Volgende: T-0.5 (Sander test op de iPhone).
+**Huidige fase: 1 (Fundament).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Volgende: T-1.1.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -25,12 +25,13 @@ en dat gegevens daar blijven staan, voordat we functies bouwen.
       in IndexedDB, (b) `navigator.storage.persist()` aanvraagt en het antwoord toont, (c) een foto laat maken met
       `<input capture>`. Leg de uitkomst vast in D-013 en RISKS (R-001, R-003, R-009). ⚙ Opus · medium — 2026-11-22
       (proef staat online; de uitkomst op de iPhone volgt uit T-0.5 en gaat dan naar D-013 en RISKS)
-- [ ] T-0.5 (S) Proef doen met de stappen die Claude geeft: app op het beginscherm zetten, iets opslaan, app
+- [x] T-0.5 (S) Proef doen met de stappen die Claude geeft: app op het beginscherm zetten, iets opslaan, app
       afsluiten, vliegtuigmodus aan, opnieuw openen. Staat alles er nog?
-- [ ] T-0.6 (C) Uitkomst van T-0.5 vastleggen in D-013 (status) en R-001, R-003, R-009. ⚙ Haiku · low
+- [x] T-0.6 (C) Uitkomst van T-0.5 vastleggen in D-013 (status) en R-001, R-003, R-009. ⚙ Haiku · low — 2026-11-22
+- [ ] T-0.7 (S) Proef herhalen op de Android-telefoon zodra die er is (D-016).
 
 **Checkpoint 0:** Sander opent de proef-app vanaf zijn beginscherm, zonder internet, en zijn opgeslagen tekst en
-foto staan er na het opnieuw opstarten van de telefoon nog.
+foto staan er na het opnieuw opstarten van de telefoon nog. ✅ Gehaald op 2026-11-22 (iPhone).
 
 ## Fase 1: Fundament
 
