@@ -169,6 +169,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Datum: 2026-11-22 · Status: Besloten · Besloten door: Claude
 - Besluit: Toegestaan: react, react-dom, dexie, vite, vite-plugin-pwa, typescript, vitest, @testing-library/react,
   eslint, prettier (en hun gewone hulppakketten). Al het andere eerst vragen en hier vastleggen.
+  Later toegestaan: `fake-indexeddb` (alleen voor tests, D-023, Sander 2026-11-22).
 - Waarom: Elke dependency is onderhoud en een mogelijk privacy- of beveiligingsrisico.
 
 ### D-020 — Eén plan per telefoon
@@ -207,3 +208,32 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Gevolgen: `npm audit` meldt 4 "moderate" kwetsbaarheden in `glob`/`minimatch` binnen `workbox-build`. Die draaien
   alleen tijdens het bouwen op de Mac en GitHub, niet in de app op de telefoon (R-012).
 - Herzien als: T-5.5 (updatebeleid) of als de proef op de iPhone iets anders laat zien.
+
+### D-023 — Datamodel en opslaglaag (T-1.1)
+- Datum: 2026-11-22 · Status: Besloten · Besloten door: Claude (testpakket: Sander)
+- Besluit:
+  - Eén Dexie-database `signaleringsplan` (los van de proefdatabase uit D-022) met **schemaversie 1** en drie
+    tabellen: `plan` (één rij met vaste sleutel `'plan'`, D-020), `tiles` en `photos`. Het model staat in
+    `src/domain/plan.ts`, de database in `src/storage/db.ts`, de functies in `src/storage/planStore.ts`.
+  - Tegels en foto's krijgen een oplopend nummer als id (`++id`).
+  - `order` is uniek over alle tegels. Omhoog/omlaag verwisselt een tegel met de buur in dezelfde lijst.
+  - Een nieuwe of gewijzigde tegel krijgt de foto zelf mee (niet eerst los opslaan). Elke wijziging is één
+    transactie: tegel en foto worden samen opgeslagen, en een vervangen of verwijderde foto gaat meteen weg.
+  - `ensurePlan()` maakt het plan als het er nog niet is, met de rode actie "Ik ga naar mijn begeleider" en
+    pictogram-id `caregiver` (D-008). Die id moet bestaan zodra de pictogrammen er zijn (T-1.5).
+  - Een groen signaal wordt geweigerd (SPEC §5.2). Teksten worden opgeschoond (spaties). Meer regels (zoals het
+    maximum per lijst, Q-004) horen bij de schermen.
+  - De schemaversie staat niet in het plan: Dexie houdt die bij. In `db.ts` staat het stappenplan voor een nieuwe
+    versie, en een test faalt als iemand versie 1 aanpast in plaats van een nieuwe versie toe te voegen (R-010).
+  - Tests voor de opslag draaien in Node met **`fake-indexeddb`** (alleen bij het testen, niet in de app).
+- Waarom: Eén transactie per wijziging voorkomt halve plannen en losse foto's die ruimte innemen. Oplopende
+  nummers werken ook als de app via het netwerkadres op de telefoon draait (`crypto.randomUUID` werkt daar niet,
+  want dat adres is geen https). Een unieke `order` over alle tegels werkt voor beide schermindelingen uit Q-001.
+  De versie op twee plekken bewaren kan uit elkaar lopen.
+- Afgewezen: `crypto.randomUUID` als id (werkt niet zonder https). `order` per lijst (lastiger als signalen van
+  oranje en rood op één scherm staan, Q-001). Foto eerst los opslaan en daarna de tegel (bij een fout blijft een
+  foto zonder tegel achter). `schemaVersion` in het plan (dubbel). Opslag testen in de browser met Playwright
+  (veel groter pakket). Opslag alleen met de hand testen (de opslagtests zijn verplicht, CLAUDE.md).
+- Gevolgen: de app gebruikt de opslag nog niet; dat komt met de schermen in fase 2 en 3. De proef (D-022) blijft
+  voorlopig staan voor T-0.7 (Android) en om te zien of gegevens na weken nog staan (R-001).
+- Herzien als: Q-001 of Q-004 iets vraagt wat het model niet kan, of vóór Checkpoint 3 bij een schemawijziging.

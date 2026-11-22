@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 1 (Fundament).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Volgende: T-1.1.
+**Huidige fase: 1 (Fundament).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). T-1.1 is af. Volgende: T-1.2.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -37,16 +37,16 @@ foto staan er na het opnieuw opstarten van de telefoon nog. ✅ Gehaald op 2026-
 
 Doel: de onderdelen waar alles op rust. Nog niets moois voor de cliënt.
 
-- [ ] T-1.1 (C) Datamodel en opslaglaag (SPEC §7): Dexie-database met schemaversie 1, functies voor plan en tegels
+- [x] T-1.1 (C) Datamodel en opslaglaag (SPEC §7): Dexie-database met schemaversie 1, functies voor plan en tegels
       (toevoegen, wijzigen, verwijderen, volgorde), foto's als Blob, migratie-opzet, tests. Nieuw plan krijgt
-      standaard de rode actie "Ik ga naar mijn begeleider" (D-008). ⚙ Opus · high
+      standaard de rode actie "Ik ga naar mijn begeleider" (D-008). ⚙ Opus · high — 2026-11-22 (D-023)
 - [ ] T-1.2 (C) Design tokens (DESIGN.md) als TS + CSS-variabelen, contrastcheck, en basiscomponenten: `Tile`,
       `BigButton`, `ColorBadge` (kleur + woord + symbool). ⚙ Sonnet · medium
 - [ ] T-1.3 (C) `LongPressButton`: 3 seconden ingedrukt houden met een ring die volloopt, werkt met touch en muis,
       annuleert bij loslaten of wegschuiven, toegankelijk label (D-006). Tests. ⚙ Sonnet · medium
 - [ ] T-1.4 (C) Kleurberekening als pure functie in `src/domain/` (D-007) met tests voor alle gevallen. ⚙ Sonnet · low
 - [ ] T-1.5 (C) Teksten op één plek (`src/text/nl.ts`) en tijdelijke placeholder-pictogrammen (10 simpele SVG's)
-      zodat fase 2 en 3 kunnen bouwen. ⚙ Sonnet · low
+      zodat fase 2 en 3 kunnen bouwen. Eén pictogram heet `caregiver` (de standaard rode actie, D-023). ⚙ Sonnet · low
 
 **Checkpoint 1:** Sander ziet in de preview de tegels, knoppen en kleurlabels en probeert de lang-indrukken-knop op zijn iPhone.
 

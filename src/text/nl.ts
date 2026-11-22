@@ -2,6 +2,12 @@
 export const nl = {
   hello: 'Hallo',
 
+  // Tiles that a new plan starts with (D-008). Stored in the plan, so changing this later
+  // only affects new plans.
+  defaults: {
+    redAction: 'Ik ga naar mijn begeleider',
+  },
+
   // TEMPORARY proof screen (T-0.4). Remove after Checkpoint 0.
   proof: {
     title: 'Proef: blijft alles staan?',

@@ -96,15 +96,19 @@ Het is een **gratis hobbyproject**, zonder licentie of account (D-017).
 - Alles wordt direct opgeslagen op de telefoon. Er is geen "opslaan"-knop nodig.
 - Geen export of back-up: het plan staat ook in het cliëntdossier (Medicore) en is daaruit opnieuw in te vullen (D-003).
 
-## 7. Datamodel (concept, wordt uitgewerkt in T-1.1)
+## 7. Datamodel (uitgewerkt in T-1.1, D-023)
 
 ```
-Plan        { id, clientName?, createdAt, updatedAt, schemaVersion }   // één plan per telefoon (Q-007)
+Plan        { id: 'plan', clientName?, createdAt, updatedAt }   // één plan per telefoon (D-020)
 Tile        { id, kind: 'signal' | 'action', color: 'green' | 'orange' | 'red',
-              text, image: ImageRef, order }
+              text, image: ImageRef, order }                    // groen heeft geen signalen
 ImageRef    { type: 'picto', pictoId } | { type: 'photo', photoId }
 Photo       { id, blob (schets, max 1024 px, webp of jpeg), createdAt }
 ```
+
+- De schemaversie staat niet in het plan zelf: de database houdt die bij (Dexie, `src/storage/db.ts`).
+- `order` is uniek over alle tegels. Een lijst (bijv. de oranje signalen) is gesorteerd op `order`.
+- Een tegel en zijn foto worden altijd samen opgeslagen en samen verwijderd.
 
 ## 8. Platform
 
