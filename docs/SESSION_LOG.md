@@ -15,6 +15,18 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — Teksten en placeholder-pictogrammen (T-1.5)
+- Waar: Claude Code, zelfde sessie als T-1.2 t/m T-1.4 (Sonnet 5.5 · medium; tag was low, dus iets zwaarder dan nodig)
+- Gedaan: T-1.5. 10 simpele SVG-pictogrammen in `public/pictos/` (caregiver, walk, music, water, sleep, angry,
+  sad, tired, headache, happy), lijst in `src/features/pictos/pictos.ts`, component `Picto`. Teksten voor
+  startscherm en resultaat in `nl.ts`. De galerij (`#galerie`) toont nu de pictogrammen. Tests (59) en lint
+  slagen; de build neemt de SVG's mee voor offline gebruik.
+- Beslissingen: geen nieuwe. De pictogrammen zijn tijdelijk (fase 4 vervangt ze; ids blijven dezelfde als
+  mogelijk, anders migratie). De test leest de SVG's met `import.meta.glob`, zodat `@types/node` niet nodig is.
+- Problemen / verrassingen: geen. Fase 1 is hiermee klaar; Checkpoint 1 is aan Sander.
+- Volgende: **Checkpoint 1** (Sander): galerij bekijken en lang-indrukken-knop proberen op de iPhone. Daarna
+  T-2.1 Invulmodus openen ⚙ Sonnet · medium.
+
 ## 2026-11-22 — Kleurberekening (T-1.4)
 - Waar: Claude Code, zelfde sessie als T-1.2 en T-1.3 (Sonnet 5.5 · medium; tag was low, dus iets zwaarder dan nodig)
 - Gedaan: T-1.4. `determineColor` in `src/domain/determineColor.ts`: rood wint van oranje, anders groen. Aangetikte

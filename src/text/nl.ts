@@ -9,6 +9,19 @@ export const nl = {
     red: 'Rood',
   },
 
+  // Screens for the client (SPEC §5). {name} is filled in by the screen.
+  start: {
+    title: 'Hoi {name}, wat merk je?',
+    titleNoName: 'Hoi, wat merk je?',
+    allGood: 'Het gaat goed',
+    done: 'Klaar',
+  },
+  result: {
+    youAreOn: 'Je bent op {color}.',
+    allGood: 'Het gaat goed!',
+    back: 'Terug',
+  },
+
   // The hold-to-open button for the filling-in mode (D-006)
   longPress: {
     label: 'Invullen voor de begeleider',
