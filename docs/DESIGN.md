@@ -54,3 +54,10 @@ Tekst op gekleurde vlakken moet een contrast van minimaal 4.5:1 halen (WCAG AA).
 ## Designbeslissingen
 
 Grote keuzes staan ook in `DECISIONS.md`. Kleine stijlkeuzes noteer je hier, met datum.
+
+- 2026-11-22 (Sander, na Checkpoint 1): Tegels mogen **schermbreed** zijn (één per rij), en het scherm mag
+  **scrollen**. Op het resultaatscherm (T-3.2) neemt de kleur, het "stoplicht", **nagenoeg het hele scherm** in.
+  Het woord en het symbool blijven erbij (regel 6). Past bij regel 5 (hooguit 2 per rij). Bij T-3.1 en T-3.2 de
+  breedte per scherm kiezen; de `Tile` krijgt dan een schermbrede variant. Heeft invloed op Q-001.
+- 2026-11-22 (Sander): De stijl van de pictogrammen is losse, onregelmatige potloodlijn met een beetje arcering
+  (zoals zijn voorbeeld met kladdetekeningen). Niet te druk of te gedetailleerd. Uitwerken in T-4.1.
