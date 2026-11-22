@@ -2,6 +2,13 @@
 export const nl = {
   hello: 'Hallo',
 
+  // The three colours as words (DESIGN.md rule 6: colour is never the only carrier of meaning)
+  colors: {
+    green: 'Groen',
+    orange: 'Oranje',
+    red: 'Rood',
+  },
+
   // Tiles that a new plan starts with (D-008). Stored in the plan, so changing this later
   // only affects new plans.
   defaults: {

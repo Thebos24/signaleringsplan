@@ -1,0 +1,107 @@
+/* Look of the basic components. Colours and sizes come from the design tokens only. */
+.tile,
+.big-button {
+  font: inherit;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition:
+    background var(--size-transition),
+    border-color var(--size-transition);
+}
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .big-button {
+    transition: none;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  min-width: var(--size-tile-min);
+  min-height: var(--size-tile-min);
+  padding: 12px;
+  background: var(--color-paper);
+  border: var(--size-border-width) solid var(--color-ink);
+  border-radius: var(--size-radius);
+  font-size: var(--size-tile-text);
+  text-align: center;
+}
+.tile--green {
+  background: var(--color-green-light);
+}
+.tile--orange {
+  background: var(--color-orange-light);
+}
+.tile--red {
+  background: var(--color-red-light);
+}
+.tile--large {
+  min-height: calc(var(--size-tile-min) * 1.5);
+  width: 100%;
+}
+/* Selected: thicker outline AND a tick, so it is not only a colour change */
+.tile--selected {
+  border-width: calc(var(--size-border-width) * 2);
+  position: relative;
+}
+.tile--selected::after {
+  content: '✓';
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+.tile__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tile__image img,
+.tile__image svg {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.big-button {
+  box-sizing: border-box;
+  min-height: var(--size-button-min-height);
+  padding: 12px 24px;
+  border: var(--size-border-width) solid var(--color-ink);
+  border-radius: var(--size-radius);
+  background: var(--color-paper);
+  font-weight: 600;
+}
+.big-button--quiet {
+  color: var(--color-muted);
+  border-color: var(--color-muted);
+  font-weight: 400;
+}
+.big-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.color-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 20px 8px 12px;
+  border: var(--size-border-width) solid var(--color-ink);
+  border-radius: var(--size-radius);
+  font-size: var(--size-heading);
+  font-weight: 600;
+}
+.color-badge--green {
+  background: var(--color-green-light);
+}
+.color-badge--orange {
+  background: var(--color-orange-light);
+}
+.color-badge--red {
+  background: var(--color-red-light);
+}

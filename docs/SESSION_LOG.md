@@ -15,6 +15,16 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — Design tokens en basiscomponenten (T-1.2)
+- Waar: Claude Code (Sonnet 5.5 · medium; past bij de tag: ja)
+- Gedaan: T-1.2. Tokens in `src/design/tokens.ts` (+ CSS-variabelen), contrastfunctie met tests, componenten
+  `Tile`, `BigButton`, `ColorBadge`, `ColorSymbol`, woorden voor de kleuren in `nl.ts`. Tijdelijke galerij op
+  `#galerie`. 41 tests en lint slagen; galerij bekeken op 390×844.
+- Beslissingen: D-024 (nieuw).
+- Problemen / verrassingen: `muted` haalde 4,5:1 niet en is donkerder gemaakt. Zuivere kleuren zijn te licht voor
+  vormen zonder rand, dus de vormen hebben een donkere rand. Nog niet op de iPhone bekeken (hoort bij Checkpoint 1).
+- Volgende: T-1.3 LongPressButton ⚙ Sonnet · medium. Sander hoeft niets te doen.
+
 ## 2026-11-22 — Datamodel en opslaglaag (T-1.1)
 - Waar: Claude Code (Opus 5.5 · high; past bij de tag: ja)
 - Gedaan: T-1.1. Datamodel in `src/domain/plan.ts`, Dexie-database `signaleringsplan` met schemaversie 1 in

@@ -1,0 +1,15 @@
+/* Base look. Only uses the tokens (see tokens.ts). */
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: var(--size-tile-text);
+}
+h1,
+h2 {
+  font-size: var(--size-heading);
+}

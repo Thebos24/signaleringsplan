@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 1 (Fundament).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). T-1.1 is af. Volgende: T-1.2.
+**Huidige fase: 1 (Fundament).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). T-1.1 en T-1.2 zijn af. Volgende: T-1.3.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -40,8 +40,8 @@ Doel: de onderdelen waar alles op rust. Nog niets moois voor de cliënt.
 - [x] T-1.1 (C) Datamodel en opslaglaag (SPEC §7): Dexie-database met schemaversie 1, functies voor plan en tegels
       (toevoegen, wijzigen, verwijderen, volgorde), foto's als Blob, migratie-opzet, tests. Nieuw plan krijgt
       standaard de rode actie "Ik ga naar mijn begeleider" (D-008). ⚙ Opus · high — 2026-11-22 (D-023)
-- [ ] T-1.2 (C) Design tokens (DESIGN.md) als TS + CSS-variabelen, contrastcheck, en basiscomponenten: `Tile`,
-      `BigButton`, `ColorBadge` (kleur + woord + symbool). ⚙ Sonnet · medium
+- [x] T-1.2 (C) Design tokens (DESIGN.md) als TS + CSS-variabelen, contrastcheck, en basiscomponenten: `Tile`,
+      `BigButton`, `ColorBadge` (kleur + woord + symbool). ⚙ Sonnet · medium — 2026-11-22 (D-024)
 - [ ] T-1.3 (C) `LongPressButton`: 3 seconden ingedrukt houden met een ring die volloopt, werkt met touch en muis,
       annuleert bij loslaten of wegschuiven, toegankelijk label (D-006). Tests. ⚙ Sonnet · medium
 - [ ] T-1.4 (C) Kleurberekening als pure functie in `src/domain/` (D-007) met tests voor alle gevallen. ⚙ Sonnet · low

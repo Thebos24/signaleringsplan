@@ -237,3 +237,20 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Gevolgen: de app gebruikt de opslag nog niet; dat komt met de schermen in fase 2 en 3. De proef (D-022) blijft
   voorlopig staan voor T-0.7 (Android) en om te zien of gegevens na weken nog staan (R-001).
 - Herzien als: Q-001 of Q-004 iets vraagt wat het model niet kan, of vóór Checkpoint 3 bij een schemawijziging.
+
+### D-024 — Design tokens in TypeScript, omgezet naar CSS-variabelen (T-1.2)
+- Datum: 2026-11-22 · Status: Besloten · Besloten door: Claude
+- Besluit: Kleuren en maten staan alleen in `src/design/tokens.ts`. `applyTokens()` zet ze bij het starten van de
+  app om naar CSS-variabelen op de pagina (`--color-green-light`, `--size-tile-min`, …). Componenten (`Tile`,
+  `BigButton`, `ColorBadge`, `ColorSymbol` in `src/components/`) gebruiken alleen die variabelen. Een zachte
+  kleur als vlak, donkere tekst (`ink`), en de vormen (rondje met vinkje, driehoek, achthoek) met een donkere rand.
+  Een aangetikte signaaltegel krijgt een dikkere rand én een vinkje (kleur nooit alleen, DESIGN.md regel 6).
+  Contrast staat in `src/domain/contrast.ts` met tests. `muted` is donkerder gemaakt: `#8A857C` → `#6B665E`.
+- Waarom: Eén bron kan niet uit elkaar lopen; een los CSS-bestand naast het TypeScript-bestand wel. De zuivere
+  kleuren (vooral oranje, 2,2:1 op licht) zijn te licht voor vormen zonder rand, dus de rand is `ink`.
+  `#8A857C` haalde 3,5:1 op papier, terwijl tekst 4,5:1 moet halen.
+- Afgewezen: Handgeschreven `tokens.css` naast `tokens.ts` (dubbel onderhoud). Een CSS-in-JS-pakket (extra
+  dependency, D-019). Witte tekst op de zuivere kleuren (3,4:1 of lager).
+- Gevolgen: Tijdelijke galerij op `#galerie` (`src/features/gallery/`) voor Checkpoint 1, met smileys in plaats van
+  pictogrammen (T-1.5). De galerij verdwijnt zodra de echte schermen er zijn.
+- Herzien als: Checkpoint 1 laat zien dat iets niet goed leesbaar of aanraakbaar is.
