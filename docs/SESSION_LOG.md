@@ -15,6 +15,16 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — Projectopzet en GitHub-repo (T-0.2, T-0.3)
+- Waar: Claude Code (start op Opus, daarna gewisseld naar Sonnet 5.5 · medium; past bij de tag: ja)
+- Gedaan: T-0.3 projectopzet (Vite, React, TypeScript, Vitest, ESLint, Prettier, mappen, Hallo-scherm,
+  `.claude/launch.json`, commando's in CLAUDE.md). T-0.2: GitHub-repo `Thebos24/signaleringsplan` door Claude
+  aangemaakt en gepusht. Lint, test en build slagen.
+- Beslissingen: D-021 (versies en opzet).
+- Problemen / verrassingen: De repo staat onder `Thebos24` (kleine b), niet `TheBos24`; GitHub maakt geen verschil.
+  De dev-server werkt alleen op `/signaleringsplan/` (door de Vite `base`).
+- Volgende: T-0.4 PWA-proef op de iPhone ⚙ Opus · medium. Sander wisselt eerst met `/model`.
+
 ## 2026-11-22 — Idee uitgewerkt en dossier opgezet (T-0.1)
 - Waar: claude.ai
 - Gedaan: T-0.1. Idee besproken en kritische vragen beantwoord. Spec, design, beslissingen, takenlijst, backlog,
