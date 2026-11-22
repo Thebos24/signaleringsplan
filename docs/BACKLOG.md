@@ -16,3 +16,5 @@ Bouw deze nooit zonder dat Sander erom vraagt. Gaat een idee naar een fase? Zet 
 | B-009 | Opvolgvraag "Gaat het nu beter?" | Sander: zo simpel mogelijk (D-009) | |
 | B-010 | Versie in de App Store / Google Play | Web-app is genoeg en gratis (D-001) | Kan later met Capacitor rond dezelfde code |
 | B-011 | Eigen domeinnaam | Niet nodig om te testen | Q-006 |
+| B-012 | Foto omzetten naar een echte getekende illustratie (zoals een AI-tekening) in plaats van een potloodfilter | Vraagt een AI-dienst op internet; dat botst met D-002 (alles op de telefoon). Filter eerst proberen (T-2.5) | Alleen als het filter tegenvalt én Sander afziet van D-002 voor foto's, of als er een model op de telefoon draait |
+
