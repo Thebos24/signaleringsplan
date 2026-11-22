@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Node / Vite
+node_modules/
+dist/
+dev-dist/
+coverage/
+*.log
+
+# Editors
+.vscode/
+.idea/
+
+# Secrets — never commit (CLAUDE.md → Git)
+.env
+.env.*
+.claude/settings.local.json
