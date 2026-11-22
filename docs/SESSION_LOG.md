@@ -15,6 +15,18 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — Datamodel en opslaglaag (T-1.1)
+- Waar: Claude Code (Opus 5.5 · high; past bij de tag: ja)
+- Gedaan: T-1.1. Datamodel in `src/domain/plan.ts`, Dexie-database `signaleringsplan` met schemaversie 1 in
+  `src/storage/db.ts`, functies voor plan, tegels (toevoegen, wijzigen, verwijderen, volgorde) en foto's in
+  `src/storage/planStore.ts`. Nieuw plan krijgt de rode actie "Ik ga naar mijn begeleider". SPEC §7 bijgewerkt.
+  29 tests en lint slagen, build en publicatie naar GitHub Pages gelukt.
+- Beslissingen: D-023 (nieuw). D-019 aangevuld: `fake-indexeddb` alleen voor tests, goedgekeurd door Sander.
+- Problemen / verrassingen: jsdom heeft geen IndexedDB, dus de opslagtests draaien in Node met `fake-indexeddb`.
+  `crypto.randomUUID` werkt niet via het netwerkadres (geen https), daarom gewone volgnummers als id.
+  De app gebruikt de opslag nog niet; het proefscherm blijft staan voor T-0.7 en R-001.
+- Volgende: T-1.2 Design tokens en basiscomponenten ⚙ Sonnet · medium. Sander kiest Sonnet · medium voor de nieuwe sessie.
+
 ## 2026-11-22 — PWA-proef online, Checkpoint 0 gehaald (T-0.4, T-0.5, T-0.6)
 - Waar: Claude Code (Opus 5.5; past bij de tag van T-0.4: ja. T-0.6 had Haiku · low, maar was zo klein dat het hier meeging)
 - Gedaan: T-0.4. `vite-plugin-pwa` en `dexie` geïnstalleerd, manifest en tijdelijk stoplicht-icoon, service
