@@ -22,6 +22,22 @@ export const nl = {
     back: 'Terug',
   },
 
+  loading: 'Even wachten…',
+  loadFailed: 'Er ging iets mis met het openen van je plan.',
+
+  // Filling-in mode for the supervisor (SPEC §6). Ordinary language is fine here (DESIGN.md).
+  fill: {
+    welcomeTitle: 'Welkom',
+    welcomeText:
+      'Met deze app ziet de cliënt wat hij merkt en wat hij dan kan doen: groen, oranje of rood. Alles blijft op deze telefoon.',
+    welcomeFillTogether: 'Vul dit plan samen in.',
+    nameLabel: 'Voornaam van de cliënt (mag leeg)',
+    next: 'Verder',
+    title: 'Plan invullen',
+    editorSoon: 'Hier komt het invullen van signalen en acties.',
+    close: 'Klaar',
+  },
+
   // The hold-to-open button for the filling-in mode (D-006)
   longPress: {
     label: 'Invullen voor de begeleider',

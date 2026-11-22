@@ -1,0 +1,14 @@
+.start {
+  box-sizing: border-box;
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: max(var(--size-gap), env(safe-area-inset-top)) var(--size-gap) var(--size-gap);
+}
+/* The quiet filling-in button sits top right (SPEC §6.1) */
+.start__top {
+  display: flex;
+  justify-content: flex-end;
+  /* room for the hint under the button */
+  margin-bottom: calc(var(--size-gap) * 2);
+}

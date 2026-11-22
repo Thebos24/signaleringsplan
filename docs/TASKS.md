@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 1 (Fundament).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Alle taken van fase 1 zijn af (T-1.1 t/m T-1.5). Volgende: Checkpoint 1 (Sander).
+**Huidige fase: 1 (Fundament).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af (T-1.1 t/m T-1.5), Checkpoint 1 loopt (Sander). T-2.1 is af. Volgende: T-2.2.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -54,7 +54,7 @@ Doel: de onderdelen waar alles op rust. Nog niets moois voor de cliënt.
 
 Doel: een begeleider kan samen met de cliënt een compleet plan invullen.
 
-- [ ] T-2.1 (C) Invulmodus openen via de lang-indrukken-knop, welkomstscherm bij een leeg plan, voornaam cliënt (SPEC §6.1–6.2). ⚙ Sonnet · medium
+- [x] T-2.1 (C) Invulmodus openen via de lang-indrukken-knop, welkomstscherm bij een leeg plan, voornaam cliënt (SPEC §6.1–6.2). ⚙ Sonnet · medium — 2026-11-22 (D-026)
 - [ ] T-2.2 (C) Editor per kleur: signalen (oranje, rood) en acties (alle kleuren) toevoegen, bewerken,
       verwijderen met bevestiging, volgorde wijzigen, maximaal aantal (Q-004). ⚙ Sonnet · high
 - [ ] T-2.3 (C) Pictogramkiezer: raster met zoekveld (zoekt op Nederlandse trefwoorden per pictogram). ⚙ Sonnet · medium

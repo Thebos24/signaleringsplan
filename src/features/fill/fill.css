@@ -1,0 +1,25 @@
+/* Filling-in mode: calm and plain, smaller than the client screens (DESIGN.md) */
+.fill {
+  box-sizing: border-box;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: max(var(--size-gap), env(safe-area-inset-top)) var(--size-gap) var(--size-gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-gap);
+}
+.fill__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fill__field input {
+  font: inherit;
+  min-height: var(--size-button-min-height);
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border: var(--size-border-width) solid var(--color-ink);
+  border-radius: var(--size-radius);
+  background: var(--color-paper);
+  color: var(--color-ink);
+}

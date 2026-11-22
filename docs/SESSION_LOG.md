@@ -15,6 +15,18 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — Invulmodus openen en welkomstscherm (T-2.1)
+- Waar: Claude Code, zelfde sessie als T-1.2 t/m T-1.5 (Sonnet 5.5 · medium; past bij de tag: ja)
+- Gedaan: T-2.1. De app opent nu op het echte startscherm ("Hoi [naam], wat merk je?", nog zonder tegels) met de
+  lang-indrukken-knop rechtsboven. Die opent de invulmodus: bij een plan zonder signalen eerst het welkomstscherm
+  met de optionele voornaam, daarna een tijdelijk scherm "Plan invullen" met "Klaar". De naam wordt opgeslagen en
+  blijft na herladen staan (gecontroleerd in de preview met de echte opslag). 67 tests en lint slagen.
+- Beslissingen: D-026 (nieuw). Proef en galerij zijn bereikbaar via `#proef` en `#galerie`.
+- Problemen / verrassingen: Sander vond de galerij (Checkpoint 1) lelijk en dacht dat het de app was; uitgelegd dat
+  het een testpagina is. Zijn wensen (schermbrede tegels, groot stoplicht, potloodstijl) staan in DESIGN.md.
+- Volgende: T-2.2 Editor per kleur ⚙ Sonnet · high. Dat is zwaarder dan deze sessie: Sander start daarvoor
+  een nieuwe sessie met `/model` op Sonnet · high. Checkpoint 1 op de iPhone staat nog open.
+
 ## 2026-11-22 — Teksten en placeholder-pictogrammen (T-1.5)
 - Waar: Claude Code, zelfde sessie als T-1.2 t/m T-1.4 (Sonnet 5.5 · medium; tag was low, dus iets zwaarder dan nodig)
 - Gedaan: T-1.5. 10 simpele SVG-pictogrammen in `public/pictos/` (caregiver, walk, music, water, sleep, angry,

@@ -271,3 +271,19 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   ongeluk openen). Een pincode (D-006).
 - Gevolgen: In de galerij (`#galerie`) staat een proefknop. Nog niet op de iPhone geprobeerd (Checkpoint 1).
 - Herzien als: Checkpoint 1 of de test met cliënten laat zien dat de knop per ongeluk opent of niet opent.
+
+### D-026 — De app opent op het echte startscherm; "leeg plan" betekent geen signalen (T-2.1)
+- Datum: 2026-11-22 · Status: Besloten · Besloten door: Claude
+- Besluit: De app opent nu op het echte (nog kale) startscherm, met het plan uit de opslag (`usePlan`, maakt het
+  plan bij de eerste start en vraagt dan `persist()` aan, R-001). De lang-indrukken-knop (D-025) staat rechtsboven en
+  opent `FillMode`. Een plan is "leeg" zolang er **geen enkel signaal** in staat (`isPlanEmpty`, `src/domain/`).
+  Dan toont de invulmodus eerst het welkomstscherm (SPEC §6.2) met de optionele voornaam; "Verder" slaat de naam
+  op. De proef en de galerij blijven bereikbaar via `#proef` en `#galerie`.
+- Waarom: Zonder signalen kan de app alleen groen tonen, dus daar hoort de uitleg bij. Het afleiden uit de tegels
+  vraagt geen extra veld en dus geen schema-migratie (R-010). De standaard rode actie bestaat altijd, dus "geen
+  tegels" zou nooit waar zijn.
+- Afgewezen: Een opgeslagen vlag "welkom gezien" (nieuw veld, migratie nodig). "Leeg" = geen enkele tegel (de rode
+  standaardactie staat er altijd). Een router-pakket voor de drie schermen (D-019; een toestand in `PlanApp` volstaat).
+- Gevolgen: Het welkomstscherm verschijnt opnieuw als iemand alle signalen verwijdert. Dat is bedoeld. Het
+  startscherm en `FillMode` zijn tijdelijk kaal: de signaaltegels komen in T-3.1, de editor in T-2.2.
+- Herzien als: T-2.2 of Checkpoint 2 laat zien dat het welkomstscherm op een verkeerd moment verschijnt.
