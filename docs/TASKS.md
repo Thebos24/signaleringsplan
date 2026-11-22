@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 1 (Fundament).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). T-1.1, T-1.2 en T-1.3 zijn af. Volgende: T-1.4.
+**Huidige fase: 1 (Fundament).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). T-1.1 t/m T-1.4 zijn af. Volgende: T-1.5.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -44,7 +44,7 @@ Doel: de onderdelen waar alles op rust. Nog niets moois voor de cliënt.
       `BigButton`, `ColorBadge` (kleur + woord + symbool). ⚙ Sonnet · medium — 2026-11-22 (D-024)
 - [x] T-1.3 (C) `LongPressButton`: 3 seconden ingedrukt houden met een ring die volloopt, werkt met touch en muis,
       annuleert bij loslaten of wegschuiven, toegankelijk label (D-006). Tests. ⚙ Sonnet · medium — 2026-11-22 (D-025)
-- [ ] T-1.4 (C) Kleurberekening als pure functie in `src/domain/` (D-007) met tests voor alle gevallen. ⚙ Sonnet · low
+- [x] T-1.4 (C) Kleurberekening als pure functie in `src/domain/` (D-007) met tests voor alle gevallen. ⚙ Sonnet · low — 2026-11-22
 - [ ] T-1.5 (C) Teksten op één plek (`src/text/nl.ts`) en tijdelijke placeholder-pictogrammen (10 simpele SVG's)
       zodat fase 2 en 3 kunnen bouwen. Eén pictogram heet `caregiver` (de standaard rode actie, D-023). ⚙ Sonnet · low
 

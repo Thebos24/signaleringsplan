@@ -15,6 +15,14 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — Kleurberekening (T-1.4)
+- Waar: Claude Code, zelfde sessie als T-1.2 en T-1.3 (Sonnet 5.5 · medium; tag was low, dus iets zwaarder dan nodig)
+- Gedaan: T-1.4. `determineColor` in `src/domain/determineColor.ts`: rood wint van oranje, anders groen. Aangetikte
+  groene signalen en acties tellen niet mee. 7 tests (55 totaal) en lint slagen.
+- Beslissingen: geen nieuwe (volgt D-007 en SPEC §5.2).
+- Problemen / verrassingen: geen.
+- Volgende: T-1.5 Teksten en 10 placeholder-pictogrammen ⚙ Sonnet · low. Sander hoeft niets te doen.
+
 ## 2026-11-22 — Lang-indrukken-knop (T-1.3)
 - Waar: Claude Code, zelfde sessie als T-1.2 (Sonnet 5.5 · medium; past bij de tag: ja)
 - Gedaan: T-1.3. `LongPressButton` met ring die in 3 seconden volloopt, annuleert bij loslaten of wegschuiven,
