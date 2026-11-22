@@ -11,7 +11,6 @@ met het antwoord en de beslissing (D-0xx).
 | Q-004 | Maximaal aantal signalen en acties per kleur? | Sander | T-2.2 | 6 signalen en 6 acties per kleur |
 | Q-005 | Komt er op het rode scherm een vaste regel over noodsituaties ("Gevaar? Bel 112")? | Sander | T-3.3 | Ja, klein onderaan, met belknop. Het is een hulpmiddel, geen crisisdienst (R-007) |
 | Q-006 | Wordt het later een eigen domein in plaats van thebos24.github.io? | Sander | Niets in v1 | Pas als het gedeeld gaat worden (B-011) |
-| Q-007 | Klopt één plan per telefoon (D-020)? | Sander | T-1.1 | Ja |
 | Q-008 | Mogen we bij Checkpoint 2 al een begeleider laten meekijken via je partner? | Sander | Niets | Hoe eerder echte feedback, hoe beter |
 
 ## Beantwoord
@@ -19,3 +18,4 @@ met het antwoord en de beslissing (D-0xx).
 | ID | Vraag | Antwoord | Beslissing |
 | --- | --- | --- | --- |
 | — | Vragen uit het eerste gesprek (generiek of persoonlijk, rood, kleur bepalen, privacy, opvolgvraag, platform, betaalmodel, export, plaatjes) | Zie D-001 t/m D-017 | D-001–D-017 |
+| Q-007 | Klopt één plan per telefoon (D-020)? | Ja, één plan (Sander, 2026-11-22) | D-020 |

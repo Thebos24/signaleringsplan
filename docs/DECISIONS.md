@@ -172,7 +172,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Waarom: Elke dependency is onderhoud en een mogelijk privacy- of beveiligingsrisico.
 
 ### D-020 — Eén plan per telefoon
-- Datum: 2026-11-22 · Status: Voorstel (wacht op Sander, Q-007) · Besloten door: Claude
+- Datum: 2026-11-22 · Status: Besloten (Sander, 2026-11-22, Q-007) · Besloten door: Claude, bevestigd door Sander
 - Besluit: De app bewaart één plan. Geen profielen of meerdere cliënten.
 - Waarom: Het is de telefoon van de cliënt. Meerdere plannen maken het startscherm ingewikkelder.
 - Herzien als: er gedeelde tablets in een woonvoorziening gebruikt worden (B-003).

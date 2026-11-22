@@ -26,7 +26,7 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
   In de desktop-preview zegt `persist()` "nee"; dat is normaal in Chrome zonder installatie. Op de iPhone kijken.
 - Daarna in dezelfde sessie: Sander deed T-0.5 op de iPhone: "beginscherm: ja", foto rechtop, alles bleef staan.
   T-0.6 vastgelegd (D-013 besloten, R-001/R-003/R-009 bijgewerkt). Checkpoint 0 gehaald. T-0.7 (Android-proef) toegevoegd.
-- Volgende: T-1.1 Datamodel en opslaglaag ⚙ Opus · high. Q-007 (één plan per telefoon) moet daarvoor beantwoord zijn.
+- Volgende: T-1.1 Datamodel en opslaglaag ⚙ Opus · high. Q-007 is beantwoord: één plan per telefoon (D-020 besloten).
 
 ## 2026-11-22 — Projectopzet en GitHub-repo (T-0.2, T-0.3)
 - Waar: Claude Code (start op Opus, daarna gewisseld naar Sonnet 5.5 · medium; past bij de tag: ja)
