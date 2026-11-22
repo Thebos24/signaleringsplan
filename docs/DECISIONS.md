@@ -254,3 +254,20 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Gevolgen: Tijdelijke galerij op `#galerie` (`src/features/gallery/`) voor Checkpoint 1, met smileys in plaats van
   pictogrammen (T-1.5). De galerij verdwijnt zodra de echte schermen er zijn.
 - Herzien als: Checkpoint 1 laat zien dat iets niet goed leesbaar of aanraakbaar is.
+
+### D-025 — Opbouw van de lang-indrukken-knop (T-1.3)
+- Datum: 2026-11-22 · Status: Besloten · Besloten door: Claude
+- Besluit: `LongPressButton` (`src/components/`) gebruikt pointer-events (touch en muis in één) en een timer van
+  3 seconden (D-006). De ring is een SVG-cirkel die met een CSS-overgang volloopt. Loslaten, wegschuiven of een
+  onderbroken aanraking annuleert; een te korte druk toont kort "Houd ingedrukt om te wijzigen" (SPEC §6.1).
+  Bij het begin van een aanraking laten we de automatische "pointer capture" los, anders merkt de browser
+  wegschuiven op een telefoon niet. Selecteren, loep en het iOS-menu bij lang indrukken staan uit. Het
+  toegankelijke label is "Invullen voor de begeleider". Met het toetsenbord werkt Enter of spatie 3 seconden
+  vasthouden.
+- Waarom: Eén route voor touch en muis is simpeler dan twee. Het toetsenbord en schermlezers moeten de
+  invulmodus ook kunnen openen. De ring toont voortgang, geen versiering, dus hij beweegt ook bij
+  `prefers-reduced-motion`.
+- Afgewezen: Aparte touch- en muisevents (dubbele code). Een timer die doortelt na wegschuiven (cliënt kan per
+  ongeluk openen). Een pincode (D-006).
+- Gevolgen: In de galerij (`#galerie`) staat een proefknop. Nog niet op de iPhone geprobeerd (Checkpoint 1).
+- Herzien als: Checkpoint 1 of de test met cliënten laat zien dat de knop per ongeluk opent of niet opent.

@@ -15,6 +15,16 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — Lang-indrukken-knop (T-1.3)
+- Waar: Claude Code, zelfde sessie als T-1.2 (Sonnet 5.5 · medium; past bij de tag: ja)
+- Gedaan: T-1.3. `LongPressButton` met ring die in 3 seconden volloopt, annuleert bij loslaten of wegschuiven,
+  hint bij kort tikken, toetsenbord en label. 7 tests (48 totaal) en lint slagen. In de preview met
+  pointer-events gecontroleerd (ring halverwege na 1,5 s, opent na 3 s). Proefknop in de galerij (`#galerie`).
+- Beslissingen: D-025 (nieuw).
+- Problemen / verrassingen: niet op de iPhone geprobeerd; dat hoort bij Checkpoint 1. Let daar op: opent hij niet
+  per ongeluk, en komt er geen loep of menu bij lang drukken?
+- Volgende: T-1.4 Kleurberekening ⚙ Sonnet · low. Sander hoeft niets te doen.
+
 ## 2026-11-22 — Design tokens en basiscomponenten (T-1.2)
 - Waar: Claude Code (Sonnet 5.5 · medium; past bij de tag: ja)
 - Gedaan: T-1.2. Tokens in `src/design/tokens.ts` (+ CSS-variabelen), contrastfunctie met tests, componenten

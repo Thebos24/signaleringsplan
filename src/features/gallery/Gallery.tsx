@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { BigButton } from '../../components/BigButton'
 import { ColorBadge } from '../../components/ColorBadge'
+import { LongPressButton } from '../../components/LongPressButton'
 import { Tile } from '../../components/Tile'
 
 // TEMPORARY (T-1.2): shows the basic components for Checkpoint 1. Open the app with #galerie.
@@ -7,9 +9,11 @@ import { Tile } from '../../components/Tile'
 const placeholder = <span style={{ fontSize: 56 }}>🙂</span>
 
 export function Gallery() {
+  const [open, setOpen] = useState(false)
   return (
     <main style={{ maxWidth: 480, margin: '0 auto', padding: 16 }}>
       <h1>Galerij</h1>
+      {open && <p>Invulmodus open (proef)</p>}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'flex-start' }}>
         <ColorBadge color="green" />
         <ColorBadge color="orange" />
@@ -25,6 +29,9 @@ export function Gallery() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 24 }}>
         <BigButton>Klaar</BigButton>
         <BigButton variant="quiet">Invullen</BigButton>
+        <div style={{ alignSelf: 'flex-end' }}>
+          <LongPressButton onComplete={() => setOpen(true)}>✎</LongPressButton>
+        </div>
       </div>
     </main>
   )

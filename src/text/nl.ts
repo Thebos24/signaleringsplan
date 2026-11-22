@@ -9,6 +9,12 @@ export const nl = {
     red: 'Rood',
   },
 
+  // The hold-to-open button for the filling-in mode (D-006)
+  longPress: {
+    label: 'Invullen voor de begeleider',
+    hint: 'Houd ingedrukt om te wijzigen',
+  },
+
   // Tiles that a new plan starts with (D-008). Stored in the plan, so changing this later
   // only affects new plans.
   defaults: {

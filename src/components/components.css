@@ -105,3 +105,61 @@
 .color-badge--red {
   background: var(--color-red-light);
 }
+
+/* Hold-to-open button (D-006). The ring fills in --long-press-ms while pressed. */
+.long-press {
+  position: relative;
+  display: inline-block;
+}
+.long-press__button {
+  position: relative;
+  box-sizing: border-box;
+  width: var(--size-button-min-height);
+  height: var(--size-button-min-height);
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  font: inherit;
+  cursor: pointer;
+  /* No text selection, magnifier or iOS callout while holding */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: none;
+}
+.long-press__ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  fill: none;
+  stroke-width: 6;
+}
+.long-press__track {
+  stroke: var(--color-muted);
+}
+.long-press__fill {
+  stroke: var(--color-ink);
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+/* The ring is allowed to move even with reduced motion: it shows progress, not decoration */
+.long-press__button--pressing .long-press__fill {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset var(--long-press-ms) linear;
+}
+.long-press__content {
+  position: relative;
+}
+.long-press__hint {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  max-width: 70vw;
+  font-size: var(--size-tile-text);
+  color: var(--color-ink);
+}
