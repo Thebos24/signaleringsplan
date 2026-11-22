@@ -184,3 +184,24 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   zodat er alleen bestanden in staan die we nodig hebben.
 - Afgewezen: `npm create vite` (genereert voorbeeldcode en extra tsconfig-bestanden die we weer moeten weggooien).
 - Herzien als: een versie problemen geeft op de iPhone.
+
+### D-022 — Opzet van de PWA-proef en het publiceren (T-0.4)
+- Datum: 2026-11-22 · Status: Besloten · Besloten door: Claude
+- Besluit:
+  - `vite-plugin-pwa` 2 met `registerType: 'autoUpdate'`: de service worker bewaart de hele build, zodat de app
+    offline werkt. Een nieuwe versie wordt vanzelf gebruikt.
+  - Tijdelijk icoon: een simpel stoplicht als PNG (192, 512 en 180 voor de iPhone), gemaakt met een klein
+    Node-script zonder extra pakketten. Het echte icoon komt in T-5.4.
+  - De proef gebruikt een **eigen database** (`signaleringsplan-proef`) met Dexie, los van de echte database uit
+    T-1.1. Zo begint het echte datamodel schoon. De proefcode is gemarkeerd als `TEMPORARY` en gaat weg na Checkpoint 0.
+  - De proef verkleint de foto al tot max. 1024 px (JPEG) met `createImageBitmap` + canvas. Het origineel wordt niet bewaard.
+  - Publiceren: GitHub Actions (`.github/workflows/deploy.yml`) draait lint, tests en build en zet `dist/` op
+    GitHub Pages. Pages staat op "bron: GitHub Actions" (door Claude aangezet via `gh`). Node-versie in `.nvmrc` (24).
+- Waarom: `autoUpdate` is het simpelst en er staan nog geen echte plannen op telefoons. `createImageBitmap` zet de
+  foto volgens de EXIF-gegevens rechtop (R-009). Lint en tests in de workflow voorkomen dat een kapotte versie online komt.
+- Afgewezen: `registerType: 'prompt'` (een melding "Nieuwe versie" is een extra keuze voor de cliënt; heroverwegen in
+  T-5.5). Icoon tekenen met `@vite-pwa/assets-generator` (extra dependency voor een tijdelijk icoon). De proef in de
+  echte database (zou T-1.1 met rommel laten beginnen). Ruwe IndexedDB in de proef (dan testen we niet wat we straks gebruiken).
+- Gevolgen: `npm audit` meldt 4 "moderate" kwetsbaarheden in `glob`/`minimatch` binnen `workbox-build`. Die draaien
+  alleen tijdens het bouwen op de Mac en GitHub, niet in de app op de telefoon (R-012).
+- Herzien als: T-5.5 (updatebeleid) of als de proef op de iPhone iets anders laat zien.

@@ -15,6 +15,17 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — PWA-proef online (T-0.4)
+- Waar: Claude Code (Opus 5.5; past bij de tag: ja)
+- Gedaan: T-0.4. `vite-plugin-pwa` en `dexie` geïnstalleerd, manifest en tijdelijk stoplicht-icoon, service
+  worker voor offline. Proefscherm: tekst en foto bewaren in IndexedDB (eigen proefdatabase), foto verkleind tot
+  1024 px, antwoord van `persist()` en "vanaf beginscherm" zichtbaar. GitHub Actions publiceert naar
+  https://thebos24.github.io/signaleringsplan/. In de preview gecontroleerd: tekst en foto blijven staan na herladen.
+- Beslissingen: D-022 (nieuw).
+- Problemen / verrassingen: `npm audit` meldt 4 "moderate" kwetsbaarheden in bouwgereedschap (R-012, niet op de telefoon).
+  In de desktop-preview zegt `persist()` "nee"; dat is normaal in Chrome zonder installatie. Op de iPhone kijken.
+- Volgende: T-0.5 (Sander test op de iPhone, stappen in de samenvatting), daarna T-0.6 ⚙ Haiku · low.
+
 ## 2026-11-22 — Projectopzet en GitHub-repo (T-0.2, T-0.3)
 - Waar: Claude Code (start op Opus, daarna gewisseld naar Sonnet 5.5 · medium; past bij de tag: ja)
 - Gedaan: T-0.3 projectopzet (Vite, React, TypeScript, Vitest, ESLint, Prettier, mappen, Hallo-scherm,

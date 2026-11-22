@@ -1,0 +1,35 @@
+/* TEMPORARY (T-0.4): layout only, no colours (real design tokens come in T-1.2). */
+.proof {
+  font-family: system-ui, sans-serif;
+  font-size: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: max(16px, env(safe-area-inset-top)) 16px 32px;
+}
+.proof section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.proof textarea,
+.proof button,
+.proof-photo-button {
+  font: inherit;
+  min-height: 56px;
+  padding: 8px 12px;
+}
+.proof-photo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 8px;
+}
+.proof-photo-button input {
+  display: none;
+}
+.proof img {
+  width: 100%;
+  border-radius: 8px;
+}

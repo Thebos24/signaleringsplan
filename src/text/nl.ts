@@ -1,4 +1,27 @@
 // All user-facing text lives here (D-015). Simple Dutch, short sentences.
 export const nl = {
   hello: 'Hallo',
+
+  // TEMPORARY proof screen (T-0.4). Remove after Checkpoint 0.
+  proof: {
+    title: 'Proef: blijft alles staan?',
+    noteLabel: 'Typ iets',
+    saveNote: 'Bewaar tekst',
+    noteSaved: 'Opgeslagen',
+    photoLabel: 'Foto',
+    takePhoto: 'Maak of kies een foto',
+    noPhoto: 'Nog geen foto',
+    photoAlt: 'De opgeslagen foto',
+    savedAt: 'Bewaard op',
+    statusTitle: 'Techniek',
+    persist: 'Opslag blijft bewaard',
+    persistGranted: 'ja',
+    persistDenied: 'nee',
+    persistUnsupported: 'weet niet (niet ondersteund)',
+    persistAsking: 'bezig…',
+    standalone: 'Geopend vanaf beginscherm',
+    yes: 'ja',
+    no: 'nee',
+    error: 'Er ging iets mis',
+  },
 }
