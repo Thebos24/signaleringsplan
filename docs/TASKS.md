@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 0 (Voorbereiding).** T-0.1 en T-0.3 zijn af (2026-11-22). Volgende: T-0.2 (Sander, GitHub-repo), daarna T-0.4.
+**Huidige fase: 0 (Voorbereiding).** T-0.1 en T-0.3 zijn af (2026-11-22). Volgende: T-0.4.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -16,7 +16,7 @@ Doel: zeker weten dat we kunnen bouwen, publiceren en op de iPhone kunnen openen
 en dat gegevens daar blijven staan, voordat we functies bouwen.
 
 - [x] T-0.1 (S+C) Idee uitwerken, vragen beantwoorden, spec en dit dossier opzetten — 2026-11-22
-- [ ] T-0.2 (S) `docs/SETUP.md` stap 1–4: Node.js controleren, GitHub-repo aanmaken, Claude Code in deze map openen
+- [x] T-0.2 (S+C) `docs/SETUP.md` stap 1–4: Node.js controleren, GitHub-repo aanmaken, Claude Code in deze map openen — 2026-11-22 (repo door Claude aangemaakt)
 - [x] T-0.3 (C) Projectopzet: Vite + React + TypeScript, ESLint, Prettier, Vitest, mappenstructuur uit CLAUDE.md,
       `git init` met `.gitignore`, een leeg "Hallo"-scherm, `.claude/launch.json` voor de preview.
       Vul "Bouwen en testen" in CLAUDE.md in met de echte commando's. ⚙ Sonnet · medium — 2026-11-22
