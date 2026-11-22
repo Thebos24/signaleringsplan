@@ -25,7 +25,7 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 - Beslissingen: D-027 (nieuw). Q-004 beantwoord door Sander: 6 per lijst.
 - Problemen / verrassingen: De opslagtests voor de editor draaien in jsdom met `fake-indexeddb`; dat werkt, dus
   geen aparte mocks nodig. Het plaatje kiezen is nog een tijdelijk rijtje van de 10 placeholder-pictogrammen.
-  Nog niet op de iPhone bekeken (hoort bij Checkpoint 2).
+  Daarna door Sander op zijn iPhone (vanaf het beginscherm) geprobeerd: de editor werkt.
 - Volgende: T-2.3 Pictogramkiezer met zoekveld ⚙ Sonnet · medium. Sander wisselt met `/model` naar medium voor de
   nieuwe sessie. Checkpoint 1 op de iPhone staat nog open.
 
