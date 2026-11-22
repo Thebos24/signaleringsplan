@@ -312,3 +312,18 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Gevolgen: Een plan zonder signalen toont bij het volgende openen weer het welkomstscherm (D-026). Wie alle signalen
   verwijdert, ziet dat dus; dat is bedoeld. Foto's kunnen nog niet gekozen worden (T-2.4).
 - Herzien als: Checkpoint 2 laat zien dat 6 te weinig of te veel is, of dat pijltjes onhandig zijn.
+
+### D-028 — Pictogramkiezer: zoeken op naam en trefwoorden, zonder extra pakket (T-2.3)
+- Datum: 2026-11-22 · Status: Besloten · Besloten door: Claude
+- Besluit: Boven het plaatjesraster staat een zoekveld. Elk pictogram heeft in `src/text/nl.ts` (`pictoWords`) een
+  Nederlandse naam en trefwoorden. De pure functie `searchPictos` (`src/features/pictos/searchPictos.ts`) toont een
+  plaatje als elk getypt woord het begin is van een woord in de naam of trefwoorden; hoofdletters en accenten tellen
+  niet. Lege zoekopdracht = alle plaatjes. De naam staat verborgen in het plaatje zodat een schermlezer hem voorleest.
+  Enter in het zoekveld bewaart de tegel niet.
+- Waarom: Met 20+ plaatjes in fase 4 is scrollen te veel; zoeken op eigen woorden is voor een begeleider het snelst.
+  Begin-van-woord is genoeg ("wand" vindt "wandelen") en geeft geen rare treffers. Teksten staan op één plek (CLAUDE.md).
+- Afgewezen: Een zoekpakket zoals Fuse.js (D-019: geen pakket voor iets wat in 10 regels kan). Zoeken op een stuk midden
+  in een woord (te veel ruis). Categorieën of tabbladen (meer keuzes en schermen).
+- Gevolgen: Fase 4 (T-4.4) moet voor elk nieuw pictogram naam en trefwoorden toevoegen; een test dwingt dat af.
+- Herzien als: Checkpoint 2 laat zien dat begeleiders vaak niets vinden (dan trefwoorden uitbreiden of tolerantie voor typfouten).
+

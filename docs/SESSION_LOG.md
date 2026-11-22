@@ -15,6 +15,17 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-22 — Pictogramkiezer met zoekveld (T-2.3)
+- Waar: Claude Code (Sonnet 5.5; past bij de tag: ja)
+- Gedaan: T-2.3. In het formulier voor een tegel staat nu een zoekveld boven het plaatjesraster. Je typt een Nederlands
+  woord ("slaap", "boos", "huilen") en het raster laat alleen de passende plaatjes zien. Zonder resultaat staat er
+  "Niets gevonden. Probeer een ander woord." Elk plaatje heeft een naam voor schermlezers. Zoeken negeert hoofdletters
+  en accenten. 84 tests, lint en build slagen; in de preview gecontroleerd dat "slaap" alleen het slaap-plaatje toont.
+- Beslissingen: D-028 (nieuw).
+- Problemen / verrassingen: geen. Checkpoint 1 is door Sander gehaald op de iPhone.
+- Volgende: T-2.4 Foto maken of kiezen ⚙ Opus · medium. Sander wisselt met `/model` naar Opus voor de nieuwe sessie.
+  Zet een verzonnen onderwerp klaar om te fotograferen (geen echte cliëntgegevens).
+
 ## 2026-11-22 — Editor per kleur (T-2.2)
 - Waar: Claude Code (Sonnet 5.5 · high; past bij de tag: ja)
 - Gedaan: T-2.2. In de invulmodus staan nu drie kleurknoppen (Groen, Oranje, Rood) en per kleur de lijsten Signalen

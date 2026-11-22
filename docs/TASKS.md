@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 loopt (Sander). T-2.1 en T-2.2 zijn af. Volgende: T-2.3.
+**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1, T-2.2 en T-2.3 zijn af. Volgende: T-2.4.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -48,7 +48,7 @@ Doel: de onderdelen waar alles op rust. Nog niets moois voor de cliënt.
 - [x] T-1.5 (C) Teksten op één plek (`src/text/nl.ts`) en tijdelijke placeholder-pictogrammen (10 simpele SVG's)
       zodat fase 2 en 3 kunnen bouwen. Eén pictogram heet `caregiver` (de standaard rode actie, D-023). ⚙ Sonnet · low — 2026-11-22
 
-**Checkpoint 1:** Sander ziet in de preview de tegels, knoppen en kleurlabels en probeert de lang-indrukken-knop op zijn iPhone.
+**Checkpoint 1:** Sander ziet in de preview de tegels, knoppen en kleurlabels en probeert de lang-indrukken-knop op zijn iPhone. ✅ Gehaald op 2026-11-22 (iPhone).
 
 ## Fase 2: Invulkant (begeleider)
 
@@ -57,7 +57,7 @@ Doel: een begeleider kan samen met de cliënt een compleet plan invullen.
 - [x] T-2.1 (C) Invulmodus openen via de lang-indrukken-knop, welkomstscherm bij een leeg plan, voornaam cliënt (SPEC §6.1–6.2). ⚙ Sonnet · medium — 2026-11-22 (D-026)
 - [x] T-2.2 (C) Editor per kleur: signalen (oranje, rood) en acties (alle kleuren) toevoegen, bewerken,
       verwijderen met bevestiging, volgorde wijzigen, maximaal aantal (Q-004). ⚙ Sonnet · high — 2026-11-22 (D-027; plaatje kiezen is nog een tijdelijk rijtje, T-2.3)
-- [ ] T-2.3 (C) Pictogramkiezer: raster met zoekveld (zoekt op Nederlandse trefwoorden per pictogram). ⚙ Sonnet · medium
+- [x] T-2.3 (C) Pictogramkiezer: raster met zoekveld (zoekt op Nederlandse trefwoorden per pictogram). ⚙ Sonnet · medium — 2026-11-22 (D-028)
 - [ ] T-2.4 (C) Foto maken of kiezen: vierkant bijsnijden (simpel: verschuiven + zoomen), verkleinen tot 1024 px,
       orientatie goed zetten, opslaan als Blob. ⚙ Opus · medium
 - [ ] T-2.5 (C) Schetsfilter (D-010): canvas-filter van foto naar potloodschets, voorbeeld met "Gebruik" / "Opnieuw".

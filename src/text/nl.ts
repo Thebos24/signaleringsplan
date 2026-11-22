@@ -60,12 +60,29 @@ export const nl = {
     editSignal: 'Signaal wijzigen',
     editAction: 'Actie wijzigen',
     textLabel: 'Wat staat er op de tegel?',
-    // TEMPORARY until the picture chooser (T-2.3)
     pictoLabel: 'Kies een plaatje',
+    pictoSearchLabel: 'Zoek een plaatje',
+    pictoSearchHint: 'Typ bijvoorbeeld: boos',
+    pictoNone: 'Niets gevonden. Probeer een ander woord.',
     save: 'Bewaar',
     cancel: 'Annuleren',
     saveFailed: 'Het opslaan lukte niet. Probeer het nog eens.',
   },
+
+  // Name and search words per pictogram (T-2.3). The name is what a screen reader says; the search
+  // words are what the supervisor can type in the search field. Phase 4 adds the rest of the set.
+  pictoWords: {
+    caregiver: { name: 'Begeleider', keywords: ['hulp', 'persoon', 'mijn begeleider', 'iemand'] },
+    walk: { name: 'Wandelen', keywords: ['lopen', 'buiten', 'wandeling', 'frisse lucht'] },
+    music: { name: 'Muziek', keywords: ['luisteren', 'liedje', 'zingen', 'koptelefoon'] },
+    water: { name: 'Water', keywords: ['drinken', 'dorst', 'glas'] },
+    sleep: { name: 'Slapen', keywords: ['bed', 'slaap', 'nacht', 'rusten', 'slecht slapen'] },
+    angry: { name: 'Boos', keywords: ['kwaad', 'woedend', 'ruzie', 'schreeuwen'] },
+    sad: { name: 'Verdrietig', keywords: ['huilen', 'triest', 'somber', 'alleen'] },
+    tired: { name: 'Moe', keywords: ['vermoeid', 'slaperig', 'uitgeput', 'geen energie'] },
+    headache: { name: 'Hoofdpijn', keywords: ['pijn', 'hoofd', 'ziek', 'druk in mijn hoofd'] },
+    happy: { name: 'Blij', keywords: ['goed', 'vrolijk', 'lachen', 'fijn', 'het gaat goed'] },
+  } as Record<string, { name: string; keywords: string[] }>,
 
   // The hold-to-open button for the filling-in mode (D-006)
   longPress: {

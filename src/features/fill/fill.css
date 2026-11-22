@@ -96,6 +96,25 @@
   padding: 0;
   border: none;
 }
+.fill__picto-search {
+  flex-basis: 100%;
+  min-height: var(--size-button-min-height);
+  padding: 0 12px;
+  font: inherit;
+  border: var(--size-border-width) solid var(--color-ink);
+  border-radius: var(--size-radius);
+}
+.fill__picto-none {
+  flex-basis: 100%;
+  margin: 0;
+}
+.fill__picto-name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
 .fill__pictos legend {
   padding: 0;
   margin-bottom: 8px;

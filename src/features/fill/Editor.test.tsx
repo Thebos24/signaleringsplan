@@ -50,7 +50,7 @@ describe('Editor', () => {
 
     await userEvent.type(screen.getByLabelText('Wat staat er op de tegel?'), '  Ik ben boos ')
     expect(save).toBeDisabled() // still no picture
-    await userEvent.click(screen.getAllByRole('radio')[5])
+    await userEvent.click(screen.getByRole('radio', { name: 'Boos' }))
     await userEvent.click(save)
 
     expect(await screen.findByText('Ik ben boos')).toBeInTheDocument()
