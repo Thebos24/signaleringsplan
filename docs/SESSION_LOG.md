@@ -15,6 +15,22 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Schetsfilter (T-2.5)
+- Waar: Claude Code (Opus 5.5; past bij de tag Opus · medium: ja)
+- Gedaan: T-2.5. Na het bijsnijden wordt een foto een potloodschets (in `ink` op `paper`), getoond met "Gebruik" /
+  "Opnieuw". Eerst drie stijlen gebouwd en via een tijdelijke pagina `#schets` vergeleken; Sander koos **potlood**.
+  Op zijn wens loopt de schets aan de randen zacht over in wit papier, zodat het plaatje in het midden staat. De
+  andere stijlen en `#schets` zijn weer weg. Contrast wordt automatisch gerekt, zodat donkere foto's even duidelijk
+  worden (R-004). 111 tests en lint slagen. Getest in de preview, op een nagebootste iPhone (iOS-simulator, Safari)
+  en door Sander op zijn iPhone (vanaf het beginscherm): werkt.
+- Beslissingen: D-030 (schetsfilter, potlood gekozen), D-031 ("Bewaar" is nooit grijs zonder uitleg), D-032 (zachte
+  witte rand).
+- Problemen / verrassingen: Sander meldde "ik kies een foto en er gebeurt niks". Oorzaak: na de foto stond het
+  tekstvak buiten beeld en bleef "Bewaar" grijs zonder uitleg; nu zegt de app wat er mist (D-031). Daarnaast laat de
+  app op het beginscherm na een update eerst de oude versie zien (R-014, nieuw). Een egaal zwart vlak werd helemaal
+  zwart in de schets; opgelost met een test.
+- Volgende: T-2.6 "Bekijk als cliënt" en "Klaar" ⚙ Sonnet · low. Sander kiest met `/model` Sonnet voor de nieuwe sessie.
+
 ## 2026-11-23 — Foto maken of kiezen en bijsnijden (T-2.4)
 - Waar: Claude Code (Opus 5.5; Sander wisselde naar medium; past bij de tag: ja)
 - Gedaan: T-2.4. In het tegelformulier staat onder de plaatjes "Of gebruik een eigen foto". De telefoon vraagt
