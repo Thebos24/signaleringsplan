@@ -355,7 +355,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Herzien als: foto's op Android of iPhone scheef of niet laden, of het geheugen op oudere telefoons tekortschiet.
 
 ### D-030 — Schetsfilter: drie stijlen, eigen pixelcode, keuze door Sander (T-2.5)
-- Datum: 2026-11-23 · Status: Voorlopig (stijl wacht op Sanders keuze) · Besloten door: Claude (techniek), Sander (stijl)
+- Datum: 2026-11-23 · Status: Besloten (2026-11-23: Sander koos **potlood**; lijnen, samen en `#schets` zijn weggehaald) · Besloten door: Claude (techniek), Sander (stijl)
 - Besluit:
   - Het filter is een pure functie `sketch()` in `src/domain/sketch.ts` die op de pixels werkt (geen canvas), met
     tests. `photoCanvas.ts` leest de pixels van het bijgesneden vierkant, laat `sketch()` ze omzetten en maakt er een
@@ -391,3 +391,15 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Afgewezen: Grijze knop houden met een vaste uitlegregel eronder (altijd extra tekst, ook als alles goed is).
   Het tekstvak verplaatsen naar onder de foto (grotere verbouwing van het formulier, niet nodig).
 - Herzien als: begeleiders de melding niet zien of niet snappen.
+
+### D-032 — Zachte witte rand rond de schets (T-2.5)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Sander (wens), Claude (uitvoering)
+- Besluit: De schets loopt naar de randen toe zacht over in `paper`, rond zoals een vignet: binnen 60% van de afstand
+  van het midden tot de rand blijft alles zoals het is, aan de rand en in de hoeken is het helemaal papier. De overgang
+  is "smoothstep" (zacht begin en eind). Het zit in `fadeEdges()` in `src/domain/sketch.ts`, met een test.
+- Waarom: Sander wil dat het plaatje in het midden staat en de randen wit zijn; dan lijkt een foto meer op een
+  tekening op papier en past hij beter bij de pictogrammen.
+- Afgewezen: Een rechthoekige vervaging per rand (hoeken blijven dan zichtbaar donkerder). De rand met CSS maken
+  (dan zit hij niet in het bewaarde plaatje en moet elke plek waar het plaatje staat hem apart krijgen).
+- Herzien als: belangrijke dingen in een foto (een gezicht aan de zijkant) wegvallen; dan de rand smaller maken
+  (`FADE_START` groter).

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import {
-  SKETCH_STYLES,
+  FADE_START,
   blur,
-  edgeStrength,
+  fadeEdges,
   hexToRgb,
   percentile,
   sketch,
@@ -37,29 +37,29 @@ const darkness = ({ data }: Pixels, x: number, y: number, width: number) =>
   255 - data[(y * width + x) * 4]
 
 describe('sketch', () => {
-  it.each(SKETCH_STYLES)('%s keeps the size and gives solid pixels', (style) => {
-    const result = sketch(testPicture(64, 48), style, colors)
+  it('keeps the size and gives solid pixels', () => {
+    const result = sketch(testPicture(64, 48), colors)
     expect(result.width).toBe(64)
     expect(result.height).toBe(48)
     expect(result.data.length).toBe(64 * 48 * 4)
     for (let i = 3; i < result.data.length; i += 4) expect(result.data[i]).toBe(255)
   })
 
-  it.each(SKETCH_STYLES)('%s works on a big photo (1024 px) without errors', (style) => {
-    const result = sketch(testPicture(1024, 1024), style, colors)
+  it('works on a big photo (1024 px) without errors', () => {
+    const result = sketch(testPicture(1024, 1024), colors)
     expect(result.data.length).toBe(1024 * 1024 * 4)
   })
 
-  it.each(SKETCH_STYLES)('%s works on tiny and on all-black or all-white photos', (style) => {
+  it('works on tiny and on all-black or all-white photos', () => {
     for (const pixels of [plain(1, 1, 128), plain(8, 8, 0), plain(8, 8, 255), testPicture(3, 2)]) {
-      const result = sketch(pixels, style, colors)
+      const result = sketch(pixels, colors)
       expect(result.data.length).toBe(pixels.width * pixels.height * 4)
       expect(result.data.every((v) => Number.isFinite(v))).toBe(true)
     }
   })
 
-  it.each(SKETCH_STYLES)('%s draws only in ink and paper colours (and mixes of them)', (style) => {
-    const { data } = sketch(testPicture(32, 32), style, colors)
+  it('draws only in ink and paper colours (and mixes of them)', () => {
+    const { data } = sketch(testPicture(32, 32), colors)
     const [inkR] = hexToRgb(colors.ink)
     const [paperR] = hexToRgb(colors.paper)
     for (let i = 0; i < data.length; i += 4) {
@@ -68,27 +68,21 @@ describe('sketch', () => {
     }
   })
 
-  it.each(SKETCH_STYLES)(
-    '%s draws the outline of a shape darker than the flat background',
-    (style) => {
-      const size = 64
-      const result = sketch(testPicture(size, size), style, colors)
-      const onEdge = darkness(result, size / 4 + 1, size / 2, size)
-      const background = darkness(result, 4, 4, size)
-      expect(onEdge).toBeGreaterThan(background)
-    },
-  )
+  it('draws the outline of a shape darker than the flat background', () => {
+    const size = 64
+    const result = sketch(testPicture(size, size), colors)
+    const onEdge = darkness(result, size / 4 + 1, size / 2, size)
+    const background = darkness(result, 4, 4, size)
+    expect(onEdge).toBeGreaterThan(background)
+  })
 
-  it.each(SKETCH_STYLES)(
-    '%s gives a dark photo about the same sketch as a light one (R-004)',
-    (style) => {
-      const size = 64
-      const light = sketch(testPicture(size, size, 1), style, colors)
-      const dark = sketch(testPicture(size, size, 0.3), style, colors)
-      const edge = (p: Pixels) => darkness(p, size / 4 + 1, size / 2, size)
-      expect(Math.abs(edge(light) - edge(dark))).toBeLessThan(40)
-    },
-  )
+  it('gives a dark photo about the same sketch as a light one (R-004)', () => {
+    const size = 64
+    const light = sketch(testPicture(size, size, 1), colors)
+    const dark = sketch(testPicture(size, size, 0.3), colors)
+    const edge = (p: Pixels) => darkness(p, size / 4 + 1, size / 2, size)
+    expect(Math.abs(edge(light) - edge(dark))).toBeLessThan(40)
+  })
 })
 
 it('pencil turns a big flat dark area into paper, not a black blob', () => {
@@ -99,7 +93,7 @@ it('pencil turns a big flat dark area into paper, not a black blob', () => {
     const v = i % width < width / 2 ? 0 : 255
     data.set([v, v, v, 255], i * 4)
   }
-  const result = sketch({ data, width, height: width }, 'pencil', colors)
+  const result = sketch({ data, width, height: width }, colors)
   expect(darkness(result, 20, 100, width)).toBeLessThan(30)
 })
 
@@ -141,10 +135,14 @@ describe('sketch helpers', () => {
     expect(soft[5]).toBeLessThan(255)
   })
 
-  it('edgeStrength is zero on a flat area and high on a step', () => {
-    const step = new Float32Array(9 * 9).map((_, i) => (i % 9 < 4 ? 0 : 255))
-    const edges = edgeStrength(step, 9, 9)
-    expect(edges[4 * 9 + 0]).toBe(0)
-    expect(edges[4 * 9 + 4]).toBeGreaterThan(500)
+  it('fadeEdges keeps the middle and turns the edges and corners into paper', () => {
+    const size = 101
+    const faded = fadeEdges(new Float32Array(size * size).fill(0), size, size)
+    const at = (x: number, y: number) => faded[y * size + x]
+    expect(at(50, 50)).toBe(0) // middle: unchanged
+    expect(at(50, 50 - Math.floor(FADE_START * 50) + 1)).toBeLessThan(5) // just inside the fade
+    expect(at(0, 50)).toBeGreaterThan(250) // edge
+    expect(at(0, 0)).toBe(255) // corner
+    expect(at(50, 10)).toBeGreaterThan(at(50, 30)) // lighter towards the edge
   })
 })

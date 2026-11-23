@@ -1,15 +1,9 @@
 // Turn a photo into a pencil sketch (T-2.5, D-010, D-030). Pure pixel maths, no canvas, so it can be
 // tested in jsdom. The canvas work (reading and writing the pixels) is in features/photo/photoCanvas.ts.
 //
-// Every style starts the same way: grey values, then the contrast stretched so dark and light photos
-// both give a clear sketch (R-004). The result is drawn in `ink` on `paper`, like the pictograms.
-
-export type SketchStyle = 'pencil' | 'lines' | 'mixed'
-
-export const SKETCH_STYLES: SketchStyle[] = ['pencil', 'lines', 'mixed']
-
-// The style the app uses. Sander chooses it after comparing them on his phone (R-013, D-030).
-export const DEFAULT_SKETCH_STYLE: SketchStyle = 'mixed'
+// Steps: grey values, the contrast stretched so dark and light photos both give a clear sketch (R-004),
+// the pencil effect (Sander chose it from three styles, D-030), and a soft fade to paper at the edges
+// so the picture sits in the middle (D-032). Drawn in `ink` on `paper`, like the pictograms.
 
 // RGBA pixels, like ImageData (4 bytes per pixel)
 export interface Pixels {
@@ -26,17 +20,32 @@ export interface SketchColors {
   paper: string // '#RRGGBB'
 }
 
-export function sketch(pixels: Pixels, style: SketchStyle, colors: SketchColors): Pixels {
+export function sketch(pixels: Pixels, colors: SketchColors): Pixels {
   const { width, height } = pixels
   const grey = stretchContrast(toGrey(pixels))
-  const size = Math.max(width, height)
-
-  let tone: Grey
-  if (style === 'pencil') tone = pencil(grey, width, height, size)
-  else if (style === 'lines') tone = lines(grey, width, height, size)
-  else tone = multiply(pencil(grey, width, height, size), lines(grey, width, height, size))
-
+  const tone = fadeEdges(pencil(grey, width, height, Math.max(width, height)), width, height)
   return { data: paint(tone, colors), width, height }
+}
+
+// Where the fade starts and ends, as a fraction of the distance from the middle to the edge.
+// Inside FADE_START nothing changes; at the edge (1) and in the corners everything is paper.
+export const FADE_START = 0.6
+const FADE_END = 1
+
+// Soft fade to paper towards the edges, round like a vignette, so the picture sits in the middle
+export function fadeEdges(tone: Grey, width: number, height: number): Grey {
+  const centerX = (width - 1) / 2
+  const centerY = (height - 1) / 2
+  const radiusX = Math.max(0.5, width / 2)
+  const radiusY = Math.max(0.5, height / 2)
+  return tone.map((v, i) => {
+    const x = (i % width) - centerX
+    const y = Math.floor(i / width) - centerY
+    const distance = Math.hypot(x / radiusX, y / radiusY) // 0 = middle, 1 = edge
+    const t = clamp01((distance - FADE_START) / (FADE_END - FADE_START))
+    const paper = t * t * (3 - 2 * t) // smooth start and end ("smoothstep")
+    return v + (255 - v) * paper
+  })
 }
 
 // Classic pencil effect: grey ÷ (blurred negative), "colour dodge". Flat areas turn white, edges and
@@ -49,32 +58,6 @@ function pencil(grey: Grey, width: number, height: number, size: number): Grey {
     const dodged = Math.min(255, ((v + 1) * 255) / (256 - blurred[i]))
     return 255 * (dodged / 255) ** 3
   })
-}
-
-// Drawn lines: the outlines of shapes (where the grey value changes fast), with a little light
-// shading so faces and objects do not look empty.
-function lines(grey: Grey, width: number, height: number, size: number): Grey {
-  // Smooth first, so camera noise and fine texture (grass, fabric) do not become scribbles
-  const smooth = blur(grey, width, height, Math.max(1, Math.round(size / 250)))
-  const edges = edgeStrength(smooth, width, height)
-  // How strong an edge must be depends on the photo itself (busy or calm), but never so weak that
-  // the noise in a flat wall or sky counts as a line
-  const strong = Math.max(MIN_EDGE, percentile(edges, 0.97))
-  const shading = blur(grey, width, height, Math.max(1, Math.round(size / 100)))
-  return edges.map((e, i) => {
-    const line = clamp01((e / strong - 0.3) / 0.5) // below 0.3: no line
-    const lineTone = 255 * (1 - 0.9 * line)
-    const shadeTone = 205 + (shading[i] * 50) / 255 // light grey in dark areas, white in light ones
-    return Math.min(lineTone, shadeTone)
-  })
-}
-
-// Smallest edge strength that can count as a line (Sobel, after smoothing). Camera noise in a flat
-// area stays well below this; the outline of a face or a cup is far above it.
-const MIN_EDGE = 12
-
-function multiply(a: Grey, b: Grey): Grey {
-  return a.map((v, i) => (v * b[i]) / 255)
 }
 
 export function toGrey({ data, width, height }: Pixels): Grey {
@@ -147,33 +130,6 @@ function boxBlur(
     for (let k = 0; k < lineLength; k++) {
       out[start + k * step] = sum / span
       sum += at(k + radius + 1) - at(k - radius)
-    }
-  }
-  return out
-}
-
-// How fast the grey value changes around each pixel (Sobel). 0 = flat area.
-export function edgeStrength(grey: Grey, width: number, height: number): Grey {
-  const out = new Float32Array(grey.length)
-  const at = (x: number, y: number) =>
-    grey[Math.min(height - 1, Math.max(0, y)) * width + Math.min(width - 1, Math.max(0, x))]
-  for (let y = 0; y < height; y++) {
-    for (let x = 0; x < width; x++) {
-      const gx =
-        at(x + 1, y - 1) +
-        2 * at(x + 1, y) +
-        at(x + 1, y + 1) -
-        at(x - 1, y - 1) -
-        2 * at(x - 1, y) -
-        at(x - 1, y + 1)
-      const gy =
-        at(x - 1, y + 1) +
-        2 * at(x, y + 1) +
-        at(x + 1, y + 1) -
-        at(x - 1, y - 1) -
-        2 * at(x, y - 1) -
-        at(x + 1, y - 1)
-      out[y * width + x] = Math.hypot(gx, gy)
     }
   }
   return out

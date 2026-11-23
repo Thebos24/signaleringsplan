@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.4 zijn af. Volgende: T-2.5.
+**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.5 zijn af. Volgende: T-2.6.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -60,9 +60,9 @@ Doel: een begeleider kan samen met de cliënt een compleet plan invullen.
 - [x] T-2.3 (C) Pictogramkiezer: raster met zoekveld (zoekt op Nederlandse trefwoorden per pictogram). ⚙ Sonnet · medium — 2026-11-22 (D-028)
 - [x] T-2.4 (C) Foto maken of kiezen: vierkant bijsnijden (simpel: verschuiven + zoomen), verkleinen tot 1024 px,
       orientatie goed zetten, opslaan als Blob. ⚙ Opus · medium — 2026-11-23 (D-029; werkt op de iPhone, foto's rechtop)
-- [ ] T-2.5 (C) Schetsfilter (D-010): canvas-filter van foto naar potloodschets, voorbeeld met "Gebruik" / "Opnieuw".
+- [x] T-2.5 (C) Schetsfilter (D-010): canvas-filter van foto naar potloodschets, voorbeeld met "Gebruik" / "Opnieuw".
       Testen met verschillende foto's (licht, donker, binnen, buiten, gezicht). Tests voor afmetingen en foutloos draaien. ⚙ Opus · medium
-      (2026-11-23: gebouwd, D-030; wacht op Sanders stijlkeuze via `#schets`, daarna stijl vastzetten en `#schets` weg)
+      — 2026-11-23 (D-030 potlood, D-031 Bewaar zegt wat er mist, D-032 zachte witte rand)
 - [ ] T-2.6 (C) "Bekijk als cliënt" en "Klaar". ⚙ Sonnet · low
 
 **Checkpoint 2:** Sander en zijn partner vullen samen een verzonnen testplan in op de iPhone, met minstens één eigen

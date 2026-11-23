@@ -10,7 +10,6 @@ import {
   type Crop,
 } from '../../domain/crop'
 import { nl } from '../../text/nl'
-import { DEFAULT_SKETCH_STYLE } from '../../domain/sketch'
 import { cropToSketch, drawCrop, loadPhoto, releaseCanvas } from './photoCanvas'
 import { SketchPreview } from './SketchPreview'
 import './photo.css'
@@ -124,7 +123,7 @@ export function PhotoCropper({
     try {
       // Let the phone show "De tekening wordt gemaakt…" before the (heavy) sketch starts
       await new Promise((resolve) => setTimeout(resolve, 50))
-      setSketched(await cropToSketch(source, cropRect(width, height, crop), DEFAULT_SKETCH_STYLE))
+      setSketched(await cropToSketch(source, cropRect(width, height, crop)))
     } catch {
       setFailed(true)
     } finally {
