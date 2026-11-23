@@ -15,6 +15,19 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Startscherm voor de cliënt (T-3.1)
+- Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
+- Gedaan: T-3.1. Het startscherm toont nu de signalen (oranje en rood door elkaar, in de volgorde van het plan) als
+  schermbrede tegels die je aan en uit kunt tikken (dikke rand + vinkje), de groene tegel "Het gaat goed" en de knop
+  "Klaar". Daarna volgt een tijdelijk scherm "Je bent op Oranje." met "Terug"; het echte resultaatscherm is T-3.2.
+  Aangetikte signalen zijn weg als je terugkomt. 114 tests, lint en typecontrole slagen. In de preview (390×844) met
+  twee testsignalen bekeken; die zijn weer verwijderd. Niet op de iPhone gezien.
+- Beslissingen: D-033 (nieuw).
+- Problemen / verrassingen: geen. Checkpoint 2 is nog niet gedaan; Sander koos ervoor eerst door te bouwen.
+- Volgende: T-3.2 Resultaatscherm per kleur ⚙ Sonnet · medium. Checkpoint 2 staat nog open.
+
+---
+
 ## 2026-11-23 — Bekijk als cliënt en Klaar (T-2.6)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · low: ja)
 - Gedaan: T-2.6. In de invulmodus staat onderaan nu "Bekijk als cliënt" boven "Klaar". "Bekijk als cliënt" toont

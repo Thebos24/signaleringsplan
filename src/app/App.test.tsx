@@ -53,6 +53,44 @@ describe('App', () => {
     expect(await screen.findByRole('heading', { name: 'Hoi, wat merk je?' })).toBeInTheDocument()
   })
 
+  it('shows the signals, "Het gaat goed" and "Klaar"; tapping signals gives the colour', async () => {
+    store.tiles = [
+      signal,
+      { ...signal, id: 2, color: 'red', text: 'Ik wil schreeuwen', order: 2 },
+      { ...signal, id: 3, kind: 'action', color: 'red', text: 'Ga wandelen', order: 3 },
+    ]
+    render(<App />)
+    const boos = await screen.findByRole('button', { name: 'Ik ben boos' })
+    expect(screen.getByRole('button', { name: 'Het gaat goed' })).toBeInTheDocument()
+    // actions are not shown on the start screen
+    expect(screen.queryByRole('button', { name: 'Ga wandelen' })).not.toBeInTheDocument()
+    await userEvent.click(boos)
+    expect(boos).toHaveAttribute('aria-pressed', 'true')
+    await userEvent.click(boos)
+    expect(boos).toHaveAttribute('aria-pressed', 'false')
+    await userEvent.click(boos)
+    await userEvent.click(screen.getByRole('button', { name: 'Klaar' }))
+    expect(await screen.findByRole('heading', { name: 'Je bent op Oranje.' })).toBeInTheDocument()
+    await userEvent.click(screen.getByRole('button', { name: 'Terug' }))
+    // back on the start screen the tapped signals are gone
+    expect(await screen.findByRole('button', { name: 'Ik ben boos' })).toHaveAttribute(
+      'aria-pressed',
+      'false',
+    )
+  })
+
+  it('"Het gaat goed" goes straight to green, and a red signal wins', async () => {
+    store.tiles = [{ ...signal, id: 2, color: 'red', text: 'Ik wil schreeuwen' }, signal]
+    render(<App />)
+    await userEvent.click(await screen.findByRole('button', { name: 'Het gaat goed' }))
+    expect(await screen.findByRole('heading', { name: 'Je bent op Groen.' })).toBeInTheDocument()
+    await userEvent.click(screen.getByRole('button', { name: 'Terug' }))
+    await userEvent.click(await screen.findByRole('button', { name: 'Ik ben boos' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Ik wil schreeuwen' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Klaar' }))
+    expect(await screen.findByRole('heading', { name: 'Je bent op Rood.' })).toBeInTheDocument()
+  })
+
   it('greets the client by name', async () => {
     store.plan = { ...store.plan, clientName: 'Sam' }
     render(<App />)

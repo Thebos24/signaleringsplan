@@ -403,3 +403,18 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   (dan zit hij niet in het bewaarde plaatje en moet elke plek waar het plaatje staat hem apart krijgen).
 - Herzien als: belangrijke dingen in een foto (een gezicht aan de zijkant) wegvallen; dan de rand smaller maken
   (`FADE_START` groter).
+
+### D-033 — Startscherm van de cliënt: opbouw (T-3.1)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude (Q-001 en Q-002 blijven open voor Checkpoint 3)
+- Besluit:
+  - Alle signalen van oranje en rood staan op één scherm, schermbreed (één per rij), gesorteerd op `order`
+    (Q-001 voorstel). Het scherm scrolt. Signaaltegels zijn neutraal van kleur: de kleur van een signaal verklapt
+    niets aan de cliënt.
+  - Wat aangetikt is, staat alleen in het geheugen van het scherm (niet in de opslag). Het is dus weg na terugkomen.
+  - "Het gaat goed" gaat direct naar groen. "Klaar" zonder iets aangetikt geeft ook groen (`determineColor([])`).
+  - Het resultaat is nu een tijdelijk scherm in `PlanApp`; T-3.2 vervangt het.
+- Waarom: Past bij SPEC §5.1 en de wens van Sander voor schermbrede tegels. Een grijze "Klaar"-knop zonder uitleg
+  zou dezelfde fout zijn als in D-031. Wie niets merkt, is groen.
+- Afgewezen: "Klaar" uitzetten zolang niets is aangetikt (de cliënt snapt niet waarom). Aangetikte signalen opslaan
+  (geen reden, en dan staan ze er na een nieuwe start nog). Signaaltegels in hun eigen kleur (stuurt de cliënt).
+- Herzien als: Q-001 bij Checkpoint 3 een scherm per kleur wordt.
