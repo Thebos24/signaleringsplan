@@ -67,6 +67,8 @@ export const nl = {
     save: 'Bewaar',
     cancel: 'Annuleren',
     saveFailed: 'Het opslaan lukte niet. Probeer het nog eens.',
+    missingText: 'Schrijf eerst wat er op de tegel staat.',
+    missingPicture: 'Kies eerst een plaatje of een foto.',
     orPhoto: 'Of gebruik een eigen foto',
     takePhoto: 'Maak of kies een foto',
     otherPhoto: 'Andere foto',

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { BigButton } from '../../components/BigButton'
 import { Picto } from '../../components/Picto'
 import { MAX_TILE_TEXT_LENGTH, cleanText, type Tile, type TileKind } from '../../domain/plan'
@@ -35,6 +35,9 @@ export function TileForm({
   const [search, setSearch] = useState('')
   const [failed, setFailed] = useState(false)
   const [saving, setSaving] = useState(false)
+  // Set when "Bewaar" was tapped while something is missing: then we say what is missing
+  const [triedToSave, setTriedToSave] = useState(false)
+  const textField = useRef<HTMLInputElement>(null)
 
   const shown = searchPictos(PICTO_IDS, nl.pictoWords, search)
 
@@ -54,10 +57,24 @@ export function TileForm({
       ? { type: 'picto', pictoId }
       : undefined
   const hasPhoto = newPhoto !== undefined || oldPhotoId !== undefined
-  const canSave =
-    cleanText(text) !== '' && (image !== undefined || hasPhoto) && !saving && !cropping
+  const missingText = cleanText(text) === ''
+  const missingPicture = image === undefined && !hasPhoto
+  // "Bewaar" is never greyed out without a reason: a tap with something missing says what is
+  // missing (the text field may be far up the screen after choosing a photo)
+  const missing = !triedToSave
+    ? undefined
+    : missingText
+      ? t.missingText
+      : missingPicture
+        ? t.missingPicture
+        : undefined
 
   async function save() {
+    if (missingText || missingPicture) {
+      setTriedToSave(true)
+      if (missingText) textField.current?.focus()
+      return
+    }
     setSaving(true)
     setFailed(false)
     try {
@@ -73,13 +90,14 @@ export function TileForm({
       className="fill__form"
       onSubmit={(e) => {
         e.preventDefault()
-        if (canSave) void save()
+        if (!saving && !cropping) void save()
       }}
     >
       <h3>{title}</h3>
       <label className="fill__field">
         {t.textLabel}
         <input
+          ref={textField}
           type="text"
           value={text}
           maxLength={MAX_TILE_TEXT_LENGTH}
@@ -157,10 +175,11 @@ export function TileForm({
         </>
       )}
       {failed && <p role="alert">{t.saveFailed}</p>}
+      {missing && !cropping && <p role="alert">{missing}</p>}
       {/* While cropping, the cropper has its own buttons; two "Annuleren" would be confusing */}
       {!cropping && (
         <div className="fill__actions">
-          <BigButton onClick={() => void save()} disabled={!canSave}>
+          <BigButton onClick={() => void save()} disabled={saving}>
             {t.save}
           </BigButton>
           <BigButton variant="quiet" onClick={onCancel}>

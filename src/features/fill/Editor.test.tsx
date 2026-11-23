@@ -46,11 +46,17 @@ describe('Editor', () => {
     render(<Harness />)
     await userEvent.click(await screen.findByRole('button', { name: /Nieuw signaal/ }))
     const save = screen.getByRole('button', { name: 'Bewaar' })
-    expect(save).toBeDisabled() // no text and no picture yet
+
+    // Tapping "Bewaar" too early says what is missing, and saves nothing
+    await userEvent.click(save)
+    expect(screen.getByRole('alert')).toHaveTextContent('Schrijf eerst wat er op de tegel staat.')
+    expect(screen.getByLabelText('Wat staat er op de tegel?')).toHaveFocus()
 
     await userEvent.type(screen.getByLabelText('Wat staat er op de tegel?'), '  Ik ben boos ')
-    expect(save).toBeDisabled() // still no picture
+    expect(screen.getByRole('alert')).toHaveTextContent('Kies eerst een plaatje of een foto.')
+    expect(await getTiles('orange', 'signal')).toEqual([])
     await userEvent.click(screen.getByRole('radio', { name: 'Boos' }))
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument()
     await userEvent.click(save)
 
     expect(await screen.findByText('Ik ben boos')).toBeInTheDocument()

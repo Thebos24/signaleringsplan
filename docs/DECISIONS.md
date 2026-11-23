@@ -380,3 +380,14 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   (R-013 vraagt om kiezen).
 - Gevolgen: Na Sanders keuze: `DEFAULT_SKETCH_STYLE` vastzetten, de andere stijlen en `#schets` weghalen.
 - Herzien als: de schets op de iPhone of Android trager is dan ±3 seconden, of echte foto's onduidelijk worden.
+
+### D-031 — "Bewaar" is nooit grijs zonder uitleg (T-2.5)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude
+- Besluit: In het tegelformulier is "Bewaar" altijd te tikken (behalve tijdens het opslaan). Ontbreekt er iets, dan
+  bewaart de app niets en zegt hij wat er mist: "Schrijf eerst wat er op de tegel staat." (en zet de cursor in het
+  tekstvak, dat dan in beeld schuift) of "Kies eerst een plaatje of een foto." Dit vervangt de grijze knop uit D-027.
+- Waarom: Sander kreeg na het kiezen van een foto het gevoel dat "er niks gebeurt". Na het bijsnijden staat het
+  tekstvak ver boven in beeld, en een grijze knop zegt niet wat er mist.
+- Afgewezen: Grijze knop houden met een vaste uitlegregel eronder (altijd extra tekst, ook als alles goed is).
+  Het tekstvak verplaatsen naar onder de foto (grotere verbouwing van het formulier, niet nodig).
+- Herzien als: begeleiders de melding niet zien of niet snappen.
