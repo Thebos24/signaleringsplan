@@ -81,6 +81,22 @@ export const nl = {
     zoomLabel: 'Groter of kleiner',
     use: 'Gebruik deze foto',
     failed: 'Deze foto lukt niet. Kies een andere foto.',
+    // The photo as a sketch (T-2.5)
+    sketching: 'De tekening wordt gemaakt…',
+    sketchHint: 'Zo komt de foto op de tegel.',
+    sketchAlt: 'De foto als tekening',
+    sketchUse: 'Gebruik',
+    sketchAgain: 'Opnieuw',
+  },
+
+  // TEMPORARY page #schets to compare the sketch styles (T-2.5, R-013). Removed once Sander has chosen.
+  sketchCompare: {
+    title: 'Schetsstijlen vergelijken',
+    intro:
+      'Kies een foto. Je ziet hem in drie stijlen. Welke vind je het mooist en het duidelijkst?',
+    choose: 'Kies een foto',
+    busy: 'Bezig…',
+    styles: { pencil: 'Stijl 1: potlood', lines: 'Stijl 2: lijnen', mixed: 'Stijl 3: samen' },
   },
 
   // Name and search words per pictogram (T-2.3). The name is what a screen reader says; the search

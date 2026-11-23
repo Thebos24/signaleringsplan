@@ -10,13 +10,16 @@ import {
   type Crop,
 } from '../../domain/crop'
 import { nl } from '../../text/nl'
-import { cropToBlob, drawCrop, loadPhoto, releaseCanvas } from './photoCanvas'
+import { DEFAULT_SKETCH_STYLE } from '../../domain/sketch'
+import { cropToSketch, drawCrop, loadPhoto, releaseCanvas } from './photoCanvas'
+import { SketchPreview } from './SketchPreview'
 import './photo.css'
 
 const t = nl.photo
 
 // Make a photo square: drag to move it, pinch or use the slider to zoom (T-2.4, D-029).
-// `onUse` gets the stored square (max 1024 px). The original file is not kept.
+// Then the square becomes a sketch, shown with "Gebruik" / "Opnieuw" (T-2.5, D-010).
+// `onUse` gets the stored sketch (max 1024 px). The original file is not kept.
 export function PhotoCropper({
   file,
   onUse,
@@ -30,6 +33,7 @@ export function PhotoCropper({
   const [failed, setFailed] = useState(false)
   const [crop, setCrop] = useState<Crop>()
   const [busy, setBusy] = useState(false)
+  const [sketched, setSketched] = useState<Blob>()
   const frame = useRef<HTMLDivElement>(null)
   const view = useRef<HTMLCanvasElement>(null)
   // Fingers (or the mouse) on the frame, by pointer id: their last position
@@ -72,6 +76,16 @@ export function PhotoCropper({
     )
   }
   if (!source || !crop) return <p className="photo">{t.loading}</p>
+  if (sketched) {
+    return (
+      <SketchPreview
+        blob={sketched}
+        onUse={() => onUse(sketched)}
+        // "Opnieuw" goes back to the frame, with the same part of the photo chosen
+        onAgain={() => setSketched(undefined)}
+      />
+    )
+  }
 
   const { width, height } = source
   const frameSize = () => frame.current?.clientWidth || 1
@@ -108,9 +122,13 @@ export function PhotoCropper({
     if (!source || !crop) return
     setBusy(true)
     try {
-      onUse(await cropToBlob(source, cropRect(width, height, crop)))
+      // Let the phone show "De tekening wordt gemaakt…" before the (heavy) sketch starts
+      await new Promise((resolve) => setTimeout(resolve, 50))
+      setSketched(await cropToSketch(source, cropRect(width, height, crop), DEFAULT_SKETCH_STYLE))
     } catch {
       setFailed(true)
+    } finally {
+      setBusy(false)
     }
   }
 
@@ -140,6 +158,7 @@ export function PhotoCropper({
           onChange={(e) => setCrop(zoomCrop(width, height, crop, Number(e.target.value)))}
         />
       </label>
+      {busy && <p role="status">{t.sketching}</p>}
       <div className="fill__actions">
         <BigButton onClick={() => void use()} disabled={busy}>
           {t.use}

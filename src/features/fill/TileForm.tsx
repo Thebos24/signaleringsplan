@@ -13,7 +13,7 @@ const t = nl.fill
 
 // Add or change one tile: a short text and a picture (SPEC §6.3).
 // The picture is a pictogram from a grid with a search field (T-2.3), or an own photo that is
-// made square first (T-2.4). T-2.5 turns the photo into a sketch.
+// made square first (T-2.4) and turned into a sketch (T-2.5).
 export function TileForm({
   kind,
   tile,

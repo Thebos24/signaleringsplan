@@ -353,3 +353,30 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   staat vaak niet in het midden).
 - Gevolgen: T-2.5 plaatst het schetsfilter tussen "Gebruik deze foto" en opslaan.
 - Herzien als: foto's op Android of iPhone scheef of niet laden, of het geheugen op oudere telefoons tekortschiet.
+
+### D-030 — Schetsfilter: drie stijlen, eigen pixelcode, keuze door Sander (T-2.5)
+- Datum: 2026-11-23 · Status: Voorlopig (stijl wacht op Sanders keuze) · Besloten door: Claude (techniek), Sander (stijl)
+- Besluit:
+  - Het filter is een pure functie `sketch()` in `src/domain/sketch.ts` die op de pixels werkt (geen canvas), met
+    tests. `photoCanvas.ts` leest de pixels van het bijgesneden vierkant, laat `sketch()` ze omzetten en maakt er een
+    JPEG (0,85) van. Alleen de schets wordt bewaard (D-010).
+  - Elke stijl begint met grijswaarden en **contrast rekken** (donkerste en lichtste 1% genegeerd), zodat donkere en
+    lichte foto's even duidelijk worden (R-004). De schets wordt getekend in `ink` op `paper` (design tokens), net als
+    de pictogrammen.
+  - Drie stijlen: **potlood** (grijs ÷ vervaagd negatief, "color dodge", donkerder gemaakt), **lijnen** (randen met
+    Sobel na licht vervagen, drempel past zich aan de foto aan maar nooit lager dan cameraruis, plus lichte schaduw),
+    **samen** (potlood × lijnen). Voorlopig gebruikt de app **samen** (`DEFAULT_SKETCH_STYLE`).
+  - Na "Gebruik deze foto" toont de app de schets groot met "Gebruik" en "Opnieuw". "Opnieuw" gaat terug naar het
+    kader, met hetzelfde stuk gekozen; daar kan "Annuleren" om een andere foto te kiezen.
+  - Tijdelijke pagina `#schets`: kies een foto en zie hem in alle drie de stijlen. Er wordt niets bewaard. Weg
+    zodra Sander gekozen heeft (R-013).
+- Waarom: Geen extra pakket nodig (D-019); de bewerkingen zijn ±150 regels. Pure functies zijn te testen in jsdom.
+  Vervagen met drie keer een "box blur" is bijna even mooi als een echte Gaussische vervaging en veel sneller
+  (1024×1024 in ±1 s op de Mac). Sander verwacht eerder een tekening dan een potloodfilter (R-013), dus hij kiest
+  met echte foto's op zijn eigen telefoon.
+- Afgewezen: CSS-filters (`filter: grayscale() contrast()`) (geen echte schets, en het bewaarde bestand blijft de
+  kleurenfoto). Canvas `ctx.filter = 'blur()'` (werkte lange tijd niet in Safari). Een Web Worker voor het rekenen
+  (meer code; pas doen als het op de telefoon te traag is). Een AI-dienst (D-010, B-012). Eén stijl zonder keuze
+  (R-013 vraagt om kiezen).
+- Gevolgen: Na Sanders keuze: `DEFAULT_SKETCH_STYLE` vastzetten, de andere stijlen en `#schets` weghalen.
+- Herzien als: de schets op de iPhone of Android trager is dan ±3 seconden, of echte foto's onduidelijk worden.

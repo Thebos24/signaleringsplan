@@ -47,3 +47,10 @@
   display: inline-block;
   background: var(--color-green-light);
 }
+
+/* The sketch preview: the same frame, but nothing to drag (T-2.5) */
+.photo__frame--still {
+  background: var(--color-paper);
+  touch-action: auto;
+  cursor: default;
+}

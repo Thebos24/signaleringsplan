@@ -1,18 +1,18 @@
-// The photo path of the tile form (T-2.4). jsdom has no canvas, so the canvas part is replaced;
-// the crop maths itself is tested in src/domain/crop.test.ts.
+// The photo path of the tile form (T-2.4, T-2.5). jsdom has no canvas, so the canvas part is replaced;
+// the crop maths and the sketch are tested in src/domain/crop.test.ts and sketch.test.ts.
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { vi } from 'vitest'
 import type { Tile } from '../../domain/plan'
 import { TileForm } from './TileForm'
 
-const cropped = new Blob(['square'], { type: 'image/jpeg' })
+const cropped = new Blob(['sketch'], { type: 'image/jpeg' })
 
 vi.mock('../photo/photoCanvas', () => ({
   loadPhoto: async () =>
     Object.assign(document.createElement('canvas'), { width: 400, height: 300 }),
   drawCrop: () => {},
-  cropToBlob: async () => cropped,
+  cropToSketch: async () => cropped,
   releaseCanvas: () => {},
 }))
 
@@ -45,10 +45,24 @@ describe('TileForm with a photo', () => {
     expect(screen.queryByRole('button', { name: 'Bewaar' })).not.toBeInTheDocument()
 
     await userEvent.click(screen.getByRole('button', { name: 'Gebruik deze foto' }))
+
+    // Then the sketch is shown, with "Gebruik" and "Opnieuw"
+    expect(await screen.findByRole('img', { name: 'De foto als tekening' })).toBeInTheDocument()
+    await userEvent.click(screen.getByRole('button', { name: 'Gebruik' }))
     expect(screen.getByText('Deze foto komt op de tegel.')).toBeInTheDocument()
 
     await userEvent.click(screen.getByRole('button', { name: 'Bewaar' }))
     expect(onSave).toHaveBeenCalledWith('Thee drinken', { type: 'photo', blob: cropped })
+  })
+
+  it('"Opnieuw" goes back to the frame to choose another part', async () => {
+    const onSave = setup()
+    await userEvent.upload(screen.getByLabelText('Maak of kies een foto'), photoFile)
+    await userEvent.click(await screen.findByRole('button', { name: 'Gebruik deze foto' }))
+    await userEvent.click(await screen.findByRole('button', { name: 'Opnieuw' }))
+    expect(screen.getByText(/Schuif de foto/)).toBeInTheDocument()
+    expect(screen.queryByText('Deze foto komt op de tegel.')).not.toBeInTheDocument()
+    expect(onSave).not.toHaveBeenCalled()
   })
 
   it('cancelling the cropper keeps the form as it was', async () => {
@@ -65,6 +79,7 @@ describe('TileForm with a photo', () => {
     await userEvent.type(screen.getByLabelText('Wat staat er op de tegel?'), 'Wandelen')
     await userEvent.upload(screen.getByLabelText('Maak of kies een foto'), photoFile)
     await userEvent.click(await screen.findByRole('button', { name: 'Gebruik deze foto' }))
+    await userEvent.click(await screen.findByRole('button', { name: 'Gebruik' }))
     await userEvent.click(screen.getByRole('radio', { name: 'Wandelen' }))
     expect(screen.queryByText('Deze foto komt op de tegel.')).not.toBeInTheDocument()
 

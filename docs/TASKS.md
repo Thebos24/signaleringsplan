@@ -62,6 +62,7 @@ Doel: een begeleider kan samen met de cliënt een compleet plan invullen.
       orientatie goed zetten, opslaan als Blob. ⚙ Opus · medium — 2026-11-23 (D-029; werkt op de iPhone, foto's rechtop)
 - [ ] T-2.5 (C) Schetsfilter (D-010): canvas-filter van foto naar potloodschets, voorbeeld met "Gebruik" / "Opnieuw".
       Testen met verschillende foto's (licht, donker, binnen, buiten, gezicht). Tests voor afmetingen en foutloos draaien. ⚙ Opus · medium
+      (2026-11-23: gebouwd, D-030; wacht op Sanders stijlkeuze via `#schets`, daarna stijl vastzetten en `#schets` weg)
 - [ ] T-2.6 (C) "Bekijk als cliënt" en "Klaar". ⚙ Sonnet · low
 
 **Checkpoint 2:** Sander en zijn partner vullen samen een verzonnen testplan in op de iPhone, met minstens één eigen
