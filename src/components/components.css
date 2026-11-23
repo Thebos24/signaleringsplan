@@ -142,3 +142,15 @@
   font-size: var(--size-tile-text);
   color: var(--color-ink);
 }
+
+/* A pictogram is drawn on paper; multiply lets the paper take the colour of the tile below it */
+.picto {
+  mix-blend-mode: multiply;
+}
+
+/* A pictogram while its sketch is being made: an empty square of the same size (D-039) */
+.picto--empty {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}

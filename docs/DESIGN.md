@@ -52,6 +52,8 @@ Bekijken: open de app met `#galerie-nieuw` (tijdelijk).
   - Alleen vlakken en dikke lijnen; hele dunne lijnen verdwijnen in het filter.
   - Eén onderwerp per pictogram, herkenbaar zonder tekst, geen kleine details.
   - Mensen als simpele, neutrale figuurtjes (geen leeftijd, geslacht of huidskleur vastgelegd).
+  - De bronnen staan in `src/features/pictos/sources/<id>.svg`. Arcering = `fill="url(#hatch)"`; het patroon, het wiebelen en de
+    witte achtergrond voegt de app zelf toe (D-039). De app schetst ze iets donkerder dan foto's (`PICTO_DARKNESS`).
   - De stijlgids met voorbeelden komt in T-4.1; de proef staat in `docs/ontwerp-voorstellen/stijl-potlood.html`.
 - **Foto's** (D-010): de app zet een foto om naar een schets (zwart-wit potlood-effect), zodat eigen foto's
   ("mijn begeleider", "mijn bankje") passen bij de pictogrammen. Gebeurt helemaal op de telefoon.

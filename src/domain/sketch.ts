@@ -20,10 +20,24 @@ export interface SketchColors {
   paper: string // '#RRGGBB'
 }
 
-export function sketch(pixels: Pixels, colors: SketchColors): Pixels {
+// How dark the pencil strokes are: the power in pencil(). Photos use 3 (D-030). Pictograms are flat
+// drawings with fewer shadows, so their lines need a bit more ink to stay clear when small (D-037, R-015).
+export const PHOTO_DARKNESS = 3
+export const PICTO_DARKNESS = 4.5
+
+export interface SketchOptions {
+  darkness?: number // default PHOTO_DARKNESS
+}
+
+export function sketch(pixels: Pixels, colors: SketchColors, options: SketchOptions = {}): Pixels {
   const { width, height } = pixels
+  const darkness = options.darkness ?? PHOTO_DARKNESS
   const grey = stretchContrast(toGrey(pixels))
-  const tone = fadeEdges(pencil(grey, width, height, Math.max(width, height)), width, height)
+  const tone = fadeEdges(
+    pencil(grey, width, height, Math.max(width, height), darkness),
+    width,
+    height,
+  )
   return { data: paint(tone, colors), width, height }
 }
 
@@ -49,14 +63,14 @@ export function fadeEdges(tone: Grey, width: number, height: number): Grey {
 }
 
 // Classic pencil effect: grey ÷ (blurred negative), "colour dodge". Flat areas turn white, edges and
-// shadows stay as soft pencil strokes. The power of 3 makes the strokes darker; plain dodge is too faint.
-function pencil(grey: Grey, width: number, height: number, size: number): Grey {
+// shadows stay as soft pencil strokes. The power (`darkness`) makes the strokes darker; plain dodge is too faint.
+function pencil(grey: Grey, width: number, height: number, size: number, darkness: number): Grey {
   const negative = grey.map((v) => 255 - v)
   const blurred = blur(negative, width, height, Math.max(1, Math.round(size / 128)))
   return grey.map((v, i) => {
     // +1 on both sides: a flat, fully black area must give white paper too, not 0 ÷ 0 = black
     const dodged = Math.min(255, ((v + 1) * 255) / (256 - blurred[i]))
-    return 255 * (dodged / 255) ** 3
+    return 255 * (dodged / 255) ** darkness
   })
 }
 

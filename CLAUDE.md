@@ -134,7 +134,7 @@ tests met **Vitest** (+ Testing Library voor componenten). Hosting: **GitHub Pag
 ## Codeafspraken
 
 - Mappen: `src/app/` (routes/schermen), `src/features/<onderdeel>/`, `src/storage/`, `src/domain/` (pure logica,
-  zoals de kleurberekening), `src/design/`, `src/components/`, `src/text/`, `public/pictos/` (SVG-pictogrammen).
+  zoals de kleurberekening), `src/design/`, `src/components/`, `src/text/`, `src/features/pictos/sources/` (bron-SVG's van de pictogrammen, D-039).
 - Code, namen en commentaar in het **Engels**; teksten voor de gebruiker in het Nederlands.
 - Eén component per bestand. Pure functies in `src/domain/` krijgen altijd unit tests.
 - Tests verplicht voor: kleurberekening, opslag en migraties, schetsfilter (draait zonder fout, juiste afmetingen).

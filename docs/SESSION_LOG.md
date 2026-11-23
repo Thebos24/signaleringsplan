@@ -15,6 +15,19 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Pictogramwerkwijze (T-2.8)
+- Waar: Claude Code (Opus 5.5; past bij de tag Opus · medium: model ja, effort lager; Sander koos door te gaan)
+- Gedaan: T-2.8. De 10 pictogrammen zijn nu platte bron-tekeningen in `src/features/pictos/sources/` (6 uit de goedgekeurde proef,
+  4 nieuw: water, verdrietig, moe, hoofdpijn). De app haalt ze bij het opstarten door hetzelfde schetsfilter als de foto's, iets
+  donkerder (`PICTO_DARKNESS`). `public/pictos/` is weg. 132 tests, lint, typecontrole, Prettier en build slagen. Bekeken in de
+  preview (390×844) op `#galerie`; niet op de iPhone.
+- Beslissingen: D-039 (nieuw).
+- Problemen / verrassingen: op gekleurde tegels gaf het papier van het pictogram een vierkantje; nu geschetst op wit. Foto's hebben
+  dat nog een beetje (genoteerd bij T-2.10).
+- Volgende: T-2.9 Invulkant omzetten naar vier schermen ⚙ Sonnet · high. Sander kiest met `/model` Sonnet en effort high.
+
+---
+
 ## 2026-11-23 — Fundament in Apple-stijl (T-2.7)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · high: effort niet te zien, Sander gaf geen bezwaar)
 - Gedaan: T-2.7. Nieuwe tokens (papier, wit, inkt, grijs, tinten, maten) en nieuwe componenten: `Screen` met vaste balk

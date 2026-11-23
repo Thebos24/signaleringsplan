@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import {
   FADE_START,
+  PHOTO_DARKNESS,
+  PICTO_DARKNESS,
   blur,
   fadeEdges,
   hexToRgb,
@@ -95,6 +97,26 @@ it('pencil turns a big flat dark area into paper, not a black blob', () => {
   }
   const result = sketch({ data, width, height: width }, colors)
   expect(darkness(result, 20, 100, width)).toBeLessThan(30)
+})
+
+describe('darkness setting (pictograms, D-037)', () => {
+  it('uses the photo darkness when nothing is given', () => {
+    const picture = testPicture(32, 32)
+    const plainResult = sketch(picture, colors)
+    const photoResult = sketch(picture, colors, { darkness: PHOTO_DARKNESS })
+    expect([...plainResult.data]).toEqual([...photoResult.data])
+  })
+
+  it('draws the outline darker for pictograms, and keeps the flat background paper', () => {
+    const size = 64
+    const photo = sketch(testPicture(size, size), colors)
+    const picto = sketch(testPicture(size, size), colors, { darkness: PICTO_DARKNESS })
+    // All ink on the page together: the soft grey around the strokes gets darker
+    const totalInk = ({ data }: Pixels) =>
+      data.reduce((sum, v, i) => (i % 4 === 0 ? sum + 255 - v : sum), 0)
+    expect(totalInk(picto)).toBeGreaterThan(totalInk(photo))
+    expect(darkness(picto, 4, 4, size)).toBeLessThan(10) // corner: still paper
+  })
 })
 
 describe('sketch helpers', () => {

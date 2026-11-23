@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M39 66V27M71 58V21" fill="none" stroke="#1a1a1a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M39 27L71 21V31L39 37Z" fill="#555"/>
+  <path d="M39 27L71 21V31L39 37Z" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 72q-1 -8 9 -9q11 0 11 6q-1 8 -10 8q-9 0 -10 -5Z" fill="#444"/>
+  <path d="M22 72q-1 -8 9 -9q11 0 11 6q-1 8 -10 8q-9 0 -10 -5Z" fill="url(#hatch)"/>
+  <path d="M54 64q-1 -8 9 -9q11 0 11 6q-1 8 -10 8q-9 0 -10 -5Z" fill="#444"/>
+  <path d="M54 64q-1 -8 9 -9q11 0 11 6q-1 8 -10 8q-9 0 -10 -5Z" fill="url(#hatch)"/>
+</svg>

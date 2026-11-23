@@ -486,7 +486,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Afgewezen: Pictogrammen als losse lijntekening zonder filter (andere stijl dan foto's). Pictogrammen door een AI-dienst laten
   tekenen (D-002, B-012). Kleurpictogrammen (de foto's zijn ook zwart-wit; kleur is voor betekenis gereserveerd).
 - Gevolgen: Het filter heeft misschien een instelling nodig voor pictogrammen (lijnen donkerder). Dat raakt de code van de
-  foto's; dan met tests. De placeholder-SVG's in `public/pictos/` en Fase 4 (T-4.1 t/m T-4.4) draaien om bronnen in plaats van
+  foto's; dan met tests. De placeholder-SVG's in `public/pictos/` (sinds D-039 `src/features/pictos/sources/`) en Fase 4 (T-4.1 t/m T-4.4) draaien om bronnen in plaats van
   eindplaatjes. `pictoId`'s blijven gelijk, dus geen migratie.
 - Herzien als: pictogrammen er na het filter te vaag uitzien om te herkennen (Checkpoint 4).
 
@@ -510,3 +510,27 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Afgewezen: `BigButton` laten bestaan naast `Button` (twee knoppen met bijna dezelfde naam verwarren). Alle oude tokens meteen
   verwijderen (breekt de nog niet omgezette schermen). Een vaste balk met `position: fixed` (dekt inhoud af; `sticky` doet dat niet).
 - Herzien als: de vaste balk op de iPhone met toetsenbord of onderrand vreemd gedraagt (testen bij Checkpoint 2).
+
+### D-039 — Pictogrammen worden in de app zelf geschetst, bij het eerste tonen (T-2.8)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude (techniek), uitwerking van D-037
+- Besluit:
+  - De bronnen staan in `src/features/pictos/sources/<id>.svg` (platte SVG, viewBox 0 0 100 100). Ze zitten als tekst in de
+    JavaScript van de app (`import.meta.glob` met `?raw`), dus ze zijn er altijd, ook offline. `public/pictos/` is weg.
+  - De gedeelde onderdelen (arcering `url(#hatch)`, het lichte wiebelen `wobble`, witte achtergrond, verkleinen tot 84% zodat de
+    tekening binnen de zachte rand blijft) voegt `pictoSvg()` toe. Een nieuwe bron hoeft alleen eigen vormen te hebben.
+  - `renderPicto.ts` tekent de bron op een canvas van 256 × 256, haalt hem door `sketch()` en bewaart het resultaat als
+    object-URL **in het geheugen** tot de app sluit. `main.tsx` maakt alle pictogrammen bij het opstarten alvast, na elkaar.
+    Lukt het filter niet, dan toont de app de platte tekening (er is altijd een plaatje).
+  - `sketch()` kreeg een instelling `darkness` (de macht in het potloodeffect): foto's 3 (zoals in D-030), pictogrammen 4,5, omdat
+    platte tekeningen anders iets te licht worden (R-015). Met tests.
+  - Pictogrammen worden geschetst op wit (`surface`) in plaats van `paper`. Met `mix-blend-mode: multiply` neemt wit de kleur van de
+    tegel eronder aan; papierkleur gaf een zichtbaar vierkantje op gekleurde tegels.
+- Waarom: Omzetten bij het bouwen vraagt in Node een extra pakket om SVG naar pixels te zetten (bijv. `@resvg/resvg-js`), dus een nieuwe
+  dependency (D-019) en een extra stap. In de browser gebruikt het precies dezelfde code als bij de foto's, zonder pakket. 10 plaatjes
+  van 256 px kosten samen een fractie van een seconde.
+- Afgewezen: Omzetten bij het bouwen (extra pakket, zie boven). De schetsen bewaren in IndexedDB (raakt de opslag en het schema, R-010,
+  voor iets wat de app zelf snel opnieuw maakt). Eindplaatjes (PNG) in de repo zetten (dan moet bij elke wijziging aan het filter of
+  een bron iemand ze opnieuw maken; ze lopen dan uit de pas).
+- Herzien als: het opstarten met de volledige set (±45 pictogrammen, Fase 4) op de iPhone of Android merkbaar traag wordt; dan in
+  de Cache Storage bewaren of alleen de zichtbare maken. Of als Safari de SVG-arcering of het wiebelen anders tekent dan Chrome.
+

@@ -157,7 +157,8 @@ button.list-row {
   flex: none;
 }
 .list-row__image img,
-.list-row__image svg {
+.list-row__image svg,
+.list-row__image .picto--empty {
   width: var(--size-row-image);
   height: var(--size-row-image);
   mix-blend-mode: multiply;
@@ -207,7 +208,8 @@ button.list-row {
   cursor: pointer;
 }
 .guide-tile__image img,
-.guide-tile__image svg {
+.guide-tile__image svg,
+.guide-tile__image .picto--empty {
   display: block;
   width: var(--size-tile-image);
   height: var(--size-tile-image);
