@@ -15,6 +15,21 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Invulkant in vier schermen (T-2.9)
+- Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · high: model ja, effort niet te zien)
+- Gedaan: T-2.9. De invulmodus heeft nu de vier schermen uit SPEC §6.3 in Apple-stijl: Plan (drie kleurkaarten met aantallen, "Bekijk als
+  cliënt", "Naam wijzigen", "Klaar"), Eén kleur (tegels twee per rij met "+ toevoegen"), Eén tegel (voorbeeld, tekst, plaatje, ← Eerder / Later →,
+  "Klaar", "Verwijderen" met "Weet je het zeker?") en Plaatje kiezen (zoeken, raster, foto maken of kiezen). Welkomstscherm, oude editor, lijsten
+  en formulier zijn weg; datamodel en opslag zijn gelijk gebleven. 143 tests, lint, typecontrole, Prettier en build slagen. In de preview
+  (390×844) doorlopen: toevoegen, bewaren, openen, verwijderen. De fotoroute alleen met tests (met een nagebootst canvas); niet op de iPhone gezien.
+- Beslissingen: D-040 (nieuw); D-026, D-027 en D-031 deels vervangen. SPEC §6.4 aangepast: tekst en plaatje van een tegel worden bewaard met
+  "Klaar", niet meer bij elke toets.
+- Problemen / verrassingen: een eerste versie van `Screen` gaf een fout in de echte browser (de scroll-naar-boven gaf iets terug aan React); de
+  tests zagen dat niet. Opgelost. De dev-server van een andere chat draaide al op poort 5173; daar de preview op geopend.
+- Volgende: T-2.10 Cliëntschermen in de nieuwe stijl ⚙ Sonnet · medium. Daarna Checkpoint 2 (Sander + partner vullen een testplan in op de iPhone).
+
+---
+
 ## 2026-11-23 — Pictogramwerkwijze (T-2.8)
 - Waar: Claude Code (Opus 5.5; past bij de tag Opus · medium: model ja, effort lager; Sander koos door te gaan)
 - Gedaan: T-2.8. De 10 pictogrammen zijn nu platte bron-tekeningen in `src/features/pictos/sources/` (6 uit de goedgekeurde proef,

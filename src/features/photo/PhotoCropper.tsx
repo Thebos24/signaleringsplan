@@ -158,7 +158,7 @@ export function PhotoCropper({
         />
       </label>
       {busy && <p role="status">{t.sketching}</p>}
-      <div className="fill__actions">
+      <div className="photo__actions">
         <Button onClick={() => void use()} disabled={busy}>
           {t.use}
         </Button>

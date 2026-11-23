@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 (Sander) staat open. T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 en T-2.8 zijn af. Eerst T-2.9 en T-2.10, daarna Checkpoint 2, dan T-3.3.
+**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 (Sander) staat open. T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7, T-2.8 en T-2.9 zijn af. Eerst T-2.10, daarna Checkpoint 2, dan T-3.3.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -76,8 +76,8 @@ schetsen (`docs/ontwerp-voorstellen/`). In deze volgorde bouwen; elke taak is ee
 - [x] T-2.8 (C) Pictogramwerkwijze: bronmap met platte SVG-tekeningen, omzetting via `sketch()` (bij het bouwen of bij eerste gebruik,
       de keuze vastleggen), eventueel instelling in het filter voor donkerdere lijnen (met tests), de 10 bestaande
       pictogrammen opnieuw tekenen als bron. Werkt offline. ⚙ Opus · medium — 2026-11-23 (D-039: in de app bij het eerste tonen, in het geheugen; `PICTO_DARKNESS`)
-- [ ] T-2.9 (C) Invulkant omzetten naar de vier schermen uit SPEC §6.3: Plan, Eén kleur, Eén tegel, Plaatje kiezen. Welkomstscherm
-      weg, naam wijzigen, volgorde met ← →. Opslag en datamodel blijven; bestaande tests omzetten. ⚙ Sonnet · high
+- [x] T-2.9 (C) Invulkant omzetten naar de vier schermen uit SPEC §6.3: Plan, Eén kleur, Eén tegel, Plaatje kiezen. Welkomstscherm
+      weg, naam wijzigen, volgorde met ← →. Opslag en datamodel blijven; bestaande tests omzetten. ⚙ Sonnet · high — 2026-11-23 (D-040; in de preview bekeken, nog niet op de iPhone)
 - [ ] T-2.10 (C) Cliëntschermen (Start en Resultaat) in de nieuwe stijl met de nieuwe componenten en pictogrammen. Let op: foto's zijn
       geschetst op `paper`; op een witte rij geeft dat een licht vierkantje. Zo nodig foto's ook op wit schetsen (D-039). ⚙ Sonnet · medium
 

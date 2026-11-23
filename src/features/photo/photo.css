@@ -54,3 +54,10 @@
   touch-action: auto;
   cursor: default;
 }
+
+/* Buttons under the cropper and the sketch preview, stacked like the other screens */
+.photo__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

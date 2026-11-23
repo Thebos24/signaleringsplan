@@ -30,7 +30,7 @@ export function SketchPreview({
       <div className="photo__frame photo__frame--still">
         {url && <img className="photo__view" src={url} alt={t.sketchAlt} />}
       </div>
-      <div className="fill__actions">
+      <div className="photo__actions">
         <Button onClick={onUse}>{t.sketchUse}</Button>
         <Button variant="secondary" onClick={onAgain}>
           {t.sketchAgain}

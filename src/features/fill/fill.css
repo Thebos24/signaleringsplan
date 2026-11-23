@@ -1,189 +1,99 @@
-/* Filling-in mode: calm and plain, smaller than the client screens (DESIGN.md) */
-.fill {
-  box-sizing: border-box;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: max(var(--size-gap), env(safe-area-inset-top)) var(--size-gap) var(--size-gap);
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-gap);
-}
-.fill__field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.fill__field input {
-  font: inherit;
-  min-height: var(--size-button-min-height);
-  box-sizing: border-box;
-  padding: 8px 12px;
-  border: var(--size-border-width) solid var(--color-ink);
-  border-radius: var(--size-radius);
-  background: var(--color-paper);
-  color: var(--color-ink);
+/* The screens of the filling-in mode (D-035, D-036). Built from the components in src/components/apple.css;
+   only what is specific for these screens is here. Colours and sizes from the design tokens only. */
+
+.fill-intro {
+  margin: 0;
+  font-size: var(--size-text);
+  line-height: 1.4;
 }
 
-/* Editor */
-.fill__tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.fill__tab {
-  font: inherit;
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  text-align: left;
-}
-.fill__tab .color-badge {
-  display: flex;
-  opacity: 0.55;
-}
-/* The chosen colour: full strength and a thicker outline, not only a colour change */
-.fill__tab[aria-pressed='true'] .color-badge {
-  opacity: 1;
-  border-width: calc(var(--size-border-width) * 2);
-}
-.fill__list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-gap);
-}
-.fill__list h2,
-.fill__list p,
-.fill__form h3 {
-  margin: 0;
-}
-.fill__rows {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-gap);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.fill__row,
-.fill__form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 12px;
-  border: var(--size-border-width) solid var(--color-ink);
-  border-radius: var(--size-radius);
-}
-.fill__row-main {
-  display: flex;
+/* The colour symbol next to the colour word in a large title */
+.fill-color-title {
+  display: inline-flex;
   align-items: center;
   gap: 12px;
 }
-.fill__row-main img {
-  width: 48px;
-  height: 48px;
-}
-.fill__actions {
+
+/* A block of tiles with a heading: "Signalen" / "Wat merk je dan?" */
+.fill-section {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
 }
-.fill__pictos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.fill-section__title {
   margin: 0;
-  padding: 0;
-  border: none;
+  font-size: 22px;
+  font-weight: 700;
 }
-.fill__picto-search {
-  flex-basis: 100%;
+.fill-section__question {
+  margin: 0;
+  font-size: var(--size-caption);
+  color: var(--color-muted);
+}
+.fill-section__full {
+  margin: 0;
+  font-size: var(--size-caption);
+  color: var(--color-muted);
+}
+
+/* Text fields */
+.fill-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--size-caption);
+  font-weight: 600;
+  color: var(--color-muted);
+}
+.fill-field input,
+.fill-search {
+  box-sizing: border-box;
+  width: 100%;
   min-height: var(--size-button-min-height);
-  padding: 0 12px;
+  padding: 8px 16px;
+  border: var(--size-hairline) solid var(--color-separator);
+  border-radius: var(--size-button-radius);
+  background: var(--color-surface);
+  color: var(--color-ink);
   font: inherit;
-  border: var(--size-border-width) solid var(--color-ink);
-  border-radius: var(--size-radius);
+  font-size: var(--size-text);
+  font-weight: 400;
 }
-.fill__picto-none {
-  flex-basis: 100%;
-  margin: 0;
-}
-.fill__picto-name {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-}
-.fill__pictos legend {
-  padding: 0;
-  margin-bottom: 8px;
-}
-.fill__picto-choice {
-  position: relative;
+
+/* Secondary buttons under each other, or two side by side (← Eerder, Later →) */
+.fill-buttons {
   display: flex;
-  border: var(--size-border-width) solid transparent;
-  border-radius: var(--size-radius);
+  flex-direction: column;
+  gap: 12px;
 }
-/* The radio itself is hidden; the chosen picture gets a thick outline */
-.fill__picto-choice input {
-  position: absolute;
-  opacity: 0;
-  inset: 0;
-  margin: 0;
-  cursor: pointer;
+.fill-buttons--pair {
+  flex-direction: row;
 }
-.fill__picto-choice:has(input:checked) {
-  border-color: var(--color-ink);
-  background: var(--color-green-light);
-}
-.fill__picto-choice:has(input:focus-visible) {
-  outline: var(--size-border-width) solid var(--color-muted);
-}
-.fill__picto-choice img {
-  width: 56px;
-  height: 56px;
-}
-.fill__actions .button {
+.fill-buttons--pair .button {
   flex: 1;
 }
-.fill__actions strong {
-  flex-basis: 100%;
+
+/* "Weet je het zeker?" above the two buttons in the bottom bar */
+.fill-sure {
+  margin: 0;
+  font-size: var(--size-text);
+  font-weight: 600;
+  text-align: center;
 }
 
-/* Own photo (T-2.4) */
-.fill__photo {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.fill__photo p {
-  margin: 0;
-}
-.fill__photo-chosen {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.fill__photo-button {
+/* The photo button: the real file field is invisible, the whole button opens it */
+.fill-file-button {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
-  cursor: pointer;
 }
-/* The real file field is invisible; the whole button opens it */
-.fill__photo-button input {
+.fill-file-button input {
   position: absolute;
   inset: 0;
   opacity: 0;
   cursor: pointer;
 }
-.fill__photo-button:has(input:focus-visible) {
-  outline: var(--size-border-width) solid var(--color-muted);
-}
-.fill__row-main .photo-image {
-  width: 48px;
-  height: 48px;
+.fill-file-button:has(input:focus-visible) {
+  outline: 3px solid var(--color-muted);
 }

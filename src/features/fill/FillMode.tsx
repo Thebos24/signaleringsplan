@@ -1,13 +1,19 @@
 import { useState } from 'react'
+import type { Color, TileKind } from '../../domain/plan'
 import type { PlanData } from '../plan/usePlan'
-import { isPlanEmpty } from '../../domain/planStatus'
-import { setClientName } from '../../storage/planStore'
-import { Editor } from './Editor'
-import { WelcomeScreen } from './WelcomeScreen'
+import { ColorScreen } from './ColorScreen'
+import { PlanScreen } from './PlanScreen'
+import { TileScreen } from './TileScreen'
 import './fill.css'
 
+// Where the supervisor is in the filling-in mode (SPEC §6.3, D-035): three levels, each with "Terug".
+// The fourth screen, choosing a picture, is part of the tile screen (it keeps the draft of the tile).
+type Route =
+  | { name: 'plan' }
+  | { name: 'color'; color: Color }
+  | { name: 'tile'; color: Color; kind: TileKind; tileId?: number } // no tileId = a new tile
+
 // The filling-in mode, opened with the hold-to-open button (D-006).
-// First the welcome screen (empty plan only), then the editor (T-2.2).
 export function FillMode({
   data,
   onChanged,
@@ -19,21 +25,42 @@ export function FillMode({
   onClose: () => void
   onPreview: () => void
 }) {
-  // Decided once, when the mode opens: the welcome stays until "Verder", even after the name is saved
-  const [showWelcome, setShowWelcome] = useState(() => isPlanEmpty(data.tiles))
+  const [route, setRoute] = useState<Route>({ name: 'plan' })
 
-  if (showWelcome) {
+  if (route.name === 'color') {
     return (
-      <WelcomeScreen
-        initialName={data.plan.clientName}
-        onNext={async (name) => {
-          await setClientName(name)
-          await onChanged()
-          setShowWelcome(false)
-        }}
+      <ColorScreen
+        key={route.color}
+        color={route.color}
+        tiles={data.tiles}
+        onBack={() => setRoute({ name: 'plan' })}
+        onOpenTile={(kind, tileId) => setRoute({ name: 'tile', color: route.color, kind, tileId })}
       />
     )
   }
 
-  return <Editor data={data} onChanged={onChanged} onClose={onClose} onPreview={onPreview} />
+  if (route.name === 'tile') {
+    return (
+      <TileScreen
+        // A new screen for every tile, so no text of the previous tile stays behind
+        key={`${route.kind}-${route.tileId ?? 'new'}`}
+        color={route.color}
+        kind={route.kind}
+        tileId={route.tileId}
+        tiles={data.tiles}
+        onChanged={onChanged}
+        onBack={() => setRoute({ name: 'color', color: route.color })}
+      />
+    )
+  }
+
+  return (
+    <PlanScreen
+      data={data}
+      onChanged={onChanged}
+      onClose={onClose}
+      onPreview={onPreview}
+      onOpenColor={(color) => setRoute({ name: 'color', color })}
+    />
+  )
 }

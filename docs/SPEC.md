@@ -95,7 +95,8 @@ Vier schermen, drie niveaus, overal "‹ Terug" linksboven:
 - Rood krijgt bij een nieuw plan al de actie "Ik ga naar mijn begeleider" met pictogram, aan te passen of te verwijderen.
 
 ### 6.4 Opslaan
-- Alles wordt direct opgeslagen op de telefoon. Er is geen "opslaan"-knop nodig.
+- Alles wordt op de telefoon opgeslagen, nooit op een server. Volgorde, verwijderen en de naam worden meteen bewaard. De tekst en het plaatje van een
+  tegel worden bewaard met "Klaar" op het tegelscherm; "Terug" laat het vallen (D-040).
 - Geen export of back-up: het plan staat ook in het cliëntdossier (Medicore) en is daaruit opnieuw in te vullen (D-003).
 
 ## 7. Datamodel (uitgewerkt in T-1.1, D-023)

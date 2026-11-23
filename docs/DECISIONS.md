@@ -274,7 +274,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Herzien als: Checkpoint 1 of de test met cliënten laat zien dat de knop per ongeluk opent of niet opent.
 
 ### D-026 — De app opent op het echte startscherm; "leeg plan" betekent geen signalen (T-2.1)
-- Datum: 2026-11-22 · Status: Besloten · Besloten door: Claude
+- Datum: 2026-11-22 · Status: Besloten (het welkomstscherm is vervangen door D-035/D-040; de rest blijft) · Besloten door: Claude
 - Besluit: De app opent nu op het echte (nog kale) startscherm, met het plan uit de opslag (`usePlan`, maakt het
   plan bij de eerste start en vraagt dan `persist()` aan, R-001). De lang-indrukken-knop (D-025) staat rechtsboven en
   opent `FillMode`. Een plan is "leeg" zolang er **geen enkel signaal** in staat (`isPlanEmpty`, `src/domain/`).
@@ -290,7 +290,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Herzien als: T-2.2 of Checkpoint 2 laat zien dat het welkomstscherm op een verkeerd moment verschijnt.
 
 ### D-027 — Editor per kleur: opbouw en maximum van 6 per lijst (T-2.2)
-- Datum: 2026-11-22 · Status: Besloten · Besloten door: Sander (maximum 6, Q-004), Claude (opbouw)
+- Datum: 2026-11-22 · Status: Besloten (de opbouw van de editor is vervangen door D-035/D-040; het maximum van 6 blijft) · Besloten door: Sander (maximum 6, Q-004), Claude (opbouw)
 - Besluit:
   - **Maximaal 6 tegels per lijst** (`MAX_TILES_PER_LIST` in `src/domain/plan.ts`): 6 signalen en 6 acties per kleur.
     De rode standaardactie telt mee, dus rood heeft nog ruimte voor 5 eigen acties. Bij 6 verdwijnt "Toevoegen" en staat
@@ -383,7 +383,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Herzien als: de schets op de iPhone of Android trager is dan ±3 seconden, of echte foto's onduidelijk worden.
 
 ### D-031 — "Bewaar" is nooit grijs zonder uitleg (T-2.5)
-- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude
+- Datum: 2026-11-23 · Status: Besloten (geldt nu voor "Klaar" op het tegelscherm, D-040) · Besloten door: Claude
 - Besluit: In het tegelformulier is "Bewaar" altijd te tikken (behalve tijdens het opslaan). Ontbreekt er iets, dan
   bewaart de app niets en zegt hij wat er mist: "Schrijf eerst wat er op de tegel staat." (en zet de cursor in het
   tekstvak, dat dan in beeld schuift) of "Kies eerst een plaatje of een foto." Dit vervangt de grijze knop uit D-027.
@@ -533,4 +533,30 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   een bron iemand ze opnieuw maken; ze lopen dan uit de pas).
 - Herzien als: het opstarten met de volledige set (±45 pictogrammen, Fase 4) op de iPhone of Android merkbaar traag wordt; dan in
   de Cache Storage bewaren of alleen de zichtbare maken. Of als Safari de SVG-arcering of het wiebelen anders tekent dan Chrome.
+
+### D-040 — Invulkant: vier schermen, opslaan met "Klaar", plaatje kiezen als deel van het tegelscherm (T-2.9)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude (technisch), uitwerking van D-035
+- Besluit:
+  - `FillMode` (`src/features/fill/`) houdt bij waar de begeleider is (Plan → Eén kleur → Eén tegel) en toont `PlanScreen`, `ColorScreen`
+    of `TileScreen`. Plaatje kiezen (`PictureScreen`) is geen eigen route maar een toestand van `TileScreen`: zo blijft wat er al getypt is
+    staan terwijl je een plaatje kiest. Elk scherm gebruikt de componenten uit T-2.7.
+  - Een tegel wordt bewaard met **"Klaar"** (tekst en plaatje samen, `addTile` of `updateTile`). **"Terug"** laat wat je typte vallen.
+    Ontbreekt er iets, dan zegt de app wat (D-031, nu bij "Klaar"). De **volgorde** (← Eerder, Later →) en **Verwijderen** gebeuren wel
+    meteen, want ze raken niet wat je aan het typen bent. Verwijderen vraagt "Weet je het zeker?" in de vaste balk onderaan.
+  - Het Plan-scherm heeft geen "Terug": het is het beginpunt en "Klaar" sluit de invulmodus. "Naam wijzigen" klapt een tekstveld open op het
+    Plan-scherm (de balk onderaan toont dan "Bewaar" en "Annuleren"), geen vijfde scherm.
+  - Bij een plan zonder signalen staat de uitleg ("Vul dit plan samen in.") boven de kleurkaarten (SPEC §6.2). `WelcomeScreen`, de oude
+    `Editor`, `TileList`, `TileRow` en `TileForm` zijn weg.
+  - Tijdens bijsnijden van een foto staat er geen "‹ Terug" maar alleen de eigen "Annuleren" van het bijsnijdscherm (D-029: twee manieren om te
+    annuleren verwarren).
+  - `Screen` scrolt bij het openen naar boven (anders opent een nieuw scherm halverwege als het vorige gescrold was).
+- Waarom: "Klaar" bij een tegel past bij de schetsen en bij wat Sander wil: één duidelijke afsluiting per scherm. Direct bewaren bij elke toets
+  zou halve tegels in het plan zetten. Plaatje kiezen binnen het tegelscherm voorkomt dat de tekst kwijtraakt of dat de draft in `FillMode`
+  moet leven.
+- Afgewezen: Alles direct bewaren zoals bij SPEC §6.4 oorspronkelijk (halve tegels, geen duidelijk "klaar"). Een router-pakket (D-019; een
+  toestand volstaat). "Terug" die ongevraagd bewaart (verrassend; onvolledige tegels). Een apart scherm voor de naam (SPEC zegt vier schermen).
+- Gevolgen: SPEC §6.4 ("Alles wordt direct opgeslagen") geldt nu voor wijzigingen aan de volgorde, verwijderen en de naam; voor tekst en plaatje
+  van een tegel is het "Klaar". Nog niet gedaan: de oude `Tile` en tokens (T-2.10), `#galerie-nieuw` (T-2.10). De knop "Foto maken of kiezen"
+  staat onder het plaatjesraster (zoals de schets); bij ±45 pictogrammen (Fase 4) ligt hij ver naar beneden en is mogelijk beter boven het raster.
+- Herzien als: testers bij Checkpoint 2 "Terug" laten vallen wat ze typten (dan een waarschuwing), of de foto-knop niet vinden.
 

@@ -99,30 +99,42 @@ describe('App', () => {
     ).toBeInTheDocument()
   })
 
-  it('opens the welcome screen after holding the button, with an empty plan', async () => {
+  it('opens the plan screen after holding the button, with the explanation for an empty plan', async () => {
     render(<App />)
     await holdFillButton()
-    expect(await screen.findByRole('heading', { name: 'Welkom' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Plan' })).toBeInTheDocument()
     expect(screen.getByText('Vul dit plan samen in.')).toBeInTheDocument()
   })
 
-  it('saves the name, then shows the filling-in screen, and "Klaar" goes back to the start', async () => {
+  it('saves the name, then "Klaar" goes back to the start', async () => {
     render(<App />)
     await holdFillButton()
-    await userEvent.type(await screen.findByLabelText(/Voornaam/), 'Sam')
-    await userEvent.click(screen.getByRole('button', { name: 'Verder' }))
-    expect(await screen.findByRole('heading', { name: 'Plan invullen' })).toBeInTheDocument()
+    await userEvent.click(await screen.findByRole('button', { name: 'Naam wijzigen' }))
+    await userEvent.type(screen.getByLabelText(/Voornaam/), 'Sam')
+    await userEvent.click(screen.getByRole('button', { name: 'Bewaar' }))
+    expect(await screen.findByRole('heading', { name: 'Plan van Sam' })).toBeInTheDocument()
     await userEvent.click(screen.getByRole('button', { name: 'Klaar' }))
     expect(
       await screen.findByRole('heading', { name: 'Hoi Sam, wat merk je?' }),
     ).toBeInTheDocument()
   })
 
-  it('skips the welcome screen when the plan already has signals', async () => {
+  it('skips the explanation when the plan already has signals', async () => {
     store.tiles = [signal]
     render(<App />)
     await holdFillButton()
-    expect(await screen.findByRole('heading', { name: 'Plan invullen' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Plan' })).toBeInTheDocument()
+    expect(screen.queryByText('Vul dit plan samen in.')).not.toBeInTheDocument()
+  })
+
+  it('"Bekijk als cliënt" shows the start screen, and "Terug naar invullen" goes back', async () => {
+    store.tiles = [signal]
+    render(<App />)
+    await holdFillButton()
+    await userEvent.click(await screen.findByRole('button', { name: 'Bekijk als cliënt' }))
+    expect(await screen.findByRole('heading', { name: 'Hoi, wat merk je?' })).toBeInTheDocument()
+    await userEvent.click(screen.getByRole('button', { name: 'Terug naar invullen' }))
+    expect(await screen.findByRole('heading', { name: 'Plan' })).toBeInTheDocument()
   })
 
   it('still shows the proof screen on #proef', async () => {
