@@ -25,8 +25,8 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 - Beslissingen: D-029 (nieuw); D-010 aangevuld (geen `capture`).
 - Problemen / verrassingen: Tijdens bijsnijden stonden er twee knoppen "Annuleren"; nu verbergt het formulier zijn
   eigen knoppen zolang het kader open is. Tot T-2.5 wordt de kleurenfoto bewaard, nog geen schets.
-- Volgende: Sander test op de iPhone (vanaf het beginscherm) een foto maken en een foto kiezen, staand en liggend.
-  Daarna T-2.5 Schetsfilter ⚙ Opus · medium.
+  Daarna door Sander op de iPhone (vanaf het beginscherm) getest: foto maken en kiezen werkt, foto's staan rechtop.
+- Volgende: T-2.5 Schetsfilter ⚙ Opus · medium.
 
 ## 2026-11-22 — Pictogramkiezer met zoekveld (T-2.3)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag: ja)

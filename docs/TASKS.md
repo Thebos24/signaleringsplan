@@ -59,7 +59,7 @@ Doel: een begeleider kan samen met de cliënt een compleet plan invullen.
       verwijderen met bevestiging, volgorde wijzigen, maximaal aantal (Q-004). ⚙ Sonnet · high — 2026-11-22 (D-027; plaatje kiezen is nog een tijdelijk rijtje, T-2.3)
 - [x] T-2.3 (C) Pictogramkiezer: raster met zoekveld (zoekt op Nederlandse trefwoorden per pictogram). ⚙ Sonnet · medium — 2026-11-22 (D-028)
 - [x] T-2.4 (C) Foto maken of kiezen: vierkant bijsnijden (simpel: verschuiven + zoomen), verkleinen tot 1024 px,
-      orientatie goed zetten, opslaan als Blob. ⚙ Opus · medium — 2026-11-23 (D-029; nog te testen op de iPhone)
+      orientatie goed zetten, opslaan als Blob. ⚙ Opus · medium — 2026-11-23 (D-029; werkt op de iPhone, foto's rechtop)
 - [ ] T-2.5 (C) Schetsfilter (D-010): canvas-filter van foto naar potloodschets, voorbeeld met "Gebruik" / "Opnieuw".
       Testen met verschillende foto's (licht, donker, binnen, buiten, gezicht). Tests voor afmetingen en foutloos draaien. ⚙ Opus · medium
 - [ ] T-2.6 (C) "Bekijk als cliënt" en "Klaar". ⚙ Sonnet · low
