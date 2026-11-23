@@ -15,6 +15,17 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Checkpoint 2 gehaald, T-2.10 online
+- Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
+- Gedaan: T-2.10 gepusht (Sander gaf akkoord) zodat de nieuwe schermen via GitHub Pages op de iPhone kwamen; eerst zag Sander nog de oude tegels
+  omdat de commit niet online stond. Sander testte op de iPhone (Checkpoint 2) en vond alles goed. Tests (140) en lint slagen.
+- Beslissingen: geen nieuwe.
+- Problemen / verrassingen: Checkpoint 2 is kort gedaan; de partner deed nog niet mee en er is geen invultijd genoteerd. Nieuwe versie op de iPhone
+  verschijnt pas na twee keer opnieuw openen (service worker); dat hoort bij T-5.5.
+- Volgende: T-3.3 Rood scherm ⚙ Sonnet · medium. Sander moet eerst Q-005 beantwoorden ("Gevaar? Bel 112" op rood: ja of nee).
+
+---
+
 ## 2026-11-23 — Cliëntschermen in Apple-stijl (T-2.10)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
 - Gedaan: T-2.10. Start en Resultaat gebruiken de nieuwe componenten: signalen als lijst met cirkels, "Het gaat goed" als groene rij, "Klaar" en
