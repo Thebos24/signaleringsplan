@@ -1,19 +1,43 @@
 import { useState } from 'react'
+import { BigButton } from '../components/BigButton'
 import { FillMode } from '../features/fill/FillMode'
 import { usePlan } from '../features/plan/usePlan'
 import { StartScreen } from '../features/start/StartScreen'
 import { nl } from '../text/nl'
 
+type Screen = 'client' | 'fill' | 'preview'
+
 // The real app: the client start screen, and the filling-in mode behind the hold-to-open button.
+// "preview" is the client screen seen from the filling-in mode (SPEC §6.3, T-2.6).
 export function PlanApp() {
   const { data, failed, reload } = usePlan()
-  const [filling, setFilling] = useState(false)
+  const [screen, setScreen] = useState<Screen>('client')
 
   if (failed) return <p style={{ padding: 16 }}>{nl.loadFailed}</p>
   if (!data) return <p style={{ padding: 16 }}>{nl.loading}</p>
 
-  if (filling) {
-    return <FillMode data={data} onChanged={reload} onClose={() => setFilling(false)} />
+  if (screen === 'fill') {
+    return (
+      <FillMode
+        data={data}
+        onChanged={reload}
+        onClose={() => setScreen('client')}
+        onPreview={() => setScreen('preview')}
+      />
+    )
   }
-  return <StartScreen clientName={data.plan.clientName} onOpenFill={() => setFilling(true)} />
+  const start = (
+    <StartScreen clientName={data.plan.clientName} onOpenFill={() => setScreen('fill')} />
+  )
+  if (screen === 'preview') {
+    return (
+      <>
+        {start}
+        <div style={{ padding: 16 }}>
+          <BigButton onClick={() => setScreen('fill')}>{nl.fill.backToFill}</BigButton>
+        </div>
+      </>
+    )
+  }
+  return start
 }

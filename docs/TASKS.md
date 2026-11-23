@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.5 zijn af. Volgende: T-2.6.
+**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 (Sander) staat open. Daarna Fase 3, eerste taak T-3.1.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -63,7 +63,7 @@ Doel: een begeleider kan samen met de cliënt een compleet plan invullen.
 - [x] T-2.5 (C) Schetsfilter (D-010): canvas-filter van foto naar potloodschets, voorbeeld met "Gebruik" / "Opnieuw".
       Testen met verschillende foto's (licht, donker, binnen, buiten, gezicht). Tests voor afmetingen en foutloos draaien. ⚙ Opus · medium
       — 2026-11-23 (D-030 potlood, D-031 Bewaar zegt wat er mist, D-032 zachte witte rand)
-- [ ] T-2.6 (C) "Bekijk als cliënt" en "Klaar". ⚙ Sonnet · low
+- [x] T-2.6 (C) "Bekijk als cliënt" en "Klaar". ⚙ Sonnet · low — 2026-11-23 (preview = het startscherm met een knop terug; de echte flow komt in Fase 3)
 
 **Checkpoint 2:** Sander en zijn partner vullen samen een verzonnen testplan in op de iPhone, met minstens één eigen
 foto per kleur. Is het invullen duidelijk? Lukt het binnen ±15 minuten?

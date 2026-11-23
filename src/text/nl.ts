@@ -35,6 +35,8 @@ export const nl = {
     next: 'Verder',
     title: 'Plan invullen',
     close: 'Klaar',
+    preview: 'Bekijk als cliënt',
+    backToFill: 'Terug naar invullen',
     colorTabs: 'Kies een kleur',
     signalsTitle: 'Signalen',
     signalsQuestion: 'Wat merk je dan?',

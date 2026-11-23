@@ -15,6 +15,18 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Bekijk als cliënt en Klaar (T-2.6)
+- Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · low: ja)
+- Gedaan: T-2.6. In de invulmodus staat onderaan nu "Bekijk als cliënt" boven "Klaar". "Bekijk als cliënt" toont
+  het startscherm van de cliënt met een knop "Terug naar invullen". "Klaar" sloot de invulmodus al. 112 tests, lint
+  en typecontrole slagen. Niet in de preview of op de iPhone bekeken.
+- Beslissingen: geen nieuwe (kleine keuze: de preview is het echte startscherm; zodra Fase 3 de flow bouwt, laat
+  de preview die vanzelf zien).
+- Problemen / verrassingen: geen.
+- Volgende: Checkpoint 2 (Sander en partner vullen samen een testplan in op de iPhone). Daarna T-3.1 ⚙ Sonnet · medium.
+
+---
+
 ## 2026-11-23 — Schetsfilter (T-2.5)
 - Waar: Claude Code (Opus 5.5; past bij de tag Opus · medium: ja)
 - Gedaan: T-2.5. Na het bijsnijden wordt een foto een potloodschets (in `ink` op `paper`), getoond met "Gebruik" /

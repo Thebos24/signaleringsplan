@@ -9,10 +9,16 @@ import { Editor } from './Editor'
 import { usePlan } from '../plan/usePlan'
 
 // Same wiring as in the app: load the plan, reload after every change
-function Harness({ onClose = () => {} }: { onClose?: () => void }) {
+function Harness({
+  onClose = () => {},
+  onPreview = () => {},
+}: {
+  onClose?: () => void
+  onPreview?: () => void
+}) {
   const { data, reload } = usePlan()
   if (!data) return null
-  return <Editor data={data} onChanged={reload} onClose={onClose} />
+  return <Editor data={data} onChanged={reload} onClose={onClose} onPreview={onPreview} />
 }
 
 beforeEach(async () => {
@@ -130,5 +136,12 @@ describe('Editor', () => {
     render(<Harness onClose={onClose} />)
     await userEvent.click(await screen.findByRole('button', { name: 'Klaar' }))
     expect(onClose).toHaveBeenCalled()
+  })
+
+  it('"Bekijk als cliënt" opens the client preview', async () => {
+    const onPreview = vi.fn()
+    render(<Harness onPreview={onPreview} />)
+    await userEvent.click(await screen.findByRole('button', { name: 'Bekijk als cliënt' }))
+    expect(onPreview).toHaveBeenCalled()
   })
 })

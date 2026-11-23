@@ -12,10 +12,12 @@ export function FillMode({
   data,
   onChanged,
   onClose,
+  onPreview,
 }: {
   data: PlanData
   onChanged: () => Promise<void> | void
   onClose: () => void
+  onPreview: () => void
 }) {
   // Decided once, when the mode opens: the welcome stays until "Verder", even after the name is saved
   const [showWelcome, setShowWelcome] = useState(() => isPlanEmpty(data.tiles))
@@ -33,5 +35,5 @@ export function FillMode({
     )
   }
 
-  return <Editor data={data} onChanged={onChanged} onClose={onClose} />
+  return <Editor data={data} onChanged={onChanged} onClose={onClose} onPreview={onPreview} />
 }

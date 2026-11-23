@@ -13,10 +13,12 @@ export function Editor({
   data,
   onChanged,
   onClose,
+  onPreview,
 }: {
   data: PlanData
   onChanged: () => Promise<void> | void
   onClose: () => void
+  onPreview: () => void
 }) {
   const [color, setColor] = useState<Color>('orange')
   const inList = (kind: 'signal' | 'action') =>
@@ -46,6 +48,7 @@ export function Editor({
       )}
       <TileList color={color} kind="action" tiles={inList('action')} onChanged={onChanged} />
 
+      <BigButton onClick={onPreview}>{t.preview}</BigButton>
       <BigButton onClick={onClose}>{t.close}</BigButton>
     </main>
   )
