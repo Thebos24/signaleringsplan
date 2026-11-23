@@ -535,7 +535,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   de Cache Storage bewaren of alleen de zichtbare maken. Of als Safari de SVG-arcering of het wiebelen anders tekent dan Chrome.
 
 ### D-040 — Invulkant: vier schermen, opslaan met "Klaar", plaatje kiezen als deel van het tegelscherm (T-2.9)
-- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude (technisch), uitwerking van D-035
+- Datum: 2026-11-23 · Status: Besloten (Sander bevestigde 2026-11-23: bewaren met "Klaar") · Besloten door: Claude (technisch), uitwerking van D-035
 - Besluit:
   - `FillMode` (`src/features/fill/`) houdt bij waar de begeleider is (Plan → Eén kleur → Eén tegel) en toont `PlanScreen`, `ColorScreen`
     of `TileScreen`. Plaatje kiezen (`PictureScreen`) is geen eigen route maar een toestand van `TileScreen`: zo blijft wat er al getypt is
