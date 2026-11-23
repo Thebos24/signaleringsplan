@@ -150,3 +150,40 @@
 .fill__actions strong {
   flex-basis: 100%;
 }
+
+/* Own photo (T-2.4) */
+.fill__photo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fill__photo p {
+  margin: 0;
+}
+.fill__photo-chosen {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.fill__photo-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+/* The real file field is invisible; the whole button opens it */
+.fill__photo-button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.fill__photo-button:has(input:focus-visible) {
+  outline: var(--size-border-width) solid var(--color-muted);
+}
+.fill__row-main .photo-image {
+  width: 48px;
+  height: 48px;
+}

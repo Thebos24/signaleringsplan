@@ -67,6 +67,20 @@ export const nl = {
     save: 'Bewaar',
     cancel: 'Annuleren',
     saveFailed: 'Het opslaan lukte niet. Probeer het nog eens.',
+    orPhoto: 'Of gebruik een eigen foto',
+    takePhoto: 'Maak of kies een foto',
+    otherPhoto: 'Andere foto',
+    photoChosen: 'Deze foto komt op de tegel.',
+  },
+
+  // Making a photo square (T-2.4)
+  photo: {
+    loading: 'De foto wordt geladen…',
+    hint: 'Schuif de foto met je vinger. Maak hem groter of kleiner met twee vingers of met de schuif.',
+    frameLabel: 'De foto. Schuif om een ander stuk te kiezen.',
+    zoomLabel: 'Groter of kleiner',
+    use: 'Gebruik deze foto',
+    failed: 'Deze foto lukt niet. Kies een andere foto.',
   },
 
   // Name and search words per pictogram (T-2.3). The name is what a screen reader says; the search

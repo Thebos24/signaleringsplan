@@ -15,6 +15,19 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Foto maken of kiezen en bijsnijden (T-2.4)
+- Waar: Claude Code (Opus 5.5; Sander wisselde naar medium; past bij de tag: ja)
+- Gedaan: T-2.4. In het tegelformulier staat onder de plaatjes "Of gebruik een eigen foto". De telefoon vraagt
+  camera of fotobibliotheek. Daarna een vierkant kader: schuiven met één vinger, zoomen met twee vingers of de
+  schuifbalk, dan "Gebruik deze foto". De foto komt rechtop, max. 1024 px, en het origineel wordt niet bewaard. In de
+  lijst staat nu het fotootje in plaats van 📷. 97 tests, lint en build slagen. In de preview (390×844) een verzonnen
+  testfoto bijgesneden, bewaard (750×750, 10 KB) en na herladen teruggezien; daarna weer verwijderd.
+- Beslissingen: D-029 (nieuw); D-010 aangevuld (geen `capture`).
+- Problemen / verrassingen: Tijdens bijsnijden stonden er twee knoppen "Annuleren"; nu verbergt het formulier zijn
+  eigen knoppen zolang het kader open is. Tot T-2.5 wordt de kleurenfoto bewaard, nog geen schets.
+- Volgende: Sander test op de iPhone (vanaf het beginscherm) een foto maken en een foto kiezen, staand en liggend.
+  Daarna T-2.5 Schetsfilter ⚙ Opus · medium.
+
 ## 2026-11-22 — Pictogramkiezer met zoekveld (T-2.3)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag: ja)
 - Gedaan: T-2.3. In het formulier voor een tegel staat nu een zoekveld boven het plaatjesraster. Je typt een Nederlands

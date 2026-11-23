@@ -2,14 +2,18 @@ import { useState } from 'react'
 import { BigButton } from '../../components/BigButton'
 import { Picto } from '../../components/Picto'
 import { MAX_TILE_TEXT_LENGTH, cleanText, type Tile, type TileKind } from '../../domain/plan'
+import type { NewImage } from '../../storage/planStore'
 import { PICTO_IDS } from '../pictos/pictos'
+import { PhotoCropper } from '../photo/PhotoCropper'
+import { PhotoImage } from '../photo/PhotoImage'
 import { searchPictos } from '../pictos/searchPictos'
 import { nl } from '../../text/nl'
 
 const t = nl.fill
 
 // Add or change one tile: a short text and a picture (SPEC §6.3).
-// The picture is chosen from a grid with a search field (T-2.3). T-2.4 and T-2.5 add photos.
+// The picture is a pictogram from a grid with a search field (T-2.3), or an own photo that is
+// made square first (T-2.4). T-2.5 turns the photo into a sketch.
 export function TileForm({
   kind,
   tile,
@@ -18,12 +22,16 @@ export function TileForm({
 }: {
   kind: TileKind
   tile?: Tile // given when changing a tile
-  onSave: (text: string, pictoId: string) => Promise<void>
+  // `image` is undefined when a changed tile keeps its photo
+  onSave: (text: string, image: NewImage | undefined) => Promise<void>
   onCancel: () => void
 }) {
   const [text, setText] = useState(tile?.text ?? '')
-  // A tile with a photo keeps it until a picto is chosen (photos come in T-2.4)
+  // A tile with a photo keeps it until a picto or another photo is chosen
   const [pictoId, setPictoId] = useState(tile?.image.type === 'picto' ? tile.image.pictoId : '')
+  const [newPhoto, setNewPhoto] = useState<Blob>()
+  // The file that is being made square right now
+  const [cropping, setCropping] = useState<Blob>()
   const [search, setSearch] = useState('')
   const [failed, setFailed] = useState(false)
   const [saving, setSaving] = useState(false)
@@ -37,15 +45,23 @@ export function TileForm({
     : kind === 'signal'
       ? t.addSignal
       : t.addAction
-  // Empty picto id on a tile with a photo means: keep the photo
-  const keepsPhoto = tile?.image.type === 'photo' && pictoId === ''
-  const canSave = cleanText(text) !== '' && (pictoId !== '' || keepsPhoto) && !saving
+  // No picto and no new photo on a tile with a photo means: keep the photo
+  const oldPhotoId =
+    tile?.image.type === 'photo' && pictoId === '' && !newPhoto ? tile.image.photoId : undefined
+  const image: NewImage | undefined = newPhoto
+    ? { type: 'photo', blob: newPhoto }
+    : pictoId !== ''
+      ? { type: 'picto', pictoId }
+      : undefined
+  const hasPhoto = newPhoto !== undefined || oldPhotoId !== undefined
+  const canSave =
+    cleanText(text) !== '' && (image !== undefined || hasPhoto) && !saving && !cropping
 
   async function save() {
     setSaving(true)
     setFailed(false)
     try {
-      await onSave(text, pictoId)
+      await onSave(text, image)
     } catch {
       setFailed(true)
       setSaving(false)
@@ -71,45 +87,87 @@ export function TileForm({
           onChange={(e) => setText(e.target.value)}
         />
       </label>
-      <fieldset className="fill__pictos">
-        <legend>{t.pictoLabel}</legend>
-        <input
-          type="search"
-          className="fill__picto-search"
-          aria-label={t.pictoSearchLabel}
-          placeholder={t.pictoSearchHint}
-          value={search}
-          autoComplete="off"
-          onChange={(e) => setSearch(e.target.value)}
-          // Enter in the search field must not save the tile
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') e.preventDefault()
+      {cropping ? (
+        <PhotoCropper
+          file={cropping}
+          onCancel={() => setCropping(undefined)}
+          onUse={(blob) => {
+            setNewPhoto(blob)
+            setPictoId('')
+            setCropping(undefined)
           }}
         />
-        {shown.length === 0 && <p className="fill__picto-none">{t.pictoNone}</p>}
-        {shown.map((id) => (
-          <label key={id} className="fill__picto-choice">
+      ) : (
+        <>
+          <fieldset className="fill__pictos">
+            <legend>{t.pictoLabel}</legend>
             <input
-              type="radio"
-              name="picto"
-              value={id}
-              checked={pictoId === id}
-              onChange={() => setPictoId(id)}
+              type="search"
+              className="fill__picto-search"
+              aria-label={t.pictoSearchLabel}
+              placeholder={t.pictoSearchHint}
+              value={search}
+              autoComplete="off"
+              onChange={(e) => setSearch(e.target.value)}
+              // Enter in the search field must not save the tile
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') e.preventDefault()
+              }}
             />
-            <Picto id={id} />
-            <span className="fill__picto-name">{nl.pictoWords[id]?.name ?? id}</span>
-          </label>
-        ))}
-      </fieldset>
+            {shown.length === 0 && <p className="fill__picto-none">{t.pictoNone}</p>}
+            {shown.map((id) => (
+              <label key={id} className="fill__picto-choice">
+                <input
+                  type="radio"
+                  name="picto"
+                  value={id}
+                  checked={pictoId === id}
+                  onChange={() => {
+                    setPictoId(id)
+                    setNewPhoto(undefined)
+                  }}
+                />
+                <Picto id={id} />
+                <span className="fill__picto-name">{nl.pictoWords[id]?.name ?? id}</span>
+              </label>
+            ))}
+          </fieldset>
+          <div className="fill__photo">
+            <p>{t.orPhoto}</p>
+            {hasPhoto && (
+              <div className="fill__photo-chosen">
+                <PhotoImage photoId={oldPhotoId} blob={newPhoto} />
+                <span>{t.photoChosen}</span>
+              </div>
+            )}
+            {/* No `capture`: the phone then asks "camera or photo library" (D-029) */}
+            <label className="big-button big-button--quiet fill__photo-button">
+              {hasPhoto ? t.otherPhoto : t.takePhoto}
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => {
+                  const file = e.target.files?.[0]
+                  e.target.value = '' // so the same photo can be chosen again
+                  if (file) setCropping(file)
+                }}
+              />
+            </label>
+          </div>
+        </>
+      )}
       {failed && <p role="alert">{t.saveFailed}</p>}
-      <div className="fill__actions">
-        <BigButton onClick={() => void save()} disabled={!canSave}>
-          {t.save}
-        </BigButton>
-        <BigButton variant="quiet" onClick={onCancel}>
-          {t.cancel}
-        </BigButton>
-      </div>
+      {/* While cropping, the cropper has its own buttons; two "Annuleren" would be confusing */}
+      {!cropping && (
+        <div className="fill__actions">
+          <BigButton onClick={() => void save()} disabled={!canSave}>
+            {t.save}
+          </BigButton>
+          <BigButton variant="quiet" onClick={onCancel}>
+            {t.cancel}
+          </BigButton>
+        </div>
+      )}
     </form>
   )
 }

@@ -106,7 +106,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Afgewezen: AI-dienst voor de omzetting (stuurt foto's naar een server, kost geld). Originele foto tonen
   (onrustig, past niet bij de stijl, privacygevoeliger).
 - Gevolgen: Foto invoer via `<input type="file" accept="image/*" capture>` (werkt op iOS en Android). Filter
-  afstemmen in T-2.6 (R-004).
+  afstemmen in T-2.6 (R-004). (2026-11-23: zonder `capture`, zodat ook de fotobibliotheek kan; zie D-029.)
 - Herzien als: de schetsen er bij echte foto's slecht uitzien.
 
 ### D-011 — Eigen geschetste pictogrammen, getekend als SVG
@@ -327,3 +327,29 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Gevolgen: Fase 4 (T-4.4) moet voor elk nieuw pictogram naam en trefwoorden toevoegen; een test dwingt dat af.
 - Herzien als: Checkpoint 2 laat zien dat begeleiders vaak niets vinden (dan trefwoorden uitbreiden of tolerantie voor typfouten).
 
+
+### D-029 — Foto maken of kiezen en vierkant bijsnijden (T-2.4)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude
+- Besluit:
+  - In het tegelformulier staat onder de pictogrammen "Of gebruik een eigen foto" met de knop "Maak of kies een foto".
+    Het bestandsveld heeft `accept="image/*"` maar **geen `capture`**: de telefoon vraagt dan zelf "camera of
+    fotobibliotheek" (SPEC §6.3: maken óf kiezen). Dit vervangt het `capture`-detail uit D-010.
+  - De foto wordt ingelezen met `createImageBitmap(file, { imageOrientation: 'from-image' })` (zet hem rechtop, ook
+    HEIC op de iPhone, R-009) en meteen verkleind tot een werkkopie van max. 2048 px. Het origineel wordt niet bewaard.
+  - Bijsnijden: een vierkant kader. Eén vinger (of muis) schuift de foto, twee vingers of een schuifbalk zoomen
+    (1× t/m 3×). Het vierkant kan niet buiten de foto komen. De rekenregels staan als pure functies in
+    `src/domain/crop.ts` (met tests); het canvaswerk in `src/features/photo/photoCanvas.ts`.
+  - Opgeslagen wordt het vierkant als JPEG (kwaliteit 0,85), max. 1024 px, en nooit groter dan het gekozen stuk
+    (geen wazig vergroten). Opslaan gaat via de bestaande `addTile`/`updateTile` (D-023): tegel en foto samen.
+  - Tot T-2.5 wordt het bijgesneden kleurenvierkant bewaard; T-2.5 zet er de schets tussen (D-010).
+  - Tijdens het bijsnijden zijn de knoppen "Bewaar"/"Annuleren" van het formulier weg; het kader heeft zijn eigen
+    "Gebruik deze foto"/"Annuleren".
+- Waarom: Geen extra pakket nodig (D-019). Een werkkopie van 2048 px blijft binnen de canvasgrens van Safari en
+  houdt het geheugen laag, en is groot genoeg om in te zoomen. Schuiven + zoomen is wat mensen van hun telefoon kennen.
+  De rekenregels los van het canvas maken ze testbaar in jsdom (dat geen canvas heeft).
+- Afgewezen: Een bijsnijpakket zoals react-easy-crop (extra dependency voor iets van ±100 regels). `capture` op het
+  bestandsveld (dan alleen de camera, niet de fotobibliotheek). Het origineel bewaren (privacy, ruimte, D-010).
+  Alleen een schuifbalk zonder knijpen (voelt vreemd op een telefoon). Een vast midden zonder schuiven (gezicht
+  staat vaak niet in het midden).
+- Gevolgen: T-2.5 plaatst het schetsfilter tussen "Gebruik deze foto" en opslaan.
+- Herzien als: foto's op Android of iPhone scheef of niet laden, of het geheugen op oudere telefoons tekortschiet.

@@ -1,0 +1,49 @@
+/* Photo: cropping a photo square (T-2.4) */
+.photo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+}
+.photo__hint {
+  margin: 0;
+}
+.photo__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: var(--size-border-width) solid var(--color-ink);
+  border-radius: var(--size-radius);
+  background: var(--color-muted);
+  /* The fingers move the photo, not the page */
+  touch-action: none;
+  cursor: grab;
+}
+.photo__view {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.photo__zoom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.photo__zoom input {
+  width: 100%;
+  min-height: var(--size-button-min-height);
+  accent-color: var(--color-ink);
+}
+
+/* A photo on a tile or in a list: square like a pictogram */
+.photo-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: calc(var(--size-radius) / 2);
+}
+.photo-image--empty {
+  display: inline-block;
+  background: var(--color-green-light);
+}

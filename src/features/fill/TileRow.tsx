@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BigButton } from '../../components/BigButton'
 import { Picto } from '../../components/Picto'
+import { PhotoImage } from '../photo/PhotoImage'
 import type { Tile } from '../../domain/plan'
 import { nl } from '../../text/nl'
 
@@ -32,7 +33,7 @@ export function TileRow({
         {tile.image.type === 'picto' ? (
           <Picto id={tile.image.pictoId} />
         ) : (
-          <span aria-hidden="true">📷</span>
+          <PhotoImage photoId={tile.image.photoId} />
         )}
         <span className="fill__row-text">{tile.text}</span>
       </div>

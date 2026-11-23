@@ -52,13 +52,8 @@ export function TileList({
                 kind={kind}
                 tile={editing}
                 onCancel={() => setForm(undefined)}
-                onSave={async (text, pictoId) => {
-                  await run(() =>
-                    updateTile(tile.id, {
-                      text,
-                      image: pictoId ? { type: 'picto', pictoId } : undefined,
-                    }),
-                  )
+                onSave={async (text, image) => {
+                  await run(() => updateTile(tile.id, { text, image }))
                   setForm(undefined)
                 }}
               />
@@ -81,8 +76,9 @@ export function TileList({
         <TileForm
           kind={kind}
           onCancel={() => setForm(undefined)}
-          onSave={async (text, pictoId) => {
-            await run(() => addTile({ kind, color, text, image: { type: 'picto', pictoId } }))
+          onSave={async (text, image) => {
+            if (!image) return // the form only allows saving a new tile with a picture
+            await run(() => addTile({ kind, color, text, image }))
             setForm(undefined)
           }}
         />
