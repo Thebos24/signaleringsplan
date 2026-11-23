@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 (Sander) staat open. Fase 3 is gestart: T-3.1 is af, volgende T-3.2.
+**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 (Sander) staat open. Fase 3 is gestart: T-3.1 en T-3.2 zijn af, volgende T-3.3.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -74,7 +74,7 @@ Doel: de hele flow voor de cliënt, zo simpel mogelijk.
 
 - [x] T-3.1 (C) Startscherm "Hoi [naam], wat merk je?" met signaaltegels (aan/uit), tegel "Het gaat goed" en knop
       "Klaar" (SPEC §5.1). Indeling volgens het voorstel in Q-001. ⚙ Sonnet · medium — 2026-11-23 (D-033)
-- [ ] T-3.2 (C) Resultaatscherm per kleur: kleurvlak + woord + symbool, actietegels, knop "Terug" (SPEC §5.3). ⚙ Sonnet · medium
+- [x] T-3.2 (C) Resultaatscherm per kleur: kleurvlak + woord + symbool, actietegels, knop "Terug" (SPEC §5.3). ⚙ Sonnet · medium — 2026-11-23 (D-034)
 - [ ] T-3.3 (C) Rood scherm met de extra grote bovenste tegel; eventuele tekst over noodsituaties (Q-005). ⚙ Sonnet · medium
 - [ ] T-3.4 (C) Kleine dingen: na terugkomen in de app altijd het startscherm, aangetikte signalen gewist,
       geen dubbel tikken nodig, werkt zonder internet. ⚙ Sonnet · low

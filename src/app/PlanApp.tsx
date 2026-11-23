@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BigButton } from '../components/BigButton'
 import { FillMode } from '../features/fill/FillMode'
 import { usePlan } from '../features/plan/usePlan'
+import { ResultScreen } from '../features/result/ResultScreen'
 import { StartScreen } from '../features/start/StartScreen'
 import type { Color } from '../domain/plan'
 import { nl } from '../text/nl'
@@ -39,14 +40,8 @@ export function PlanApp() {
       }}
     />
   )
-  // TEMPORARY (T-3.1): the real result screen with the action tiles comes in T-3.2
   if (screen === 'result') {
-    return (
-      <main style={{ padding: 16 }}>
-        <h1>{nl.result.youAreOn.replace('{color}', nl.colors[color])}</h1>
-        <BigButton onClick={() => setScreen('client')}>{nl.result.back}</BigButton>
-      </main>
-    )
+    return <ResultScreen color={color} tiles={data.tiles} onBack={() => setScreen('client')} />
   }
   if (screen === 'preview') {
     return (

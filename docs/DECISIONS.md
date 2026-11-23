@@ -418,3 +418,17 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Afgewezen: "Klaar" uitzetten zolang niets is aangetikt (de cliënt snapt niet waarom). Aangetikte signalen opslaan
   (geen reden, en dan staan ze er na een nieuwe start nog). Signaaltegels in hun eigen kleur (stuurt de cliënt).
 - Herzien als: Q-001 bij Checkpoint 3 een scherm per kleur wordt.
+
+### D-034 — Resultaatscherm: opbouw (T-3.2)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude
+- Besluit:
+  - De kleur is de achtergrond van het hele scherm (wens Sander, DESIGN.md 2026-11-22). Bovenaan staat het symbool
+    van de kleur en het woord. De tegels zelf hebben een lichte papierachtergrond voor goed contrast.
+  - Actietegels zijn alleen om te bekijken: `Tile` heeft daarvoor `readOnly` en wordt dan een gewoon blok, geen
+    knop. Een knop die niets doet is verwarrend, ook voor schermlezers.
+  - Groen zegt "Het gaat goed!" met daaronder het woord "Groen" (regel 6). Oranje en rood zeggen "Je bent op {kleur}."
+  - Acties staan op volgorde van het plan. De extra grote bovenste tegel bij rood komt in T-3.3.
+- Waarom: Past bij SPEC §5.3 en DESIGN.md regel 6 en 7.
+- Afgewezen: Actietegels als knoppen die niets doen (verwarrend). Kleurvlak alleen bovenaan (Sander wilde bijna het
+  hele scherm).
+- Herzien als: Checkpoint 3 laat zien dat het te druk of te weinig is.

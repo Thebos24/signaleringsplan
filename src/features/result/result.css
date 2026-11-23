@@ -1,0 +1,47 @@
+/* The colour is the background of the whole screen (DESIGN.md, 2026-11-22) */
+.result {
+  box-sizing: border-box;
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: max(var(--size-gap), env(safe-area-inset-top)) var(--size-gap) var(--size-gap);
+}
+.result--green {
+  background: var(--color-green-light);
+}
+.result--orange {
+  background: var(--color-orange-light);
+}
+.result--red {
+  background: var(--color-red-light);
+}
+.result__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-gap);
+  margin-bottom: calc(var(--size-gap) * 2);
+  text-align: center;
+}
+.result__head h1,
+.result__word {
+  margin: 0;
+}
+.result__word {
+  font-size: var(--size-tile-text);
+}
+.result__tiles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-gap);
+}
+.result__tiles .tile {
+  width: 100%;
+  background: var(--color-paper);
+}
+.result__back {
+  margin-top: calc(var(--size-gap) * 2);
+}
+.result__back .big-button {
+  width: 100%;
+}

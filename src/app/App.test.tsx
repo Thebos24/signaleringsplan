@@ -83,7 +83,7 @@ describe('App', () => {
     store.tiles = [{ ...signal, id: 2, color: 'red', text: 'Ik wil schreeuwen' }, signal]
     render(<App />)
     await userEvent.click(await screen.findByRole('button', { name: 'Het gaat goed' }))
-    expect(await screen.findByRole('heading', { name: 'Je bent op Groen.' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Het gaat goed!' })).toBeInTheDocument()
     await userEvent.click(screen.getByRole('button', { name: 'Terug' }))
     await userEvent.click(await screen.findByRole('button', { name: 'Ik ben boos' }))
     await userEvent.click(screen.getByRole('button', { name: 'Ik wil schreeuwen' }))

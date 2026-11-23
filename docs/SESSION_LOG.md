@@ -15,6 +15,20 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Resultaatscherm (T-3.2)
+- Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
+- Gedaan: T-3.2. Na "Klaar" of "Het gaat goed" vult de kleur het hele scherm, met een groot symbool (rondje met
+  vinkje, driehoek, achthoek), het woord ("Je bent op Oranje.", bij groen "Het gaat goed!" plus "Groen"), de acties
+  van die kleur als tegels om naar te kijken (geen knoppen) en de knop "Terug". Het tijdelijke scherm uit T-3.1 is
+  weg. 114 tests, lint, typecontrole en Prettier slagen. Oranje bekeken in de preview (390×844) met testtegels, die
+  zijn weer verwijderd. Rood en groen alleen via tests; niet op de iPhone gezien.
+- Beslissingen: D-034 (nieuw).
+- Problemen / verrassingen: geen.
+- Volgende: T-3.3 Rood scherm met extra grote bovenste tegel ⚙ Sonnet · medium. Sander moet Q-005 beantwoorden
+  (komt er een regel "Gevaar? Bel 112" op rood?). Checkpoint 2 staat nog open.
+
+---
+
 ## 2026-11-23 — Startscherm voor de cliënt (T-3.1)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
 - Gedaan: T-3.1. Het startscherm toont nu de signalen (oranje en rood door elkaar, in de volgorde van het plan) als
