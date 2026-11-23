@@ -115,6 +115,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Waarom: Eén consistente stijl, geen licentiekosten, geen externe bestanden.
 - Afgewezen: Bestaande pictogrammensets: andere stijl, en licenties moeten per set gecontroleerd worden.
 - Gevolgen: Fase 4 (pictogrammen). Tot die tijd tijdelijke placeholder-pictogrammen.
+- Aangevuld door D-037 (2026-11-23): de pictogrammen worden getekend als platte bron en door het schetsfilter gehaald.
 
 ### D-012 — Stack: Vite + React + TypeScript + vite-plugin-pwa
 - Datum: 2026-11-22 · Status: Besloten · Besloten door: Claude
@@ -432,3 +433,59 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Afgewezen: Actietegels als knoppen die niets doen (verwarrend). Kleurvlak alleen bovenaan (Sander wilde bijna het
   hele scherm).
 - Herzien als: Checkpoint 3 laat zien dat het te druk of te weinig is.
+
+### D-035 — Schermindeling: twee cliëntschermen, vier schermen voor de begeleider (herontwerp)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Sander (schetsen in `docs/ontwerp-voorstellen/schermen.html`)
+- Besluit:
+  - **Cliënt:** Start (signalen, "Het gaat goed", "Klaar") en Resultaat per kleur (met "Terug"). Zoals gebouwd in T-3.1 en T-3.2.
+  - **Begeleider**, drie niveaus met overal "‹ Terug" linksboven: **Plan** (drie kleurkaarten met aantallen, "Bekijk als cliënt", naam
+    wijzigen, "Klaar") → **Eén kleur** (signalen en acties als tegels, twee per rij, "+ Toevoegen") → **Eén tegel**
+    (voorbeeld, tekst, ander plaatje of foto, volgorde ← →, "Klaar", "Verwijderen" apart met "Weet je het zeker?") →
+    **Plaatje kiezen** (zoeken, raster, foto maken of kiezen; daarna bijsnijden, schets, "Gebruik" of "Opnieuw").
+  - Het aparte welkomstscherm vervalt: de uitleg staat op het Plan-scherm als het plan leeg is. De voornaam stel je in via
+    "Naam wijzigen".
+  - Geen knoppen per tegel meer in lijsten, geen formulier dat in een lijst openklapt.
+- Waarom: Sander kon de invulkant niet volgen. Eén lange pagina met tabs, lijsten, formulieren en vier knoppen per tegel gaf
+  geen overzicht. Eén taak per scherm past ook bij regel 1 van DESIGN.md.
+- Afgewezen: Alleen opruimen zonder nieuwe indeling (de structuur was het probleem). Alles op één scherm houden.
+- Gevolgen: SPEC §6.2 en §6.3 zijn aangepast. T-2.2 (Editor) en T-2.3 worden omgebouwd (T-2.7). Datamodel en opslag
+  blijven gelijk; geen migratie nodig. Het maximum van 6 per lijst (D-027) blijft.
+- Herzien als: testers de nieuwe indeling ook onduidelijk vinden (Checkpoint 2).
+
+### D-036 — Uitstraling: Apple-richtlijnen, warm papier, kleur alleen voor betekenis
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Sander (schetsen in `docs/ontwerp-voorstellen/stijl-potlood.html`)
+- Besluit:
+  - Volgt de Apple Human Interface-stijl: systeemlettertype (SF, `system-ui`), groot kopje links bovenaan (34 px,
+    vet), gegroepeerde lijsten met ronde hoeken en dunne scheidingslijnen, selectie met een cirkel (leeg = nog niet gekozen,
+    gevuld met vinkje = gekozen), terugknop linksboven, één vaste hoofdknop onderaan op een vervaagde balk.
+  - Kleuren: warm papier (`#F6F3EE` achtergrond, wit voor kaarten), donkergrijs `#3A3834` als inkt en hoofdknop. Groen, oranje
+    en rood alleen voor betekenis: het resultaatscherm (zachte verloop-achtergrond), de symbolen en de kleurkaarten.
+  - Het resultaatscherm blijft bijna volledig in de kleur, met groot symbool, "Je bent op" en het kleurwoord (regel 6).
+  - Lettergrootte en raakvlakken blijven volgens DESIGN.md regels 3 en 4 (rij minimaal ±80 px hoog, tekst ≥ 19 px).
+- Waarom: Sander vindt het eerdere ontwerp "trash" en kinderachtig. Drie stijlen (schetsboek, zacht en rond, stoplicht strak),
+  een serif-variant en daarna Apple-stijl zijn vergeleken; alleen de laatste voelde modern, professioneel en warm. Apple-
+  patronen kent elke iPhone-gebruiker, en dat helpt bij eenvoud.
+- Afgewezen: Dikke zwarte randen met schaduwblokken (stoer, niet warm). Zachte ronde "kinder"-kaarten. Serif-kopjes (voelden
+  niet als Apple). Emoji als plaatjes.
+- Gevolgen: Nieuwe design tokens en nieuwe basiscomponenten (T-2.7). Op Android blijft hetzelfde ontwerp met het
+  systeemlettertype van die telefoon; het wordt geen "Material"-versie.
+- Herzien als: Sander of testers het op Android vreemd vinden.
+
+### D-037 — Pictogrammen: platte tekening door het schetsfilter van de foto's
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Sander (idee), Claude (opzet)
+- Besluit:
+  - Elk pictogram is een **bronbestand**: een platte SVG-tekening (vormen, dikke lijnen, streeppatroon voor arcering,
+    een lichte onregelmatigheid). Het schetsfilter `sketch()` uit `src/domain/sketch.ts` (dezelfde code als voor foto's,
+    D-030, D-032) zet de bron om naar een potloodplaatje in `ink` op `paper`. Foto's en pictogrammen hebben zo één look.
+  - De omzetting draait één keer, bij het bouwen of bij het eerste gebruik, en het resultaat wordt als plaatje bewaard in de app
+    (offline, geen netwerk). Welke van de twee kiest T-2.8.
+  - Pictogrammen zijn grijs-op-papier, zoals foto's. Kleur zit niet in het pictogram, wel in de symbolen (groen, oranje, rood).
+  - De bronnen staan in de repo; de proef met zes pictogrammen staat in `docs/ontwerp-voorstellen/stijl-potlood.html`.
+- Waarom: De hand getekende lijntjes uit D-011 zagen er anders uit dan de schetsfoto's. Dezelfde code voor beide geeft
+  automatisch dezelfde stijl en voorkomt twee dingen onderhouden.
+- Afgewezen: Pictogrammen als losse lijntekening zonder filter (andere stijl dan foto's). Pictogrammen door een AI-dienst laten
+  tekenen (D-002, B-012). Kleurpictogrammen (de foto's zijn ook zwart-wit; kleur is voor betekenis gereserveerd).
+- Gevolgen: Het filter heeft misschien een instelling nodig voor pictogrammen (lijnen donkerder). Dat raakt de code van de
+  foto's; dan met tests. De placeholder-SVG's in `public/pictos/` en Fase 4 (T-4.1 t/m T-4.4) draaien om bronnen in plaats van
+  eindplaatjes. `pictoId`'s blijven gelijk, dus geen migratie.
+- Herzien als: pictogrammen er na het filter te vaag uitzien om te herkennen (Checkpoint 4).

@@ -1,0 +1,264 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Potloodpictogrammen + Apple-stijl — voorstel</title>
+<style>
+:root{--ink:#3A3834;--bg:#F6F3EE;--card:#fff;--sep:rgba(60,55,45,.14);--sec:#7a756c;--green:#3E9B57;--orange:#E8892B;--red:#D2453B}
+*{box-sizing:border-box}
+body{margin:0;padding:28px;background:#DCD7CE;font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;color:var(--ink)}
+h1{margin:0 0 6px;font-size:32px;letter-spacing:-.4px}h2{margin:36px 0 4px;font-size:24px;letter-spacing:-.3px}
+.lead,.sub{max-width:820px;line-height:1.5;margin:0 0 14px}.sub{color:#555}
+.pipe{display:flex;flex-wrap:wrap;gap:14px;max-width:1000px}
+.pc{background:#fff;border-radius:20px;padding:12px;display:flex;align-items:center;gap:8px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.pc img{width:120px;height:120px;border-radius:12px;display:block}.pc .ar{font-size:22px;color:#9a948a}
+.pc small{display:block;text-align:center;font-size:12px;color:#777;margin-top:4px}
+.row2{display:flex;gap:28px;flex-wrap:wrap}figure{margin:0}
+.phone{width:290px;height:620px;border-radius:46px;background:var(--bg);position:relative;overflow:hidden;box-shadow:0 0 0 7px #1c1b19,0 20px 40px rgba(0,0,0,.25);display:flex;flex-direction:column}
+.sb{display:flex;justify-content:space-between;align-items:center;padding:14px 26px 0 30px;font-weight:600;font-size:14px;height:40px;flex:none}
+.sb i{display:inline-block;background:var(--ink);border-radius:2px;margin-left:4px;vertical-align:middle}
+.sig{width:3px;height:6px}.sig+.sig{height:8px}.sig+.sig+.sig{height:10px}.bat{width:22px;height:10px;border-radius:3px!important}
+.scr{flex:1;padding:6px 16px 0;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.nav{display:flex;justify-content:space-between;align-items:center;min-height:28px;font-size:17px;color:var(--ink)}
+.nav .b{font-weight:500;color:#6b665e}
+.pen{width:30px;height:30px;border-radius:50%;background:rgba(60,55,45,.08);display:flex;align-items:center;justify-content:center;font-size:14px;color:#6b665e}
+.lt{font-size:34px;font-weight:700;letter-spacing:-.8px;line-height:1.07;margin:2px 0 4px}
+.cap{font-size:13px;color:var(--sec);margin:-4px 4px 0}
+.list{background:var(--card);border-radius:20px;overflow:hidden}
+.li{display:flex;align-items:center;gap:12px;padding:10px 14px 10px 10px;min-height:82px;position:relative}
+.li+.li:before{content:"";position:absolute;left:96px;right:0;top:0;height:1px;background:var(--sep)}
+.li img{width:66px;height:66px;mix-blend-mode:multiply;flex:none}
+.li .t{flex:1;font-size:19px;font-weight:500;line-height:1.2;letter-spacing:-.2px}
+.li .t small{display:block;font-size:14px;font-weight:400;color:var(--sec);margin-top:2px}
+.ck{width:28px;height:28px;border-radius:50%;border:2px solid rgba(60,55,45,.28);flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:700}
+.sel .ck{background:var(--ink);border-color:var(--ink)}
+.sel{background:#FFF4DA}
+.good{background:#E6F2E6}
+.chev{color:#b5afa5;font-size:24px;font-weight:300}
+.bar{margin-top:auto;padding:12px 16px 30px;margin-left:-16px;margin-right:-16px;background:rgba(246,243,238,.85);backdrop-filter:blur(20px);border-top:1px solid var(--sep)}
+.btn{background:var(--ink);color:#fff;text-align:center;font-weight:600;font-size:19px;padding:16px;border-radius:16px}
+.btn.g{background:rgba(60,55,45,.09);color:var(--ink)}
+.hi{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:100px;height:4px;border-radius:2px;background:var(--ink);opacity:.85}
+.res{background:linear-gradient(#F9DDB8 0%,#FBE9D1 42%,var(--bg) 100%)}
+.rh{display:flex;flex-direction:column;align-items:center;margin:2px 0 6px}
+.sym{position:relative;display:flex;align-items:center;justify-content:center}
+.sym:before{content:"";position:absolute;inset:11%;transform:translate(4px,3px);opacity:.72}
+.sym img{position:relative;mix-blend-mode:multiply;width:100%;height:100%}
+.sym.o:before{background:var(--orange);clip-path:polygon(50% 8%,94% 88%,6% 88%)}
+.sym.r:before{background:var(--red);clip-path:polygon(32% 6%,68% 6%,94% 32%,94% 68%,68% 94%,32% 94%,6% 68%,6% 32%)}
+.sym.g:before{background:var(--green);border-radius:50%}
+.rh .e{font-size:16px;color:var(--sec);margin-top:2px}.rh h2{margin:0;font-size:46px;font-weight:800;letter-spacing:-1.2px;line-height:1.05}
+.tilt{display:flex;align-items:center;gap:8px}.tilt .lt{margin:0}
+.sec{font-size:13px;font-weight:600;color:var(--sec);text-transform:uppercase;letter-spacing:.3px;margin:4px 6px -4px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gt{background:var(--card);border-radius:20px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:0;text-align:center;font-size:15px;font-weight:500;line-height:1.2}
+.gt img{width:70px;height:70px;mix-blend-mode:multiply}
+.gt.add{background:transparent;border:2px dashed rgba(60,55,45,.28);justify-content:center;color:var(--sec);min-height:112px}.gt.add b{font-size:30px;font-weight:300}
+.note{background:#FFF4D0;border:1px solid #e0c96a;border-radius:14px;padding:14px 18px;max-width:860px;margin:28px 0;line-height:1.5}
+</style></head><body>
+<h1>Potloodpictogrammen + Apple-stijl — voorstel</h1>
+<p class="lead">Twee dingen veranderen. <b>1.</b> De pictogrammen worden niet meer met de hand als lijntjes getekend, maar als gewone tekening gemaakt en dan door <b>precies dezelfde schetscode</b> (<code>src/domain/sketch.ts</code>) gehaald als jouw foto's. Daardoor lijken pictogrammen en foto's als twee druppels water op elkaar. <b>2.</b> De indeling volgt nu de Apple-richtlijnen: groot kopje, gegroepeerde lijsten, vaste knop onderaan, systeemlettertype.</p>
+
+<h2>Zo ontstaat een pictogram</h2>
+<p class="sub">Links de ruwe tekening (platte vormen, strepen voor arcering). Rechts wat het schetsfilter ervan maakt: dezelfde code als bij een foto, met dezelfde zachte rand naar het papier toe.</p>
+<div class="pipe" id="pipe"></div>
+
+<h2>De schermen</h2>
+<p class="sub">Start, resultaat, plan van de begeleider, één kleur invullen. Alle pictogrammen komen uit het schetsfilter.</p>
+<div class="row2">
+<figure><div class="phone"><div class="sb"><span>9:41</span><span><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="scr">
+ <div class="nav"><span></span><span class="pen">✎</span></div>
+ <div class="lt">Hoi Sam,<br>wat merk je?</div>
+ <div class="list">
+  <div class="li"><img data-icon="sleep"><span class="t">Ik slaap slecht</span><span class="ck"></span></div>
+  <div class="li sel"><img data-icon="angry"><span class="t">Ik ben boos</span><span class="ck">✓</span></div>
+  <div class="li good"><img data-icon="happy"><span class="t">Het gaat goed</span></div>
+ </div>
+ <div class="bar"><div class="btn">Klaar</div></div></div><div class="hi"></div></div></figure>
+
+<figure><div class="phone res"><div class="sb"><span>9:41</span><span><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="scr">
+ <div class="rh"><div class="sym o" style="width:110px;height:110px"><img data-icon="sym-o"></div><div class="e">Je bent op</div><h2>Oranje</h2></div>
+ <div class="list">
+  <div class="li"><img data-icon="walk"><span class="t">Ga wandelen</span></div>
+  <div class="li"><img data-icon="music"><span class="t">Muziek luisteren</span></div>
+ </div>
+ <div class="bar" style="background:transparent;border:0;backdrop-filter:none"><div class="btn g">Terug</div></div></div><div class="hi"></div></div></figure>
+
+<figure><div class="phone"><div class="sb"><span>9:41</span><span><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="scr">
+ <div class="nav"><span class="b">Klaar</span><span></span></div>
+ <div class="lt">Plan van Sam</div><div class="cap">Tik op een kleur om die in te vullen</div>
+ <div class="list">
+  <div class="li"><div class="sym g" style="width:56px;height:56px"><img data-icon="sym-g"></div><span class="t">Groen<small>3 acties</small></span><span class="chev">›</span></div>
+  <div class="li"><div class="sym o" style="width:56px;height:56px"><img data-icon="sym-o"></div><span class="t">Oranje<small>2 signalen · 3 acties</small></span><span class="chev">›</span></div>
+  <div class="li"><div class="sym r" style="width:56px;height:56px"><img data-icon="sym-r"></div><span class="t">Rood<small>1 signaal · 2 acties</small></span><span class="chev">›</span></div>
+ </div>
+ <div class="bar"><div class="btn g">Bekijk als cliënt</div></div></div><div class="hi"></div></div></figure>
+
+<figure><div class="phone"><div class="sb"><span>9:41</span><span><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="scr">
+ <div class="nav"><span class="b">‹ Plan</span><span></span></div>
+ <div class="tilt"><div class="sym o" style="width:40px;height:40px"><img data-icon="sym-o"></div><div class="lt">Oranje</div></div>
+ <div class="sec">Wat merk je dan?</div>
+ <div class="grid"><div class="gt"><img data-icon="sleep">Ik slaap slecht</div><div class="gt add"><b>+</b>Toevoegen</div></div>
+ <div class="sec">Wat kun je dan doen?</div>
+ <div class="grid"><div class="gt"><img data-icon="walk">Ga wandelen</div><div class="gt"><img data-icon="music">Muziek luisteren</div><div class="gt add"><b>+</b>Toevoegen</div></div>
+ </div><div class="hi"></div></div></figure>
+</div>
+<div class="note"><b>Wat dit betekent voor de bouw:</b> elk pictogram is één bronbestand (platte tekening, SVG). Bij het bouwen draait het schetsfilter er één keer over en slaat het resultaat op als plaatje in de app. Alles werkt dus offline en foto's en pictogrammen blijven altijd precies even "potlood". Een nieuw pictogram toevoegen = een nieuwe bron tekenen.<br><br><b>Apple-richtlijnen die ik gevolgd heb:</b> systeemlettertype (SF), groot kopje links bovenaan, gegroepeerde lijsten met ronde hoeken en dunne scheidingslijnen, vinkjes in een cirkel, vaste knop onderaan op een vervaagde balk, terugknop linksboven, statusbalk en home-streep. Kleur blijft alleen voor betekenis (groen, oranje, rood).</div>
+<script>
+"use strict";
+var SK = (() => {
+  var __defProp = Object.defineProperty;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __export = (target, all) => {
+    for (var name in all)
+      __defProp(target, name, { get: all[name], enumerable: true });
+  };
+  var __copyProps = (to, from, except, desc) => {
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (let key of __getOwnPropNames(from))
+        if (!__hasOwnProp.call(to, key) && key !== except)
+          __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+    }
+    return to;
+  };
+  var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+  var sketch_exports = {};
+  __export(sketch_exports, {
+    FADE_START: () => FADE_START,
+    blur: () => blur,
+    fadeEdges: () => fadeEdges,
+    hexToRgb: () => hexToRgb,
+    percentile: () => percentile,
+    sketch: () => sketch,
+    stretchContrast: () => stretchContrast,
+    toGrey: () => toGrey
+  });
+  function sketch(pixels, colors) {
+    const { width, height } = pixels;
+    const grey = stretchContrast(toGrey(pixels));
+    const tone = fadeEdges(pencil(grey, width, height, Math.max(width, height)), width, height);
+    return { data: paint(tone, colors), width, height };
+  }
+  const FADE_START = 0.6;
+  const FADE_END = 1;
+  function fadeEdges(tone, width, height) {
+    const centerX = (width - 1) / 2;
+    const centerY = (height - 1) / 2;
+    const radiusX = Math.max(0.5, width / 2);
+    const radiusY = Math.max(0.5, height / 2);
+    return tone.map((v, i) => {
+      const x = i % width - centerX;
+      const y = Math.floor(i / width) - centerY;
+      const distance = Math.hypot(x / radiusX, y / radiusY);
+      const t = clamp01((distance - FADE_START) / (FADE_END - FADE_START));
+      const paper = t * t * (3 - 2 * t);
+      return v + (255 - v) * paper;
+    });
+  }
+  function pencil(grey, width, height, size) {
+    const negative = grey.map((v) => 255 - v);
+    const blurred = blur(negative, width, height, Math.max(1, Math.round(size / 128)));
+    return grey.map((v, i) => {
+      const dodged = Math.min(255, (v + 1) * 255 / (256 - blurred[i]));
+      return 255 * (dodged / 255) ** 3;
+    });
+  }
+  function toGrey({ data, width, height }) {
+    const grey = new Float32Array(width * height);
+    for (let i = 0; i < grey.length; i++) {
+      const r = data[i * 4];
+      const g = data[i * 4 + 1];
+      const b = data[i * 4 + 2];
+      grey[i] = 0.299 * r + 0.587 * g + 0.114 * b;
+    }
+    return grey;
+  }
+  function stretchContrast(grey) {
+    const low = percentile(grey, 0.01);
+    const high = percentile(grey, 0.99);
+    if (high - low < 1) return grey;
+    return grey.map((v) => 255 * clamp01((v - low) / (high - low)));
+  }
+  function percentile(values, fraction) {
+    if (values.length === 0) return 0;
+    let max = 0;
+    for (const v of values) if (v > max) max = v;
+    if (max === 0) return 0;
+    const buckets = new Uint32Array(256);
+    for (const v of values) buckets[Math.min(255, Math.floor(v / max * 255))]++;
+    const target = fraction * values.length;
+    let count = 0;
+    for (let b = 0; b < 256; b++) {
+      count += buckets[b];
+      if (count >= target) return b / 255 * max;
+    }
+    return max;
+  }
+  function blur(grey, width, height, radius) {
+    let result = grey;
+    for (let pass = 0; pass < 3; pass++) {
+      result = boxBlur(result, width, height, radius, true);
+      result = boxBlur(result, width, height, radius, false);
+    }
+    return result;
+  }
+  function boxBlur(grey, width, height, radius, alongRows) {
+    const out = new Float32Array(grey.length);
+    const lineLength = alongRows ? width : height;
+    const lineCount = alongRows ? height : width;
+    const step = alongRows ? 1 : width;
+    const span = 2 * radius + 1;
+    for (let line = 0; line < lineCount; line++) {
+      const start = alongRows ? line * width : line;
+      const at = (k) => grey[start + Math.min(lineLength - 1, Math.max(0, k)) * step];
+      let sum = 0;
+      for (let k = -radius; k <= radius; k++) sum += at(k);
+      for (let k = 0; k < lineLength; k++) {
+        out[start + k * step] = sum / span;
+        sum += at(k + radius + 1) - at(k - radius);
+      }
+    }
+    return out;
+  }
+  function paint(tone, colors) {
+    const ink = hexToRgb(colors.ink);
+    const paper = hexToRgb(colors.paper);
+    const data = new Uint8ClampedArray(tone.length * 4);
+    for (let i = 0; i < tone.length; i++) {
+      const t = clamp01(tone[i] / 255);
+      for (let c = 0; c < 3; c++) data[i * 4 + c] = ink[c] + (paper[c] - ink[c]) * t;
+      data[i * 4 + 3] = 255;
+    }
+    return data;
+  }
+  function hexToRgb(hex) {
+    const n = parseInt(hex.replace("#", ""), 16);
+    return [n >> 16 & 255, n >> 8 & 255, n & 255];
+  }
+  function clamp01(v) {
+    return Math.min(1, Math.max(0, v));
+  }
+  return __toCommonJS(sketch_exports);
+})();
+
+const S=(d,w=2.5)=>`<path d="${d}" fill="none" stroke="#1a1a1a" stroke-width="${(w*1.5).toFixed(2)}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const F=(d,c)=>`<path d="${d}" fill="${c}"/>`;
+const Hh=d=>`<path d="${d}" fill="url(#h)"/>`;
+const C=(x,y,r,c)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${c}"/>`;
+const circ=(x,y,r)=>`M${x-r} ${y} a${r} ${r} 0 1 0 ${2*r} 0 a${r} ${r} 0 1 0 ${-2*r} 0`;
+const SRC={
+sleep:()=>F('M15 62H85V70H15Z','#9a9a9a')+S('M15 38V76')+S('M15 62H85')+S('M85 55V76')+F('M20 62V54Q20 49 26 49H39Q43 56 41 62Z','#e4e4e4')+S('M20 62V54Q20 49 26 49H39Q43 56 41 62')+C(28,45,7.5,'#d0d0d0')+S('M20.5 45a7.5 7.5 0 0 1 15 0')+S('M24 46q1.8 1.8 3.6 0M30 46q1.8 1.8 3.6 0',2)+F('M38 62Q38 50 53 48.5Q72 47 85 54V62Z','#8a8a8a')+Hh('M38 62Q38 50 53 48.5Q72 47 85 54V62Z')+S('M38 62Q38 50 53 48.5Q72 47 85 54')+S('M57 22h12l-12 13h12M75 12h8l-8 9h8',2.4),
+angry:()=>F(circ(50,52,31),'#e8e8e8')+S(circ(50,52,31))+S('M30 40L44 47M70 40L56 47',3.2)+C(38,55,2.6,'#000')+C(62,55,2.6,'#000')+S('M37 69Q50 59 63 69',2.6)+Hh(circ(33,62,6))+Hh(circ(67,62,6))+S('M22 14q-3 5 0 9M78 14q3 5 0 9',2.2),
+happy:()=>F(circ(50,52,31),'#e8e8e8')+S(circ(50,52,31))+S('M31 46q5 -7 10 0M59 46q5 -7 10 0',2.8)+S('M33 58Q50 78 67 58',2.8)+Hh(circ(30,62,6))+Hh(circ(70,62,6))+S('M50 9v6M16 22l4 4M84 22l-4 4',2.2),
+walk:()=>S(circ(37,22,7.5))+S('M37 31L35 54L26 80M35 54L49 67L53 82M36 38L23 51M36 38L51 47',2.8)+F(circ(76,42,14),'#bdbdbd')+Hh(circ(76,42,14))+S(circ(76,42,14))+S('M76 56V80',2.6)+S('M12 80H88',2.6)+Hh('M12 82H88V87H12Z'),
+music:()=>S('M39 66V27M71 58V21',2.8)+F('M39 27L71 21V31L39 37Z','#555')+S('M39 27L71 21V31L39 37Z')+F('M22 72q-1 -8 9 -9q11 0 11 6q-1 8 -10 8q-9 0 -10 -5Z','#444')+Hh('M22 72q-1 -8 9 -9q11 0 11 6q-1 8 -10 8q-9 0 -10 -5Z')+F('M54 64q-1 -8 9 -9q11 0 11 6q-1 8 -10 8q-9 0 -10 -5Z','#444')+Hh('M54 64q-1 -8 9 -9q11 0 11 6q-1 8 -10 8q-9 0 -10 -5Z'),
+caregiver:()=>F('M52 26C38 16 38 5 47 7C50 8 52 11 52 13C52 11 54 8 57 7C66 5 66 16 52 26Z','#aaa')+Hh('M52 26C38 16 38 5 47 7C50 8 52 11 52 13C52 11 54 8 57 7C66 5 66 16 52 26Z')+S('M52 26C38 16 38 5 47 7C50 8 52 11 52 13C52 11 54 8 57 7C66 5 66 16 52 26Z',2.2)+S(circ(32,35,7.5))+S('M32 44V66M32 66L24 88M32 66L40 88M32 52L56 60',2.8)+S(circ(70,46,6.5))+S('M70 54V72M70 72L64 88M70 72L76 88M70 60L57 60',2.6)+F('M26 46L38 46L40 68L24 68Z','#cfcfcf')+Hh('M26 46L38 46L40 68L24 68Z'),
+'sym-g':()=>S(circ(50,50,36),3)+S('M33 52L46 65L69 37',3.4),
+'sym-o':()=>S('M50 15L88 82H12Z',3)+Hh('M50 60L66 82H34Z'),
+'sym-r':()=>S('M35 13H65L87 35V65L65 87H35L13 65V35Z',3)
+};
+function svgOf(k){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512"><defs><filter id="w" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="1.6"/></filter><pattern id="h" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><rect width="1.3" height="3.2" fill="#222"/></pattern></defs><rect width="100" height="100" fill="#fff"/><g transform="translate(50 50) scale(.84) translate(-50 -50)"><g filter="url(#w)">${SRC[k]()}</g></g></svg>`}
+async function raster(k){const img=new Image();img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svgOf(k));await img.decode();const c=document.createElement('canvas');c.width=c.height=512;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,512,512);x.drawImage(img,0,0,512,512);const px=x.getImageData(0,0,512,512);const r=SK.sketch(px,{ink:'#3A3834',paper:'#FFFFFF'});px.data.set(r.data);x.putImageData(px,0,0);return {src:img.src,out:c.toDataURL()}}
+(async()=>{const out={};const pipe=document.getElementById('pipe');
+for(const k of Object.keys(SRC)){out[k]=await raster(k);
+ if(!k.startsWith('sym-'))pipe.insertAdjacentHTML('beforeend',`<div class="pc"><div><img src="${out[k].src}"><small>tekening</small></div><span class="ar">→</span><div><img src="${out[k].out}"><small>schetsfilter</small></div></div>`)}
+document.querySelectorAll('img[data-icon]').forEach(i=>i.src=out[i.dataset.icon].out);document.title+=' ✓'})();
+</script></body></html>

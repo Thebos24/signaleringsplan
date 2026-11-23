@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schermen — voorstel</title>
+<style>
+  :root{--paper:#FBF8F2;--ink:#2B2B2B;--green:#3E9B57;--gl:#DFF1E4;--orange:#E8892B;--ol:#FCE9D4;--red:#D2453B;--rl:#F8DCD9;--muted:#8A857C}
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px;background:#e9e6df;font-family:-apple-system,system-ui,sans-serif;color:var(--ink)}
+  h1{margin:0 0 4px} .lead{max-width:760px;margin:0 0 24px;line-height:1.5}
+  h2{margin:40px 0 4px;font-size:22px} .sub{margin:0 0 16px;color:#555;max-width:760px;line-height:1.45}
+  .row{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
+  figure{margin:0} figcaption{margin-top:8px;font-size:14px;max-width:260px;line-height:1.4}
+  figcaption b{display:block;font-size:15px}
+  .phone{width:260px;height:560px;background:var(--paper);border:3px solid var(--ink);border-radius:28px;padding:14px 12px;overflow:hidden;position:relative;display:flex;flex-direction:column;gap:8px;font-size:13px}
+  .phone.ol{background:var(--ol)} .phone.rl{background:var(--rl)} .phone.gl{background:var(--gl)}
+  .top{display:flex;justify-content:space-between;align-items:center;min-height:30px}
+  .pen{width:28px;height:28px;border:2px solid var(--muted);border-radius:50%;text-align:center;line-height:24px;color:var(--muted)}
+  h3{margin:0;font-size:19px;line-height:1.2}
+  .tile{background:var(--paper);border:2.5px solid var(--ink);border-radius:14px;padding:8px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:13px}
+  .tile .pic{font-size:26px;line-height:1.1}
+  .tile.sel{border-width:5px;position:relative} .tile.g{background:var(--gl)}
+  .btn{background:var(--paper);border:2.5px solid var(--ink);border-radius:14px;padding:11px;text-align:center;font-weight:700}
+  .btn.q{border-color:var(--muted);color:#444;font-weight:600}
+  .btn.d{border-color:var(--red);color:var(--red);font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .grow{flex:1}
+  .card{border:2.5px solid var(--ink);border-radius:14px;padding:10px 12px;display:flex;align-items:center;gap:10px}
+  .card.g{background:var(--gl)} .card.o{background:var(--ol)} .card.r{background:var(--rl)}
+  .card small{display:block;font-weight:400;color:#444} .card b{font-size:16px}
+  .sym{font-size:24px}
+  .add{border:2.5px dashed var(--muted);border-radius:14px;padding:8px;text-align:center;color:#555;display:flex;flex-direction:column;justify-content:center;font-size:13px}
+  .lbl{font-weight:700;font-size:14px;margin-top:2px}
+  .bar{display:flex;gap:8px;align-items:center}
+  .back{border:2px solid var(--muted);border-radius:10px;padding:4px 10px;color:#444;font-weight:600;font-size:13px}
+  .field{border:2px solid var(--ink);border-radius:10px;background:#fff;padding:8px 10px}
+  .tag{display:inline-block;background:var(--ink);color:#fff;border-radius:6px;padding:1px 7px;font-size:11px;margin-left:6px}
+  .arrow{align-self:center;font-size:28px;color:#777}
+  .note{background:#fff7d6;border:1px solid #e0c96a;border-radius:10px;padding:10px 14px;max-width:760px;margin:12px 0;line-height:1.45}
+  .strip{display:flex;gap:6px}.strip .tile{flex:1}
+  .small{font-size:11px;color:#555;text-align:center}
+</style>
+</head>
+<body>
+<h1>Schermen — voorstel</h1>
+<p class="lead">Dit zijn alle schermen van de app, in de volgorde waarin je ze ziet. Elk scherm heeft <b>één taak</b>. Het zijn schetsen: de plaatjes en kleuren zijn nog niet af. Kijk vooral naar <i>wat waar zit</i> en <i>wat je waarheen tikt</i>.</p>
+
+<div class="note"><b>Wat er nu mis is:</b> de invulkant is één lange pagina. Kleurkeuze, signalen, acties, formulieren, en per tegel vier knoppen (↑ ↓ Wijzigen Verwijderen) staan allemaal door elkaar. Daardoor weet je niet waar je bent en wat je moet doen.<br>
+<b>Voorstel in één zin:</b> de cliënt ziet <u>twee</u> schermen, de begeleider ziet drie niveaus (plan → kleur → tegel), en een tegel ziet er bij het invullen precies zo uit als bij de cliënt.</div>
+
+<!-- ============ CLIËNT ============ -->
+<h2>A. De cliënt (2 schermen)</h2>
+<p class="sub">Bijna zoals nu. Het enige wat verandert: de knop voor de begeleider wordt kleiner en rustiger, en "Klaar" staat altijd onderaan in beeld.</p>
+<div class="row">
+  <figure>
+    <div class="phone">
+      <div class="top"><span></span><span class="pen">✎</span></div>
+      <h3>Hoi Sam, wat merk je?</h3>
+      <div class="tile"><span class="pic">😴</span>Ik slaap slecht</div>
+      <div class="tile sel"><span class="pic">😠</span>Ik ben boos ✓</div>
+      <div class="tile g"><span class="pic">🙂</span>Het gaat goed</div>
+      <div class="grow"></div>
+      <div class="btn">Klaar</div>
+    </div>
+    <figcaption><b>1. Start</b>Tik aan wat je merkt, dan "Klaar". Scrolt als er veel signalen zijn; "Klaar" blijft onderaan staan.</figcaption>
+  </figure>
+  <span class="arrow">→</span>
+  <figure>
+    <div class="phone ol">
+      <div class="top"><span></span><span></span></div>
+      <div style="text-align:center;font-size:54px;line-height:1">▲</div>
+      <h3 style="text-align:center">Je bent op Oranje.</h3>
+      <div class="tile"><span class="pic">🚶</span>Ga wandelen</div>
+      <div class="tile"><span class="pic">🎵</span>Muziek luisteren</div>
+      <div class="grow"></div>
+      <div class="btn">Terug</div>
+    </div>
+    <figcaption><b>2. Resultaat — oranje</b>Kleur vult het scherm, met woord en vorm. Tegels om naar te kijken.</figcaption>
+  </figure>
+  <figure>
+    <div class="phone rl">
+      <div class="top"><span></span><span></span></div>
+      <div style="text-align:center;font-size:54px;line-height:1">⬢</div>
+      <h3 style="text-align:center">Je bent op Rood.</h3>
+      <div class="tile" style="padding:22px 8px"><span class="pic" style="font-size:40px">🧑‍🤝‍🧑</span><b style="font-size:16px">Ik ga naar mijn begeleider</b></div>
+      <div class="tile"><span class="pic">🎧</span>Koptelefoon op</div>
+      <div class="grow"></div>
+      <div class="btn">Terug</div>
+    </div>
+    <figcaption><b>2. Resultaat — rood</b>Eerste actie extra groot (T-3.3). Groen is gelijk aan oranje, met "Het gaat goed!".</figcaption>
+  </figure>
+</div>
+
+<!-- ============ BEGELEIDER ============ -->
+<h2>B. De begeleider (houd ✎ 3 seconden ingedrukt)</h2>
+<p class="sub">Drie niveaus, elk met één knop <b>"Terug"</b> bovenaan. Je weet altijd waar je bent en hoe je terugkomt. Alles wordt direct bewaard.</p>
+<div class="row">
+  <figure>
+    <div class="phone">
+      <div class="top"><b>Plan van Sam</b><span class="back">Klaar</span></div>
+      <div class="small">Tik op een kleur om die in te vullen</div>
+      <div class="card g"><span class="sym">●</span><div><b>Groen</b><small>3 acties</small></div></div>
+      <div class="card o"><span class="sym">▲</span><div><b>Oranje</b><small>2 signalen · 3 acties</small></div></div>
+      <div class="card r"><span class="sym">⬢</span><div><b>Rood</b><small>1 signaal · 2 acties</small></div></div>
+      <div class="grow"></div>
+      <div class="btn q">Bekijk als cliënt</div>
+      <div class="btn q">Naam wijzigen</div>
+    </div>
+    <figcaption><b>3. Plan (beginpunt)</b>Eén overzicht: drie kleuren met hoeveel erin zit. Geen lijsten hier. Een nieuw, leeg plan toont hier ook de uitleg (welkomstscherm vervalt).</figcaption>
+  </figure>
+  <span class="arrow">→</span>
+  <figure>
+    <div class="phone ol">
+      <div class="top"><span class="back">‹ Terug</span><b>Oranje</b></div>
+      <div class="lbl">Wat merk je dan? <span class="tag">signalen</span></div>
+      <div class="grid">
+        <div class="tile"><span class="pic">😴</span>Ik slaap slecht</div>
+        <div class="tile"><span class="pic">😟</span>Ik pieker</div>
+        <div class="add"><b style="font-size:22px">+</b>Signaal</div>
+      </div>
+      <div class="lbl">Wat kun je dan doen? <span class="tag">acties</span></div>
+      <div class="grid">
+        <div class="tile"><span class="pic">🚶</span>Ga wandelen</div>
+        <div class="tile"><span class="pic">🎵</span>Muziek</div>
+        <div class="tile"><span class="pic">💧</span>Water</div>
+        <div class="add"><b style="font-size:22px">+</b>Actie</div>
+      </div>
+    </div>
+    <figcaption><b>4. Eén kleur</b>Tegels zoals de cliënt ze ziet, twee per rij. Tik een tegel om hem te wijzigen, tik "+" om er een toe te voegen. Geen knoppen per tegel.</figcaption>
+  </figure>
+  <span class="arrow">→</span>
+  <figure>
+    <div class="phone">
+      <div class="top"><span class="back">‹ Terug</span><b>Signaal</b></div>
+      <div class="tile" style="padding:14px"><span class="pic" style="font-size:44px">😴</span>Ik slaap slecht</div>
+      <div class="lbl">Wat staat erop?</div>
+      <div class="field">Ik slaap slecht</div>
+      <div class="btn q">Ander plaatje of foto</div>
+      <div class="strip"><div class="btn q" style="flex:1">← Eerder</div><div class="btn q" style="flex:1">Later →</div></div>
+      <div class="grow"></div>
+      <div class="btn">Klaar</div>
+      <div class="btn d">Verwijderen</div>
+    </div>
+    <figcaption><b>5. Eén tegel</b>Bovenaan een voorbeeld van de tegel. Daaronder tekst, plaatje, volgorde. "Verwijderen" staat apart en vraagt "Weet je het zeker?".</figcaption>
+  </figure>
+  <span class="arrow">→</span>
+  <figure>
+    <div class="phone">
+      <div class="top"><span class="back">‹ Terug</span><b>Plaatje</b></div>
+      <div class="field">🔍 Zoek: slaap</div>
+      <div class="grid">
+        <div class="tile"><span class="pic">😴</span>Slapen</div>
+        <div class="tile"><span class="pic">🛏</span>Bed</div>
+      </div>
+      <div class="lbl" style="margin-top:6px">Of een eigen foto</div>
+      <div class="btn q">📷 Foto maken of kiezen</div>
+      <div class="small">Daarna: bijsnijden → schets → "Gebruik" of "Opnieuw"</div>
+    </div>
+    <figcaption><b>6. Plaatje kiezen</b>Eigen scherm met zoeken en de foto-knop. Dit is nu verstopt onderaan het formulier.</figcaption>
+  </figure>
+</div>
+
+<h2>C. Wat verandert er ten opzichte van nu?</h2>
+<div class="note">
+<b>Verdwijnt:</b> de lange pagina met tabs, alle lijsten onder elkaar, de vier knoppen per tegel, het formulier dat in de lijst opengaat, het aparte welkomstscherm.<br>
+<b>Komt erbij:</b> een overzicht met drie kleurkaarten, en aparte schermen voor één kleur, één tegel en het plaatje kiezen. Elk met "‹ Terug".<br>
+<b>Blijft gelijk:</b> het datamodel en de opslag (je opgeslagen plannen raken niet kwijt), de kleurberekening, het schetsfilter, het bijsnijden, alle teksten en maximaal 6 per lijst.<br>
+<b>Uitstraling (nog uit te werken):</b> overal dezelfde tegel, dezelfde knoppen, dezelfde afstanden. Cliënt = grote tegels op papierkleur. Begeleider = zelfde tegels, maar kleiner en met rustige grijze knoppen.
+</div>
+</body>
+</html>

@@ -35,16 +35,21 @@ Tekst op gekleurde vlakken moet een contrast van minimaal 4.5:1 halen (WCAG AA).
 ## Stijl van de plaatjes: "geschetst"
 
 - Alles lijkt met de hand getekend: zwarte potloodlijn (`ink`), iets onregelmatig, op `paper`.
-- **Pictogrammen** (D-011): eigen SVG's, getekend door Claude in één vaste stijl:
-  - viewBox 0 0 100 100, lijndikte 3–4, ronde uiteinden, geen vulling of hooguit één zachte vlakkleur;
-  - lichte "trilling" in de lijnen, zodat het niet strak oogt;
-  - één onderwerp per pictogram, herkenbaar zonder tekst, geen kleine details;
-  - mensen als simpele, neutrale figuurtjes (geen leeftijd, geslacht of huidskleur vastgelegd).
-  - De stijlgids met voorbeelden komt in T-4.1.
+- **Pictogrammen** (D-011, D-037): elk pictogram is een platte bron-SVG (viewBox 0 0 100 100) die het schetsfilter van de foto's
+  omzet naar potlood op papier. Zo zien pictogrammen en foto's er hetzelfde uit.
+  - Tekenen voor het filter: dikke lijnen (±3,5 eenheden), platte grijze vlakken, streeppatroon voor arcering, een lichte
+    onregelmatigheid (SVG-turbulentie), onderwerp binnen ±35 eenheden van het midden (de rand fadet naar papier, D-032).
+  - Alleen vlakken en dikke lijnen; hele dunne lijnen verdwijnen in het filter.
+  - Eén onderwerp per pictogram, herkenbaar zonder tekst, geen kleine details.
+  - Mensen als simpele, neutrale figuurtjes (geen leeftijd, geslacht of huidskleur vastgelegd).
+  - De stijlgids met voorbeelden komt in T-4.1; de proef staat in `docs/ontwerp-voorstellen/stijl-potlood.html`.
 - **Foto's** (D-010): de app zet een foto om naar een schets (zwart-wit potlood-effect), zodat eigen foto's
   ("mijn begeleider", "mijn bankje") passen bij de pictogrammen. Gebeurt helemaal op de telefoon.
 
 ## Vaste schermen
+
+Indeling en schermen van de begeleider: zie SPEC §6.3 en D-035. Uitstraling: D-036 (Apple-stijl). Schetsen:
+`docs/ontwerp-voorstellen/`.
 
 - **Startscherm**: "Hoi [naam], wat merk je?" + signaaltegels + tegel "Het gaat goed" + knop "Klaar".
   Klein, rustig knopje rechtsboven voor de invulmodus (lang indrukken).
@@ -61,3 +66,8 @@ Grote keuzes staan ook in `DECISIONS.md`. Kleine stijlkeuzes noteer je hier, met
   breedte per scherm kiezen; de `Tile` krijgt dan een schermbrede variant. Heeft invloed op Q-001.
 - 2026-11-22 (Sander): De stijl van de pictogrammen is losse, onregelmatige potloodlijn met een beetje arcering
   (zoals zijn voorbeeld met kladdetekeningen). Niet te druk of te gedetailleerd. Uitwerken in T-4.1.
+- 2026-11-23 (Sander): **Apple-stijl** (D-036). Systeemlettertype, groot kopje, gegroepeerde lijsten met cirkel-vinkjes, vaste
+  knop onderaan, warm papier, donkergrijze inkt. De eerdere voorstellen (stoer met schaduwblokken, zacht en rond, serif) zijn
+  afgewezen en staan in `docs/ontwerp-voorstellen/afgewezen-*`. Rijen in plaats van losse vierkante tegels op de
+  cliëntschermen (plaatje links, cirkel rechts); de begeleider ziet tegels twee per rij.
+- 2026-11-23 (Sander): Pictogrammen gaan door het schetsfilter van de foto's (D-037).

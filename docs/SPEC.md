@@ -75,22 +75,24 @@ Het is een **gratis hobbyproject**, zonder licentie of account (D-017).
 - **3 seconden ingedrukt houden** opent de invulmodus. Een ring loopt vol terwijl je drukt.
 
 ### 6.2 De eerste keer
-- Een leeg plan opent met een welkomstscherm voor de begeleider: wat de app doet, en "Vul dit plan samen in."
-- Optioneel: de voornaam van de cliënt, voor "Hoi Sam, hoe gaat het?".
+- Een leeg plan opent op het Plan-scherm (6.3) met een korte uitleg bovenaan: wat de app doet, en "Vul dit plan samen in."
+  Er is geen apart welkomstscherm meer (D-035).
+- De voornaam van de cliënt (optioneel, voor "Hoi Sam, wat merk je?") stel je in met "Naam wijzigen".
 
-### 6.3 Het plan invullen
-- Per kleur een tab of kaart: **Groen · Oranje · Rood**.
-- Per kleur twee lijstjes:
-  - **Signalen** (alleen oranje en rood): "Wat merk je dan?"
-  - **Acties** (alle drie): "Wat kun je dan doen?"
-- Een tegel toevoegen: korte zin typen + plaatje kiezen:
-  - **Pictogram kiezen** uit de ingebouwde set geschetste pictogrammen (D-011), met een zoekveld.
-  - **Foto maken** of kiezen. De app snijdt hem vierkant, verkleint hem en zet hem om naar een schets (D-010).
-    De begeleider ziet het resultaat en kiest "Gebruik" of "Opnieuw".
-- Tegels bewerken, verwijderen (met "Weet je het zeker?") en van volgorde veranderen.
-- Maximaal **6** per lijst (Q-004, D-027): 6 signalen en 6 acties per kleur, zodat het overzichtelijk blijft. Bij 6 verdwijnt de knop "Toevoegen" en staat er "De lijst is vol". De standaard rode actie telt mee.
+### 6.3 Het plan invullen (D-035)
+Vier schermen, drie niveaus, overal "‹ Terug" linksboven:
+1. **Plan**: de drie kleuren als kaarten (**Groen · Oranje · Rood**) met hoeveel signalen en acties erin zitten. Onderaan
+   "Bekijk als cliënt" en "Naam wijzigen"; "Klaar" sluit de invulmodus.
+2. **Eén kleur**: bovenaan het kleurwoord met symbool. Daaronder twee blokken met tegels, twee per rij, zoals de cliënt ze
+   ziet: **Signalen** (alleen oranje en rood): "Wat merk je dan?" en **Acties** (alle drie): "Wat kun je dan doen?". Elke lijst
+   eindigt met een "+ Toevoegen"-tegel. Tik op een tegel om hem te wijzigen.
+3. **Eén tegel**: voorbeeld van de tegel, daaronder de tekst ("Wat staat erop?"), "Ander plaatje of foto", de volgorde (← Eerder,
+   Later →), "Klaar" en apart "Verwijderen" (met "Weet je het zeker?").
+4. **Plaatje kiezen**: zoekveld en raster met pictogrammen (D-011, D-037), en "Foto maken of kiezen". Een foto wordt vierkant
+   bijgesneden, verkleind en omgezet naar een schets (D-010); de begeleider ziet het resultaat en kiest "Gebruik" of "Opnieuw".
+- Maximaal **6** per lijst (Q-004, D-027): 6 signalen en 6 acties per kleur. Bij 6 verdwijnt de "+ Toevoegen"-tegel en staat er
+  "De lijst is vol". De standaard rode actie telt mee.
 - Rood krijgt bij een nieuw plan al de actie "Ik ga naar mijn begeleider" met pictogram, aan te passen of te verwijderen.
-- Knop **"Bekijk als cliënt"** om de flow te proberen, en **"Klaar"** om de invulmodus te sluiten.
 
 ### 6.4 Opslaan
 - Alles wordt direct opgeslagen op de telefoon. Er is geen "opslaan"-knop nodig.

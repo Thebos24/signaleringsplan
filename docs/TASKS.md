@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 (Sander) staat open. Fase 3 is gestart: T-3.1 en T-3.2 zijn af, volgende T-3.3.
+**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 (Sander) staat open. T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). Eerst T-2.7 t/m T-2.10, daarna Checkpoint 2, dan T-3.3.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -65,7 +65,22 @@ Doel: een begeleider kan samen met de cliënt een compleet plan invullen.
       — 2026-11-23 (D-030 potlood, D-031 Bewaar zegt wat er mist, D-032 zachte witte rand)
 - [x] T-2.6 (C) "Bekijk als cliënt" en "Klaar". ⚙ Sonnet · low — 2026-11-23 (preview = het startscherm met een knop terug; de echte flow komt in Fase 3)
 
-**Checkpoint 2:** Sander en zijn partner vullen samen een verzonnen testplan in op de iPhone, met minstens één eigen
+### Herontwerp (2026-11-23, D-035, D-036, D-037)
+
+Sander vond de schermen een bende. Het schermoverzicht, de Apple-stijl en de pictogramwerkwijze zijn goedgekeurd in
+schetsen (`docs/ontwerp-voorstellen/`). In deze volgorde bouwen; elke taak is een eigen sessie.
+
+- [ ] T-2.7 (C) Fundament: nieuwe design tokens (kleuren, lettergroottes, afstanden) en basiscomponenten in Apple-stijl:
+      groot kopje, gegroepeerde lijst, rij met plaatje en cirkel-vinkje, hoofdknop op vaste balk, secundaire knop,
+      tegel voor de begeleider, terugknop. Oude `Tile`, `BigButton` vervangen of aanpassen; contrastcheck; tests; DESIGN.md. ⚙ Sonnet · high
+- [ ] T-2.8 (C) Pictogramwerkwijze: bronmap met platte SVG-tekeningen, omzetting via `sketch()` (bij het bouwen of bij eerste gebruik,
+      de keuze vastleggen), eventueel instelling in het filter voor donkerdere lijnen (met tests), de 10 bestaande
+      pictogrammen opnieuw tekenen als bron. Werkt offline. ⚙ Opus · medium
+- [ ] T-2.9 (C) Invulkant omzetten naar de vier schermen uit SPEC §6.3: Plan, Eén kleur, Eén tegel, Plaatje kiezen. Welkomstscherm
+      weg, naam wijzigen, volgorde met ← →. Opslag en datamodel blijven; bestaande tests omzetten. ⚙ Sonnet · high
+- [ ] T-2.10 (C) Cliëntschermen (Start en Resultaat) in de nieuwe stijl met de nieuwe componenten en pictogrammen. ⚙ Sonnet · medium
+
+**Checkpoint 2** (na het herontwerp, T-2.7 t/m T-2.10): Sander en zijn partner vullen samen een verzonnen testplan in op de iPhone, met minstens één eigen
 foto per kleur. Is het invullen duidelijk? Lukt het binnen ±15 minuten?
 
 ## Fase 3: Gebruikskant (cliënt)

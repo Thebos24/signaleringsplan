@@ -15,6 +15,18 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Herontwerp vastgelegd (geen taak uit de lijst)
+- Waar: Claude Code (Sonnet 5.5)
+- Gedaan: Sander snapte de app niet meer door de rommelige indeling. Samen schetsen gemaakt (zonder te bouwen): schermoverzicht,
+  drie stijlen, een serif-variant, en een Apple-stijl met pictogrammen die door het schetsfilter van de foto's gaan. Sander
+  koos de laatste. Vastgelegd in D-035, D-036, D-037, SPEC §6.2 en §6.3, DESIGN.md, TASKS (T-2.7 t/m T-2.10) en R-015. De
+  schetsen staan in `docs/ontwerp-voorstellen/` (de afgewezen stijlen blijven staan). Geen app-code veranderd.
+- Beslissingen: D-035, D-036, D-037. D-011 aangevuld.
+- Problemen / verrassingen: T-3.3 (rood scherm) wacht tot het herontwerp klaar is. Q-005 (regel "Gevaar? Bel 112") nog open.
+- Volgende: T-2.7 Fundament en basiscomponenten ⚙ Sonnet · high. Sander kiest met `/model` Sonnet en effort high voor de nieuwe sessie.
+
+---
+
 ## 2026-11-23 — Resultaatscherm (T-3.2)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
 - Gedaan: T-3.2. Na "Klaar" of "Het gaat goed" vult de kleur het hele scherm, met een groot symbool (rondje met
