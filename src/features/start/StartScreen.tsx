@@ -1,17 +1,21 @@
 import { useState } from 'react'
 import { Button } from '../../components/Button'
+import { LargeTitle } from '../../components/LargeTitle'
+import { ListGroup } from '../../components/ListGroup'
+import { ListRow } from '../../components/ListRow'
 import { LongPressButton } from '../../components/LongPressButton'
 import { Picto } from '../../components/Picto'
-import { Tile } from '../../components/Tile'
-import { PhotoImage } from '../photo/PhotoImage'
+import { Screen } from '../../components/Screen'
+import { TileImage } from '../fill/TileImage'
 import { determineColor } from '../../domain/determineColor'
 import type { Color, Tile as TileData } from '../../domain/plan'
 import { nl } from '../../text/nl'
 import './start.css'
 
-// The first screen of the client (SPEC §5.1, T-3.1): the signals of orange and red mixed on one
-// screen in the order of the plan (Q-001 proposal), a tile "Het gaat goed" and the button "Klaar".
-// Tapped signals are only kept in this component, so they are gone when the app starts again.
+// The first screen of the client (SPEC §5.1, D-041): the signals of orange and red mixed in one grouped
+// list in the order of the plan (Q-001 proposal), each with a circle; a row "Het gaat goed" and the
+// button "Klaar" in the fixed bar. Tapped signals are only kept in this component, so they are gone
+// when the app starts again.
 export function StartScreen({
   clientName,
   tiles,
@@ -40,37 +44,33 @@ export function StartScreen({
   const finish = () => onDone(determineColor(signals.filter((s) => tapped.has(s.id))))
 
   return (
-    <main className="start">
+    <Screen bottomBar={<Button onClick={finish}>{nl.start.done}</Button>}>
       <div className="start__top">
         <LongPressButton onComplete={onOpenFill}>✎</LongPressButton>
       </div>
-      <h1>{title}</h1>
-      <div className="start__tiles">
-        {signals.map((signal) => (
-          <Tile
-            key={signal.id}
-            image={
-              signal.image.type === 'picto' ? (
-                <Picto id={signal.image.pictoId} />
-              ) : (
-                <PhotoImage photoId={signal.image.photoId} />
-              )
-            }
-            text={signal.text}
-            selected={tapped.has(signal.id)}
-            onClick={() => toggle(signal.id)}
-          />
-        ))}
-        <Tile
+      <LargeTitle>{title}</LargeTitle>
+      {signals.length > 0 && (
+        <ListGroup>
+          {signals.map((signal) => (
+            <ListRow
+              key={signal.id}
+              image={<TileImage image={signal.image} />}
+              title={signal.text}
+              trailing="circle"
+              selected={tapped.has(signal.id)}
+              onClick={() => toggle(signal.id)}
+            />
+          ))}
+        </ListGroup>
+      )}
+      <ListGroup>
+        <ListRow
           image={<Picto id="happy" />}
-          text={nl.start.allGood}
-          color="green"
+          title={nl.start.allGood}
+          tint="good"
           onClick={() => onDone('green')}
         />
-      </div>
-      <div className="start__done">
-        <Button onClick={finish}>{nl.start.done}</Button>
-      </div>
-    </main>
+      </ListGroup>
+    </Screen>
   )
 }

@@ -1,49 +1,984 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Warme schetsstijl — voorstel</title><style>
-:root{--paper:#FAF7F2;--ink:#3A3834;--line:rgba(58,56,52,.14);--green:#3E9B57;--gl:#E4F1E4;--orange:#E8892B;--ol:#FBE8D2;--red:#D2453B;--rl:#F8DDD9}
-*{box-sizing:border-box}
-body{margin:0;padding:28px;background:#E6E1D8;font-family:-apple-system,system-ui,sans-serif;color:var(--ink)}
-h1{font-family:ui-serif,"New York",Georgia,serif;margin:0 0 6px;font-size:34px}h2{font-family:ui-serif,"New York",Georgia,serif}
-.lead,.sub{max-width:780px;line-height:1.5;margin:0 0 14px}.sub{color:#555}
-.sheet{display:flex;gap:18px;flex-wrap:wrap;background:var(--paper);border-radius:20px;padding:22px;max-width:900px;border:1px solid var(--line)}
-.ic{display:flex;flex-direction:column;align-items:center;gap:6px;width:120px;font-size:14px}
-.pic{display:flex;line-height:0}
-.row2{display:flex;gap:26px;flex-wrap:wrap}figure{margin:0}
-.phone{width:280px;height:600px;border-radius:38px;padding:16px;display:flex;flex-direction:column;gap:12px;overflow:hidden;background:var(--paper);box-shadow:0 0 0 1px var(--line),0 18px 40px rgba(60,50,30,.14);position:relative}
-.phone h3{margin:0;font-family:ui-serif,"New York",Georgia,serif;font-weight:600;font-size:30px;line-height:1.12;letter-spacing:-.3px}
-.grow{flex:1}.small{font-size:13px;color:#6b665e;margin-top:-6px}
-.hdr{display:flex;justify-content:space-between;align-items:center;min-height:30px}
-.pen{width:32px;height:32px;border-radius:50%;text-align:center;line-height:30px;color:#8a857c;border:1.5px solid rgba(58,56,52,.25);font-size:14px}
-.back{font-size:15px;font-weight:600;color:#6b665e}
-.row{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:12px 16px 12px 12px;box-shadow:0 1px 2px rgba(60,50,30,.05)}
-.row .tx{flex:1;font-size:19px;font-weight:500;line-height:1.2}
-.row .ck{width:30px;height:30px;border-radius:50%;border:2px solid rgba(58,56,52,.3);display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;flex:none}
-.row.sel{background:#FFF6E0;border:2px solid var(--ink)}
-.row.sel .ck{background:var(--ink);border-color:var(--ink)}
-.row.good{background:var(--gl);border-color:rgba(62,155,87,.35)}
-.btn{background:var(--ink);color:#fff;text-align:center;font-weight:600;font-size:20px;padding:19px;border-radius:20px}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(58,56,52,.35)}
-.phone.result{background:linear-gradient(#FBE3C4 0%,#FBEBD6 38%,var(--paper) 100%)}
-.resh{display:flex;flex-direction:column;align-items:center;margin:4px 0 6px}
-.eyebrow{font-size:15px;color:#6b665e;margin-top:6px}
-.resh h2{margin:0;font-size:44px;font-weight:600;letter-spacing:-.5px;line-height:1.05}
-.card .tx b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:22px;font-weight:600}
-.card .tx small{display:block;color:#6b665e;font-size:14px;margin-top:2px}
-.chev{font-size:26px;color:#a8a299}
-.ctitle{display:flex;align-items:center;gap:10px}
-.lbl{font-size:13px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#6b665e;margin-top:2px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.gt{background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;font-size:15px;line-height:1.2;box-shadow:0 1px 2px rgba(60,50,30,.05)}
-.gt.add{background:transparent;border:2px dashed rgba(58,56,52,.3);justify-content:center;color:#6b665e}.gt.add b{font-size:28px;font-weight:400;line-height:1}
-.note{background:#fff7d6;border:1px solid #e0c96a;border-radius:12px;padding:12px 16px;max-width:820px;margin:30px 0;line-height:1.5}
-
-</style></head><body>
-<svg width="0" height="0" style="position:absolute"><filter id="pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter></svg>
-<h1>Warme schetsstijl — voorstel</h1><p class="lead">Rustig, modern en warm. De hele app is opgebouwd rond één idee: <b>potlood op warm papier</b>, zoals de schetsfoto's. Alle pictogrammen zijn getekend met een potloodlijn, een beetje arcering en een zacht kleurvlak dat net naast de lijn valt, zoals bij een aquarelschets.</p>
-<h2>De pictogrammen</h2><p class="sub">Eén lijndikte, onregelmatige lijn, arcering op één plek, kleur alleen als zacht vlak. Dit zijn 6 voorbeelden; de hele set (±40) volgt in Fase 4.</p><div class="sheet"><div class="ic"><i class="pic"><svg viewBox="0 0 100 100" width="96" height="96" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M36 66 Q36 52 52 50 Q74 48 90 56 V66 Z" fill="#8FB0D6" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66 Z" fill="#F1E7D0" stroke="none" opacity="0.9" transform="translate(2.5 2)"/><path d="M8 34 V84"/><path d="M8 66 H92"/><path d="M92 58 V84"/><path d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66"/><path d="M36 66 Q36 52 52 50 Q74 48 90 56"/><path d="M18 48 A8 8 0 1 1 34 47"/><path d="M21 45 q2 2 4 0 M28 45 q2 2 4 0"/><path d="M46 63 L52 55 M54 63 L62 54 M64 63 L73 55 M75 63 L84 57" stroke-width="1.3" opacity=".55"/><path d="M60 20 h13 l-13 14 h13"/><path d="M78 6 h9 l-9 10 h9"/></g></svg></i><span>Slapen</span></div><div class="ic"><i class="pic"><svg viewBox="0 0 100 100" width="96" height="96" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 14 A37 37 0 1 1 49 14 Z" fill="#E59A92" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M50 14 A37 37 0 1 0 53 14.2"/><path d="M26 38 L44 46 M74 38 L56 46"/><circle cx="36" cy="55" r="2.6" fill="#3A3834"/><circle cx="64" cy="55" r="2.6" fill="#3A3834"/><path d="M35 74 Q50 62 65 74"/><path d="M22 62 l7 -4 M24 69 l7 -4 M71 58 l7 4 M69 65 l7 4" stroke-width="1.3" opacity=".55"/><path d="M18 10 q-4 6 0 11"/><path d="M82 10 q4 6 0 11"/></g></svg></i><span>Boos</span></div><div class="ic"><i class="pic"><svg viewBox="0 0 100 100" width="96" height="96" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 14 A37 37 0 1 1 49 14 Z" fill="#F2D36B" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M50 14 A37 37 0 1 0 53 14.2"/><path d="M30 46 q5 -8 10 0 M60 46 q5 -8 10 0"/><path d="M30 62 Q50 84 70 62"/><path d="M20 56 l6 -3 M21 63 l6 -3 M74 53 l6 3 M73 60 l6 3" stroke-width="1.3" opacity=".55"/><path d="M50 3 v5 M12 18 l4 3 M88 18 l-4 3"/></g></svg></i><span>Blij</span></div><div class="ic"><i class="pic"><svg viewBox="0 0 100 100" width="96" height="96" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40 Z" fill="#8DC79B" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M82 52 V86"/><path d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40"/><path d="M77 40 q5 -5 10 0"/><path d="M40 12 a8 8 0 1 1 -0.1 0"/><path d="M40 30 L38 54 L28 82 M38 54 L52 68 L56 86 M39 38 L24 52 M39 38 L54 48"/><path d="M8 88 H94"/><path d="M12 94 l6 -5 M24 94 l6 -5 M36 94 l6 -5 M48 94 l6 -5 M60 94 l6 -5" stroke-width="1.3" opacity=".55"/></g></svg></i><span>Wandelen</span></div><div class="ic"><i class="pic"><svg viewBox="0 0 100 100" width="96" height="96" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 12 A38 38 0 1 1 49 12 Z" fill="#F3B36B" stroke="none" opacity="0.45" transform="translate(2.5 2)"/><path d="M41 28 L77 20 V30 L41 38 Z" fill="#F3B36B" stroke="none" opacity="0.9" transform="translate(2.5 2)"/><path d="M41 70 V28 M77 62 V20"/><path d="M41 28 L77 20 V30 L41 38 Z"/><path d="M22 76 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z"/><path d="M58 68 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z"/><path d="M25 74 l12 -4 M61 66 l12 -4" stroke-width="1.3" opacity=".55"/></g></svg></i><span>Muziek</span></div><div class="ic"><i class="pic"><svg viewBox="0 0 100 100" width="96" height="96" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M52 24 C38 14 38 3 47 5 C50 6 52 9 52 11 C52 9 54 6 57 5 C66 3 66 14 52 24 Z" fill="#E5877B" stroke="none" opacity="0.8" transform="translate(2.5 2)"/><path d="M28 44 L40 44 L42 70 L26 70 Z" fill="#9CBF9A" stroke="none" opacity="0.7" transform="translate(2.5 2)"/><path d="M52 24 C38 14 38 3 47 5 C50 6 52 9 52 11 C52 9 54 6 57 5 C66 3 66 14 52 24 Z"/><path d="M34 24 a8 8 0 1 1 -0.1 0"/><path d="M34 42 V64 M34 64 L26 88 M34 64 L42 88 M34 50 L56 58"/><path d="M70 38 a7 7 0 1 1 -0.1 0"/><path d="M70 52 V70 M70 70 L64 88 M70 70 L76 88 M70 58 L58 58"/></g></svg></i><span>Begeleider</span></div></div>
-<h2>De schermen</h2><p class="sub">Start, resultaat, plan van de begeleider en één kleur invullen. Grote koppen in een warm schreefletterype, rustige kaarten met een dun randje, kleur alleen als zacht vlak, één donkere hoofdknop.</p><div class="row2">
-<figure><div class="phone start "><div class="hdr"><span></span><span class="pen">✎</span></div><h3>Hoi Sam,<br>wat merk je?</h3><div class="row "><i class="pic"><svg viewBox="0 0 100 100" width="58" height="58" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M36 66 Q36 52 52 50 Q74 48 90 56 V66 Z" fill="#8FB0D6" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66 Z" fill="#F1E7D0" stroke="none" opacity="0.9" transform="translate(2.5 2)"/><path d="M8 34 V84"/><path d="M8 66 H92"/><path d="M92 58 V84"/><path d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66"/><path d="M36 66 Q36 52 52 50 Q74 48 90 56"/><path d="M18 48 A8 8 0 1 1 34 47"/><path d="M21 45 q2 2 4 0 M28 45 q2 2 4 0"/><path d="M46 63 L52 55 M54 63 L62 54 M64 63 L73 55 M75 63 L84 57" stroke-width="1.3" opacity=".55"/><path d="M60 20 h13 l-13 14 h13"/><path d="M78 6 h9 l-9 10 h9"/></g></svg></i><span class="tx">Ik slaap slecht</span><span class="ck"></span></div><div class="row sel"><i class="pic"><svg viewBox="0 0 100 100" width="58" height="58" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 14 A37 37 0 1 1 49 14 Z" fill="#E59A92" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M50 14 A37 37 0 1 0 53 14.2"/><path d="M26 38 L44 46 M74 38 L56 46"/><circle cx="36" cy="55" r="2.6" fill="#3A3834"/><circle cx="64" cy="55" r="2.6" fill="#3A3834"/><path d="M35 74 Q50 62 65 74"/><path d="M22 62 l7 -4 M24 69 l7 -4 M71 58 l7 4 M69 65 l7 4" stroke-width="1.3" opacity=".55"/><path d="M18 10 q-4 6 0 11"/><path d="M82 10 q4 6 0 11"/></g></svg></i><span class="tx">Ik ben boos</span><span class="ck">✓</span></div><div class="row good"><i class="pic"><svg viewBox="0 0 100 100" width="58" height="58" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 14 A37 37 0 1 1 49 14 Z" fill="#F2D36B" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M50 14 A37 37 0 1 0 53 14.2"/><path d="M30 46 q5 -8 10 0 M60 46 q5 -8 10 0"/><path d="M30 62 Q50 84 70 62"/><path d="M20 56 l6 -3 M21 63 l6 -3 M74 53 l6 3 M73 60 l6 3" stroke-width="1.3" opacity=".55"/><path d="M50 3 v5 M12 18 l4 3 M88 18 l-4 3"/></g></svg></i><span class="tx">Het gaat goed</span></div><div class="grow"></div><div class="btn">Klaar</div></div></figure>
-<figure><div class="phone result "><div class="resh"><svg viewBox="0 0 100 100" width="84" height="84" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 10 L92 86 L8 86 Z" fill="#F3A64E" stroke="none" opacity="0.7" transform="translate(2.5 2)"/><path d="M50 10 L92 86 L8 86 Z"/></g></svg><div class="eyebrow">Je bent op</div><h2>Oranje</h2></div><div class="row "><i class="pic"><svg viewBox="0 0 100 100" width="58" height="58" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40 Z" fill="#8DC79B" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M82 52 V86"/><path d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40"/><path d="M77 40 q5 -5 10 0"/><path d="M40 12 a8 8 0 1 1 -0.1 0"/><path d="M40 30 L38 54 L28 82 M38 54 L52 68 L56 86 M39 38 L24 52 M39 38 L54 48"/><path d="M8 88 H94"/><path d="M12 94 l6 -5 M24 94 l6 -5 M36 94 l6 -5 M48 94 l6 -5 M60 94 l6 -5" stroke-width="1.3" opacity=".55"/></g></svg></i><span class="tx">Ga wandelen</span></div><div class="row "><i class="pic"><svg viewBox="0 0 100 100" width="58" height="58" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 12 A38 38 0 1 1 49 12 Z" fill="#F3B36B" stroke="none" opacity="0.45" transform="translate(2.5 2)"/><path d="M41 28 L77 20 V30 L41 38 Z" fill="#F3B36B" stroke="none" opacity="0.9" transform="translate(2.5 2)"/><path d="M41 70 V28 M77 62 V20"/><path d="M41 28 L77 20 V30 L41 38 Z"/><path d="M22 76 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z"/><path d="M58 68 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z"/><path d="M25 74 l12 -4 M61 66 l12 -4" stroke-width="1.3" opacity=".55"/></g></svg></i><span class="tx">Muziek luisteren</span></div><div class="grow"></div><div class="btn ghost">Terug</div></div></figure>
-<figure><div class="phone hubs "><div class="hdr"><span class="back">Klaar</span></div><h3>Plan van Sam</h3><div class="small">Tik op een kleur om die in te vullen</div><div class="row card"><i class="pic"><svg viewBox="0 0 100 100" width="46" height="46" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 8 A42 42 0 1 1 49 8 Z" fill="#8DC79B" stroke="none" opacity="0.7" transform="translate(2.5 2)"/><path d="M50 8 A42 42 0 1 0 53 8.2"/><path d="M30 52 L45 66 L72 36"/></g></svg></i><span class="tx"><b>Groen</b><small>3 acties</small></span><span class="chev">›</span></div><div class="row card"><i class="pic"><svg viewBox="0 0 100 100" width="46" height="46" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 10 L92 86 L8 86 Z" fill="#F3A64E" stroke="none" opacity="0.7" transform="translate(2.5 2)"/><path d="M50 10 L92 86 L8 86 Z"/></g></svg></i><span class="tx"><b>Oranje</b><small>2 signalen · 3 acties</small></span><span class="chev">›</span></div><div class="row card"><i class="pic"><svg viewBox="0 0 100 100" width="46" height="46" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z" fill="#E0675C" stroke="none" opacity="0.7" transform="translate(2.5 2)"/><path d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z"/></g></svg></i><span class="tx"><b>Rood</b><small>1 signaal · 2 acties</small></span><span class="chev">›</span></div><div class="grow"></div><div class="btn ghost">Bekijk als cliënt</div></div></figure>
-<figure><div class="phone colour "><div class="hdr"><span class="back">‹ Terug</span></div><div class="ctitle"><svg viewBox="0 0 100 100" width="34" height="34" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 10 L92 86 L8 86 Z" fill="#F3A64E" stroke="none" opacity="0.7" transform="translate(2.5 2)"/><path d="M50 10 L92 86 L8 86 Z"/></g></svg><h3>Oranje</h3></div><div class="lbl">Wat merk je dan?</div><div class="grid"><div class="gt"><i class="pic"><svg viewBox="0 0 100 100" width="64" height="64" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M36 66 Q36 52 52 50 Q74 48 90 56 V66 Z" fill="#8FB0D6" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66 Z" fill="#F1E7D0" stroke="none" opacity="0.9" transform="translate(2.5 2)"/><path d="M8 34 V84"/><path d="M8 66 H92"/><path d="M92 58 V84"/><path d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66"/><path d="M36 66 Q36 52 52 50 Q74 48 90 56"/><path d="M18 48 A8 8 0 1 1 34 47"/><path d="M21 45 q2 2 4 0 M28 45 q2 2 4 0"/><path d="M46 63 L52 55 M54 63 L62 54 M64 63 L73 55 M75 63 L84 57" stroke-width="1.3" opacity=".55"/><path d="M60 20 h13 l-13 14 h13"/><path d="M78 6 h9 l-9 10 h9"/></g></svg></i><span>Ik slaap slecht</span></div><div class="gt add"><b>+</b><span>Toevoegen</span></div></div><div class="lbl">Wat kun je dan doen?</div><div class="grid"><div class="gt"><i class="pic"><svg viewBox="0 0 100 100" width="64" height="64" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40 Z" fill="#8DC79B" stroke="none" opacity="0.55" transform="translate(2.5 2)"/><path d="M82 52 V86"/><path d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40"/><path d="M77 40 q5 -5 10 0"/><path d="M40 12 a8 8 0 1 1 -0.1 0"/><path d="M40 30 L38 54 L28 82 M38 54 L52 68 L56 86 M39 38 L24 52 M39 38 L54 48"/><path d="M8 88 H94"/><path d="M12 94 l6 -5 M24 94 l6 -5 M36 94 l6 -5 M48 94 l6 -5 M60 94 l6 -5" stroke-width="1.3" opacity=".55"/></g></svg></i><span>Ga wandelen</span></div><div class="gt"><i class="pic"><svg viewBox="0 0 100 100" width="64" height="64" fill="none" stroke="#3A3834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g filter="url(#pencil)"><path d="M50 12 A38 38 0 1 1 49 12 Z" fill="#F3B36B" stroke="none" opacity="0.45" transform="translate(2.5 2)"/><path d="M41 28 L77 20 V30 L41 38 Z" fill="#F3B36B" stroke="none" opacity="0.9" transform="translate(2.5 2)"/><path d="M41 70 V28 M77 62 V20"/><path d="M41 28 L77 20 V30 L41 38 Z"/><path d="M22 76 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z"/><path d="M58 68 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z"/><path d="M25 74 l12 -4 M61 66 l12 -4" stroke-width="1.3" opacity=".55"/></g></svg></i><span>Muziek luisteren</span></div><div class="gt add"><b>+</b><span>Toevoegen</span></div></div></div></figure>
-</div>
-<div class="note"><b>Wat is anders dan eerder:</b> geen zwarte dikke randen of schaduwblokken meer, geen emoji, geen speelse ronde cirkels. Rijen met links het plaatje, rechts een leeg rondje dat je aantikt (zo zie je dat het een keuze is). Kleur is rustig en komt alleen terug als zacht vlak en in het symbool. Koppen in een schreefletter geven warmte en rust; de rest is een gewoon, goed leesbaar systeemlettertype.<br><br><b>Lettertypes:</b> alleen wat al op de telefoon staat (D-002). Op iPhone is de kop "New York"; op Android valt die terug op Georgia of een gewone schreefletter.</div></body></html>
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Warme schetsstijl — voorstel</title>
+    <style>
+      :root {
+        --paper: #faf7f2;
+        --ink: #3a3834;
+        --line: rgba(58, 56, 52, 0.14);
+        --green: #3e9b57;
+        --gl: #e4f1e4;
+        --orange: #e8892b;
+        --ol: #fbe8d2;
+        --red: #d2453b;
+        --rl: #f8ddd9;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 28px;
+        background: #e6e1d8;
+        font-family: -apple-system, system-ui, sans-serif;
+        color: var(--ink);
+      }
+      h1 {
+        font-family: ui-serif, 'New York', Georgia, serif;
+        margin: 0 0 6px;
+        font-size: 34px;
+      }
+      h2 {
+        font-family: ui-serif, 'New York', Georgia, serif;
+      }
+      .lead,
+      .sub {
+        max-width: 780px;
+        line-height: 1.5;
+        margin: 0 0 14px;
+      }
+      .sub {
+        color: #555;
+      }
+      .sheet {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        background: var(--paper);
+        border-radius: 20px;
+        padding: 22px;
+        max-width: 900px;
+        border: 1px solid var(--line);
+      }
+      .ic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        width: 120px;
+        font-size: 14px;
+      }
+      .pic {
+        display: flex;
+        line-height: 0;
+      }
+      .row2 {
+        display: flex;
+        gap: 26px;
+        flex-wrap: wrap;
+      }
+      figure {
+        margin: 0;
+      }
+      .phone {
+        width: 280px;
+        height: 600px;
+        border-radius: 38px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        overflow: hidden;
+        background: var(--paper);
+        box-shadow:
+          0 0 0 1px var(--line),
+          0 18px 40px rgba(60, 50, 30, 0.14);
+        position: relative;
+      }
+      .phone h3 {
+        margin: 0;
+        font-family: ui-serif, 'New York', Georgia, serif;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.12;
+        letter-spacing: -0.3px;
+      }
+      .grow {
+        flex: 1;
+      }
+      .small {
+        font-size: 13px;
+        color: #6b665e;
+        margin-top: -6px;
+      }
+      .hdr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 30px;
+      }
+      .pen {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        color: #8a857c;
+        border: 1.5px solid rgba(58, 56, 52, 0.25);
+        font-size: 14px;
+      }
+      .back {
+        font-size: 15px;
+        font-weight: 600;
+        color: #6b665e;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 12px 16px 12px 12px;
+        box-shadow: 0 1px 2px rgba(60, 50, 30, 0.05);
+      }
+      .row .tx {
+        flex: 1;
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      .row .ck {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid rgba(58, 56, 52, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 16px;
+        flex: none;
+      }
+      .row.sel {
+        background: #fff6e0;
+        border: 2px solid var(--ink);
+      }
+      .row.sel .ck {
+        background: var(--ink);
+        border-color: var(--ink);
+      }
+      .row.good {
+        background: var(--gl);
+        border-color: rgba(62, 155, 87, 0.35);
+      }
+      .btn {
+        background: var(--ink);
+        color: #fff;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 19px;
+        border-radius: 20px;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--ink);
+        border: 1.5px solid rgba(58, 56, 52, 0.35);
+      }
+      .phone.result {
+        background: linear-gradient(#fbe3c4 0%, #fbebd6 38%, var(--paper) 100%);
+      }
+      .resh {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 4px 0 6px;
+      }
+      .eyebrow {
+        font-size: 15px;
+        color: #6b665e;
+        margin-top: 6px;
+      }
+      .resh h2 {
+        margin: 0;
+        font-size: 44px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        line-height: 1.05;
+      }
+      .card .tx b {
+        display: block;
+        font-family: ui-serif, 'New York', Georgia, serif;
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .card .tx small {
+        display: block;
+        color: #6b665e;
+        font-size: 14px;
+        margin-top: 2px;
+      }
+      .chev {
+        font-size: 26px;
+        color: #a8a299;
+      }
+      .ctitle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .lbl {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        color: #6b665e;
+        margin-top: 2px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .gt {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 12px 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.2;
+        box-shadow: 0 1px 2px rgba(60, 50, 30, 0.05);
+      }
+      .gt.add {
+        background: transparent;
+        border: 2px dashed rgba(58, 56, 52, 0.3);
+        justify-content: center;
+        color: #6b665e;
+      }
+      .gt.add b {
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1;
+      }
+      .note {
+        background: #fff7d6;
+        border: 1px solid #e0c96a;
+        border-radius: 12px;
+        padding: 12px 16px;
+        max-width: 820px;
+        margin: 30px 0;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute">
+      <filter id="pencil" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7" />
+        <feDisplacementMap in="SourceGraphic" scale="2.2" />
+      </filter>
+    </svg>
+    <h1>Warme schetsstijl — voorstel</h1>
+    <p class="lead">
+      Rustig, modern en warm. De hele app is opgebouwd rond één idee: <b>potlood op warm papier</b>,
+      zoals de schetsfoto's. Alle pictogrammen zijn getekend met een potloodlijn, een beetje
+      arcering en een zacht kleurvlak dat net naast de lijn valt, zoals bij een aquarelschets.
+    </p>
+    <h2>De pictogrammen</h2>
+    <p class="sub">
+      Eén lijndikte, onregelmatige lijn, arcering op één plek, kleur alleen als zacht vlak. Dit zijn
+      6 voorbeelden; de hele set (±40) volgt in Fase 4.
+    </p>
+    <div class="sheet">
+      <div class="ic">
+        <i class="pic"
+          ><svg
+            viewBox="0 0 100 100"
+            width="96"
+            height="96"
+            fill="none"
+            stroke="#3A3834"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <g filter="url(#pencil)">
+              <path
+                d="M36 66 Q36 52 52 50 Q74 48 90 56 V66 Z"
+                fill="#8FB0D6"
+                stroke="none"
+                opacity="0.55"
+                transform="translate(2.5 2)"
+              />
+              <path
+                d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66 Z"
+                fill="#F1E7D0"
+                stroke="none"
+                opacity="0.9"
+                transform="translate(2.5 2)"
+              />
+              <path d="M8 34 V84" />
+              <path d="M8 66 H92" />
+              <path d="M92 58 V84" />
+              <path d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66" />
+              <path d="M36 66 Q36 52 52 50 Q74 48 90 56" />
+              <path d="M18 48 A8 8 0 1 1 34 47" />
+              <path d="M21 45 q2 2 4 0 M28 45 q2 2 4 0" />
+              <path
+                d="M46 63 L52 55 M54 63 L62 54 M64 63 L73 55 M75 63 L84 57"
+                stroke-width="1.3"
+                opacity=".55"
+              />
+              <path d="M60 20 h13 l-13 14 h13" />
+              <path d="M78 6 h9 l-9 10 h9" />
+            </g></svg></i
+        ><span>Slapen</span>
+      </div>
+      <div class="ic">
+        <i class="pic"
+          ><svg
+            viewBox="0 0 100 100"
+            width="96"
+            height="96"
+            fill="none"
+            stroke="#3A3834"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <g filter="url(#pencil)">
+              <path
+                d="M50 14 A37 37 0 1 1 49 14 Z"
+                fill="#E59A92"
+                stroke="none"
+                opacity="0.55"
+                transform="translate(2.5 2)"
+              />
+              <path d="M50 14 A37 37 0 1 0 53 14.2" />
+              <path d="M26 38 L44 46 M74 38 L56 46" />
+              <circle cx="36" cy="55" r="2.6" fill="#3A3834" />
+              <circle cx="64" cy="55" r="2.6" fill="#3A3834" />
+              <path d="M35 74 Q50 62 65 74" />
+              <path
+                d="M22 62 l7 -4 M24 69 l7 -4 M71 58 l7 4 M69 65 l7 4"
+                stroke-width="1.3"
+                opacity=".55"
+              />
+              <path d="M18 10 q-4 6 0 11" />
+              <path d="M82 10 q4 6 0 11" />
+            </g></svg></i
+        ><span>Boos</span>
+      </div>
+      <div class="ic">
+        <i class="pic"
+          ><svg
+            viewBox="0 0 100 100"
+            width="96"
+            height="96"
+            fill="none"
+            stroke="#3A3834"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <g filter="url(#pencil)">
+              <path
+                d="M50 14 A37 37 0 1 1 49 14 Z"
+                fill="#F2D36B"
+                stroke="none"
+                opacity="0.55"
+                transform="translate(2.5 2)"
+              />
+              <path d="M50 14 A37 37 0 1 0 53 14.2" />
+              <path d="M30 46 q5 -8 10 0 M60 46 q5 -8 10 0" />
+              <path d="M30 62 Q50 84 70 62" />
+              <path
+                d="M20 56 l6 -3 M21 63 l6 -3 M74 53 l6 3 M73 60 l6 3"
+                stroke-width="1.3"
+                opacity=".55"
+              />
+              <path d="M50 3 v5 M12 18 l4 3 M88 18 l-4 3" />
+            </g></svg></i
+        ><span>Blij</span>
+      </div>
+      <div class="ic">
+        <i class="pic"
+          ><svg
+            viewBox="0 0 100 100"
+            width="96"
+            height="96"
+            fill="none"
+            stroke="#3A3834"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <g filter="url(#pencil)">
+              <path
+                d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40 Z"
+                fill="#8DC79B"
+                stroke="none"
+                opacity="0.55"
+                transform="translate(2.5 2)"
+              />
+              <path d="M82 52 V86" />
+              <path d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40" />
+              <path d="M77 40 q5 -5 10 0" />
+              <path d="M40 12 a8 8 0 1 1 -0.1 0" />
+              <path d="M40 30 L38 54 L28 82 M38 54 L52 68 L56 86 M39 38 L24 52 M39 38 L54 48" />
+              <path d="M8 88 H94" />
+              <path
+                d="M12 94 l6 -5 M24 94 l6 -5 M36 94 l6 -5 M48 94 l6 -5 M60 94 l6 -5"
+                stroke-width="1.3"
+                opacity=".55"
+              />
+            </g></svg></i
+        ><span>Wandelen</span>
+      </div>
+      <div class="ic">
+        <i class="pic"
+          ><svg
+            viewBox="0 0 100 100"
+            width="96"
+            height="96"
+            fill="none"
+            stroke="#3A3834"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <g filter="url(#pencil)">
+              <path
+                d="M50 12 A38 38 0 1 1 49 12 Z"
+                fill="#F3B36B"
+                stroke="none"
+                opacity="0.45"
+                transform="translate(2.5 2)"
+              />
+              <path
+                d="M41 28 L77 20 V30 L41 38 Z"
+                fill="#F3B36B"
+                stroke="none"
+                opacity="0.9"
+                transform="translate(2.5 2)"
+              />
+              <path d="M41 70 V28 M77 62 V20" />
+              <path d="M41 28 L77 20 V30 L41 38 Z" />
+              <path d="M22 76 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z" />
+              <path d="M58 68 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z" />
+              <path d="M25 74 l12 -4 M61 66 l12 -4" stroke-width="1.3" opacity=".55" />
+            </g></svg></i
+        ><span>Muziek</span>
+      </div>
+      <div class="ic">
+        <i class="pic"
+          ><svg
+            viewBox="0 0 100 100"
+            width="96"
+            height="96"
+            fill="none"
+            stroke="#3A3834"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <g filter="url(#pencil)">
+              <path
+                d="M52 24 C38 14 38 3 47 5 C50 6 52 9 52 11 C52 9 54 6 57 5 C66 3 66 14 52 24 Z"
+                fill="#E5877B"
+                stroke="none"
+                opacity="0.8"
+                transform="translate(2.5 2)"
+              />
+              <path
+                d="M28 44 L40 44 L42 70 L26 70 Z"
+                fill="#9CBF9A"
+                stroke="none"
+                opacity="0.7"
+                transform="translate(2.5 2)"
+              />
+              <path
+                d="M52 24 C38 14 38 3 47 5 C50 6 52 9 52 11 C52 9 54 6 57 5 C66 3 66 14 52 24 Z"
+              />
+              <path d="M34 24 a8 8 0 1 1 -0.1 0" />
+              <path d="M34 42 V64 M34 64 L26 88 M34 64 L42 88 M34 50 L56 58" />
+              <path d="M70 38 a7 7 0 1 1 -0.1 0" />
+              <path d="M70 52 V70 M70 70 L64 88 M70 70 L76 88 M70 58 L58 58" />
+            </g></svg></i
+        ><span>Begeleider</span>
+      </div>
+    </div>
+    <h2>De schermen</h2>
+    <p class="sub">
+      Start, resultaat, plan van de begeleider en één kleur invullen. Grote koppen in een warm
+      schreefletterype, rustige kaarten met een dun randje, kleur alleen als zacht vlak, één donkere
+      hoofdknop.
+    </p>
+    <div class="row2">
+      <figure>
+        <div class="phone start">
+          <div class="hdr"><span></span><span class="pen">✎</span></div>
+          <h3>Hoi Sam,<br />wat merk je?</h3>
+          <div class="row">
+            <i class="pic"
+              ><svg
+                viewBox="0 0 100 100"
+                width="58"
+                height="58"
+                fill="none"
+                stroke="#3A3834"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <g filter="url(#pencil)">
+                  <path
+                    d="M36 66 Q36 52 52 50 Q74 48 90 56 V66 Z"
+                    fill="#8FB0D6"
+                    stroke="none"
+                    opacity="0.55"
+                    transform="translate(2.5 2)"
+                  />
+                  <path
+                    d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66 Z"
+                    fill="#F1E7D0"
+                    stroke="none"
+                    opacity="0.9"
+                    transform="translate(2.5 2)"
+                  />
+                  <path d="M8 34 V84" />
+                  <path d="M8 66 H92" />
+                  <path d="M92 58 V84" />
+                  <path d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66" />
+                  <path d="M36 66 Q36 52 52 50 Q74 48 90 56" />
+                  <path d="M18 48 A8 8 0 1 1 34 47" />
+                  <path d="M21 45 q2 2 4 0 M28 45 q2 2 4 0" />
+                  <path
+                    d="M46 63 L52 55 M54 63 L62 54 M64 63 L73 55 M75 63 L84 57"
+                    stroke-width="1.3"
+                    opacity=".55"
+                  />
+                  <path d="M60 20 h13 l-13 14 h13" />
+                  <path d="M78 6 h9 l-9 10 h9" />
+                </g></svg></i
+            ><span class="tx">Ik slaap slecht</span><span class="ck"></span>
+          </div>
+          <div class="row sel">
+            <i class="pic"
+              ><svg
+                viewBox="0 0 100 100"
+                width="58"
+                height="58"
+                fill="none"
+                stroke="#3A3834"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <g filter="url(#pencil)">
+                  <path
+                    d="M50 14 A37 37 0 1 1 49 14 Z"
+                    fill="#E59A92"
+                    stroke="none"
+                    opacity="0.55"
+                    transform="translate(2.5 2)"
+                  />
+                  <path d="M50 14 A37 37 0 1 0 53 14.2" />
+                  <path d="M26 38 L44 46 M74 38 L56 46" />
+                  <circle cx="36" cy="55" r="2.6" fill="#3A3834" />
+                  <circle cx="64" cy="55" r="2.6" fill="#3A3834" />
+                  <path d="M35 74 Q50 62 65 74" />
+                  <path
+                    d="M22 62 l7 -4 M24 69 l7 -4 M71 58 l7 4 M69 65 l7 4"
+                    stroke-width="1.3"
+                    opacity=".55"
+                  />
+                  <path d="M18 10 q-4 6 0 11" />
+                  <path d="M82 10 q4 6 0 11" />
+                </g></svg></i
+            ><span class="tx">Ik ben boos</span><span class="ck">✓</span>
+          </div>
+          <div class="row good">
+            <i class="pic"
+              ><svg
+                viewBox="0 0 100 100"
+                width="58"
+                height="58"
+                fill="none"
+                stroke="#3A3834"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <g filter="url(#pencil)">
+                  <path
+                    d="M50 14 A37 37 0 1 1 49 14 Z"
+                    fill="#F2D36B"
+                    stroke="none"
+                    opacity="0.55"
+                    transform="translate(2.5 2)"
+                  />
+                  <path d="M50 14 A37 37 0 1 0 53 14.2" />
+                  <path d="M30 46 q5 -8 10 0 M60 46 q5 -8 10 0" />
+                  <path d="M30 62 Q50 84 70 62" />
+                  <path
+                    d="M20 56 l6 -3 M21 63 l6 -3 M74 53 l6 3 M73 60 l6 3"
+                    stroke-width="1.3"
+                    opacity=".55"
+                  />
+                  <path d="M50 3 v5 M12 18 l4 3 M88 18 l-4 3" />
+                </g></svg></i
+            ><span class="tx">Het gaat goed</span>
+          </div>
+          <div class="grow"></div>
+          <div class="btn">Klaar</div>
+        </div>
+      </figure>
+      <figure>
+        <div class="phone result">
+          <div class="resh">
+            <svg
+              viewBox="0 0 100 100"
+              width="84"
+              height="84"
+              fill="none"
+              stroke="#3A3834"
+              stroke-width="2.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g filter="url(#pencil)">
+                <path
+                  d="M50 10 L92 86 L8 86 Z"
+                  fill="#F3A64E"
+                  stroke="none"
+                  opacity="0.7"
+                  transform="translate(2.5 2)"
+                />
+                <path d="M50 10 L92 86 L8 86 Z" />
+              </g>
+            </svg>
+            <div class="eyebrow">Je bent op</div>
+            <h2>Oranje</h2>
+          </div>
+          <div class="row">
+            <i class="pic"
+              ><svg
+                viewBox="0 0 100 100"
+                width="58"
+                height="58"
+                fill="none"
+                stroke="#3A3834"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <g filter="url(#pencil)">
+                  <path
+                    d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40 Z"
+                    fill="#8DC79B"
+                    stroke="none"
+                    opacity="0.55"
+                    transform="translate(2.5 2)"
+                  />
+                  <path d="M82 52 V86" />
+                  <path d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40" />
+                  <path d="M77 40 q5 -5 10 0" />
+                  <path d="M40 12 a8 8 0 1 1 -0.1 0" />
+                  <path d="M40 30 L38 54 L28 82 M38 54 L52 68 L56 86 M39 38 L24 52 M39 38 L54 48" />
+                  <path d="M8 88 H94" />
+                  <path
+                    d="M12 94 l6 -5 M24 94 l6 -5 M36 94 l6 -5 M48 94 l6 -5 M60 94 l6 -5"
+                    stroke-width="1.3"
+                    opacity=".55"
+                  />
+                </g></svg></i
+            ><span class="tx">Ga wandelen</span>
+          </div>
+          <div class="row">
+            <i class="pic"
+              ><svg
+                viewBox="0 0 100 100"
+                width="58"
+                height="58"
+                fill="none"
+                stroke="#3A3834"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <g filter="url(#pencil)">
+                  <path
+                    d="M50 12 A38 38 0 1 1 49 12 Z"
+                    fill="#F3B36B"
+                    stroke="none"
+                    opacity="0.45"
+                    transform="translate(2.5 2)"
+                  />
+                  <path
+                    d="M41 28 L77 20 V30 L41 38 Z"
+                    fill="#F3B36B"
+                    stroke="none"
+                    opacity="0.9"
+                    transform="translate(2.5 2)"
+                  />
+                  <path d="M41 70 V28 M77 62 V20" />
+                  <path d="M41 28 L77 20 V30 L41 38 Z" />
+                  <path d="M22 76 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z" />
+                  <path d="M58 68 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z" />
+                  <path d="M25 74 l12 -4 M61 66 l12 -4" stroke-width="1.3" opacity=".55" />
+                </g></svg></i
+            ><span class="tx">Muziek luisteren</span>
+          </div>
+          <div class="grow"></div>
+          <div class="btn ghost">Terug</div>
+        </div>
+      </figure>
+      <figure>
+        <div class="phone hubs">
+          <div class="hdr"><span class="back">Klaar</span></div>
+          <h3>Plan van Sam</h3>
+          <div class="small">Tik op een kleur om die in te vullen</div>
+          <div class="row card">
+            <i class="pic"
+              ><svg
+                viewBox="0 0 100 100"
+                width="46"
+                height="46"
+                fill="none"
+                stroke="#3A3834"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <g filter="url(#pencil)">
+                  <path
+                    d="M50 8 A42 42 0 1 1 49 8 Z"
+                    fill="#8DC79B"
+                    stroke="none"
+                    opacity="0.7"
+                    transform="translate(2.5 2)"
+                  />
+                  <path d="M50 8 A42 42 0 1 0 53 8.2" />
+                  <path d="M30 52 L45 66 L72 36" />
+                </g></svg></i
+            ><span class="tx"><b>Groen</b><small>3 acties</small></span
+            ><span class="chev">›</span>
+          </div>
+          <div class="row card">
+            <i class="pic"
+              ><svg
+                viewBox="0 0 100 100"
+                width="46"
+                height="46"
+                fill="none"
+                stroke="#3A3834"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <g filter="url(#pencil)">
+                  <path
+                    d="M50 10 L92 86 L8 86 Z"
+                    fill="#F3A64E"
+                    stroke="none"
+                    opacity="0.7"
+                    transform="translate(2.5 2)"
+                  />
+                  <path d="M50 10 L92 86 L8 86 Z" />
+                </g></svg></i
+            ><span class="tx"><b>Oranje</b><small>2 signalen · 3 acties</small></span
+            ><span class="chev">›</span>
+          </div>
+          <div class="row card">
+            <i class="pic"
+              ><svg
+                viewBox="0 0 100 100"
+                width="46"
+                height="46"
+                fill="none"
+                stroke="#3A3834"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <g filter="url(#pencil)">
+                  <path
+                    d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z"
+                    fill="#E0675C"
+                    stroke="none"
+                    opacity="0.7"
+                    transform="translate(2.5 2)"
+                  />
+                  <path d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z" />
+                </g></svg></i
+            ><span class="tx"><b>Rood</b><small>1 signaal · 2 acties</small></span
+            ><span class="chev">›</span>
+          </div>
+          <div class="grow"></div>
+          <div class="btn ghost">Bekijk als cliënt</div>
+        </div>
+      </figure>
+      <figure>
+        <div class="phone colour">
+          <div class="hdr"><span class="back">‹ Terug</span></div>
+          <div class="ctitle">
+            <svg
+              viewBox="0 0 100 100"
+              width="34"
+              height="34"
+              fill="none"
+              stroke="#3A3834"
+              stroke-width="2.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g filter="url(#pencil)">
+                <path
+                  d="M50 10 L92 86 L8 86 Z"
+                  fill="#F3A64E"
+                  stroke="none"
+                  opacity="0.7"
+                  transform="translate(2.5 2)"
+                />
+                <path d="M50 10 L92 86 L8 86 Z" />
+              </g>
+            </svg>
+            <h3>Oranje</h3>
+          </div>
+          <div class="lbl">Wat merk je dan?</div>
+          <div class="grid">
+            <div class="gt">
+              <i class="pic"
+                ><svg
+                  viewBox="0 0 100 100"
+                  width="64"
+                  height="64"
+                  fill="none"
+                  stroke="#3A3834"
+                  stroke-width="2.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <g filter="url(#pencil)">
+                    <path
+                      d="M36 66 Q36 52 52 50 Q74 48 90 56 V66 Z"
+                      fill="#8FB0D6"
+                      stroke="none"
+                      opacity="0.55"
+                      transform="translate(2.5 2)"
+                    />
+                    <path
+                      d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66 Z"
+                      fill="#F1E7D0"
+                      stroke="none"
+                      opacity="0.9"
+                      transform="translate(2.5 2)"
+                    />
+                    <path d="M8 34 V84" />
+                    <path d="M8 66 H92" />
+                    <path d="M92 58 V84" />
+                    <path d="M14 66 V56 Q14 50 24 50 H38 Q42 56 40 66" />
+                    <path d="M36 66 Q36 52 52 50 Q74 48 90 56" />
+                    <path d="M18 48 A8 8 0 1 1 34 47" />
+                    <path d="M21 45 q2 2 4 0 M28 45 q2 2 4 0" />
+                    <path
+                      d="M46 63 L52 55 M54 63 L62 54 M64 63 L73 55 M75 63 L84 57"
+                      stroke-width="1.3"
+                      opacity=".55"
+                    />
+                    <path d="M60 20 h13 l-13 14 h13" />
+                    <path d="M78 6 h9 l-9 10 h9" />
+                  </g></svg></i
+              ><span>Ik slaap slecht</span>
+            </div>
+            <div class="gt add"><b>+</b><span>Toevoegen</span></div>
+          </div>
+          <div class="lbl">Wat kun je dan doen?</div>
+          <div class="grid">
+            <div class="gt">
+              <i class="pic"
+                ><svg
+                  viewBox="0 0 100 100"
+                  width="64"
+                  height="64"
+                  fill="none"
+                  stroke="#3A3834"
+                  stroke-width="2.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <g filter="url(#pencil)">
+                    <path
+                      d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40 Z"
+                      fill="#8DC79B"
+                      stroke="none"
+                      opacity="0.55"
+                      transform="translate(2.5 2)"
+                    />
+                    <path d="M82 52 V86" />
+                    <path d="M70 40 A12 12 0 1 1 94 40 A12 12 0 1 1 70 40" />
+                    <path d="M77 40 q5 -5 10 0" />
+                    <path d="M40 12 a8 8 0 1 1 -0.1 0" />
+                    <path
+                      d="M40 30 L38 54 L28 82 M38 54 L52 68 L56 86 M39 38 L24 52 M39 38 L54 48"
+                    />
+                    <path d="M8 88 H94" />
+                    <path
+                      d="M12 94 l6 -5 M24 94 l6 -5 M36 94 l6 -5 M48 94 l6 -5 M60 94 l6 -5"
+                      stroke-width="1.3"
+                      opacity=".55"
+                    />
+                  </g></svg></i
+              ><span>Ga wandelen</span>
+            </div>
+            <div class="gt">
+              <i class="pic"
+                ><svg
+                  viewBox="0 0 100 100"
+                  width="64"
+                  height="64"
+                  fill="none"
+                  stroke="#3A3834"
+                  stroke-width="2.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <g filter="url(#pencil)">
+                    <path
+                      d="M50 12 A38 38 0 1 1 49 12 Z"
+                      fill="#F3B36B"
+                      stroke="none"
+                      opacity="0.45"
+                      transform="translate(2.5 2)"
+                    />
+                    <path
+                      d="M41 28 L77 20 V30 L41 38 Z"
+                      fill="#F3B36B"
+                      stroke="none"
+                      opacity="0.9"
+                      transform="translate(2.5 2)"
+                    />
+                    <path d="M41 70 V28 M77 62 V20" />
+                    <path d="M41 28 L77 20 V30 L41 38 Z" />
+                    <path d="M22 76 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z" />
+                    <path d="M58 68 q-1 -8 9 -9 q11 0 11 6 q-1 8 -10 8 q-9 0 -10 -5 z" />
+                    <path d="M25 74 l12 -4 M61 66 l12 -4" stroke-width="1.3" opacity=".55" />
+                  </g></svg></i
+              ><span>Muziek luisteren</span>
+            </div>
+            <div class="gt add"><b>+</b><span>Toevoegen</span></div>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <div class="note">
+      <b>Wat is anders dan eerder:</b> geen zwarte dikke randen of schaduwblokken meer, geen emoji,
+      geen speelse ronde cirkels. Rijen met links het plaatje, rechts een leeg rondje dat je aantikt
+      (zo zie je dat het een keuze is). Kleur is rustig en komt alleen terug als zacht vlak en in
+      het symbool. Koppen in een schreefletter geven warmte en rust; de rest is een gewoon, goed
+      leesbaar systeemlettertype.<br /><br /><b>Lettertypes:</b> alleen wat al op de telefoon staat
+      (D-002). Op iPhone is de kop "New York"; op Android valt die terug op Georgia of een gewone
+      schreefletter.
+    </div>
+  </body>
+</html>

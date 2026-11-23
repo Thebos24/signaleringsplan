@@ -15,6 +15,18 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Cliëntschermen in Apple-stijl (T-2.10)
+- Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
+- Gedaan: T-2.10. Start en Resultaat gebruiken de nieuwe componenten: signalen als lijst met cirkels, "Het gaat goed" als groene rij, "Klaar" en
+  "Terug" in de vaste balk; het resultaat heeft een zacht kleurverloop met groot symbool en kleurwoord. Foto's worden nu op wit geschetst. Oude
+  `Tile` en de proefpagina's `#galerie` en `#galerie-nieuw` zijn weg. 140 tests, lint, typecontrole en Prettier slagen. In de preview (390×844)
+  met testtegels bekeken (Start, aangetikt, Oranje); die zijn weer weg. Rood en groen alleen via tests; niet op de iPhone gezien.
+- Beslissingen: D-041 (nieuw).
+- Problemen / verrassingen: preview_start kon geen eigen server starten (grens van 5 per map); de preview staat op de server van een andere chat (poort 5173).
+- Volgende: Checkpoint 2 (Sander en partner vullen samen een verzonnen testplan in op de iPhone, minstens één eigen foto per kleur). Daarna T-3.3 ⚙ Sonnet · medium (eerst Q-005 beantwoorden).
+
+---
+
 ## 2026-11-23 — Invulkant in vier schermen (T-2.9)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · high: model ja, effort niet te zien)
 - Gedaan: T-2.9. De invulmodus heeft nu de vier schermen uit SPEC §6.3 in Apple-stijl: Plan (drie kleurkaarten met aantallen, "Bekijk als

@@ -17,7 +17,7 @@ export const nl = {
     done: 'Klaar',
   },
   result: {
-    youAreOn: 'Je bent op {color}.',
+    youAreOn: 'Je bent op',
     allGood: 'Het gaat goed!',
     back: 'Terug',
   },

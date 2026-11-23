@@ -56,7 +56,7 @@ export function sketchCanvas(canvas: HTMLCanvasElement): void {
   if (!context) throw new Error('No canvas')
   const { width, height } = canvas
   const pixels = context.getImageData(0, 0, width, height)
-  const result = sketch(pixels, { ink: colors.ink, paper: colors.paper })
+  const result = sketch(pixels, { ink: colors.ink, paper: colors.surface })
   pixels.data.set(result.data)
   context.putImageData(pixels, 0, 0)
 }

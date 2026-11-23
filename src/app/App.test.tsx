@@ -70,7 +70,7 @@ describe('App', () => {
     expect(boos).toHaveAttribute('aria-pressed', 'false')
     await userEvent.click(boos)
     await userEvent.click(screen.getByRole('button', { name: 'Klaar' }))
-    expect(await screen.findByRole('heading', { name: 'Je bent op Oranje.' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Je bent op Oranje' })).toBeInTheDocument()
     await userEvent.click(screen.getByRole('button', { name: 'Terug' }))
     // back on the start screen the tapped signals are gone
     expect(await screen.findByRole('button', { name: 'Ik ben boos' })).toHaveAttribute(
@@ -88,7 +88,7 @@ describe('App', () => {
     await userEvent.click(await screen.findByRole('button', { name: 'Ik ben boos' }))
     await userEvent.click(screen.getByRole('button', { name: 'Ik wil schreeuwen' }))
     await userEvent.click(screen.getByRole('button', { name: 'Klaar' }))
-    expect(await screen.findByRole('heading', { name: 'Je bent op Rood.' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Je bent op Rood' })).toBeInTheDocument()
   })
 
   it('greets the client by name', async () => {

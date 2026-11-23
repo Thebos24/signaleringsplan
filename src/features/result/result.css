@@ -1,47 +1,54 @@
-/* The colour is the background of the whole screen (DESIGN.md, 2026-11-22) */
+/* The colour fills the screen, as a soft gradient (D-036). The bottom bar takes the same tint. */
 .result {
-  box-sizing: border-box;
-  max-width: 480px;
-  min-height: 100dvh;
-  margin: 0 auto;
-  padding: max(var(--size-gap), env(safe-area-inset-top)) var(--size-gap) var(--size-gap);
+  --result-tint: var(--color-green-light);
+  background: linear-gradient(to bottom, var(--result-tint), var(--color-paper));
+  background-attachment: fixed;
 }
 .result--green {
-  background: var(--color-green-light);
+  --result-tint: var(--color-green-light);
 }
 .result--orange {
-  background: var(--color-orange-light);
+  --result-tint: var(--color-orange-light);
 }
 .result--red {
-  background: var(--color-red-light);
+  --result-tint: var(--color-red-light);
+}
+.result .bottom-bar {
+  background: color-mix(in srgb, var(--color-paper) 70%, transparent);
 }
 .result__head {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--size-gap);
-  margin-bottom: calc(var(--size-gap) * 2);
+  gap: 12px;
+  padding-top: var(--size-page-margin);
   text-align: center;
 }
-.result__head h1,
+.result__line,
 .result__word {
   margin: 0;
 }
+.result__line {
+  font-size: var(--size-text);
+  font-weight: 500;
+}
+/* The colour word is the biggest thing on the screen */
 .result__word {
-  font-size: var(--size-tile-text);
+  display: block;
+  font-size: var(--size-title);
+  font-weight: 700;
+  letter-spacing: -0.8px;
 }
-.result__tiles {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-gap);
+.result__line .result__word {
+  margin-top: 4px;
 }
-.result__tiles .tile {
-  width: 100%;
-  background: var(--color-paper);
+/* "Het gaat goed!" is the big line on green, with "Groen" under it */
+.result--green .result__line {
+  font-size: var(--size-title);
+  font-weight: 700;
+  letter-spacing: -0.8px;
 }
-.result__back {
-  margin-top: calc(var(--size-gap) * 2);
-}
-.result__back .button {
-  width: 100%;
+.result--green .result__word {
+  font-size: var(--size-text);
+  font-weight: 500;
 }

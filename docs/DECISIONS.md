@@ -560,3 +560,17 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   staat onder het plaatjesraster (zoals de schets); bij ±45 pictogrammen (Fase 4) ligt hij ver naar beneden en is mogelijk beter boven het raster.
 - Herzien als: testers bij Checkpoint 2 "Terug" laten vallen wat ze typten (dan een waarschuwing), of de foto-knop niet vinden.
 
+### D-041 — Cliëntschermen in Apple-stijl; foto's op wit; oude tegel en proefpagina's weg (T-2.10)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude (technisch), uitwerking van D-035 en D-036
+- Besluit:
+  - **Start:** groot kopje, de signalen als één gegroepeerde lijst met een cirkel per rij (leeg of gevuld met vinkje), daaronder een eigen
+    groep met de rij "Het gaat goed" (`tint="good"`), en "Klaar" in de vaste balk. De lang-indrukken-knop staat rechtsboven, boven het kopje.
+  - **Resultaat:** de kleur is een zacht verloop over het hele scherm (kleur bovenin, papier onderin), met het symbool, "Je bent op" en het
+    kleurwoord groot; bij groen "Het gaat goed!" groot met "Groen" eronder. De acties staan als rijen om te bekijken (zonder cirkel of pijltje), "Terug" in de vaste balk.
+  - Foto's worden nu geschetst op wit (`surface`), net als de pictogrammen (D-039), zodat ze op een witte rij geen vierkantje geven. Foto's die
+    al op papier zijn bewaard houden een heel licht vierkantje; dat is alleen de kleur, geen datamodelwijziging.
+  - Weg: `Tile`, `Gallery`, `GalleryApple` (`#galerie`, `#galerie-nieuw`), de bijbehorende CSS en tests. `#proef` blijft voor T-0.7.
+  - De kop op het resultaat is nu "Je bent op Oranje" zonder punt.
+- Waarom: één set componenten voor alle schermen (D-038); de cliënt ziet dezelfde rijen als de begeleider, alleen zonder knoppen.
+- Afgewezen: Oude foto's opnieuw schetsen (er is geen origineel, D-010). Een eigen "ActionRow" voor het resultaat (`ListRow` zonder `onClick` doet het al).
+- Herzien als: Sander of testers de lijst met veel signalen te lang vinden (Q-001, Checkpoint 3) of het verloop op de iPhone te zacht lijkt.

@@ -40,7 +40,7 @@ Contrast wordt in `tokens.test.ts` gecontroleerd (tekst 4,5:1, symbool en cirkel
 
 `Screen` (inhoud + vaste balk onderaan), `LargeTitle`, `BackButton`, `Button` (`primary` / `secondary`), `ListGroup` + `ListRow`
 (rechts cirkel, pijltje of niets), `SelectCircle`, `GuideTile` + `GuideTileGrid` (twee per rij, begeleider). Eén hoofdknop per scherm.
-Bekijken: open de app met `#galerie-nieuw` (tijdelijk).
+De oude tegel (`Tile`) en de proefpagina's `#galerie` en `#galerie-nieuw` zijn weg (T-2.10); de echte schermen laten de componenten zien.
 
 ## Stijl van de plaatjes: "geschetst"
 

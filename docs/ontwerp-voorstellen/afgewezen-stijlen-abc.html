@@ -1,130 +1,1061 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stijlen — voorstel</title><style>
-:root{--paper:#FBF8F2;--ink:#2B2B2B;--green:#3E9B57;--gl:#DFF1E4;--orange:#E8892B;--ol:#FCE9D4;--red:#D2453B;--rl:#F8DCD9;--muted:#6B665E}
-*{box-sizing:border-box}
-body{margin:0;padding:24px;background:#e4e0d8;font-family:-apple-system,system-ui,sans-serif;color:var(--ink)}
-h1{margin:0 0 6px}h2{margin:40px 0 4px}.lead,.sub{max-width:780px;line-height:1.5;margin:0 0 14px}.sub{color:#444}
-.row{display:flex;gap:28px;flex-wrap:wrap}figure{margin:0}
-.phone{width:280px;height:600px;border-radius:34px;padding:14px;display:flex;flex-direction:column;gap:12px;overflow:hidden;position:relative;color:var(--ink);font-size:15px}
-.grow{flex:1}.small{font-size:12px;text-align:center;color:#555}
-.pic{display:flex;line-height:0}.pic svg{width:58px;height:58px}
-.tile{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px;text-align:center;font-size:17px;position:relative}
-.btn{text-align:center;font-weight:700;font-size:20px;padding:14px;position:relative}
-.btn.q{font-size:15px;font-weight:600}
-h3{margin:0;font-size:22px;line-height:1.2}
-.hdr{display:flex;justify-content:space-between;align-items:center;min-height:32px}
-.logo{display:flex;gap:4px}.l{width:12px;height:12px;border-radius:50%;display:block;border:2px solid var(--ink)}.l.r{background:var(--red)}.l.o{background:var(--orange)}.l.g{background:var(--green)}
-.pen{width:30px;height:30px;border-radius:50%;text-align:center;line-height:26px;border:2px solid var(--muted);color:var(--muted);font-size:14px}
-.back{font-size:14px;font-weight:600;color:#444}
-.resh{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;margin-top:6px}
-.card{display:flex;align-items:center;gap:12px;padding:12px 14px;position:relative}
-.card b{font-size:19px}.card small{display:block;color:#444;font-size:13px}
-.chk{font-style:normal;position:absolute;top:6px;right:10px;font-weight:700}
-.ttl{font-size:18px}
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stijlen — voorstel</title>
+    <style>
+      :root {
+        --paper: #fbf8f2;
+        --ink: #2b2b2b;
+        --green: #3e9b57;
+        --gl: #dff1e4;
+        --orange: #e8892b;
+        --ol: #fce9d4;
+        --red: #d2453b;
+        --rl: #f8dcd9;
+        --muted: #6b665e;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #e4e0d8;
+        font-family: -apple-system, system-ui, sans-serif;
+        color: var(--ink);
+      }
+      h1 {
+        margin: 0 0 6px;
+      }
+      h2 {
+        margin: 40px 0 4px;
+      }
+      .lead,
+      .sub {
+        max-width: 780px;
+        line-height: 1.5;
+        margin: 0 0 14px;
+      }
+      .sub {
+        color: #444;
+      }
+      .row {
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+      figure {
+        margin: 0;
+      }
+      .phone {
+        width: 280px;
+        height: 600px;
+        border-radius: 34px;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        overflow: hidden;
+        position: relative;
+        color: var(--ink);
+        font-size: 15px;
+      }
+      .grow {
+        flex: 1;
+      }
+      .small {
+        font-size: 12px;
+        text-align: center;
+        color: #555;
+      }
+      .pic {
+        display: flex;
+        line-height: 0;
+      }
+      .pic svg {
+        width: 58px;
+        height: 58px;
+      }
+      .tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding: 10px;
+        text-align: center;
+        font-size: 17px;
+        position: relative;
+      }
+      .btn {
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 14px;
+        position: relative;
+      }
+      .btn.q {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      h3 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+      .hdr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 32px;
+      }
+      .logo {
+        display: flex;
+        gap: 4px;
+      }
+      .l {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: block;
+        border: 2px solid var(--ink);
+      }
+      .l.r {
+        background: var(--red);
+      }
+      .l.o {
+        background: var(--orange);
+      }
+      .l.g {
+        background: var(--green);
+      }
+      .pen {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 26px;
+        border: 2px solid var(--muted);
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .back {
+        font-size: 14px;
+        font-weight: 600;
+        color: #444;
+      }
+      .resh {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+        margin-top: 6px;
+      }
+      .card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        position: relative;
+      }
+      .card b {
+        font-size: 19px;
+      }
+      .card small {
+        display: block;
+        color: #444;
+        font-size: 13px;
+      }
+      .chk {
+        font-style: normal;
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        font-weight: 700;
+      }
+      .ttl {
+        font-size: 18px;
+      }
 
-/* ===== A · Schetsboek ===== */
-.sA{background:var(--paper);background-image:radial-gradient(#d8d2c4 1px,transparent 1px);background-size:16px 16px;border:3px solid var(--ink)}
-.sA h3{font-family:"Marker Felt","Bradley Hand","Chalkboard SE","Comic Sans MS",cursive;font-size:25px;text-decoration:underline wavy rgba(43,43,43,.45);text-underline-offset:6px}
-.sA .tile,.sA .btn,.sA .card{background:none;border:0}
-.sA .tile::before,.sA .btn::before,.sA .card::before{content:"";position:absolute;inset:0;border:3px solid var(--ink);border-radius:16px 20px 14px 22px/20px 14px 22px 16px;filter:url(#wob);background:rgba(255,255,255,.7);z-index:-1}
-.sA .tile,.sA .btn,.sA .card{z-index:0;isolation:isolate}
-.sA .tile.good::before{background:var(--gl)}
-.sA .tile.sel::before{border-width:6px;background:rgba(255,236,170,.6)}
-.sA .btn::before{background:rgba(255,255,255,.9)}
-.sA .btn.q::before{border-color:var(--muted)}
-.sA .card.g::before{background:var(--gl)}.sA .card.o::before{background:var(--ol)}.sA .card.r::before{background:var(--rl)}
-.sA.o{background-color:var(--ol)}
-.sA .tile.good{color:#1f5e33}
+      /* ===== A · Schetsboek ===== */
+      .sA {
+        background: var(--paper);
+        background-image: radial-gradient(#d8d2c4 1px, transparent 1px);
+        background-size: 16px 16px;
+        border: 3px solid var(--ink);
+      }
+      .sA h3 {
+        font-family: 'Marker Felt', 'Bradley Hand', 'Chalkboard SE', 'Comic Sans MS', cursive;
+        font-size: 25px;
+        text-decoration: underline wavy rgba(43, 43, 43, 0.45);
+        text-underline-offset: 6px;
+      }
+      .sA .tile,
+      .sA .btn,
+      .sA .card {
+        background: none;
+        border: 0;
+      }
+      .sA .tile::before,
+      .sA .btn::before,
+      .sA .card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 3px solid var(--ink);
+        border-radius: 16px 20px 14px 22px/20px 14px 22px 16px;
+        filter: url(#wob);
+        background: rgba(255, 255, 255, 0.7);
+        z-index: -1;
+      }
+      .sA .tile,
+      .sA .btn,
+      .sA .card {
+        z-index: 0;
+        isolation: isolate;
+      }
+      .sA .tile.good::before {
+        background: var(--gl);
+      }
+      .sA .tile.sel::before {
+        border-width: 6px;
+        background: rgba(255, 236, 170, 0.6);
+      }
+      .sA .btn::before {
+        background: rgba(255, 255, 255, 0.9);
+      }
+      .sA .btn.q::before {
+        border-color: var(--muted);
+      }
+      .sA .card.g::before {
+        background: var(--gl);
+      }
+      .sA .card.o::before {
+        background: var(--ol);
+      }
+      .sA .card.r::before {
+        background: var(--rl);
+      }
+      .sA.o {
+        background-color: var(--ol);
+      }
+      .sA .tile.good {
+        color: #1f5e33;
+      }
 
-/* ===== B · Zacht en rond ===== */
-.sB{background:#F3EEE6;border:0;box-shadow:0 14px 30px rgba(60,50,30,.18);font-family:ui-rounded,"SF Pro Rounded",system-ui,sans-serif}
-.sB h3{font-weight:800}
-.sB .tile,.sB .card{background:#fff;border-radius:28px;box-shadow:0 5px 0 rgba(0,0,0,.06),0 12px 22px rgba(60,50,30,.10)}
-.sB .tile .pic{background:#EEF1F8;border-radius:50%;padding:10px;width:76px;height:76px;align-items:center;justify-content:center}
-.sB .tile.good .pic{background:var(--gl)}
-.sB .tile.sel{box-shadow:0 0 0 4px var(--ink),0 12px 22px rgba(60,50,30,.12)}
-.sB .chk{background:var(--ink);color:#fff;border-radius:50%;width:26px;height:26px;line-height:26px;text-align:center;top:8px;right:10px;font-size:14px}
-.sB .btn{background:var(--ink);color:#fff;border-radius:999px;box-shadow:0 5px 0 #000}
-.sB .btn.q{background:#fff;color:var(--ink);box-shadow:0 4px 0 rgba(0,0,0,.08)}
-.sB .pen{border:0;background:#fff;box-shadow:0 3px 0 rgba(0,0,0,.08)}
-.sB .l{border:0}
-.sB.o{background:linear-gradient(#FCE3C6,#FDF1E2)}
-.sB .resh svg{filter:drop-shadow(0 6px 8px rgba(0,0,0,.18))}
-.sB .card .sy{background:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center}
-.sB .card.g{background:var(--gl)}.sB .card.o{background:var(--ol)}.sB .card.r{background:var(--rl)}
+      /* ===== B · Zacht en rond ===== */
+      .sB {
+        background: #f3eee6;
+        border: 0;
+        box-shadow: 0 14px 30px rgba(60, 50, 30, 0.18);
+        font-family: ui-rounded, 'SF Pro Rounded', system-ui, sans-serif;
+      }
+      .sB h3 {
+        font-weight: 800;
+      }
+      .sB .tile,
+      .sB .card {
+        background: #fff;
+        border-radius: 28px;
+        box-shadow:
+          0 5px 0 rgba(0, 0, 0, 0.06),
+          0 12px 22px rgba(60, 50, 30, 0.1);
+      }
+      .sB .tile .pic {
+        background: #eef1f8;
+        border-radius: 50%;
+        padding: 10px;
+        width: 76px;
+        height: 76px;
+        align-items: center;
+        justify-content: center;
+      }
+      .sB .tile.good .pic {
+        background: var(--gl);
+      }
+      .sB .tile.sel {
+        box-shadow:
+          0 0 0 4px var(--ink),
+          0 12px 22px rgba(60, 50, 30, 0.12);
+      }
+      .sB .chk {
+        background: var(--ink);
+        color: #fff;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        top: 8px;
+        right: 10px;
+        font-size: 14px;
+      }
+      .sB .btn {
+        background: var(--ink);
+        color: #fff;
+        border-radius: 999px;
+        box-shadow: 0 5px 0 #000;
+      }
+      .sB .btn.q {
+        background: #fff;
+        color: var(--ink);
+        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.08);
+      }
+      .sB .pen {
+        border: 0;
+        background: #fff;
+        box-shadow: 0 3px 0 rgba(0, 0, 0, 0.08);
+      }
+      .sB .l {
+        border: 0;
+      }
+      .sB.o {
+        background: linear-gradient(#fce3c6, #fdf1e2);
+      }
+      .sB .resh svg {
+        filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.18));
+      }
+      .sB .card .sy {
+        background: #fff;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .sB .card.g {
+        background: var(--gl);
+      }
+      .sB .card.o {
+        background: var(--ol);
+      }
+      .sB .card.r {
+        background: var(--rl);
+      }
 
-/* ===== C · Stoplicht strak ===== */
-.sC{background:var(--paper);border:3px solid var(--ink);padding:0;gap:0}
-.sC>*{margin-left:14px;margin-right:14px}
-.sC .tile,.sC .card,.sC .btn,.sC h3,.sC .small,.sC .grow{margin-bottom:12px}
-.sC .hdr{margin:0 0 14px;padding:12px 14px;background:var(--ink);color:#fff}
-.sC .hdr .back{color:#fff}.sC .pen{border-color:#fff;color:#fff}
-.sC .l{width:16px;height:16px;border-color:#fff}
-.sC h3{font-weight:900;font-size:24px}
-.sC .tile{background:#fff;border:3px solid var(--ink);border-radius:12px;box-shadow:5px 5px 0 var(--ink)}
-.sC .tile.good{background:var(--green);color:#fff}
-.sC .tile.good .pic{filter:invert(1)}
-.sC .tile.sel{background:var(--ink);color:#fff}
-.sC .tile.sel .pic{filter:invert(1)}
-.sC .chk{color:#fff;font-size:20px}
-.sC .btn{background:var(--ink);color:#fff;border-radius:12px;box-shadow:5px 5px 0 var(--muted)}
-.sC .btn.q{background:#fff;color:var(--ink);border:3px solid var(--ink);box-shadow:none}
-.sC.o{background:var(--orange)}
-.sC.o .tile{background:#fff}
-.sC .resh{margin-top:0;padding:22px 14px 8px;background:none}
-.sC .resh h3{font-size:28px}
-.sC .card{border:3px solid var(--ink);border-radius:12px;box-shadow:5px 5px 0 var(--ink)}
-.sC .card.g{background:var(--green);color:#fff}.sC .card.g small{color:#eaffef}
-.sC .card.o{background:var(--orange)}.sC .card.r{background:var(--red);color:#fff}.sC .card.r small{color:#ffe9e7}
-.sC .card .sy{background:#fff;border:3px solid var(--ink);border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center}
-.sC .small{margin-top:2px}
-.note{background:#fff7d6;border:1px solid #e0c96a;border-radius:10px;padding:10px 14px;max-width:780px;margin:30px 0;line-height:1.45}
-
-</style></head><body>
-<svg width="0" height="0" style="position:absolute"><filter id="wob" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></svg>
-<h1>Drie stijlen — voorstel</h1><p class="lead">Dezelfde drie schermen (Start, Resultaat oranje, Plan van de begeleider) in drie stijlen. De pictogrammen zijn de huidige tijdelijke; in Fase 4 worden die vervangen door mooiere. De indeling is hetzelfde als in <i>schermen.html</i>: alleen de uitstraling verschilt.</p>
-<h2>A · Schetsboek</h2><p class="sub">Alles ziet eruit als met de hand getekend: kriebelige potloodranden, kleur als zachte waterverf, golvende streep onder de kopjes. Past bij de schetsfoto's en je wens voor potloodstijl (DESIGN.md).</p><div class="row">
-<figure><div class="phone sA start "><div class="hdr"><span class="logo"><b class="l r"></b><b class="l o"></b><b class="l g"></b></span><span class="pen">✎</span></div><h3>Hoi Sam, wat merk je?</h3><div class="tile "><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M14 72 h72 M14 72 v-12 h72 v12"/><path d="M20 60 v-10 q0 -6 8 -6 h10 q6 0 6 6 v10"/><path d="M58 22 h12 l-12 14 h12 M72 12 h9 l-9 10 h9"/>
-</svg></i><span>Ik slaap slecht</span></div><div class="tile sel"><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="50" cy="50" r="38"/><path d="M28 36 L44 44 M72 36 L56 44"/><path d="M36 50 v3 M64 50 v3"/><path d="M34 72 Q50 62 66 72"/>
-</svg></i><span>Ik ben boos</span><em class="chk">✓</em></div><div class="tile good"><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="50" cy="50" r="38"/><path d="M35 42 v4 M65 42 v4"/><path d="M32 60 Q50 78 68 60"/>
-</svg></i><span>Het gaat goed</span></div><div class="grow"></div><div class="btn">Klaar</div></div></figure>
-<figure><div class="phone sA result o "><div class="resh"><svg viewBox="0 0 100 100" width="70" height="70" fill="#E8892B" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 10 L92 86 L8 86 Z"/></svg><h3>Je bent op Oranje.</h3></div><div class="tile "><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="50" cy="20" r="8"/><path d="M50 30 L48 54 L36 80 M48 54 L62 66 L66 84 M49 38 L34 50 M49 38 L64 48"/><path d="M12 90 h76"/>
-</svg></i><span>Ga wandelen</span></div><div class="tile "><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M38 74 V28 L74 20 V66"/><path d="M38 40 L74 32"/><ellipse cx="30" cy="76" rx="9" ry="7"/><ellipse cx="66" cy="68" rx="9" ry="7"/>
-</svg></i><span>Muziek luisteren</span></div><div class="grow"></div><div class="btn">Terug</div></div></figure>
-<figure><div class="phone sA hubs "><div class="hdr"><b class="ttl">Plan van Sam</b><span class="back">Klaar</span></div><div class="small">Tik op een kleur om die in te vullen</div><div class="card g"><span class="sy"><svg viewBox="0 0 100 100" width="44" height="44" fill="#3E9B57" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="42"/><path d="M30 52 L45 66 L72 36" fill="none"/></svg></span><div><b>Groen</b><small>3 acties</small></div></div><div class="card o"><span class="sy"><svg viewBox="0 0 100 100" width="44" height="44" fill="#E8892B" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 10 L92 86 L8 86 Z"/></svg></span><div><b>Oranje</b><small>2 signalen · 3 acties</small></div></div><div class="card r"><span class="sy"><svg viewBox="0 0 100 100" width="44" height="44" fill="#D2453B" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z"/></svg></span><div><b>Rood</b><small>1 signaal · 2 acties</small></div></div><div class="grow"></div><div class="btn q">Bekijk als cliënt</div></div></figure>
-</div>
-<h2>B · Zacht en rond</h2><p class="sub">Vriendelijk en rustig: ronde kaarten met zachte schaduw, plaatjes in een gekleurde cirkel, ronde knoppen. Geen harde zwarte randen.</p><div class="row">
-<figure><div class="phone sB start "><div class="hdr"><span class="logo"><b class="l r"></b><b class="l o"></b><b class="l g"></b></span><span class="pen">✎</span></div><h3>Hoi Sam, wat merk je?</h3><div class="tile "><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M14 72 h72 M14 72 v-12 h72 v12"/><path d="M20 60 v-10 q0 -6 8 -6 h10 q6 0 6 6 v10"/><path d="M58 22 h12 l-12 14 h12 M72 12 h9 l-9 10 h9"/>
-</svg></i><span>Ik slaap slecht</span></div><div class="tile sel"><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="50" cy="50" r="38"/><path d="M28 36 L44 44 M72 36 L56 44"/><path d="M36 50 v3 M64 50 v3"/><path d="M34 72 Q50 62 66 72"/>
-</svg></i><span>Ik ben boos</span><em class="chk">✓</em></div><div class="tile good"><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="50" cy="50" r="38"/><path d="M35 42 v4 M65 42 v4"/><path d="M32 60 Q50 78 68 60"/>
-</svg></i><span>Het gaat goed</span></div><div class="grow"></div><div class="btn">Klaar</div></div></figure>
-<figure><div class="phone sB result o "><div class="resh"><svg viewBox="0 0 100 100" width="70" height="70" fill="#E8892B" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 10 L92 86 L8 86 Z"/></svg><h3>Je bent op Oranje.</h3></div><div class="tile "><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="50" cy="20" r="8"/><path d="M50 30 L48 54 L36 80 M48 54 L62 66 L66 84 M49 38 L34 50 M49 38 L64 48"/><path d="M12 90 h76"/>
-</svg></i><span>Ga wandelen</span></div><div class="tile "><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M38 74 V28 L74 20 V66"/><path d="M38 40 L74 32"/><ellipse cx="30" cy="76" rx="9" ry="7"/><ellipse cx="66" cy="68" rx="9" ry="7"/>
-</svg></i><span>Muziek luisteren</span></div><div class="grow"></div><div class="btn">Terug</div></div></figure>
-<figure><div class="phone sB hubs "><div class="hdr"><b class="ttl">Plan van Sam</b><span class="back">Klaar</span></div><div class="small">Tik op een kleur om die in te vullen</div><div class="card g"><span class="sy"><svg viewBox="0 0 100 100" width="44" height="44" fill="#3E9B57" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="42"/><path d="M30 52 L45 66 L72 36" fill="none"/></svg></span><div><b>Groen</b><small>3 acties</small></div></div><div class="card o"><span class="sy"><svg viewBox="0 0 100 100" width="44" height="44" fill="#E8892B" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 10 L92 86 L8 86 Z"/></svg></span><div><b>Oranje</b><small>2 signalen · 3 acties</small></div></div><div class="card r"><span class="sy"><svg viewBox="0 0 100 100" width="44" height="44" fill="#D2453B" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z"/></svg></span><div><b>Rood</b><small>1 signaal · 2 acties</small></div></div><div class="grow"></div><div class="btn q">Bekijk als cliënt</div></div></figure>
-</div>
-<h2>C · Stoplicht strak</h2><p class="sub">Stoer en heel duidelijk: donkere kop met een klein stoplicht, vlakke kleuren, dikke rand met schaduw-blok. Aangetikt = tegel wordt donker. Resultaat: de kleur is echt vol.</p><div class="row">
-<figure><div class="phone sC start "><div class="hdr"><span class="logo"><b class="l r"></b><b class="l o"></b><b class="l g"></b></span><span class="pen">✎</span></div><h3>Hoi Sam, wat merk je?</h3><div class="tile "><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M14 72 h72 M14 72 v-12 h72 v12"/><path d="M20 60 v-10 q0 -6 8 -6 h10 q6 0 6 6 v10"/><path d="M58 22 h12 l-12 14 h12 M72 12 h9 l-9 10 h9"/>
-</svg></i><span>Ik slaap slecht</span></div><div class="tile sel"><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="50" cy="50" r="38"/><path d="M28 36 L44 44 M72 36 L56 44"/><path d="M36 50 v3 M64 50 v3"/><path d="M34 72 Q50 62 66 72"/>
-</svg></i><span>Ik ben boos</span><em class="chk">✓</em></div><div class="tile good"><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="50" cy="50" r="38"/><path d="M35 42 v4 M65 42 v4"/><path d="M32 60 Q50 78 68 60"/>
-</svg></i><span>Het gaat goed</span></div><div class="grow"></div><div class="btn">Klaar</div></div></figure>
-<figure><div class="phone sC result o "><div class="resh"><svg viewBox="0 0 100 100" width="70" height="70" fill="#E8892B" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 10 L92 86 L8 86 Z"/></svg><h3>Je bent op Oranje.</h3></div><div class="tile "><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="50" cy="20" r="8"/><path d="M50 30 L48 54 L36 80 M48 54 L62 66 L66 84 M49 38 L34 50 M49 38 L64 48"/><path d="M12 90 h76"/>
-</svg></i><span>Ga wandelen</span></div><div class="tile "><i class="pic"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M38 74 V28 L74 20 V66"/><path d="M38 40 L74 32"/><ellipse cx="30" cy="76" rx="9" ry="7"/><ellipse cx="66" cy="68" rx="9" ry="7"/>
-</svg></i><span>Muziek luisteren</span></div><div class="grow"></div><div class="btn">Terug</div></div></figure>
-<figure><div class="phone sC hubs "><div class="hdr"><b class="ttl">Plan van Sam</b><span class="back">Klaar</span></div><div class="small">Tik op een kleur om die in te vullen</div><div class="card g"><span class="sy"><svg viewBox="0 0 100 100" width="44" height="44" fill="#3E9B57" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="42"/><path d="M30 52 L45 66 L72 36" fill="none"/></svg></span><div><b>Groen</b><small>3 acties</small></div></div><div class="card o"><span class="sy"><svg viewBox="0 0 100 100" width="44" height="44" fill="#E8892B" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 10 L92 86 L8 86 Z"/></svg></span><div><b>Oranje</b><small>2 signalen · 3 acties</small></div></div><div class="card r"><span class="sy"><svg viewBox="0 0 100 100" width="44" height="44" fill="#D2453B" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z"/></svg></span><div><b>Rood</b><small>1 signaal · 2 acties</small></div></div><div class="grow"></div><div class="btn q">Bekijk als cliënt</div></div></figure>
-</div>
-<div class="note">Typografie: alle drie gebruiken alleen lettertypes die al op de telefoon staan (geen download, D-002). A gebruikt voor de kopjes Marker Felt (iPhone) en valt op Android terug op een gewoon lettertype; B gebruikt het ronde systeemlettertype van de iPhone. Het potloodrandje in A wordt in de echte app met een SVG-filter gemaakt: dat werkt offline en in Safari en Chrome.</div></body></html>
+      /* ===== C · Stoplicht strak ===== */
+      .sC {
+        background: var(--paper);
+        border: 3px solid var(--ink);
+        padding: 0;
+        gap: 0;
+      }
+      .sC > * {
+        margin-left: 14px;
+        margin-right: 14px;
+      }
+      .sC .tile,
+      .sC .card,
+      .sC .btn,
+      .sC h3,
+      .sC .small,
+      .sC .grow {
+        margin-bottom: 12px;
+      }
+      .sC .hdr {
+        margin: 0 0 14px;
+        padding: 12px 14px;
+        background: var(--ink);
+        color: #fff;
+      }
+      .sC .hdr .back {
+        color: #fff;
+      }
+      .sC .pen {
+        border-color: #fff;
+        color: #fff;
+      }
+      .sC .l {
+        width: 16px;
+        height: 16px;
+        border-color: #fff;
+      }
+      .sC h3 {
+        font-weight: 900;
+        font-size: 24px;
+      }
+      .sC .tile {
+        background: #fff;
+        border: 3px solid var(--ink);
+        border-radius: 12px;
+        box-shadow: 5px 5px 0 var(--ink);
+      }
+      .sC .tile.good {
+        background: var(--green);
+        color: #fff;
+      }
+      .sC .tile.good .pic {
+        filter: invert(1);
+      }
+      .sC .tile.sel {
+        background: var(--ink);
+        color: #fff;
+      }
+      .sC .tile.sel .pic {
+        filter: invert(1);
+      }
+      .sC .chk {
+        color: #fff;
+        font-size: 20px;
+      }
+      .sC .btn {
+        background: var(--ink);
+        color: #fff;
+        border-radius: 12px;
+        box-shadow: 5px 5px 0 var(--muted);
+      }
+      .sC .btn.q {
+        background: #fff;
+        color: var(--ink);
+        border: 3px solid var(--ink);
+        box-shadow: none;
+      }
+      .sC.o {
+        background: var(--orange);
+      }
+      .sC.o .tile {
+        background: #fff;
+      }
+      .sC .resh {
+        margin-top: 0;
+        padding: 22px 14px 8px;
+        background: none;
+      }
+      .sC .resh h3 {
+        font-size: 28px;
+      }
+      .sC .card {
+        border: 3px solid var(--ink);
+        border-radius: 12px;
+        box-shadow: 5px 5px 0 var(--ink);
+      }
+      .sC .card.g {
+        background: var(--green);
+        color: #fff;
+      }
+      .sC .card.g small {
+        color: #eaffef;
+      }
+      .sC .card.o {
+        background: var(--orange);
+      }
+      .sC .card.r {
+        background: var(--red);
+        color: #fff;
+      }
+      .sC .card.r small {
+        color: #ffe9e7;
+      }
+      .sC .card .sy {
+        background: #fff;
+        border: 3px solid var(--ink);
+        border-radius: 50%;
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .sC .small {
+        margin-top: 2px;
+      }
+      .note {
+        background: #fff7d6;
+        border: 1px solid #e0c96a;
+        border-radius: 10px;
+        padding: 10px 14px;
+        max-width: 780px;
+        margin: 30px 0;
+        line-height: 1.45;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute">
+      <filter id="wob" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" />
+        <feDisplacementMap in="SourceGraphic" scale="5" />
+      </filter>
+    </svg>
+    <h1>Drie stijlen — voorstel</h1>
+    <p class="lead">
+      Dezelfde drie schermen (Start, Resultaat oranje, Plan van de begeleider) in drie stijlen. De
+      pictogrammen zijn de huidige tijdelijke; in Fase 4 worden die vervangen door mooiere. De
+      indeling is hetzelfde als in <i>schermen.html</i>: alleen de uitstraling verschilt.
+    </p>
+    <h2>A · Schetsboek</h2>
+    <p class="sub">
+      Alles ziet eruit als met de hand getekend: kriebelige potloodranden, kleur als zachte
+      waterverf, golvende streep onder de kopjes. Past bij de schetsfoto's en je wens voor
+      potloodstijl (DESIGN.md).
+    </p>
+    <div class="row">
+      <figure>
+        <div class="phone sA start">
+          <div class="hdr">
+            <span class="logo"><b class="l r"></b><b class="l o"></b><b class="l g"></b></span
+            ><span class="pen">✎</span>
+          </div>
+          <h3>Hoi Sam, wat merk je?</h3>
+          <div class="tile">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M14 72 h72 M14 72 v-12 h72 v12" />
+                <path d="M20 60 v-10 q0 -6 8 -6 h10 q6 0 6 6 v10" />
+                <path d="M58 22 h12 l-12 14 h12 M72 12 h9 l-9 10 h9" /></svg></i
+            ><span>Ik slaap slecht</span>
+          </div>
+          <div class="tile sel">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="50" r="38" />
+                <path d="M28 36 L44 44 M72 36 L56 44" />
+                <path d="M36 50 v3 M64 50 v3" />
+                <path d="M34 72 Q50 62 66 72" /></svg></i
+            ><span>Ik ben boos</span><em class="chk">✓</em>
+          </div>
+          <div class="tile good">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="50" r="38" />
+                <path d="M35 42 v4 M65 42 v4" />
+                <path d="M32 60 Q50 78 68 60" /></svg></i
+            ><span>Het gaat goed</span>
+          </div>
+          <div class="grow"></div>
+          <div class="btn">Klaar</div>
+        </div>
+      </figure>
+      <figure>
+        <div class="phone sA result o">
+          <div class="resh">
+            <svg
+              viewBox="0 0 100 100"
+              width="70"
+              height="70"
+              fill="#E8892B"
+              stroke="#2B2B2B"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M50 10 L92 86 L8 86 Z" />
+            </svg>
+            <h3>Je bent op Oranje.</h3>
+          </div>
+          <div class="tile">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="20" r="8" />
+                <path d="M50 30 L48 54 L36 80 M48 54 L62 66 L66 84 M49 38 L34 50 M49 38 L64 48" />
+                <path d="M12 90 h76" /></svg></i
+            ><span>Ga wandelen</span>
+          </div>
+          <div class="tile">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M38 74 V28 L74 20 V66" />
+                <path d="M38 40 L74 32" />
+                <ellipse cx="30" cy="76" rx="9" ry="7" />
+                <ellipse cx="66" cy="68" rx="9" ry="7" /></svg></i
+            ><span>Muziek luisteren</span>
+          </div>
+          <div class="grow"></div>
+          <div class="btn">Terug</div>
+        </div>
+      </figure>
+      <figure>
+        <div class="phone sA hubs">
+          <div class="hdr"><b class="ttl">Plan van Sam</b><span class="back">Klaar</span></div>
+          <div class="small">Tik op een kleur om die in te vullen</div>
+          <div class="card g">
+            <span class="sy"
+              ><svg
+                viewBox="0 0 100 100"
+                width="44"
+                height="44"
+                fill="#3E9B57"
+                stroke="#2B2B2B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="50" r="42" />
+                <path d="M30 52 L45 66 L72 36" fill="none" /></svg
+            ></span>
+            <div><b>Groen</b><small>3 acties</small></div>
+          </div>
+          <div class="card o">
+            <span class="sy"
+              ><svg
+                viewBox="0 0 100 100"
+                width="44"
+                height="44"
+                fill="#E8892B"
+                stroke="#2B2B2B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M50 10 L92 86 L8 86 Z" /></svg
+            ></span>
+            <div><b>Oranje</b><small>2 signalen · 3 acties</small></div>
+          </div>
+          <div class="card r">
+            <span class="sy"
+              ><svg
+                viewBox="0 0 100 100"
+                width="44"
+                height="44"
+                fill="#D2453B"
+                stroke="#2B2B2B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z" /></svg
+            ></span>
+            <div><b>Rood</b><small>1 signaal · 2 acties</small></div>
+          </div>
+          <div class="grow"></div>
+          <div class="btn q">Bekijk als cliënt</div>
+        </div>
+      </figure>
+    </div>
+    <h2>B · Zacht en rond</h2>
+    <p class="sub">
+      Vriendelijk en rustig: ronde kaarten met zachte schaduw, plaatjes in een gekleurde cirkel,
+      ronde knoppen. Geen harde zwarte randen.
+    </p>
+    <div class="row">
+      <figure>
+        <div class="phone sB start">
+          <div class="hdr">
+            <span class="logo"><b class="l r"></b><b class="l o"></b><b class="l g"></b></span
+            ><span class="pen">✎</span>
+          </div>
+          <h3>Hoi Sam, wat merk je?</h3>
+          <div class="tile">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M14 72 h72 M14 72 v-12 h72 v12" />
+                <path d="M20 60 v-10 q0 -6 8 -6 h10 q6 0 6 6 v10" />
+                <path d="M58 22 h12 l-12 14 h12 M72 12 h9 l-9 10 h9" /></svg></i
+            ><span>Ik slaap slecht</span>
+          </div>
+          <div class="tile sel">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="50" r="38" />
+                <path d="M28 36 L44 44 M72 36 L56 44" />
+                <path d="M36 50 v3 M64 50 v3" />
+                <path d="M34 72 Q50 62 66 72" /></svg></i
+            ><span>Ik ben boos</span><em class="chk">✓</em>
+          </div>
+          <div class="tile good">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="50" r="38" />
+                <path d="M35 42 v4 M65 42 v4" />
+                <path d="M32 60 Q50 78 68 60" /></svg></i
+            ><span>Het gaat goed</span>
+          </div>
+          <div class="grow"></div>
+          <div class="btn">Klaar</div>
+        </div>
+      </figure>
+      <figure>
+        <div class="phone sB result o">
+          <div class="resh">
+            <svg
+              viewBox="0 0 100 100"
+              width="70"
+              height="70"
+              fill="#E8892B"
+              stroke="#2B2B2B"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M50 10 L92 86 L8 86 Z" />
+            </svg>
+            <h3>Je bent op Oranje.</h3>
+          </div>
+          <div class="tile">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="20" r="8" />
+                <path d="M50 30 L48 54 L36 80 M48 54 L62 66 L66 84 M49 38 L34 50 M49 38 L64 48" />
+                <path d="M12 90 h76" /></svg></i
+            ><span>Ga wandelen</span>
+          </div>
+          <div class="tile">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M38 74 V28 L74 20 V66" />
+                <path d="M38 40 L74 32" />
+                <ellipse cx="30" cy="76" rx="9" ry="7" />
+                <ellipse cx="66" cy="68" rx="9" ry="7" /></svg></i
+            ><span>Muziek luisteren</span>
+          </div>
+          <div class="grow"></div>
+          <div class="btn">Terug</div>
+        </div>
+      </figure>
+      <figure>
+        <div class="phone sB hubs">
+          <div class="hdr"><b class="ttl">Plan van Sam</b><span class="back">Klaar</span></div>
+          <div class="small">Tik op een kleur om die in te vullen</div>
+          <div class="card g">
+            <span class="sy"
+              ><svg
+                viewBox="0 0 100 100"
+                width="44"
+                height="44"
+                fill="#3E9B57"
+                stroke="#2B2B2B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="50" r="42" />
+                <path d="M30 52 L45 66 L72 36" fill="none" /></svg
+            ></span>
+            <div><b>Groen</b><small>3 acties</small></div>
+          </div>
+          <div class="card o">
+            <span class="sy"
+              ><svg
+                viewBox="0 0 100 100"
+                width="44"
+                height="44"
+                fill="#E8892B"
+                stroke="#2B2B2B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M50 10 L92 86 L8 86 Z" /></svg
+            ></span>
+            <div><b>Oranje</b><small>2 signalen · 3 acties</small></div>
+          </div>
+          <div class="card r">
+            <span class="sy"
+              ><svg
+                viewBox="0 0 100 100"
+                width="44"
+                height="44"
+                fill="#D2453B"
+                stroke="#2B2B2B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z" /></svg
+            ></span>
+            <div><b>Rood</b><small>1 signaal · 2 acties</small></div>
+          </div>
+          <div class="grow"></div>
+          <div class="btn q">Bekijk als cliënt</div>
+        </div>
+      </figure>
+    </div>
+    <h2>C · Stoplicht strak</h2>
+    <p class="sub">
+      Stoer en heel duidelijk: donkere kop met een klein stoplicht, vlakke kleuren, dikke rand met
+      schaduw-blok. Aangetikt = tegel wordt donker. Resultaat: de kleur is echt vol.
+    </p>
+    <div class="row">
+      <figure>
+        <div class="phone sC start">
+          <div class="hdr">
+            <span class="logo"><b class="l r"></b><b class="l o"></b><b class="l g"></b></span
+            ><span class="pen">✎</span>
+          </div>
+          <h3>Hoi Sam, wat merk je?</h3>
+          <div class="tile">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M14 72 h72 M14 72 v-12 h72 v12" />
+                <path d="M20 60 v-10 q0 -6 8 -6 h10 q6 0 6 6 v10" />
+                <path d="M58 22 h12 l-12 14 h12 M72 12 h9 l-9 10 h9" /></svg></i
+            ><span>Ik slaap slecht</span>
+          </div>
+          <div class="tile sel">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="50" r="38" />
+                <path d="M28 36 L44 44 M72 36 L56 44" />
+                <path d="M36 50 v3 M64 50 v3" />
+                <path d="M34 72 Q50 62 66 72" /></svg></i
+            ><span>Ik ben boos</span><em class="chk">✓</em>
+          </div>
+          <div class="tile good">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="50" r="38" />
+                <path d="M35 42 v4 M65 42 v4" />
+                <path d="M32 60 Q50 78 68 60" /></svg></i
+            ><span>Het gaat goed</span>
+          </div>
+          <div class="grow"></div>
+          <div class="btn">Klaar</div>
+        </div>
+      </figure>
+      <figure>
+        <div class="phone sC result o">
+          <div class="resh">
+            <svg
+              viewBox="0 0 100 100"
+              width="70"
+              height="70"
+              fill="#E8892B"
+              stroke="#2B2B2B"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M50 10 L92 86 L8 86 Z" />
+            </svg>
+            <h3>Je bent op Oranje.</h3>
+          </div>
+          <div class="tile">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="20" r="8" />
+                <path d="M50 30 L48 54 L36 80 M48 54 L62 66 L66 84 M49 38 L34 50 M49 38 L64 48" />
+                <path d="M12 90 h76" /></svg></i
+            ><span>Ga wandelen</span>
+          </div>
+          <div class="tile">
+            <i class="pic"
+              ><svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M38 74 V28 L74 20 V66" />
+                <path d="M38 40 L74 32" />
+                <ellipse cx="30" cy="76" rx="9" ry="7" />
+                <ellipse cx="66" cy="68" rx="9" ry="7" /></svg></i
+            ><span>Muziek luisteren</span>
+          </div>
+          <div class="grow"></div>
+          <div class="btn">Terug</div>
+        </div>
+      </figure>
+      <figure>
+        <div class="phone sC hubs">
+          <div class="hdr"><b class="ttl">Plan van Sam</b><span class="back">Klaar</span></div>
+          <div class="small">Tik op een kleur om die in te vullen</div>
+          <div class="card g">
+            <span class="sy"
+              ><svg
+                viewBox="0 0 100 100"
+                width="44"
+                height="44"
+                fill="#3E9B57"
+                stroke="#2B2B2B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="50" cy="50" r="42" />
+                <path d="M30 52 L45 66 L72 36" fill="none" /></svg
+            ></span>
+            <div><b>Groen</b><small>3 acties</small></div>
+          </div>
+          <div class="card o">
+            <span class="sy"
+              ><svg
+                viewBox="0 0 100 100"
+                width="44"
+                height="44"
+                fill="#E8892B"
+                stroke="#2B2B2B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M50 10 L92 86 L8 86 Z" /></svg
+            ></span>
+            <div><b>Oranje</b><small>2 signalen · 3 acties</small></div>
+          </div>
+          <div class="card r">
+            <span class="sy"
+              ><svg
+                viewBox="0 0 100 100"
+                width="44"
+                height="44"
+                fill="#D2453B"
+                stroke="#2B2B2B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M34 8 H66 L92 34 V66 L66 92 H34 L8 66 V34 Z" /></svg
+            ></span>
+            <div><b>Rood</b><small>1 signaal · 2 acties</small></div>
+          </div>
+          <div class="grow"></div>
+          <div class="btn q">Bekijk als cliënt</div>
+        </div>
+      </figure>
+    </div>
+    <div class="note">
+      Typografie: alle drie gebruiken alleen lettertypes die al op de telefoon staan (geen download,
+      D-002). A gebruikt voor de kopjes Marker Felt (iPhone) en valt op Android terug op een gewoon
+      lettertype; B gebruikt het ronde systeemlettertype van de iPhone. Het potloodrandje in A wordt
+      in de echte app met een SVG-filter gemaakt: dat werkt offline en in Safari en Chrome.
+    </div>
+  </body>
+</html>
