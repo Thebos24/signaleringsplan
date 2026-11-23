@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import {
   canAddTile,
   MAX_TILES_PER_LIST,
@@ -83,9 +83,7 @@ export function TileList({
           }}
         />
       ) : canAddTile(tiles.length) ? (
-        <BigButton onClick={() => setForm('new')}>
-          + {isSignal ? t.addSignal : t.addAction}
-        </BigButton>
+        <Button onClick={() => setForm('new')}>+ {isSignal ? t.addSignal : t.addAction}</Button>
       ) : (
         <p className="fill__full">{t.full.replace('{max}', String(MAX_TILES_PER_LIST))}</p>
       )}

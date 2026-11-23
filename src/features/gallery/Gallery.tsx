@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import { ColorBadge } from '../../components/ColorBadge'
 import { LongPressButton } from '../../components/LongPressButton'
 import { PICTO_IDS } from '../pictos/pictos'
@@ -34,8 +34,8 @@ export function Gallery() {
         ))}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 24 }}>
-        <BigButton>Klaar</BigButton>
-        <BigButton variant="quiet">Invullen</BigButton>
+        <Button>Klaar</Button>
+        <Button variant="secondary">Invullen</Button>
         <div style={{ alignSelf: 'flex-end' }}>
           <LongPressButton onComplete={() => setOpen(true)}>✎</LongPressButton>
         </div>

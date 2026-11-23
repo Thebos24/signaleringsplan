@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it, vi } from 'vitest'
-import { BigButton } from './BigButton'
+import { Button } from './Button'
 import { ColorBadge } from './ColorBadge'
 import { Tile } from './Tile'
 
@@ -36,10 +36,10 @@ describe('Tile', () => {
   })
 })
 
-describe('BigButton', () => {
+describe('Button', () => {
   it('calls onClick', async () => {
     const onClick = vi.fn()
-    render(<BigButton onClick={onClick}>Klaar</BigButton>)
+    render(<Button onClick={onClick}>Klaar</Button>)
     await userEvent.click(screen.getByRole('button', { name: 'Klaar' }))
     expect(onClick).toHaveBeenCalledOnce()
   })

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import { Picto } from '../../components/Picto'
 import { PhotoImage } from '../photo/PhotoImage'
 import type { Tile } from '../../domain/plan'
@@ -40,42 +40,42 @@ export function TileRow({
       {confirming ? (
         <div className="fill__actions" role="group" aria-label={t.sure}>
           <strong>{t.sure}</strong>
-          <BigButton onClick={onRemove}>{t.sureYes}</BigButton>
-          <BigButton variant="quiet" onClick={() => setConfirming(false)}>
+          <Button onClick={onRemove}>{t.sureYes}</Button>
+          <Button variant="secondary" onClick={() => setConfirming(false)}>
             {t.sureNo}
-          </BigButton>
+          </Button>
         </div>
       ) : (
         <>
           <div className="fill__actions">
-            <BigButton
-              variant="quiet"
+            <Button
+              variant="secondary"
               disabled={isFirst}
               onClick={() => onMove('up')}
               aria-label={label(t.moveUpLabel, tile.text)}
             >
               ↑
-            </BigButton>
-            <BigButton
-              variant="quiet"
+            </Button>
+            <Button
+              variant="secondary"
               disabled={isLast}
               onClick={() => onMove('down')}
               aria-label={label(t.moveDownLabel, tile.text)}
             >
               ↓
-            </BigButton>
+            </Button>
           </div>
           <div className="fill__actions">
-            <BigButton variant="quiet" onClick={onEdit} aria-label={label(t.editLabel, tile.text)}>
+            <Button variant="secondary" onClick={onEdit} aria-label={label(t.editLabel, tile.text)}>
               {t.edit}
-            </BigButton>
-            <BigButton
-              variant="quiet"
+            </Button>
+            <Button
+              variant="secondary"
               onClick={() => setConfirming(true)}
               aria-label={label(t.removeLabel, tile.text)}
             >
               {t.remove}
-            </BigButton>
+            </Button>
           </div>
         </>
       )}

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BigButton } from '../components/BigButton'
+import { Button } from '../components/Button'
 import { FillMode } from '../features/fill/FillMode'
 import { usePlan } from '../features/plan/usePlan'
 import { ResultScreen } from '../features/result/ResultScreen'
@@ -48,7 +48,7 @@ export function PlanApp() {
       <>
         {start}
         <div style={{ padding: 16 }}>
-          <BigButton onClick={() => setScreen('fill')}>{nl.fill.backToFill}</BigButton>
+          <Button onClick={() => setScreen('fill')}>{nl.fill.backToFill}</Button>
         </div>
       </>
     )

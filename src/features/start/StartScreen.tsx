@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import { LongPressButton } from '../../components/LongPressButton'
 import { Picto } from '../../components/Picto'
 import { Tile } from '../../components/Tile'
@@ -69,7 +69,7 @@ export function StartScreen({
         />
       </div>
       <div className="start__done">
-        <BigButton onClick={finish}>{nl.start.done}</BigButton>
+        <Button onClick={finish}>{nl.start.done}</Button>
       </div>
     </main>
   )

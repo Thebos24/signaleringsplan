@@ -1,27 +1,27 @@
 import type { ReactNode } from 'react'
-import './components.css'
+import './apple.css'
 
-interface BigButtonProps {
+interface ButtonProps {
   children: ReactNode
   onClick?: () => void
-  // 'quiet' is the rustig grey button for the filling-in mode
-  variant?: 'primary' | 'quiet'
+  // 'primary' is the one main button of a screen (dark); 'secondary' is the quiet grey one
+  variant?: 'primary' | 'secondary'
   disabled?: boolean
   // For buttons whose visible text is short, like an arrow
   'aria-label'?: string
 }
 
-export function BigButton({
+export function Button({
   children,
   onClick,
   variant = 'primary',
   disabled,
   'aria-label': ariaLabel,
-}: BigButtonProps) {
+}: ButtonProps) {
   return (
     <button
       type="button"
-      className={`big-button big-button--${variant}`}
+      className={`button button--${variant}`}
       onClick={onClick}
       disabled={disabled}
       aria-label={ariaLabel}

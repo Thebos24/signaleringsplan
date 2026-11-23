@@ -24,6 +24,6 @@
 .start__done {
   margin-top: calc(var(--size-gap) * 2);
 }
-.start__done .big-button {
+.start__done .button {
   width: 100%;
 }

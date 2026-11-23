@@ -42,6 +42,6 @@
 .result__back {
   margin-top: calc(var(--size-gap) * 2);
 }
-.result__back .big-button {
+.result__back .button {
   width: 100%;
 }

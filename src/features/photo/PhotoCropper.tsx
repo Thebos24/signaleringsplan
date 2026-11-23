@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type PointerEvent } from 'react'
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import {
   MAX_ZOOM,
   MIN_ZOOM,
@@ -68,9 +68,9 @@ export function PhotoCropper({
     return (
       <div className="photo">
         <p role="alert">{t.failed}</p>
-        <BigButton variant="quiet" onClick={onCancel}>
+        <Button variant="secondary" onClick={onCancel}>
           {nl.fill.cancel}
-        </BigButton>
+        </Button>
       </div>
     )
   }
@@ -159,12 +159,12 @@ export function PhotoCropper({
       </label>
       {busy && <p role="status">{t.sketching}</p>}
       <div className="fill__actions">
-        <BigButton onClick={() => void use()} disabled={busy}>
+        <Button onClick={() => void use()} disabled={busy}>
           {t.use}
-        </BigButton>
-        <BigButton variant="quiet" onClick={onCancel} disabled={busy}>
+        </Button>
+        <Button variant="secondary" onClick={onCancel} disabled={busy}>
           {nl.fill.cancel}
-        </BigButton>
+        </Button>
       </div>
     </div>
   )

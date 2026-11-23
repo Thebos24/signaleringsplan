@@ -1,6 +1,5 @@
 /* Look of the basic components. Colours and sizes come from the design tokens only. */
-.tile,
-.big-button {
+.tile {
   font: inherit;
   color: var(--color-ink);
   cursor: pointer;
@@ -9,8 +8,7 @@
     border-color var(--size-transition);
 }
 @media (prefers-reduced-motion: reduce) {
-  .tile,
-  .big-button {
+  .tile {
     transition: none;
   }
 }
@@ -65,25 +63,6 @@
   width: 80px;
   height: 80px;
   object-fit: cover;
-}
-
-.big-button {
-  box-sizing: border-box;
-  min-height: var(--size-button-min-height);
-  padding: 12px 24px;
-  border: var(--size-border-width) solid var(--color-ink);
-  border-radius: var(--size-radius);
-  background: var(--color-paper);
-  font-weight: 600;
-}
-.big-button--quiet {
-  color: var(--color-muted);
-  border-color: var(--color-muted);
-  font-weight: 400;
-}
-.big-button:disabled {
-  opacity: 0.5;
-  cursor: default;
 }
 
 .color-badge {

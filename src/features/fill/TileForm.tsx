@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import { Picto } from '../../components/Picto'
 import { MAX_TILE_TEXT_LENGTH, cleanText, type Tile, type TileKind } from '../../domain/plan'
 import type { NewImage } from '../../storage/planStore'
@@ -159,7 +159,7 @@ export function TileForm({
               </div>
             )}
             {/* No `capture`: the phone then asks "camera or photo library" (D-029) */}
-            <label className="big-button big-button--quiet fill__photo-button">
+            <label className="button button--secondary fill__photo-button">
               {hasPhoto ? t.otherPhoto : t.takePhoto}
               <input
                 type="file"
@@ -179,12 +179,12 @@ export function TileForm({
       {/* While cropping, the cropper has its own buttons; two "Annuleren" would be confusing */}
       {!cropping && (
         <div className="fill__actions">
-          <BigButton onClick={() => void save()} disabled={saving}>
+          <Button onClick={() => void save()} disabled={saving}>
             {t.save}
-          </BigButton>
-          <BigButton variant="quiet" onClick={onCancel}>
+          </Button>
+          <Button variant="secondary" onClick={onCancel}>
             {t.cancel}
-          </BigButton>
+          </Button>
         </div>
       )}
     </form>

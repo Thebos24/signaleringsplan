@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import { ColorBadge } from '../../components/ColorBadge'
 import { COLORS, type Color } from '../../domain/plan'
 import type { PlanData } from '../plan/usePlan'
@@ -48,8 +48,8 @@ export function Editor({
       )}
       <TileList color={color} kind="action" tiles={inList('action')} onChanged={onChanged} />
 
-      <BigButton onClick={onPreview}>{t.preview}</BigButton>
-      <BigButton onClick={onClose}>{t.close}</BigButton>
+      <Button onClick={onPreview}>{t.preview}</Button>
+      <Button onClick={onClose}>{t.close}</Button>
     </main>
   )
 }

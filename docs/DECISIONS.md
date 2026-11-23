@@ -489,3 +489,24 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   foto's; dan met tests. De placeholder-SVG's in `public/pictos/` en Fase 4 (T-4.1 t/m T-4.4) draaien om bronnen in plaats van
   eindplaatjes. `pictoId`'s blijven gelijk, dus geen migratie.
 - Herzien als: pictogrammen er na het filter te vaag uitzien om te herkennen (Checkpoint 4).
+
+### D-038 — Basiscomponenten in Apple-stijl; `BigButton` wordt `Button`; oude tegel blijft tijdelijk (T-2.7)
+- Datum: 2026-11-23 · Status: Besloten · Besloten door: Claude (technisch), uitwerking van D-036
+- Besluit:
+  - Nieuwe componenten in `src/components/` (alle stijl in `apple.css`, alleen tokens): `Screen` (marges, inhoud, vaste balk onderaan,
+    `position: sticky` met vervaagde achtergrond), `LargeTitle`, `BackButton`, `Button` (`primary` donker, `secondary` grijs),
+    `ListGroup` + `ListRow` (plaatje, titel, ondertitel, rechts een cirkel, pijltje of niets; zonder `onClick` is de rij alleen om naar
+    te kijken), `SelectCircle`, `GuideTile` + `GuideTileGrid` (twee per rij, met gestippelde "+ Toevoegen"-tegel).
+  - `BigButton` is vervangen door `Button`; `variant="quiet"` heet nu `secondary`. Alle schermen gebruiken al de nieuwe knop.
+  - De oude `Tile` en de oude tokens (`tileMin`, `radius`, `borderWidth`, `tileText`, `heading`, `gap`) blijven bestaan, alleen zolang
+    Start, Resultaat en de invulschermen ze nog gebruiken. Ze verdwijnen in T-2.9 en T-2.10.
+  - Nieuw token `outline` (`#2B2B2B`) voor de rand van de kleursymbolen. De zachtere inkt uit D-036 (`#3A3834`) haalt op rood
+    maar 2,6:1 (nodig: 3:1); `#2B2B2B` haalt 3,1:1. Tekst en hoofdknop gebruiken wel `#3A3834`.
+  - Rijen en tegels zetten plaatjes met `mix-blend-mode: multiply` op de kaart, zodat het papier van een schetsplaatje niet als witte
+    doos zichtbaar is.
+  - Tijdelijke proefpagina `#galerie-nieuw` toont alle nieuwe componenten; verdwijnt in T-2.10.
+- Waarom: één set componenten voor alle nieuwe schermen houdt de schermen simpel en gelijk. Eerst alles omzetten in één keer had de
+  app tussentijds kapot gelaten; zo blijft hij werken terwijl we taak voor taak omzetten.
+- Afgewezen: `BigButton` laten bestaan naast `Button` (twee knoppen met bijna dezelfde naam verwarren). Alle oude tokens meteen
+  verwijderen (breekt de nog niet omgezette schermen). Een vaste balk met `position: fixed` (dekt inhoud af; `sticky` doet dat niet).
+- Herzien als: de vaste balk op de iPhone met toetsenbord of onderrand vreemd gedraagt (testen bij Checkpoint 2).

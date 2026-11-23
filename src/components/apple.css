@@ -1,0 +1,231 @@
+/* Apple-style components (D-036). Colours and sizes come from the design tokens only. */
+
+button {
+  font: inherit;
+}
+
+/* Screen: margins, content, fixed bottom bar */
+.screen {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100dvh;
+  padding: 0 var(--size-page-margin);
+}
+.screen__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-page-margin);
+  padding-top: max(var(--size-page-margin), env(safe-area-inset-top));
+  padding-bottom: var(--size-page-margin);
+}
+.bottom-bar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: auto calc(-1 * var(--size-page-margin)) 0;
+  padding: 12px var(--size-page-margin) max(var(--size-page-margin), env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--color-paper) 85%, transparent);
+  -webkit-backdrop-filter: blur(var(--size-bar-blur));
+  backdrop-filter: blur(var(--size-bar-blur));
+  border-top: var(--size-hairline) solid var(--color-separator);
+}
+
+/* Large title */
+.large-title__text {
+  margin: 0;
+  font-size: var(--size-title);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+}
+.large-title__caption {
+  margin: 6px 0 0;
+  font-size: var(--size-caption);
+  color: var(--color-muted);
+}
+
+/* Back button */
+.back-button {
+  align-self: flex-start;
+  min-height: var(--size-back-button-min);
+  min-width: var(--size-back-button-min);
+  padding: 0 8px 0 0;
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  font-size: var(--size-text);
+  font-weight: 500;
+  cursor: pointer;
+}
+.back-button__chevron {
+  margin-right: 4px;
+  font-size: 30px;
+  line-height: 1;
+  vertical-align: -3px;
+}
+
+/* Buttons: one primary per screen, secondary is the quiet grey one */
+.button {
+  box-sizing: border-box;
+  min-height: var(--size-button-min-height);
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--size-button-radius);
+  font-size: var(--size-text);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity var(--size-transition);
+}
+.button--primary {
+  background: var(--color-ink);
+  color: var(--color-surface);
+}
+.button--secondary {
+  background: var(--color-fill-quiet);
+  color: var(--color-ink);
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Selection circle */
+.select-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  box-sizing: border-box;
+  width: var(--size-circle);
+  height: var(--size-circle);
+  border: 2px solid var(--color-muted);
+  border-radius: 50%;
+  color: var(--color-surface);
+  font-size: 15px;
+  font-weight: 700;
+}
+.select-circle--checked {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+/* Grouped list */
+.list-group {
+  overflow: hidden;
+  background: var(--color-surface);
+  border-radius: var(--size-card-radius);
+}
+.list-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: var(--size-row-min-height);
+  padding: 10px 14px 10px 10px;
+  border: none;
+  background: transparent;
+  color: var(--color-ink);
+  text-align: left;
+}
+button.list-row {
+  cursor: pointer;
+}
+/* Thin line between rows, starting right of the picture */
+.list-row + .list-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: calc(var(--size-row-image) + 30px);
+  height: var(--size-hairline);
+  background: var(--color-separator);
+}
+.list-row--selected {
+  background: var(--color-selected-tint);
+}
+.list-row--good {
+  background: var(--color-good-tint);
+}
+.list-row__image {
+  display: flex;
+  flex: none;
+}
+.list-row__image img,
+.list-row__image svg {
+  width: var(--size-row-image);
+  height: var(--size-row-image);
+  mix-blend-mode: multiply;
+}
+.list-row__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+}
+.list-row__title {
+  font-size: var(--size-text);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.list-row__subtitle {
+  font-size: var(--size-caption);
+  color: var(--color-muted);
+}
+.list-row__chevron {
+  color: var(--color-muted);
+  font-size: 24px;
+}
+
+/* Tiles for the supervisor, two per row */
+.guide-tile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.guide-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: var(--size-row-min-height);
+  padding: 10px 6px;
+  border: none;
+  border-radius: var(--size-card-radius);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: var(--size-text);
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+}
+.guide-tile__image img,
+.guide-tile__image svg {
+  display: block;
+  width: var(--size-tile-image);
+  height: var(--size-tile-image);
+  mix-blend-mode: multiply;
+}
+.guide-tile--add {
+  min-height: calc(var(--size-tile-image) + 42px);
+  border: 2px dashed var(--color-muted);
+  background: transparent;
+  color: var(--color-muted);
+}
+.guide-tile__plus {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

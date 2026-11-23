@@ -1,4 +1,4 @@
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import { ColorSymbol } from '../../components/ColorSymbol'
 import { Picto } from '../../components/Picto'
 import { Tile } from '../../components/Tile'
@@ -49,7 +49,7 @@ export function ResultScreen({
         ))}
       </div>
       <div className="result__back">
-        <BigButton onClick={onBack}>{nl.result.back}</BigButton>
+        <Button onClick={onBack}>{nl.result.back}</Button>
       </div>
     </main>
   )

@@ -15,6 +15,20 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-23 — Fundament in Apple-stijl (T-2.7)
+- Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · high: effort niet te zien, Sander gaf geen bezwaar)
+- Gedaan: T-2.7. Nieuwe tokens (papier, wit, inkt, grijs, tinten, maten) en nieuwe componenten: `Screen` met vaste balk
+  onderaan, `LargeTitle`, `BackButton`, `Button` (hoofd en secundair), `ListGroup` + `ListRow` (met cirkel-vinkje of pijltje),
+  `GuideTile` voor de begeleider. `BigButton` is overal `Button` geworden. Contrastcontrole en 13 nieuwe tests; 127 tests, lint,
+  typecontrole en build slagen. Bekeken in de preview (390×844) op de tijdelijke pagina `#galerie-nieuw`; niet op de iPhone.
+- Beslissingen: D-038 (nieuw).
+- Problemen / verrassingen: de inkt uit D-036 haalde op rood geen 3:1 voor de rand van het symbool; daarom een eigen token
+  `outline` (iets donkerder). De bestaande schermen (Start, Resultaat, invullen) hebben nu de nieuwe kleuren en knoppen maar nog
+  de oude opzet; ze worden omgebouwd in T-2.9 en T-2.10.
+- Volgende: T-2.8 Pictogramwerkwijze ⚙ Opus · medium. Sander kiest met `/model` Opus en effort medium voor de nieuwe sessie.
+
+---
+
 ## 2026-11-23 — Herontwerp vastgelegd (geen taak uit de lijst)
 - Waar: Claude Code (Sonnet 5.5)
 - Gedaan: Sander snapte de app niet meer door de rommelige indeling. Samen schetsen gemaakt (zonder te bouwen): schermoverzicht,

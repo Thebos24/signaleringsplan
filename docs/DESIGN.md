@@ -19,18 +19,28 @@ Uitstraling, regels voor eenvoud en design tokens. Tokens staan in code in `src/
 
 De invulkant (begeleider) mag gewoner zijn: kleinere letters, formulieren, lijstjes. Wel duidelijk en rustig.
 
-## Kleuren (eerste voorstel, vastleggen in T-1.2)
+## Kleuren en maten (D-036, D-038; waarden in `src/design/tokens.ts`)
 
 | Token | Waarde | Gebruik |
 | --- | --- | --- |
-| `paper` | `#FBF8F2` | Achtergrond: warm, papierachtig wit (past bij de schetsstijl) |
-| `ink` | `#2B2B2B` | Tekst en lijnen van pictogrammen |
-| `green` | `#3E9B57` | Groen. Lichte variant `#DFF1E4` voor vlakken |
-| `orange` | `#E8892B` | Oranje. Lichte variant `#FCE9D4` |
-| `red` | `#D2453B` | Rood. Lichte variant `#F8DCD9` |
-| `muted` | `#8A857C` | Rustige knop voor de invulmodus |
+| `paper` | `#F6F3EE` | Achtergrond van een scherm: warm papier |
+| `surface` | `#FFFFFF` | Kaarten en gegroepeerde lijsten; tekst op de hoofdknop |
+| `ink` | `#3A3834` | Tekst, hoofdknop, vinkje |
+| `outline` | `#2B2B2B` | Rand van de kleursymbolen (donkerder dan `ink`: 3:1 op rood) |
+| `muted` | `#6B665E` | Kleine grijze tekst, terugknop, lege cirkel (4,5:1 op papier en kaart) |
+| `separator` | `#DDD9D2` | Dunne lijn tussen rijen (alleen versiering) |
+| `fillQuiet` | `#E8E4DE` | Achtergrond van de secundaire knop |
+| `selectedTint` / `goodTint` | `#FFF4DA` / `#E6F2E6` | Gekozen rij / de rij "Het gaat goed" (altijd met cirkel of woord erbij) |
+| `green`, `orange`, `red` (+ `…Light`) | `#3E9B57`, `#E8892B`, `#D2453B` | Alleen voor betekenis: symbolen, kleurkaarten, resultaatscherm |
 
-Tekst op gekleurde vlakken moet een contrast van minimaal 4.5:1 halen (WCAG AA). Controleer dat in T-1.2.
+Maten: kopje 34, tekst 19, klein 14, rij ≥ 80, plaatje in rij 66, in tegel 70, cirkel 28, kaart-hoek 20, knop ≥ 64 en hoek 16.
+Contrast wordt in `tokens.test.ts` gecontroleerd (tekst 4,5:1, symbool en cirkel 3:1).
+
+## Componenten (`src/components/`, D-038)
+
+`Screen` (inhoud + vaste balk onderaan), `LargeTitle`, `BackButton`, `Button` (`primary` / `secondary`), `ListGroup` + `ListRow`
+(rechts cirkel, pijltje of niets), `SelectCircle`, `GuideTile` + `GuideTileGrid` (twee per rij, begeleider). Eén hoofdknop per scherm.
+Bekijken: open de app met `#galerie-nieuw` (tijdelijk).
 
 ## Stijl van de plaatjes: "geschetst"
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import { nl } from '../../text/nl'
 
 const t = nl.photo
@@ -31,10 +31,10 @@ export function SketchPreview({
         {url && <img className="photo__view" src={url} alt={t.sketchAlt} />}
       </div>
       <div className="fill__actions">
-        <BigButton onClick={onUse}>{t.sketchUse}</BigButton>
-        <BigButton variant="quiet" onClick={onAgain}>
+        <Button onClick={onUse}>{t.sketchUse}</Button>
+        <Button variant="secondary" onClick={onAgain}>
           {t.sketchAgain}
-        </BigButton>
+        </Button>
       </div>
     </div>
   )

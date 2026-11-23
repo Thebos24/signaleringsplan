@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 (Sander) staat open. T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). Eerst T-2.7 t/m T-2.10, daarna Checkpoint 2, dan T-3.3.
+**Huidige fase: 2 (Invulkant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 (Sander) staat open. T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 is af. Eerst T-2.8 t/m T-2.10, daarna Checkpoint 2, dan T-3.3.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -70,9 +70,9 @@ Doel: een begeleider kan samen met de cliënt een compleet plan invullen.
 Sander vond de schermen een bende. Het schermoverzicht, de Apple-stijl en de pictogramwerkwijze zijn goedgekeurd in
 schetsen (`docs/ontwerp-voorstellen/`). In deze volgorde bouwen; elke taak is een eigen sessie.
 
-- [ ] T-2.7 (C) Fundament: nieuwe design tokens (kleuren, lettergroottes, afstanden) en basiscomponenten in Apple-stijl:
+- [x] T-2.7 (C) Fundament: nieuwe design tokens (kleuren, lettergroottes, afstanden) en basiscomponenten in Apple-stijl:
       groot kopje, gegroepeerde lijst, rij met plaatje en cirkel-vinkje, hoofdknop op vaste balk, secundaire knop,
-      tegel voor de begeleider, terugknop. Oude `Tile`, `BigButton` vervangen of aanpassen; contrastcheck; tests; DESIGN.md. ⚙ Sonnet · high
+      tegel voor de begeleider, terugknop. Oude `Tile`, `BigButton` vervangen of aanpassen; contrastcheck; tests; DESIGN.md. ⚙ Sonnet · high — 2026-11-23 (D-038; `BigButton` is nu `Button`, oude `Tile` blijft tot T-2.10)
 - [ ] T-2.8 (C) Pictogramwerkwijze: bronmap met platte SVG-tekeningen, omzetting via `sketch()` (bij het bouwen of bij eerste gebruik,
       de keuze vastleggen), eventueel instelling in het filter voor donkerdere lijnen (met tests), de 10 bestaande
       pictogrammen opnieuw tekenen als bron. Werkt offline. ⚙ Opus · medium

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BigButton } from '../../components/BigButton'
+import { Button } from '../../components/Button'
 import { nl } from '../../text/nl'
 import './fill.css'
 
@@ -31,7 +31,7 @@ export function WelcomeScreen({
           onChange={(e) => setName(e.target.value)}
         />
       </label>
-      <BigButton onClick={() => onNext(name)}>{t.next}</BigButton>
+      <Button onClick={() => onNext(name)}>{t.next}</Button>
     </main>
   )
 }
