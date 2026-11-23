@@ -23,8 +23,8 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
   en formulier zijn weg; datamodel en opslag zijn gelijk gebleven. 143 tests, lint, typecontrole, Prettier en build slagen. In de preview
   (390×844) doorlopen: toevoegen, bewaren, openen, verwijderen. De fotoroute alleen met tests (met een nagebootst canvas); niet op de iPhone gezien.
 - Beslissingen: D-040 (nieuw); D-026, D-027 en D-031 deels vervangen. SPEC §6.4 aangepast: tekst en plaatje van een tegel worden bewaard met
-  "Klaar", niet meer bij elke toets.
-- Problemen / verrassingen: een eerste versie van `Screen` gaf een fout in de echte browser (de scroll-naar-boven gaf iets terug aan React); de
+  "Klaar", niet meer bij elke toets. Sander bevestigde dit aan het eind van de sessie.
+- Problemen / verrassingen: een test (volgorde ← →) faalde af en toe als de hele reeks draaide, doordat beide pijlen even uit staan tijdens het opslaan; test verbeterd, drie keer achter elkaar groen. Een eerste versie van `Screen` gaf een fout in de echte browser (de scroll-naar-boven gaf iets terug aan React); de
   tests zagen dat niet. Opgelost. De dev-server van een andere chat draaide al op poort 5173; daar de preview op geopend.
 - Volgende: T-2.10 Cliëntschermen in de nieuwe stijl ⚙ Sonnet · medium. Daarna Checkpoint 2 (Sander + partner vullen een testplan in op de iPhone).
 

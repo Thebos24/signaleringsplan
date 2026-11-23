@@ -240,9 +240,11 @@ describe('Tile screen', () => {
     await waitFor(async () =>
       expect((await getTiles('orange', 'signal')).map((x) => x.text)).toEqual(['Tweede', 'Eerste']),
     )
-    // Now it is last: "Later" is off and "Eerder" is on
-    await waitFor(() => expect(screen.getByRole('button', { name: 'Later →' })).toBeDisabled())
-    expect(screen.getByRole('button', { name: '← Eerder' })).toBeEnabled()
+    // Now it is last: "Eerder" is on and "Later" is off (both are off for a moment while it saves)
+    await waitFor(() => {
+      expect(screen.getByRole('button', { name: '← Eerder' })).toBeEnabled()
+      expect(screen.getByRole('button', { name: 'Later →' })).toBeDisabled()
+    })
 
     await userEvent.click(screen.getByRole('button', { name: '← Eerder' }))
     await waitFor(async () =>
