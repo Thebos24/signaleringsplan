@@ -96,7 +96,7 @@ Doel: de hele flow voor de cliënt, zo simpel mogelijk.
       geen dubbel tikken nodig, werkt zonder internet. ⚙ Sonnet · low — 2026-11-28 (D-043; alleen met tests, niet op de iPhone gezien)
 
 **Checkpoint 3:** Sander doorloopt de hele flow op de iPhone (en op Android als die er is), bij alle drie kleuren.
-Beslissen over Q-001 (één scherm of per kleur) en Q-002 (direct een kleur kiezen).
+Q-001 en Q-002 zijn beslist (D-044, 2026-11-28).
 **Vanaf hier geldt: wijzigingen aan het datamodel alleen met een migratie en overleg (CLAUDE.md).**
 
 ## Fase 4: Pictogrammen

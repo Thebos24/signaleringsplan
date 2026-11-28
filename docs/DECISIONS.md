@@ -598,3 +598,12 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Waarom: een cliënt die terugkomt moet niet halverwege een oude keuze of een oud resultaat zien (SPEC §5.1).
 - Afgewezen: Alleen terug na een bepaalde tijd weg (extra regel, moeilijk uit te leggen). Ook de invulmodus sluiten (verliest werk bij een foto).
 - Herzien als: testers het vervelend vinden dat een korte onderbreking het resultaat wist.
+
+### D-044 — Eén lijst met signalen; geen directe kleurkeuze (Q-001, Q-002)
+- Datum: 2026-11-28 · Status: Besloten · Besloten door: Sander
+- Besluit:
+  - **Q-001:** het startscherm houdt één lijst met de signalen van oranje en rood door elkaar, in de volgorde van het plan (zoals D-033/D-041).
+  - **Q-002:** de cliënt kan niet direct een kleur kiezen. De kleur volgt altijd uit de aangetikte signalen, of uit "Het gaat goed" voor groen.
+- Waarom: zo simpel mogelijk; geen extra schermen of keuzes voor de cliënt. Het maximum van 6 signalen per kleur (D-027) houdt de lijst op 12 rijen.
+- Afgewezen: Een scherm per kleur (meer schermen en stappen). Drie kleurknoppen op het startscherm (extra keuze, en het plan draait juist om signalen).
+- Herzien als: Sander, zijn partner of testers (Fase 6) de lijst te lang of te druk vinden, of de directe kleurkeuze missen.
