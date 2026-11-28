@@ -15,6 +15,18 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-28 — Set acties (T-4.2)
+- Waar: Claude Code (Opus 5.5 · medium; past bij de tag: ja). Zelfde sessie als T-4.1 (Sander koos om hier door te gaan).
+- Gedaan: T-4.2. 15 nieuwe actie-pictogrammen (rustig ademhalen, douchen, praten, bellen, rustige plek, tekenen, sporten, eten, tv kijken,
+  dier, opruimen, buiten zitten, spelletje, koptelefoon op, lezen); water opnieuw getekend. Namen en eerste zoekwoorden in `nl.ts`.
+  Proefpagina `#pictos` toont nu alle pictogrammen. In de preview (390×844) bekeken, groot en in de lijst; douchen en bankje verbeterd.
+  Tests, lint en Prettier slagen. Niet op de iPhone gezien.
+- Beslissingen: D-045 aangevuld (id's met streepje, acties eerst).
+- Problemen / verrassingen: geen.
+- Volgende: T-4.3 Set signalen (±20) ⚙ Opus · medium. Sander kan alvast op `#pictos` kijken of hij de acties herkent.
+
+---
+
 ## 2026-11-28 — Stijlgids pictogrammen (T-4.1)
 - Waar: Claude Code (Opus 5.5 · medium; past bij de tag Opus · medium: ja). Zelfde sessie als het afvinken van Checkpoint 3.
 - Gedaan: T-4.1. Stijlgids in DESIGN.md (lijndiktes, één poppetje met romp, vast gezicht, arcering als accent). Zes proefpictogrammen

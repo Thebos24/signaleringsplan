@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M28 50H72" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="6"/>
+  <path d="M10 38H18V62H10Z" fill="#bdbdbd"/>
+  <path d="M10 38H18V62H10Z" fill="url(#hatch)"/>
+  <path d="M10 38H18V62H10Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M18 30H30V70H18Z" fill="#bdbdbd"/>
+  <path d="M18 30H30V70H18Z" fill="url(#hatch)"/>
+  <path d="M18 30H30V70H18Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M82 38H90V62H82Z" fill="#bdbdbd"/>
+  <path d="M82 38H90V62H82Z" fill="url(#hatch)"/>
+  <path d="M82 38H90V62H82Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M70 30H82V70H70Z" fill="#bdbdbd"/>
+  <path d="M70 30H82V70H70Z" fill="url(#hatch)"/>
+  <path d="M70 30H82V70H70Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+</svg>
