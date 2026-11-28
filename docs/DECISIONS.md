@@ -609,7 +609,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Herzien als: Sander, zijn partner of testers (Fase 6) de lijst te lang of te druk vinden, of de directe kleurkeuze missen.
 
 ### D-045 — Stijlgids pictogrammen: vaste lijndiktes, één poppetje, arcering als accent (T-4.1)
-- Datum: 2026-11-28 · Status: Voorstel, wacht op goedkeuring van Sander · Besloten door: Claude (uitwerking), Sander (keurt de stijl goed)
+- Datum: 2026-11-28 · Status: Besloten (Sander keurde de stijl goed, 2026-11-28) · Besloten door: Claude (uitwerking), Sander (keurt de stijl goed)
 - Besluit:
   - DESIGN.md → "Stijlgids pictogrammen" legt vast: plek in het vlak, vier lijndiktes (3,5 / 4 / 4,5 / 5), drie grijstinten als
     ondergrond, arcering als accent (één of twee vlakken), één vast poppetje voor mensen en een vast gezicht voor gevoelens.

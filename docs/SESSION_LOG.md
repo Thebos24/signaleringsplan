@@ -15,6 +15,17 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-28 — Stijlgids pictogrammen (T-4.1)
+- Waar: Claude Code (Opus 5.5 · medium; past bij de tag Opus · medium: ja). Zelfde sessie als het afvinken van Checkpoint 3.
+- Gedaan: T-4.1. Stijlgids in DESIGN.md (lijndiktes, één poppetje met romp, vast gezicht, arcering als accent). Zes proefpictogrammen
+  opnieuw getekend (walk, music, caregiver, sleep, angry, happy). Tijdelijke proefpagina `#pictos`. 145 tests, lint en build slagen.
+  In de preview (390×844) bekeken; online gezet. Sander keurde de stijl goed.
+- Beslissingen: D-045 (nieuw).
+- Problemen / verrassingen: het schetsfilter maakt grijze vlakken bijna wit; alleen lijnen en arcering blijven staan. Daarom is arcering het accent.
+- Volgende: T-4.2 Set acties (±20) ⚙ Opus · medium. Daarna T-4.3 signalen (±20) en T-4.4 (zoekwoorden, proefpagina weg).
+
+---
+
 ## 2026-11-28 — Checkpoint 3 gehaald
 - Waar: Claude Code (Opus 5.5 · lage effort; geen bouwtaak, dus past)
 - Gedaan: Sander deed Checkpoint 3 op de iPhone: groen, oranje en rood, terugkomen in de app en vliegtuigmodus. Zijn oordeel: "alles is goed".

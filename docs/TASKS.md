@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 4 (Pictogrammen).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 is gehaald (Sander, 2026-11-23). T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 t/m T-2.10 zijn af (herontwerp klaar). Checkpoint 2 gehaald; T-3.3 en T-3.4 zijn af (2026-11-28); Checkpoint 3 gehaald (Sander, 2026-11-28); nu Fase 4 (T-4.1).
+**Huidige fase: 4 (Pictogrammen).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 is gehaald (Sander, 2026-11-23). T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 t/m T-2.10 zijn af (herontwerp klaar). Checkpoint 2 gehaald; T-3.3 en T-3.4 zijn af (2026-11-28); Checkpoint 3 gehaald (Sander, 2026-11-28); T-4.1 af (2026-11-28); nu T-4.2.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -103,8 +103,8 @@ Q-001 en Q-002 zijn beslist (D-044, 2026-11-28).
 
 Doel: een eigen set geschetste pictogrammen in één stijl (D-011).
 
-- [ ] T-4.1 (C) Stijlgids uitwerken in DESIGN.md + 6 proefpictogrammen (wandelen, muziek, begeleider, slapen,
-      boos, het gaat goed). Sander keurt de stijl goed. ⚙ Opus · medium
+- [x] T-4.1 (C) Stijlgids uitwerken in DESIGN.md + 6 proefpictogrammen (wandelen, muziek, begeleider, slapen,
+      boos, het gaat goed). Sander keurt de stijl goed. ⚙ Opus · medium — 2026-11-28 (D-045; Sander: "de stijl is leuk"; proefpagina `#pictos`)
 - [ ] T-4.2 (C) Set acties, ±20: wandelen, muziek luisteren, water drinken, rustig ademhalen, douchen, slapen,
       praten met iemand, bellen, naar begeleider, rustige plek, tekenen, sporten, eten, tv kijken, knuffel/dier,
       opruimen, buiten zitten, spelletje, koptelefoon op, lezen. ⚙ Opus · medium
