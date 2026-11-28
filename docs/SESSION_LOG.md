@@ -15,6 +15,16 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-28 — Kleine dingen (T-3.4)
+- Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · low: ja)
+- Gedaan: T-3.4. Terugkomen in de app geeft altijd het startscherm met gewiste signalen (niet in de invulmodus); `touch-action: manipulation` tegen
+  dubbel tikken; gecontroleerd dat er geen netwerkaanvragen zijn. Twee nieuwe tests; 144 tests, lint, typecontrole en Prettier slagen. Niet op de iPhone gezien.
+- Beslissingen: D-043 (nieuw).
+- Problemen / verrassingen: geen.
+- Volgende: Checkpoint 3: Sander doorloopt de hele flow op de iPhone bij alle drie kleuren en beslist over Q-001 en Q-002. Daarna Fase 4 (T-4.1 ⚙ Opus · medium).
+
+---
+
 ## 2026-11-28 — Rood scherm (T-3.3)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
 - Gedaan: T-3.3. Sander besliste: geen "Bel 112"-tekst op rood (Q-005). Op rood is de eerste actie nu een extra grote tegel bovenaan, de rest staat

@@ -79,6 +79,34 @@ describe('App', () => {
     )
   })
 
+  function comeBackToTheApp() {
+    document.dispatchEvent(new Event('visibilitychange'))
+  }
+
+  it('coming back to the app gives the start screen with nothing tapped', async () => {
+    store.tiles = [signal]
+    render(<App />)
+    await userEvent.click(await screen.findByRole('button', { name: 'Ik ben boos' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Klaar' }))
+    expect(await screen.findByRole('heading', { name: 'Je bent op Oranje' })).toBeInTheDocument()
+    act(comeBackToTheApp)
+    expect(await screen.findByRole('heading', { name: 'Hoi, wat merk je?' })).toBeInTheDocument()
+    await userEvent.click(screen.getByRole('button', { name: 'Ik ben boos' }))
+    act(comeBackToTheApp)
+    expect(await screen.findByRole('button', { name: 'Ik ben boos' })).toHaveAttribute(
+      'aria-pressed',
+      'false',
+    )
+  })
+
+  it('coming back to the app does not close the filling-in mode', async () => {
+    render(<App />)
+    await holdFillButton()
+    expect(await screen.findByRole('heading', { name: 'Plan' })).toBeInTheDocument()
+    act(comeBackToTheApp)
+    expect(screen.getByRole('heading', { name: 'Plan' })).toBeInTheDocument()
+  })
+
   it('"Het gaat goed" goes straight to green, and a red signal wins', async () => {
     store.tiles = [{ ...signal, id: 2, color: 'red', text: 'Ik wil schreeuwen' }, signal]
     render(<App />)

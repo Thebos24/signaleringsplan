@@ -586,3 +586,15 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Afgewezen: Klein "Bel 112" onderaan met belknop (mijn voorstel; Sander koos nee). Een aparte instelling "grote tegel" per actie (extra keuze voor de begeleider, meer schermen).
 - Gevolgen: R-007 blijft bestaan; de maatregel "112-regel" vervalt. De uitlegpagina voor begeleiders (T-5.4) moet zeggen dat de app een hulpmiddel is en geen noodhulp.
 - Herzien als: testers of begeleiders de 112-regel missen.
+
+### D-043 — Terugkomen in de app geeft altijd het startscherm (T-3.4)
+- Datum: 2026-11-28 · Status: Besloten · Besloten door: Claude (technisch), uitwerking van SPEC §5.1 en T-3.4
+- Besluit:
+  - Zodra de app weer zichtbaar wordt (andere app weg, scherm weer aan, `visibilitychange`), gaan het startscherm en het resultaatscherm terug naar
+    het startscherm en zijn aangetikte signalen gewist (de `StartScreen` krijgt een nieuwe `key`).
+  - De invulmodus en "Bekijk als cliënt" blijven zoals ze waren: een foto nemen verlaat de app even, en dan mag de begeleider niets kwijtraken.
+  - Dubbel tikken: de app heeft geen hover-stijlen; `touch-action: manipulation` op `html` haalt het wachten op een dubbeltik-zoom weg.
+  - Zonder internet: gecontroleerd dat de code geen netwerkaanvragen doet (geen `fetch`, geen externe adressen). Offline werken is op de iPhone getest (T-0.5).
+- Waarom: een cliënt die terugkomt moet niet halverwege een oude keuze of een oud resultaat zien (SPEC §5.1).
+- Afgewezen: Alleen terug na een bepaalde tijd weg (extra regel, moeilijk uit te leggen). Ook de invulmodus sluiten (verliest werk bij een foto).
+- Herzien als: testers het vervelend vinden dat een korte onderbreking het resultaat wist.

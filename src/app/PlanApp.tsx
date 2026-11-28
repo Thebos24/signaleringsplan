@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button } from '../components/Button'
 import { FillMode } from '../features/fill/FillMode'
 import { usePlan } from '../features/plan/usePlan'
@@ -15,6 +15,20 @@ export function PlanApp() {
   const { data, failed, reload } = usePlan()
   const [screen, setScreen] = useState<Screen>('client')
   const [color, setColor] = useState<Color>('green')
+  // Changes when the client comes back to the app; the start screen then starts fresh (T-3.4)
+  const [visit, setVisit] = useState(0)
+
+  // Coming back to the app (from another app or a locked phone) always gives the start screen with
+  // nothing tapped. The filling-in mode stays as it is: taking a photo also leaves the app for a moment.
+  useEffect(() => {
+    const onVisible = () => {
+      if (document.visibilityState !== 'visible') return
+      setVisit((n) => n + 1)
+      setScreen((now) => (now === 'fill' || now === 'preview' ? now : 'client'))
+    }
+    document.addEventListener('visibilitychange', onVisible)
+    return () => document.removeEventListener('visibilitychange', onVisible)
+  }, [])
 
   if (failed) return <p style={{ padding: 16 }}>{nl.loadFailed}</p>
   if (!data) return <p style={{ padding: 16 }}>{nl.loading}</p>
@@ -31,6 +45,7 @@ export function PlanApp() {
   }
   const start = (
     <StartScreen
+      key={visit}
       clientName={data.plan.clientName}
       tiles={data.tiles}
       onOpenFill={() => setScreen('fill')}

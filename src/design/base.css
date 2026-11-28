@@ -13,3 +13,8 @@ h1,
 h2 {
   font-size: var(--size-heading);
 }
+
+/* One tap is one tap: no waiting for a possible double tap to zoom (T-3.4) */
+html {
+  touch-action: manipulation;
+}
