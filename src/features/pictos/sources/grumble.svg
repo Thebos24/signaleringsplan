@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M12 60a26 26 0 1 0 52 0a26 26 0 1 0 -52 0" fill="#e6e6e6"/>
+  <path d="M12 60a26 26 0 1 0 52 0a26 26 0 1 0 -52 0" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M24 50L34 53M52 50L42 53" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4.5"/>
+  <circle cx="31" cy="60" r="3" fill="#1a1a1a"/>
+  <circle cx="45" cy="60" r="3" fill="#1a1a1a"/>
+  <path d="M28 74q3.3 -4 6.7 0t6.7 0t6.7 0" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4.5"/>
+  <path d="M60 8H86Q92 8 92 14V30Q92 36 86 36H70L62 44L64 36H60Q54 36 54 30V14Q54 8 60 8Z" fill="#e6e6e6"/>
+  <path d="M60 8H86Q92 8 92 14V30Q92 36 86 36H70L62 44L64 36H60Q54 36 54 30V14Q54 8 60 8Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M60 24c3 -9 6 9 9 0s6 9 9 0s6 9 8 0" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3.5"/>
+</svg>

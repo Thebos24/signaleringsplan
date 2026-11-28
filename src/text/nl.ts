@@ -132,6 +132,15 @@ export const nl = {
     game: { name: 'Spelletje', keywords: ['spel', 'dobbelsteen', 'bordspel', 'gamen'] },
     headphones: { name: 'Koptelefoon op', keywords: ['koptelefoon', 'muziek', 'stil', 'geluid'] },
     read: { name: 'Lezen', keywords: ['boek', 'verhaal', 'tijdschrift'] },
+    'my-room': {
+      name: 'Naar mijn kamer',
+      keywords: ['kamer', 'weggaan', 'rust', 'tot rust komen', 'deur'],
+    },
+    'thumbs-up': {
+      name: 'Compliment',
+      keywords: ['goed gedaan', 'duim', 'trots', 'compliment krijgen'],
+    },
+    medicine: { name: 'Medicijnen', keywords: ['pil', 'medicatie', 'tabletten', 'innemen'] },
     angry: { name: 'Boos', keywords: ['kwaad', 'woedend', 'ruzie'] },
     sad: { name: 'Verdrietig', keywords: ['triest', 'somber', 'alleen'] },
     tired: { name: 'Moe', keywords: ['vermoeid', 'slaperig', 'uitgeput', 'geen energie'] },
@@ -168,6 +177,18 @@ export const nl = {
     'phone-checking': {
       name: 'Steeds telefoon pakken',
       keywords: ['telefoon', 'mobiel', 'scrollen', 'steeds'],
+    },
+    argue: { name: 'Ruzie maken', keywords: ['ruzie', 'vechten', 'discussie', 'botsen'] },
+    restless: {
+      name: 'Onrustig lopen',
+      keywords: ['heen en weer', 'ijsberen', 'onrustig', 'niet stil zitten'],
+    },
+    grumble: { name: 'Mopperen', keywords: ['klagen', 'vloeken', 'schelden', 'chagrijnig'] },
+    'slam-door': { name: 'Deuren slaan', keywords: ['deur', 'slaan', 'knallen', 'dichtgooien'] },
+    throw: { name: 'Gooien', keywords: ['spullen gooien', 'kopjes', 'gooien', 'smijten'] },
+    'cover-ears': {
+      name: 'Niet luisteren',
+      keywords: ['oren dicht', 'niet horen', 'negeren', 'luisteren'],
     },
     calm: { name: 'Rustig', keywords: ['kalm', 'ontspannen', 'goed', 'rust'] },
     energy: { name: 'Energie', keywords: ['vrolijk', 'zin', 'actief', 'fit', 'springen'] },

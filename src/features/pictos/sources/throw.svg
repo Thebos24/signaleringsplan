@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M18 72L16 88M26 72L28 88" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+  <path d="M16 53L10 66M28 53L40 42" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+  <path d="M15 50Q22 47 29 50L28 72Q22 74 16 72Z" fill="#bdbdbd"/>
+  <path d="M15 50Q22 47 29 50L28 72Q22 74 16 72Z" fill="url(#hatch)"/>
+  <path d="M15 50Q22 47 29 50L28 72Q22 74 16 72Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M14 38a8 8 0 1 0 16 0a8 8 0 1 0 -16 0" fill="#e6e6e6"/>
+  <path d="M14 38a8 8 0 1 0 16 0a8 8 0 1 0 -16 0" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M46 44L56 38M48 54L60 47M46 64L56 58" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3.5"/>
+  <path d="M84 26q9 2 7 11t-11 6" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M62 18L84 22L80 46Q79 51 73 50L66 49Q61 48 61 42Z" fill="#bdbdbd"/>
+  <path d="M62 18L84 22L80 46Q79 51 73 50L66 49Q61 48 61 42Z" fill="url(#hatch)"/>
+  <path d="M62 18L84 22L80 46Q79 51 73 50L66 49Q61 48 61 42Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+</svg>

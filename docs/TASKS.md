@@ -110,7 +110,7 @@ Doel: een eigen set geschetste pictogrammen in één stijl (D-011).
       opruimen, buiten zitten, spelletje, koptelefoon op, lezen. ⚙ Opus · medium — 2026-11-28 (20 acties: 15 nieuw, water opnieuw; eerste zoekwoorden erbij; in de preview bekeken, niet op de iPhone)
 - [x] T-4.3 (C) Set signalen, ±20: boos, verdrietig, moe, slecht slapen, niet eten, veel eten, hoofdpijn, buikpijn,
       alleen willen zijn, schreeuwen, piekeren, druk in mijn hoofd, huilen, snel geïrriteerd, niet naar buiten gaan,
-      telefoon steeds pakken, blij, rustig, energie. ⚙ Opus · medium — 2026-11-28 (19 signalen: 14 nieuw, verdrietig/moe/hoofdpijn opnieuw; in de preview bekeken, niet op de iPhone)
+      telefoon steeds pakken, blij, rustig, energie. ⚙ Opus · medium — 2026-11-28 (19 signalen: 14 nieuw, verdrietig/moe/hoofdpijn opnieuw; in de preview bekeken, niet op de iPhone; daarna 9 extra uit het voorbeeldplan van Sanders partner: ruzie maken, onrustig lopen, mopperen, deuren slaan, gooien, niet luisteren, naar mijn kamer, compliment, medicijnen. Totaal 48)
 - [ ] T-4.4 (C) Placeholders vervangen, trefwoorden per pictogram voor het zoekveld. ⚙ Sonnet · low
       (Alle tien placeholders zijn al vervangen in T-4.1 t/m T-4.3, en elk pictogram heeft al een naam en eerste zoekwoorden. Over: zoekwoorden nalopen,
       proefpagina `#pictos` en de tekst `nl.gallery` weghalen.)

@@ -629,4 +629,7 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
   gezicht; signalen die geen gevoel zijn (slecht slapen, buikpijn, niet naar buiten, steeds telefoon pakken) gebruiken een voorwerp of het
   poppetje. "Niet eten" krijgt een dikke streep door het bord (de enige "niet"-streep in de set). Zoekwoorden die nu een eigen pictogram
   hebben zijn bij het oude weggehaald (bijv. "huilen" bij verdrietig, "slecht slapen" bij slapen).
+- Aangevuld (2026-11-28, op verzoek van Sander): 9 extra pictogrammen naar een voorbeeld-signaleringsplan van Sanders partner. Signalen over
+  gedrag (ruzie maken, onrustig lopen, mopperen, deuren slaan, gooien, niet luisteren) en acties (naar mijn kamer, compliment, medicijnen).
+  Totaal 48 (D-039 rekende op ±45; opstarten nog niet op de iPhone gemeten).
 

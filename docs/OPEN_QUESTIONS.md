@@ -8,6 +8,8 @@ met het antwoord en de beslissing (D-0xx).
 | Q-003 | Hoe heet de app (naam op het beginscherm)? | Sander | T-5.4 | Kort en duidelijk, bijv. "Mijn Stoplicht" of "Hoe gaat het?" |
 | Q-006 | Wordt het later een eigen domein in plaats van thebos24.github.io? | Sander | Niets in v1 | Pas als het gedeeld gaat worden (B-011) |
 | Q-008 | Mogen we bij Checkpoint 2 al een begeleider laten meekijken via je partner? | Sander | Niets | Hoe eerder echte feedback, hoe beter |
+| Q-009 | Krijgt groen ook signalen ("Ik praat rustig"), zoals in het voorbeeldplan van Sanders partner? Nu is groen alleen "Het gaat goed" met acties (SPEC §5.2) | Sander + partner | Niets (later datamodel, vanaf Checkpoint 3 met migratie) | Nu niet: meer rijen op het startscherm. Eerst navragen hoe begeleiders groene signalen gebruiken |
+| Q-010 | In het voorbeeld zegt de begeleider bij rood de kleur ("Begeleiding geeft mijn stoplicht aan"). Moet de begeleider in de app een kleur kunnen tonen zonder dat de cliënt signalen tikt? Raakt Q-002/D-044 | Sander + partner | Niets | Navragen hoe het in de praktijk gaat; eventueel een verborgen knop in de invulmodus, niet op het startscherm |
 
 ## Beantwoord
 

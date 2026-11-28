@@ -15,6 +15,16 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-28 — Voorbeeldplan vergeleken, 9 extra pictogrammen
+- Waar: Claude Code (Opus 5.5 · medium). Zelfde sessie als T-4.1 t/m T-4.3.
+- Gedaan: het voorbeeldplan van Sanders partner (`reference/`, niet in git) vergeleken met de app. 9 extra pictogrammen getekend (6 signalen
+  over gedrag, 3 acties); totaal 48. `reference/` in `.gitignore`. Tests en lint slagen. In de preview bekeken, niet op de iPhone.
+- Beslissingen: D-045 aangevuld.
+- Problemen / verrassingen: twee nieuwe vragen uit de vergelijking: Q-009 (groene signalen), Q-010 (begeleider toont de kleur).
+- Volgende: T-4.4 ⚙ Sonnet · low (zoekwoorden nalopen, proefpagina weg), daarna Checkpoint 4. Sander bespreekt Q-009 en Q-010 met zijn partner.
+
+---
+
 ## 2026-11-28 — Set signalen (T-4.3)
 - Waar: Claude Code (Opus 5.5 · medium; past bij de tag: ja). Zelfde sessie als T-4.1 en T-4.2 (Sander koos om hier door te gaan).
 - Gedaan: T-4.3. 14 nieuwe signalen (huilen, snel geïrriteerd, schreeuwen, piekeren, druk in mijn hoofd, slecht slapen, buikpijn, niet eten,

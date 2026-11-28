@@ -16,3 +16,6 @@ coverage/
 .env
 .env.*
 .claude/settings.local.json
+
+# Sander's own reference material (screenshots from other sites); not part of the app
+reference/
