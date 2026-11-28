@@ -15,6 +15,15 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-28 — Q-001 en Q-002 vastgelegd
+- Waar: Claude Code (Sonnet 5.5; dezelfde sessie als T-3.3 en T-3.4)
+- Gedaan: Sander legde uit dat hij Q-001 en Q-002 niet begreep; ik heb ze in gewone taal uitgelegd. Zijn antwoord: één lijst met signalen (Q-001), geen directe kleurkeuze (Q-002).
+- Beslissingen: D-044 (nieuw).
+- Problemen / verrassingen: geen.
+- Volgende: Sander doet Checkpoint 3 op de iPhone (hele flow bij alle drie kleuren, terugkomen in de app). Daarna T-4.1 ⚙ Opus · medium (nieuwe sessie met `/model` Opus).
+
+---
+
 ## 2026-11-28 — Kleine dingen (T-3.4)
 - Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · low: ja)
 - Gedaan: T-3.4. Terugkomen in de app geeft altijd het startscherm met gewiste signalen (niet in de invulmodus); `touch-action: manipulation` tegen
