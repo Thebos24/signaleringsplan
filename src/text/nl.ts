@@ -107,7 +107,7 @@ export const nl = {
     walk: { name: 'Wandelen', keywords: ['lopen', 'buiten', 'wandeling', 'frisse lucht'] },
     music: { name: 'Muziek', keywords: ['luisteren', 'liedje', 'zingen', 'koptelefoon'] },
     water: { name: 'Water', keywords: ['drinken', 'dorst', 'glas'] },
-    sleep: { name: 'Slapen', keywords: ['bed', 'slaap', 'nacht', 'rusten', 'slecht slapen'] },
+    sleep: { name: 'Slapen', keywords: ['bed', 'slaap', 'nacht', 'rusten'] },
     breathe: {
       name: 'Rustig ademhalen',
       keywords: ['ademen', 'adem', 'rust', 'ontspannen', 'kalm'],
@@ -132,10 +132,45 @@ export const nl = {
     game: { name: 'Spelletje', keywords: ['spel', 'dobbelsteen', 'bordspel', 'gamen'] },
     headphones: { name: 'Koptelefoon op', keywords: ['koptelefoon', 'muziek', 'stil', 'geluid'] },
     read: { name: 'Lezen', keywords: ['boek', 'verhaal', 'tijdschrift'] },
-    angry: { name: 'Boos', keywords: ['kwaad', 'woedend', 'ruzie', 'schreeuwen'] },
-    sad: { name: 'Verdrietig', keywords: ['huilen', 'triest', 'somber', 'alleen'] },
+    angry: { name: 'Boos', keywords: ['kwaad', 'woedend', 'ruzie'] },
+    sad: { name: 'Verdrietig', keywords: ['triest', 'somber', 'alleen'] },
     tired: { name: 'Moe', keywords: ['vermoeid', 'slaperig', 'uitgeput', 'geen energie'] },
-    headache: { name: 'Hoofdpijn', keywords: ['pijn', 'hoofd', 'ziek', 'druk in mijn hoofd'] },
+    headache: { name: 'Hoofdpijn', keywords: ['pijn', 'hoofd', 'ziek'] },
+    cry: { name: 'Huilen', keywords: ['tranen', 'verdrietig', 'janken'] },
+    irritated: {
+      name: 'Snel geïrriteerd',
+      keywords: ['geïrriteerd', 'geirriteerd', 'prikkelbaar', 'chagrijnig', 'kort lontje'],
+    },
+    shout: { name: 'Schreeuwen', keywords: ['roepen', 'gillen', 'boos', 'hard praten'] },
+    worry: { name: 'Piekeren', keywords: ['zorgen', 'nadenken', 'malen', 'bang'] },
+    'busy-head': {
+      name: 'Druk in mijn hoofd',
+      keywords: ['druk', 'hoofd', 'chaos', 'onrustig', 'te veel'],
+    },
+    'bad-sleep': {
+      name: 'Slecht slapen',
+      keywords: ['wakker', 'niet slapen', 'nacht', 'slapeloos'],
+    },
+    stomachache: { name: 'Buikpijn', keywords: ['buik', 'pijn', 'misselijk', 'ziek'] },
+    'no-appetite': {
+      name: 'Niet eten',
+      keywords: ['geen honger', 'geen trek', 'overslaan', 'eten'],
+    },
+    overeat: { name: 'Veel eten', keywords: ['te veel eten', 'snoepen', 'vreten', 'eten'] },
+    alone: {
+      name: 'Alleen willen zijn',
+      keywords: ['alleen', 'met rust laten', 'stop', 'afstand'],
+    },
+    'stay-inside': {
+      name: 'Niet naar buiten',
+      keywords: ['binnen blijven', 'thuis', 'huis', 'niet weg'],
+    },
+    'phone-checking': {
+      name: 'Steeds telefoon pakken',
+      keywords: ['telefoon', 'mobiel', 'scrollen', 'steeds'],
+    },
+    calm: { name: 'Rustig', keywords: ['kalm', 'ontspannen', 'goed', 'rust'] },
+    energy: { name: 'Energie', keywords: ['vrolijk', 'zin', 'actief', 'fit', 'springen'] },
     happy: { name: 'Blij', keywords: ['goed', 'vrolijk', 'lachen', 'fijn', 'het gaat goed'] },
   } as Record<string, { name: string; keywords: string[] }>,
 

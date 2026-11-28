@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path d="M19 52 a31 31 0 1 0 62 0 a31 31 0 1 0 -62 0" fill="#e8e8e8"/>
-  <path d="M19 52 a31 31 0 1 0 62 0 a31 31 0 1 0 -62 0" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M32 45q5 -4 10 -2M58 43q5 -2 10 2" fill="none" stroke="#1a1a1a" stroke-width="3.9" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="38" cy="53" r="2.6" fill="#000"/>
-  <circle cx="62" cy="53" r="2.6" fill="#000"/>
-  <path d="M36 72Q50 60 64 72" fill="none" stroke="#1a1a1a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M38 60Q42 67 42 70A4 4 0 0 1 34 70Q34 67 38 60Z" fill="#8a8a8a"/>
-  <path d="M38 60Q42 67 42 70A4 4 0 0 1 34 70Q34 67 38 60Z" fill="none" stroke="#1a1a1a" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19 52a31 31 0 1 0 62 0a31 31 0 1 0 -62 0" fill="#e6e6e6"/>
+  <path d="M19 52a31 31 0 1 0 62 0a31 31 0 1 0 -62 0" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M30 45L42 40M70 45L58 40" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4.5"/>
+  <circle cx="38" cy="54" r="3" fill="#1a1a1a"/>
+  <circle cx="62" cy="54" r="3" fill="#1a1a1a"/>
+  <path d="M37 72Q50 62 63 72" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4.5"/>
 </svg>

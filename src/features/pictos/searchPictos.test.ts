@@ -12,8 +12,8 @@ describe('searchPictos', () => {
   })
 
   it('finds by name, by search word and ignores capitals', () => {
-    expect(searchPictos(PICTO_IDS, words, 'boos')).toEqual(['angry'])
-    expect(searchPictos(PICTO_IDS, words, 'HUILEN')).toEqual(['sad'])
+    expect(searchPictos(PICTO_IDS, words, 'boos')).toEqual(['angry', 'shout'])
+    expect(searchPictos(PICTO_IDS, words, 'HUILEN')).toEqual(['cry'])
   })
 
   it('finds on the start of a word', () => {
@@ -21,7 +21,7 @@ describe('searchPictos', () => {
   })
 
   it('needs every typed word to match', () => {
-    expect(searchPictos(PICTO_IDS, words, 'slecht slapen')).toEqual(['sleep'])
+    expect(searchPictos(PICTO_IDS, words, 'slecht slapen')).toEqual(['bad-sleep'])
     expect(searchPictos(PICTO_IDS, words, 'boos slapen')).toEqual([])
   })
 

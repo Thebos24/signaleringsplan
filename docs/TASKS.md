@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 4 (Pictogrammen).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 is gehaald (Sander, 2026-11-23). T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 t/m T-2.10 zijn af (herontwerp klaar). Checkpoint 2 gehaald; T-3.3 en T-3.4 zijn af (2026-11-28); Checkpoint 3 gehaald (Sander, 2026-11-28); T-4.1 en T-4.2 af (2026-11-28); nu T-4.3.
+**Huidige fase: 4 (Pictogrammen).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 is gehaald (Sander, 2026-11-23). T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 t/m T-2.10 zijn af (herontwerp klaar). Checkpoint 2 gehaald; T-3.3 en T-3.4 zijn af (2026-11-28); Checkpoint 3 gehaald (Sander, 2026-11-28); T-4.1, T-4.2 en T-4.3 af (2026-11-28); nu T-4.4 en daarna Checkpoint 4.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -108,10 +108,12 @@ Doel: een eigen set geschetste pictogrammen in één stijl (D-011).
 - [x] T-4.2 (C) Set acties, ±20: wandelen, muziek luisteren, water drinken, rustig ademhalen, douchen, slapen,
       praten met iemand, bellen, naar begeleider, rustige plek, tekenen, sporten, eten, tv kijken, knuffel/dier,
       opruimen, buiten zitten, spelletje, koptelefoon op, lezen. ⚙ Opus · medium — 2026-11-28 (20 acties: 15 nieuw, water opnieuw; eerste zoekwoorden erbij; in de preview bekeken, niet op de iPhone)
-- [ ] T-4.3 (C) Set signalen, ±20: boos, verdrietig, moe, slecht slapen, niet eten, veel eten, hoofdpijn, buikpijn,
+- [x] T-4.3 (C) Set signalen, ±20: boos, verdrietig, moe, slecht slapen, niet eten, veel eten, hoofdpijn, buikpijn,
       alleen willen zijn, schreeuwen, piekeren, druk in mijn hoofd, huilen, snel geïrriteerd, niet naar buiten gaan,
-      telefoon steeds pakken, blij, rustig, energie. ⚙ Opus · medium
+      telefoon steeds pakken, blij, rustig, energie. ⚙ Opus · medium — 2026-11-28 (19 signalen: 14 nieuw, verdrietig/moe/hoofdpijn opnieuw; in de preview bekeken, niet op de iPhone)
 - [ ] T-4.4 (C) Placeholders vervangen, trefwoorden per pictogram voor het zoekveld. ⚙ Sonnet · low
+      (Alle tien placeholders zijn al vervangen in T-4.1 t/m T-4.3, en elk pictogram heeft al een naam en eerste zoekwoorden. Over: zoekwoorden nalopen,
+      proefpagina `#pictos` en de tekst `nl.gallery` weghalen.)
 
 **Checkpoint 4:** Sander en zijn partner herkennen elk pictogram zonder de tekst te lezen.
 

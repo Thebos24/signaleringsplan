@@ -625,4 +625,8 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Aangevuld (T-4.2, 2026-11-28): 15 nieuwe acties in dezelfde stijl. Id's met twee woorden krijgen een streepje (`quiet-place`,
   `sit-outside`). In `PICTO_IDS` staan de acties eerst en de signalen daarna, zodat de begeleider bij het kiezen eerst acties ziet. Elk
   nieuw pictogram kreeg alvast een naam en een paar zoekwoorden; T-4.4 loopt ze na.
+- Aangevuld (T-4.3, 2026-11-28): 14 nieuwe signalen; verdrietig, moe en hoofdpijn opnieuw getekend. Gevoelens met een gezicht houden het vaste
+  gezicht; signalen die geen gevoel zijn (slecht slapen, buikpijn, niet naar buiten, steeds telefoon pakken) gebruiken een voorwerp of het
+  poppetje. "Niet eten" krijgt een dikke streep door het bord (de enige "niet"-streep in de set). Zoekwoorden die nu een eigen pictogram
+  hebben zijn bij het oude weggehaald (bijv. "huilen" bij verdrietig, "slecht slapen" bij slapen).
 

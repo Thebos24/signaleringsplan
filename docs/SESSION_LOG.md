@@ -15,6 +15,18 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-28 — Set signalen (T-4.3)
+- Waar: Claude Code (Opus 5.5 · medium; past bij de tag: ja). Zelfde sessie als T-4.1 en T-4.2 (Sander koos om hier door te gaan).
+- Gedaan: T-4.3. 14 nieuwe signalen (huilen, snel geïrriteerd, schreeuwen, piekeren, druk in mijn hoofd, slecht slapen, buikpijn, niet eten,
+  veel eten, alleen willen zijn, niet naar buiten, steeds telefoon pakken, rustig, energie); verdrietig, moe en hoofdpijn opnieuw getekend.
+  De set heeft nu 39 pictogrammen. In de preview bekeken; piekeren, veel eten en alleen willen zijn verbeterd. Zoektests aangepast.
+  Tests, lint en typecontrole slagen. Niet op de iPhone gezien.
+- Beslissingen: D-045 aangevuld.
+- Problemen / verrassingen: twijfelgevallen voor Checkpoint 4: "Alleen willen zijn" (stop-hand), "Rustige plek" (leunstoel), "Druk in mijn hoofd".
+- Volgende: T-4.4 ⚙ Sonnet · low (zoekwoorden nalopen, proefpagina weg), daarna Checkpoint 4 met Sander en zijn partner.
+
+---
+
 ## 2026-11-28 — Set acties (T-4.2)
 - Waar: Claude Code (Opus 5.5 · medium; past bij de tag: ja). Zelfde sessie als T-4.1 (Sander koos om hier door te gaan).
 - Gedaan: T-4.2. 15 nieuwe actie-pictogrammen (rustig ademhalen, douchen, praten, bellen, rustige plek, tekenen, sporten, eten, tv kijken,
