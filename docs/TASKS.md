@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 3 (Gebruikskant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 is gehaald (Sander, 2026-11-23). T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 t/m T-2.10 zijn af (herontwerp klaar). Checkpoint 2 gehaald; T-3.3 en T-3.4 zijn af (2026-11-28); nu Checkpoint 3.
+**Huidige fase: 4 (Pictogrammen).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 is gehaald (Sander, 2026-11-23). T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 t/m T-2.10 zijn af (herontwerp klaar). Checkpoint 2 gehaald; T-3.3 en T-3.4 zijn af (2026-11-28); Checkpoint 3 gehaald (Sander, 2026-11-28); nu Fase 4 (T-4.1).
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -95,7 +95,7 @@ Doel: de hele flow voor de cliënt, zo simpel mogelijk.
 - [x] T-3.4 (C) Kleine dingen: na terugkomen in de app altijd het startscherm, aangetikte signalen gewist,
       geen dubbel tikken nodig, werkt zonder internet. ⚙ Sonnet · low — 2026-11-28 (D-043; alleen met tests, niet op de iPhone gezien)
 
-**Checkpoint 3:** Sander doorloopt de hele flow op de iPhone (en op Android als die er is), bij alle drie kleuren.
+**Checkpoint 3:** Sander doorloopt de hele flow op de iPhone (en op Android als die er is), bij alle drie kleuren. ✅ Gehaald op 2026-11-28 (iPhone; Sander: "alles is goed"; Android nog niet).
 Q-001 en Q-002 zijn beslist (D-044, 2026-11-28).
 **Vanaf hier geldt: wijzigingen aan het datamodel alleen met een migratie en overleg (CLAUDE.md).**
 

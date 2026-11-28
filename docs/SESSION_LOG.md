@@ -15,6 +15,15 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-28 — Checkpoint 3 gehaald
+- Waar: Claude Code (Opus 5.5 · lage effort; geen bouwtaak, dus past)
+- Gedaan: Sander deed Checkpoint 3 op de iPhone: groen, oranje en rood, terugkomen in de app en vliegtuigmodus. Zijn oordeel: "alles is goed".
+- Beslissingen: geen nieuwe.
+- Problemen / verrassingen: geen. Android nog niet getest (telefoon komt eind november).
+- Volgende: T-4.1 Stijlgids + 6 proefpictogrammen ⚙ Opus · medium (nieuwe sessie, Opus op effort medium).
+
+---
+
 ## 2026-11-28 — Q-001 en Q-002 vastgelegd
 - Waar: Claude Code (Sonnet 5.5; dezelfde sessie als T-3.3 en T-3.4)
 - Gedaan: Sander legde uit dat hij Q-001 en Q-002 niet begreep; ik heb ze in gewone taal uitgelegd. Zijn antwoord: één lijst met signalen (Q-001), geen directe kleurkeuze (Q-002).
