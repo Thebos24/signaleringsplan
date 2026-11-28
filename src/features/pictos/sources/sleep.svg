@@ -1,15 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path d="M15 62H85V70H15Z" fill="#9a9a9a"/>
-  <path d="M15 38V76" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M15 62H85" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M85 55V76" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M20 62V54Q20 49 26 49H39Q43 56 41 62Z" fill="#e4e4e4"/>
-  <path d="M20 62V54Q20 49 26 49H39Q43 56 41 62" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="28" cy="45" r="7.5" fill="#d0d0d0"/>
-  <path d="M20.5 45a7.5 7.5 0 0 1 15 0" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M24 46q1.8 1.8 3.6 0M30 46q1.8 1.8 3.6 0" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M38 62Q38 50 53 48.5Q72 47 85 54V62Z" fill="#8a8a8a"/>
-  <path d="M38 62Q38 50 53 48.5Q72 47 85 54V62Z" fill="url(#hatch)"/>
-  <path d="M38 62Q38 50 53 48.5Q72 47 85 54" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M57 22h12l-12 13h12M75 12h8l-8 9h8" fill="none" stroke="#1a1a1a" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 63H86V71H14Z" fill="#8a8a8a"/>
+  <path d="M14 38V78M14 63H86M86 54V78" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M19 63V55Q19 50 25 50H38Q42 57 40 63Z" fill="#e6e6e6"/>
+  <path d="M19 63V55Q19 50 25 50H38Q42 57 40 63" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <circle cx="29" cy="44" r="8" fill="#e6e6e6"/>
+  <circle cx="29" cy="44" r="8" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M37 63Q37 51 52 49.5Q71 48 86 55V63Z" fill="#bdbdbd"/>
+  <path d="M37 63Q37 51 52 49.5Q71 48 86 55V63Z" fill="url(#hatch)"/>
+  <path d="M37 63Q37 51 52 49.5Q71 48 86 55V63" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M55 24h12l-12 13h12M73 13h8l-8 9h8" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
 </svg>

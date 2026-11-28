@@ -54,7 +54,41 @@ De oude tegel (`Tile`) en de proefpagina's `#galerie` en `#galerie-nieuw` zijn w
   - Mensen als simpele, neutrale figuurtjes (geen leeftijd, geslacht of huidskleur vastgelegd).
   - De bronnen staan in `src/features/pictos/sources/<id>.svg`. Arcering = `fill="url(#hatch)"`; het patroon, het wiebelen en de
     witte achtergrond voegt de app zelf toe (D-039). De app schetst ze iets donkerder dan foto's (`PICTO_DARKNESS`).
-  - De stijlgids met voorbeelden komt in T-4.1; de proef staat in `docs/ontwerp-voorstellen/stijl-potlood.html`.
+  - De stijlgids staat hieronder (T-4.1, D-045). Proefpagina in de app: `#pictos` (tijdelijk, tot T-4.4).
+
+### Stijlgids pictogrammen (T-4.1, D-045)
+
+Elk nieuw pictogram volgt deze regels, zodat de set er als één geheel uitziet.
+
+**Vlak en plek**
+- viewBox `0 0 100 100`. Het onderwerp past in een cirkel van straal ±38 rond het midden. Grond (als die er is) op y = 84,
+  als lijn van 8 tot 92 met een gearceerde strook eronder (y 86–91).
+
+**Lijnen** (altijd `stroke="#1a1a1a"`, ronde uiteinden en hoeken)
+- Omtrek van vormen: **4**. Armen en benen, stelen, staanders: **5**. Gezichtstrekken (ogen-boogjes, mond, wenkbrauwen): **4,5**.
+- Kleine tekentjes buiten het onderwerp (zzz, straaltjes, stoomwolkjes): **3,5**. Nooit dunner dan 3: dat verdwijnt in het filter.
+
+**Vlakken en arcering**
+- Grijze vulling wordt door het schetsfilter bijna wit. Gebruik hem alleen als ondergrond: licht `#e6e6e6` (hoofd, gezicht, kussen),
+  midden `#bdbdbd` (onder arcering), donker `#8a8a8a` (alleen voor iets wat echt donker is, zoals een balk of matras).
+- **Arcering (`url(#hatch)`) is het accent.** Eén of twee gearceerde vlakken per pictogram: het belangrijkste ding of de hoofdpersoon.
+- Volgorde in de bron: eerst vulling, dan arcering, dan de omtrek erover.
+
+**Mensen**
+- Altijd hetzelfde poppetje: hoofd = cirkel r 8 (licht, omtrek 4), romp = afgeronde vorm van ±15 breed en ±22 hoog (omtrek 4),
+  armen en benen = lijnen van 5. Geen haar, kleding, gezicht of huidskleur: neutraal (zie hierboven).
+- De hoofdpersoon heeft een gearceerde romp; een tweede persoon een lichte romp en is iets kleiner.
+- Beweging laat je zien met de houding (schuin lichaam, wijde pas, zwaaiende armen), niet met losse streepjes.
+
+**Gevoelens (gezichten)**
+- Gezicht = cirkel r 31 in (50, 52), licht, omtrek 4. Ogen = stip r 3 of boogje; mond = één lijn van 4,5.
+- Wangen mogen een gearceerd rondje (r 6) krijgen. Tekentjes buiten het gezicht (straaltjes, stoom) maken het gevoel sterker.
+
+**Inhoud**
+- Eén onderwerp, herkenbaar zonder tekst, op 66 px in een rij. Geen letters, behalve "z" bij slapen.
+- Niets wat alleen met kleur werkt: pictogrammen zijn grijs (D-037).
+
+Voorbeelden: `walk`, `music`, `caregiver`, `sleep`, `angry`, `happy` in `src/features/pictos/sources/`.
 - **Foto's** (D-010): de app zet een foto om naar een schets (zwart-wit potlood-effect), zodat eigen foto's
   ("mijn begeleider", "mijn bankje") passen bij de pictogrammen. Gebeurt helemaal op de telefoon.
 

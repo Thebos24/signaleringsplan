@@ -1,11 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path d="M52 26C38 16 38 5 47 7C50 8 52 11 52 13C52 11 54 8 57 7C66 5 66 16 52 26Z" fill="#aaa"/>
-  <path d="M52 26C38 16 38 5 47 7C50 8 52 11 52 13C52 11 54 8 57 7C66 5 66 16 52 26Z" fill="url(#hatch)"/>
-  <path d="M52 26C38 16 38 5 47 7C50 8 52 11 52 13C52 11 54 8 57 7C66 5 66 16 52 26Z" fill="none" stroke="#1a1a1a" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M24.5 35 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M32 44V66M32 66L24 88M32 66L40 88M32 52L56 60" fill="none" stroke="#1a1a1a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M63.5 46 a6.5 6.5 0 1 0 13 0 a6.5 6.5 0 1 0 -13 0" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M70 54V72M70 72L64 88M70 72L76 88M70 60L57 60" fill="none" stroke="#1a1a1a" stroke-width="3.9" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M26 46L38 46L40 68L24 68Z" fill="#cfcfcf"/>
-  <path d="M26 46L38 46L40 68L24 68Z" fill="url(#hatch)"/>
+  <!-- Two people holding hands; the supervisor (left, hatched) is a bit taller. Heart = warmth -->
+  <path d="M50 27C38 19 38 9 45 10C48 10 50 13 50 15C50 13 52 10 55 10C62 9 62 19 50 27Z" fill="#bdbdbd"/>
+  <path d="M50 27C38 19 38 9 45 10C48 10 50 13 50 15C50 13 52 10 55 10C62 9 62 19 50 27Z" fill="url(#hatch)"/>
+  <path d="M50 27C38 19 38 9 45 10C48 10 50 13 50 15C50 13 52 10 55 10C62 9 62 19 50 27Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M28 63L26 86M36 63L38 86" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+  <path d="M24 44L20 60M39 44L50 57" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+  <path d="M23 41Q31 38 39 41L38 63Q31 65 24 63Z" fill="#bdbdbd"/>
+  <path d="M23 41Q31 38 39 41L38 63Q31 65 24 63Z" fill="url(#hatch)"/>
+  <path d="M23 41Q31 38 39 41L38 63Q31 65 24 63Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <circle cx="31" cy="30" r="8" fill="#e6e6e6"/>
+  <circle cx="31" cy="30" r="8" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M66 68L64 86M72 68L74 86" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+  <path d="M62 52L50 57M76 52L80 66" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+  <path d="M61 49Q69 46 77 49L76 68Q69 70 62 68Z" fill="#e6e6e6"/>
+  <path d="M61 49Q69 46 77 49L76 68Q69 70 62 68Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <circle cx="69" cy="39" r="7" fill="#e6e6e6"/>
+  <circle cx="69" cy="39" r="7" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
 </svg>

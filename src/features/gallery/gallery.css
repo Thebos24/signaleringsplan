@@ -1,0 +1,26 @@
+/* TEMPORARY (T-4.1): the trial page for the pictograms */
+.gallery__intro {
+  margin: 0 0 var(--size-page-margin);
+  font-size: var(--size-text);
+  color: var(--color-muted);
+}
+.gallery__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--size-page-margin);
+  margin-bottom: calc(2 * var(--size-page-margin));
+}
+.gallery__item {
+  margin: 0;
+  padding: var(--size-page-margin);
+  font-size: var(--size-text);
+  text-align: center;
+  background: var(--color-surface);
+  border-radius: var(--size-card-radius);
+}
+.gallery__big .picto {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}

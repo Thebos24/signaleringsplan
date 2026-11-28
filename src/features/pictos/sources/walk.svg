@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path d="M29.5 22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M37 31L35 54L26 80M35 54L49 67L53 82M36 38L23 51M36 38L51 47" fill="none" stroke="#1a1a1a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M62 42 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0" fill="#bdbdbd"/>
-  <path d="M62 42 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0" fill="url(#hatch)"/>
-  <path d="M62 42 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0" fill="none" stroke="#1a1a1a" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M76 56V80" fill="none" stroke="#1a1a1a" stroke-width="3.9" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M12 80H88" fill="none" stroke="#1a1a1a" stroke-width="3.9" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M12 82H88V87H12Z" fill="url(#hatch)"/>
+  <!-- Style guide T-4.1 (DESIGN.md): figure = head r8 + rounded torso (hatched = the main person) + limbs 5 wide -->
+  <path d="M8 84H92" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M8 86H92V91H8Z" fill="url(#hatch)"/>
+  <path d="M81 60V84" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+  <path d="M70 50q-6 -8 2 -13q0 -9 9 -8q8 -3 10 6q7 4 2 12q-1 7 -10 6q-8 4 -13 -3Z" fill="#bdbdbd"/>
+  <path d="M70 50q-6 -8 2 -13q0 -9 9 -8q8 -3 10 6q7 4 2 12q-1 7 -10 6q-8 4 -13 -3Z" fill="url(#hatch)"/>
+  <path d="M70 50q-6 -8 2 -13q0 -9 9 -8q8 -3 10 6q7 4 2 12q-1 7 -10 6q-8 4 -13 -3Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <path d="M38 55L30 69L22 83M45 56L55 69L61 83" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+  <path d="M39 37L26 49M50 37L62 46" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+  <path d="M37 34Q44 31 51 35L47 57Q40 58 35 55Z" fill="#bdbdbd"/>
+  <path d="M37 34Q44 31 51 35L47 57Q40 58 35 55Z" fill="url(#hatch)"/>
+  <path d="M37 34Q44 31 51 35L47 57Q40 58 35 55Z" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+  <circle cx="47" cy="21" r="8" fill="#e6e6e6"/>
+  <circle cx="47" cy="21" r="8" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
 </svg>

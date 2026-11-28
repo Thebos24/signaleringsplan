@@ -607,3 +607,19 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Waarom: zo simpel mogelijk; geen extra schermen of keuzes voor de cliënt. Het maximum van 6 signalen per kleur (D-027) houdt de lijst op 12 rijen.
 - Afgewezen: Een scherm per kleur (meer schermen en stappen). Drie kleurknoppen op het startscherm (extra keuze, en het plan draait juist om signalen).
 - Herzien als: Sander, zijn partner of testers (Fase 6) de lijst te lang of te druk vinden, of de directe kleurkeuze missen.
+
+### D-045 — Stijlgids pictogrammen: vaste lijndiktes, één poppetje, arcering als accent (T-4.1)
+- Datum: 2026-11-28 · Status: Voorstel, wacht op goedkeuring van Sander · Besloten door: Claude (uitwerking), Sander (keurt de stijl goed)
+- Besluit:
+  - DESIGN.md → "Stijlgids pictogrammen" legt vast: plek in het vlak, vier lijndiktes (3,5 / 4 / 4,5 / 5), drie grijstinten als
+    ondergrond, arcering als accent (één of twee vlakken), één vast poppetje voor mensen en een vast gezicht voor gevoelens.
+  - De zes proefpictogrammen (`walk`, `music`, `caregiver`, `sleep`, `angry`, `happy`) zijn hiermee opnieuw getekend. De id's blijven gelijk,
+    dus geen migratie (D-037).
+  - Tijdelijke proefpagina `#pictos` toont ze groot en in een rij, door het echte schetsfilter. Verdwijnt in T-4.4.
+- Waarom: In de proef bleek dat het filter grijze vlakken bijna wit maakt; alleen lijnen en arcering blijven staan. Vaste regels
+  daarvoor houden ±45 pictogrammen gelijk van stijl. Streeppoppetjes waren te dun naast de gezichten; een poppetje met romp is op
+  66 px beter te zien.
+- Afgewezen: Streeppoppetjes (te dun en te klein in een rij). Donkere grijze vlakken in plaats van arcering (worden zwarte vlekken of
+  verdwijnen, afhankelijk van de toon). Het filter aanpassen zodat grijs blijft staan (raakt de foto's, D-030).
+- Herzien als: Sander de stijl afkeurt, of bij Checkpoint 4 pictogrammen niet herkend worden.
+

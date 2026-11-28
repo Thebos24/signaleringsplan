@@ -174,4 +174,11 @@ describe('App', () => {
       ).toBeInTheDocument(),
     )
   })
+
+  it('shows the trial pictograms on #pictos (T-4.1, temporary)', async () => {
+    window.location.hash = '#pictos'
+    render(<App />)
+    expect(await screen.findByRole('heading', { name: 'Proef: pictogrammen' })).toBeInTheDocument()
+    expect(screen.getAllByText('Wandelen')).toHaveLength(2)
+  })
 })

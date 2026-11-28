@@ -127,6 +127,13 @@ export const nl = {
     redAction: 'Ik ga naar mijn begeleider',
   },
 
+  // TEMPORARY trial page for the pictograms (T-4.1, #pictos). Remove in T-4.4.
+  gallery: {
+    title: 'Proef: pictogrammen',
+    intro: 'Zo zien de plaatjes eruit. Herken je ze zonder de tekst?',
+    inRows: 'Zo staan ze in de lijst:',
+  },
+
   // TEMPORARY proof screen (T-0.4). Remove after Checkpoint 0.
   proof: {
     title: 'Proef: blijft alles staan?',
