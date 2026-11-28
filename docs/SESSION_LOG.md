@@ -15,6 +15,16 @@ Nieuwste item bovenaan. Elke sessie voegt één item toe (Claude Code doet dit b
 
 ---
 
+## 2026-11-28 — Rood scherm (T-3.3)
+- Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
+- Gedaan: T-3.3. Sander besliste: geen "Bel 112"-tekst op rood (Q-005). Op rood is de eerste actie nu een extra grote tegel bovenaan, de rest staat
+  als rijen eronder. Twee nieuwe tests; 142 tests, lint, typecontrole en Prettier slagen. Niet in de preview of op de iPhone gezien (er moet dan een rood plan met acties staan).
+- Beslissingen: D-042 (nieuw).
+- Problemen / verrassingen: geen.
+- Volgende: T-3.4 Kleine dingen ⚙ Sonnet · low. Sander kan alvast op de iPhone kijken: vul bij rood twee acties in en tik een rood signaal aan.
+
+---
+
 ## 2026-11-23 — Checkpoint 2 gehaald, T-2.10 online
 - Waar: Claude Code (Sonnet 5.5; past bij de tag Sonnet · medium: ja)
 - Gedaan: T-2.10 gepusht (Sander gaf akkoord) zodat de nieuwe schermen via GitHub Pages op de iPhone kwamen; eerst zag Sander nog de oude tegels

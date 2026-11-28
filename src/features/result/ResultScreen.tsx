@@ -10,7 +10,7 @@ import './result.css'
 
 // The result for the client (SPEC §5.3, D-041): the colour fills the screen, with a big symbol, the
 // word (DESIGN.md rule 6), the actions of that colour as rows to look at, and "Terug" in the fixed bar.
-// The extra large top tile for red comes in T-3.3.
+// On red the first action is an extra large tile on top, the rest are rows below (SPEC §5.3, D-042).
 export function ResultScreen({
   color,
   tiles,
@@ -23,6 +23,8 @@ export function ResultScreen({
   const actions = tiles
     .filter((t) => t.kind === 'action' && t.color === color)
     .sort((a, b) => a.order - b.order)
+  const main = color === 'red' ? actions[0] : undefined
+  const others = main ? actions.slice(1) : actions
 
   return (
     <div className={`result result--${color}`}>
@@ -40,9 +42,17 @@ export function ResultScreen({
             </h1>
           )}
         </div>
-        {actions.length > 0 && (
+        {main && (
+          <div className="result__main" data-testid="main-action">
+            <span className="result__main-image">
+              <TileImage image={main.image} />
+            </span>
+            <p className="result__main-text">{main.text}</p>
+          </div>
+        )}
+        {others.length > 0 && (
           <ListGroup>
-            {actions.map((action) => (
+            {others.map((action) => (
               <ListRow
                 key={action.id}
                 image={<TileImage image={action.image} />}

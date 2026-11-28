@@ -1,6 +1,6 @@
 # Taken
 
-**Huidige fase: 3 (Gebruikskant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 is gehaald (Sander, 2026-11-23). T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 t/m T-2.10 zijn af (herontwerp klaar). Checkpoint 2 gehaald; nu T-3.3 (eerst Q-005 beantwoorden), dan T-3.4.
+**Huidige fase: 3 (Gebruikskant).** Fase 0 en Checkpoint 0 zijn af (2026-11-22). Fase 1 is af, Checkpoint 1 is gehaald (Sander, 2026-11-22). T-2.1 t/m T-2.6 zijn af; Checkpoint 2 is gehaald (Sander, 2026-11-23). T-3.1 en T-3.2 zijn af, maar op 2026-11-23 besliste Sander een **herontwerp** (D-035, D-036, D-037). T-2.7 t/m T-2.10 zijn af (herontwerp klaar). Checkpoint 2 gehaald; T-3.3 is af (2026-11-28); nu T-3.4.
 
 Zo werkt het: fases lopen op volgorde. Elke fase eindigt met een **checkpoint** dat Sander op zijn telefoon
 uitprobeert. We gaan pas verder als het goed voelt. Eigenaar: **S** = Sander, **C** = Claude Code.
@@ -91,7 +91,7 @@ Doel: de hele flow voor de cliënt, zo simpel mogelijk.
 - [x] T-3.1 (C) Startscherm "Hoi [naam], wat merk je?" met signaaltegels (aan/uit), tegel "Het gaat goed" en knop
       "Klaar" (SPEC §5.1). Indeling volgens het voorstel in Q-001. ⚙ Sonnet · medium — 2026-11-23 (D-033)
 - [x] T-3.2 (C) Resultaatscherm per kleur: kleurvlak + woord + symbool, actietegels, knop "Terug" (SPEC §5.3). ⚙ Sonnet · medium — 2026-11-23 (D-034)
-- [ ] T-3.3 (C) Rood scherm met de extra grote bovenste tegel; eventuele tekst over noodsituaties (Q-005). ⚙ Sonnet · medium
+- [x] T-3.3 (C) Rood scherm met de extra grote bovenste tegel; eventuele tekst over noodsituaties (Q-005). ⚙ Sonnet · medium — 2026-11-28 (D-042; geen noodtekst; alleen met tests, niet op de iPhone gezien)
 - [ ] T-3.4 (C) Kleine dingen: na terugkomen in de app altijd het startscherm, aangetikte signalen gewist,
       geen dubbel tikken nodig, werkt zonder internet. ⚙ Sonnet · low
 

@@ -574,3 +574,15 @@ herzien. Nieuwe beslissingen onderaan. Verwijder nooit een item: markeer het als
 - Waarom: één set componenten voor alle schermen (D-038); de cliënt ziet dezelfde rijen als de begeleider, alleen zonder knoppen.
 - Afgewezen: Oude foto's opnieuw schetsen (er is geen origineel, D-010). Een eigen "ActionRow" voor het resultaat (`ListRow` zonder `onClick` doet het al).
 - Herzien als: Sander of testers de lijst met veel signalen te lang vinden (Q-001, Checkpoint 3) of het verloop op de iPhone te zacht lijkt.
+
+### D-042 — Rood scherm: extra grote bovenste tegel, geen noodtekst (T-3.3, Q-005)
+- Datum: 2026-11-28 · Status: Besloten · Besloten door: Sander (geen tekst), Claude (uitwerking)
+- Besluit:
+  - Op rood staat de **eerste actie** van het plan als één extra grote tegel bovenaan (wit vlak, plaatje van 160 px, tekst groot en vet).
+    De overige rode acties staan daaronder als rijen, zoals bij oranje. Bij oranje en groen verandert niets.
+  - Er komt **geen** vaste regel over noodsituaties ("Gevaar? Bel 112") en geen belknop op het rode scherm.
+  - Welke actie "de eerste" is, bepaalt de begeleider met de volgorde (← →). Standaard is dat "Ik ga naar mijn begeleider" (D-008).
+- Waarom: Sander wil geen extra tekst of keuzes voor de cliënt (zo simpel mogelijk). De volgorde bestond al, dus geen nieuw datamodel of instelling.
+- Afgewezen: Klein "Bel 112" onderaan met belknop (mijn voorstel; Sander koos nee). Een aparte instelling "grote tegel" per actie (extra keuze voor de begeleider, meer schermen).
+- Gevolgen: R-007 blijft bestaan; de maatregel "112-regel" vervalt. De uitlegpagina voor begeleiders (T-5.4) moet zeggen dat de app een hulpmiddel is en geen noodhulp.
+- Herzien als: testers of begeleiders de 112-regel missen.
